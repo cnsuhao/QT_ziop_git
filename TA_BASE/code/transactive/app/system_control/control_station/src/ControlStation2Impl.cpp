@@ -105,16 +105,16 @@ void ControlStation2Impl::entityCommand(EntityMessageType entityType, const std:
     }
 }
 
-void ControlStation2Impl::isLoginAllowed(const std::string& bstrOperator, const std::string& bstrPassword, Promise<bool>& bLogin)
+void ControlStation2Impl::isLoginAllowed(const std::string& bstrOperator, const std::string& bstrPassword, BoolPromisePtr bLogin)
 {
     std::string theOperatorName = SessionDetails::getInstance().getOperatorName();
 
-    bLogin.set_value(theOperatorName.size() &&
-                     (theOperatorName == bstrOperator) &&
-                     (SessionDetails::getInstance().getSessionInfo().password == bstrPassword));
+    bLogin->set_value(theOperatorName.size() &&
+                      (theOperatorName == bstrOperator) &&
+                      (SessionDetails::getInstance().getSessionInfo().password == bstrPassword));
 }
 
-void ControlStation2Impl::isActionPermittedOnEntity(const std::string& entityName, long actionKey, Promise<ResponseEnum>& response)
+void ControlStation2Impl::isActionPermittedOnEntity(const std::string& entityName, long actionKey, boost::shared_ptr<Promise<ResponseEnum>> response)
 {
     TA_Base_App::TA_ControlStation::EPermission permission = TA_ControlStation::GENERAL_ERROR;
 
@@ -136,7 +136,7 @@ void ControlStation2Impl::isActionPermittedOnEntity(const std::string& entityNam
         { TA_ControlStation::GENERAL_ERROR, TAError }
     };
 
-    response.set_value(theMap[permission]);
+    response->set_value(theMap[permission]);
 }
 
 void ControlStation2Impl::launchPlan(long planId)
@@ -164,21 +164,21 @@ void ControlStation2Impl::loadComplete(long leftPosition)
     GraphWorxManager::getInstance().loadComplete(leftPosition);
 }
 
-void ControlStation2Impl::getSessionId(Promise<std::string>& sessionId)
+void ControlStation2Impl::getSessionId(StringPromisePtr sessionId)
 {
-    sessionId.set_value(SessionDetails::getInstance().getSessionId());
+    sessionId->set_value(SessionDetails::getInstance().getSessionId());
 }
 
-void ControlStation2Impl::getCurrentDisplayName(Promise<std::string>& display)
+void ControlStation2Impl::getCurrentDisplayName(StringPromisePtr display)
 {
-    display.set_value(GraphWorxManager::getInstance().getCurrentDisplay(1));
+    display->set_value(GraphWorxManager::getInstance().getCurrentDisplay(1));
 }
 
-void ControlStation2Impl::getRect(EScreen targetScreen, EArea targetArea, long val, Promise<RECT>& dim)
+void ControlStation2Impl::getRect(EScreen targetScreen, EArea targetArea, long val, boost::shared_ptr<Promise<RECT>> dim)
 {
-    dim.set_value(ScreenPositioning::getInstance().getRect(static_cast<TA_GenericGui::EScreen>(targetScreen),
-                                                           static_cast<TA_GenericGui::EArea>(targetArea),
-                                                           val));
+    dim->set_value(ScreenPositioning::getInstance().getRect(static_cast<TA_GenericGui::EScreen>(targetScreen),
+                                                            static_cast<TA_GenericGui::EArea>(targetArea),
+                                                            val));
 }
 
 void ControlStation2Impl::setDisplayDimension(RECT dim)
@@ -202,9 +202,9 @@ void ControlStation2Impl::changePassword()
     //boost::async();
 }
 
-void ControlStation2Impl::isOperatorOverridden(Promise<bool>& isOverridden)
+void ControlStation2Impl::isOperatorOverridden(BoolPromisePtr isOverridden)
 {
-    isOverridden.set_value(SessionDetails::getInstance().isOperatorOverridden());
+    isOverridden->set_value(SessionDetails::getInstance().isOperatorOverridden());
 }
 
 void ControlStation2Impl::changeOperatorOverride()
@@ -219,9 +219,9 @@ void ControlStation2Impl::displayTaskManager()
     //boost::async();
 }
 
-void ControlStation2Impl::isServerContactable(Promise<bool>& isContactable)
+void ControlStation2Impl::isServerContactable(BoolPromisePtr isContactable)
 {
-    isContactable.set_value(ServerMonitor::getInstance().isContactable());
+    isContactable->set_value(ServerMonitor::getInstance().isContactable());
 }
 
 void ControlStation2Impl::logout()
@@ -234,7 +234,7 @@ void ControlStation2Impl::giveApplicationFocus(long processId)
     //TODO: do this in application manager
 }
 
-void ControlStation2Impl::getOperator(Promise<std::string>& operatorName)
+void ControlStation2Impl::getOperator(StringPromisePtr operatorName)
 {
     std::string theOperatorName = SessionDetails::getInstance().getOperatorName();
 
@@ -244,16 +244,16 @@ void ControlStation2Impl::getOperator(Promise<std::string>& operatorName)
         theOperatorName += SessionDetails::getInstance().getOverrideOperatorName();
     }
 
-    operatorName.set_value(theOperatorName);
+    operatorName->set_value(theOperatorName);
 }
 
-void ControlStation2Impl::getSite(Promise<std::string>& site)
+void ControlStation2Impl::getSite(StringPromisePtr site)
 {
     // Site is the physical location of the operator. That is, where is their console sitting.
-    site.set_value(SessionDetails::getInstance().getConsoleLocationName());
+    site->set_value(SessionDetails::getInstance().getConsoleLocationName());
 }
 
-void ControlStation2Impl::getProfile(Promise<std::string>& profile)
+void ControlStation2Impl::getProfile(StringPromisePtr profile)
 {
     std::string theProfile = SessionDetails::getInstance().getProfileAndLocationDisplayString();
 
@@ -263,7 +263,7 @@ void ControlStation2Impl::getProfile(Promise<std::string>& profile)
         theProfile += SessionDetails::getInstance().getOverrideProfileAndLocationDisplayString();
     }
 
-    profile.set_value(theProfile);
+    profile->set_value(theProfile);
 }
 
 void ControlStation2Impl::launchApplicationEx(long appType, std::string extraCommandLine, long posType, long alignType, RECT objectDim, RECT boundaryDim)
@@ -274,20 +274,20 @@ void ControlStation2Impl::launchApplicationEx(long appType, std::string extraCom
     ApplicationSignal::launchApplication(appType, extraCommandLine, posType, alignType, objectDim, boundaryDim, false);
 }
 
-void ControlStation2Impl::getAllApplications(Promise<std::vector<ApplicationProperties>>& applications)
+void ControlStation2Impl::getAllApplications(boost::shared_ptr<Promise<std::vector<ApplicationProperties>>> applications)
 {
-    applications.set_value(ApplicationManager::getInstance().getApplications());
+    applications->set_value(ApplicationManager::getInstance().getApplications());
 }
 
-void ControlStation2Impl::getRunningApplications(Promise<std::map<unsigned long, std::string>>& runningApplications)
+void ControlStation2Impl::getRunningApplications(boost::shared_ptr<Promise<std::map<unsigned long, std::string>>> runningApplications)
 {
-    runningApplications.set_value(RunningApplicationManager::getInstance().getRunningApplications());
+    runningApplications->set_value(RunningApplicationManager::getInstance().getRunningApplications());
 }
 
-void ControlStation2Impl::getLocation(Promise<std::string>& location)
+void ControlStation2Impl::getLocation(StringPromisePtr location)
 {
     // Location is the conceptual location of the operator.
-    location.set_value(SessionDetails::getInstance().getLocationDisplayName());
+    location->set_value(SessionDetails::getInstance().getLocationDisplayName());
 }
 
 void ControlStation2Impl::setSelectedAlarms(const std::string& asset, long leftPosition)
@@ -295,17 +295,17 @@ void ControlStation2Impl::setSelectedAlarms(const std::string& asset, long leftP
     //TODO:
 }
 
-void ControlStation2Impl::getProfileDisplay(long leftPosition, Promise<std::string>& profileDisplay)
+void ControlStation2Impl::getProfileDisplay(long leftPosition, StringPromisePtr profileDisplay)
 {
     unsigned long screen = ScreenPositioning::getInstance().getWhichScreenCoordinateIsOn(leftPosition);
-    profileDisplay.set_value(SessionDetails::getInstance().getProfileDisplay(screen));
+    profileDisplay->set_value(SessionDetails::getInstance().getProfileDisplay(screen));
 }
 
-void ControlStation2Impl::getProfileDisplayAtLocation(long leftPosition, const std::string& locationName, Promise<std::string>& profileDisplay)
+void ControlStation2Impl::getProfileDisplayAtLocation(long leftPosition, const std::string& locationName, StringPromisePtr profileDisplay)
 {
     unsigned long screen = ScreenPositioning::getInstance().getWhichScreenCoordinateIsOn(leftPosition);
-    profileDisplay.set_value(SessionDetails::getInstance().getProfileDisplayAtLocation(screen, locationName));
-    LOG_INFO("Get the default display for location %s is %s", locationName.c_str(), profileDisplay.get().c_str());
+    profileDisplay->set_value(SessionDetails::getInstance().getProfileDisplayAtLocation(screen, locationName));
+    LOG_INFO("Get the default display for location %s is %s", locationName.c_str(), profileDisplay->get().c_str());
 }
 
 void ControlStation2Impl::changeProfile()
@@ -338,9 +338,9 @@ void ControlStation2Impl::changeDisplayMode()
     // task
 }
 
-void ControlStation2Impl::getDisplayMode(Promise<std::string>& displayMode)
+void ControlStation2Impl::getDisplayMode(StringPromisePtr displayMode)
 {
-    displayMode.set_value(SessionDetails::getInstance().getDisplayMode() ? "DisplayOnly" : "DisplayNormal");
+    displayMode->set_value(SessionDetails::getInstance().getDisplayMode() ? "DisplayOnly" : "DisplayNormal");
 }
 
 void ControlStation2Impl::setRunParam(const std::string& name, const std::string& value)

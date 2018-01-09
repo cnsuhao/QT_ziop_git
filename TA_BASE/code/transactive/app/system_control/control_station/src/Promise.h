@@ -87,15 +87,22 @@ struct Promise
         }
     }
 
+    //template <typename X>
+    //operator X& ()
+    //{
+    //    return future.get();
+    //}
+
     template <typename X>
-    operator const X&()
+    operator const X& () const
     {
         return future.get();
     }
 };
 
 typedef Promise<void> VoidPromise;
-typedef boost::shared_ptr<VoidPromise> PromisePtr;
+typedef boost::shared_ptr<VoidPromise> VoidPromisePtr;
+typedef VoidPromisePtr PromisePtr;
 
 typedef Promise<bool> BoolPromise;
 typedef boost::shared_ptr<BoolPromise> BoolPromisePtr;
@@ -108,3 +115,5 @@ typedef boost::shared_ptr<LongPromise> LongPromisePtr;
 
 typedef Promise<unsigned long> ULongPromise;
 typedef boost::shared_ptr<ULongPromise> ULongPromisePtr;
+
+#define DECLEAR_SHARED(type, name) boost::shared_ptr<type> name(new type())

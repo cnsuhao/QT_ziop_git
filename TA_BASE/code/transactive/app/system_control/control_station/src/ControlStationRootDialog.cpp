@@ -1541,13 +1541,13 @@ void ControlStationRootDialog::onDutyNottionButton()
 {
     DutyManager::SubsystemDetail subsystem_detail;
     subsystem_detail.regionName = "Region";
-    subsystem_detail.subsystemName.push_back("Subsystem");
+    subsystem_detail.subsystemNames.push_back("Subsystem");
 
     DutyManager::DutyDetail duty_detail;
     duty_detail.operatorName = "Operator";
     duty_detail.profileName = "Profile";
     duty_detail.locationName = "Location";
-    duty_detail.subsystem.push_back(subsystem_detail);
+    duty_detail.subsystemDetails.push_back(subsystem_detail);
 
     DutyManager::DutyNotificationDetail notification_detail;
     notification_detail.gained.push_back(duty_detail);
@@ -1567,13 +1567,13 @@ void ControlStationRootDialog::onDutyRequestButton()
 {
     DutyManager::SubsystemDetail subsystem_detail;
     subsystem_detail.regionName = "Region";
-    subsystem_detail.subsystemName.push_back("Subsystem");
+    subsystem_detail.subsystemNames.push_back("Subsystem");
 
     DutyManager::DutyDetail duty_detail;
     duty_detail.operatorName = "Operator";
     duty_detail.profileName = "Profile";
     duty_detail.locationName = "Location";
-    duty_detail.subsystem.push_back(subsystem_detail);
+    duty_detail.subsystemDetails.push_back(subsystem_detail);
 
     DutyManager::DutyNotificationDetail notification_detail;
     notification_detail.gained.push_back(duty_detail);

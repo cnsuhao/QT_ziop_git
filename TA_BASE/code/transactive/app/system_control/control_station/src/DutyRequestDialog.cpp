@@ -148,18 +148,18 @@ CString DutyRequestDialog::formatContent()
 
     out += temp;
 
-    for (unsigned int j = 0; j < data.subsystem.size(); j++)
+    for (unsigned int j = 0; j < data.subsystemDetails.size(); j++)
     {
         out += "\n\nfor:";
 
-        for (unsigned int k = 0; k < data.subsystem[j].subsystemName.size(); k++)
+        for (unsigned int k = 0; k < data.subsystemDetails[j].subsystemNames.size(); k++)
         {
-            temp = str(boost::format(SUBSYSTEM_FORMAT) % data.subsystem[j].subsystemName[k]);
+            temp = str(boost::format(SUBSYSTEM_FORMAT) % data.subsystemDetails[j].subsystemNames[k]);
             out += temp;
         }
 
         out += "\nat:";
-        temp = str(boost::format(LOCATION_FORMAT) % data.subsystem[j].regionName);
+        temp = str(boost::format(LOCATION_FORMAT) % data.subsystemDetails[j].regionName);
         out += temp;
     }
 

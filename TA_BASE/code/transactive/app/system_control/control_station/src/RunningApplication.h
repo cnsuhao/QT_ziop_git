@@ -25,7 +25,8 @@ public:
                        unsigned long alignFlag,
                        const RECT& objectDim,
                        const RECT& boundaryDim,
-                       bool isVisible);
+                       bool isVisible,
+                       bool autoRelaunch = false);
 
     virtual unsigned long getProcessId() const { return m_processId; }
     virtual unsigned long getAppType() const;
@@ -67,6 +68,7 @@ protected:
     void passNewParameters(const std::string& additionalCommands);
     void parseProcessAddress(std::string& startPath, std::string& argList, std::string& currentPath, const std::string& processAddress);
     void prepareProcessOption();
+    static void addCommonCommand(std::string& command);
 
     void changeApplicationFocus(const TA_Base_Core::EFocusType focus);
     void dutyChanged();

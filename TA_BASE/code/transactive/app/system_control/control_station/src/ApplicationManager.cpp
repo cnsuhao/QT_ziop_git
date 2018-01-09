@@ -19,7 +19,6 @@
 #include "core/configuration_updates/src/ConfigUpdateDetails.h"
 
 using namespace TA_Base_Core;
-using namespace boost::assign;
 
 ApplicationManager::ApplicationManager()
 {
@@ -31,7 +30,6 @@ void ApplicationManager::setupSignalConnections()
 {
     ApplicationSignal::launchApplication.connect(boost::bind(&ApplicationManager::launchApplication, this, _1, _2, _3, _4, _5, _6, _7));
     ApplicationSignal::registerManagedProcess.connect(boost::bind(&ApplicationManager::registerManagedProcess, this, _1, _2, _3, _4));
-    //ControlStationSignal::exit.connect();
 }
 
 void ApplicationManager::asyncInitialize()
@@ -66,9 +64,9 @@ void ApplicationManager::loadTerminators()
 
 void ApplicationManager::setupApplicationCreators()
 {
-    m_creators[BANNER_GUI_APPTYPE] = &BannerApplication::create;
-    m_creators[DLL_HOST_GUI_APPTYPE] = &TADllHostApplication::create;
-    m_creators[ADMIN_GUI_APPTYPE] = &SystemManagerApplication::create;
+    m_creators[BANNER_GUI_APPTYPE]      = &BannerApplication::create;
+    m_creators[DLL_HOST_GUI_APPTYPE]    = &TADllHostApplication::create;
+    m_creators[ADMIN_GUI_APPTYPE]       = &SystemManagerApplication::create;
 }
 
 void ApplicationManager::launchApplication(unsigned long appType,
@@ -107,14 +105,53 @@ void ApplicationManager::checkAppType(unsigned long appType)
     }
 }
 
+std::vector<IProcessManager::ApplicationProperties> ApplicationManager::getApplications()
+{
+    FUNCTION_ENTRY("getApplications");
+
+    std::vector<IProcessManager::ApplicationProperties> applist;
+
+    for (ApplicationMap::value_type& v : m_applications)
+    {
+        Application* app = v.second;
+
+        try
+        {
+            if (app->getGui().isIconDisplayed())
+            {
+                IProcessManager::ApplicationProperties prop;
+                prop.key = app->getGui().getKey();
+                prop.name = app->getGui().getFullName();
+                prop.isAccessible = app->isAccessible();
+                applist.push_back(prop);
+            }
+        }
+        catch (...)
+        {
+            LOG_EXCEPTION("Unknown", "Error occurred while retrieving the list of applications. Ignore this application since we cannot retrieve it's details");
+        }
+    }
+
+    return applist;
+}
+
+ApplicationCreator ApplicationManager::getApplicationCreator(unsigned long appType)
+{
+    ApplicationCreatorMap::iterator it = m_creators.find(appType);
+
+    if (it != m_creators.end())
+    {
+        return it->second;
+    }
+
+    return [](TA_Base_Core::IGui * gui) { return Application::create(gui); };
+}
+
 void ApplicationManager::processUpdate(const TA_Base_Core::ConfigUpdateDetails& updateEvent)
 {
-    FUNCTION_ENTRY("processUpdate");
-
     if (updateEvent.getType() != TA_Base_Core::APPLICATION)
     {
         LOG_WARNING("Type of configuration update does not match the update we are interested in. Ignoring");
-        FUNCTION_EXIT;
         return;
     }
 
@@ -124,7 +161,6 @@ void ApplicationManager::processUpdate(const TA_Base_Core::ConfigUpdateDetails& 
     if ((updateEvent.getModifications() != TA_Base_Core::Create) && (appIter == m_applications.end()))
     {
         LOG_WARNING("Key of configuration update does not match the update we are interested in. Ignoring");
-        FUNCTION_EXIT;
         return;
     }
 
@@ -168,56 +204,4 @@ void ApplicationManager::processUpdate(const TA_Base_Core::ConfigUpdateDetails& 
         break;
     }
     }
-
-    FUNCTION_EXIT;
-}
-
-std::vector<IProcessManager::ApplicationProperties> ApplicationManager::getApplications()
-{
-    FUNCTION_ENTRY("getApplications");
-
-    std::vector<IProcessManager::ApplicationProperties> applist;
-
-    for (ApplicationMap::value_type& v : m_applications)
-    {
-        Application* app = v.second;
-
-        try
-        {
-            if (app->getGui().isIconDisplayed())
-            {
-                IProcessManager::ApplicationProperties prop;
-                prop.key = app->getGui().getKey();
-                prop.name = app->getGui().getFullName();
-                prop.isAccessible = app->isAccessible();
-                applist.push_back(prop);
-            }
-        }
-        catch (...)
-        {
-            LOG_EXCEPTION("Unknown", "Error occurred while retrieving the list of applications. Ignore this application since we cannot retrieve it's details");
-        }
-    }
-
-    return applist;
-}
-
-ApplicationCreator ApplicationManager::getApplicationCreator(unsigned long appType)
-{
-    ApplicationCreatorMap::iterator it = m_creators.find(appType);
-
-    if (it != m_creators.end())
-    {
-        return it->second;
-    }
-
-    struct DefaultApplicationCreator
-    {
-        Application* operator()(TA_Base_Core::IGui* gui)
-        {
-            return Application::create(gui);
-        }
-    };
-
-    return DefaultApplicationCreator();
 }

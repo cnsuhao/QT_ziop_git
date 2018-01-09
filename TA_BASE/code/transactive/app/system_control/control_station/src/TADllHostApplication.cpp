@@ -14,10 +14,6 @@ TADllHostApplication::TADllHostApplication(TA_Base_Core::IGui* gui)
     setupSignalConnections();
 }
 
-TADllHostApplication::~TADllHostApplication()
-{
-}
-
 void TADllHostApplication::setupSignalConnections()
 {
     SessionSignal::logined.connect(boost::bind(&TADllHostApplication::onLogin, this));
@@ -44,5 +40,6 @@ void TADllHostApplication::onLogin()
                                                                       TA_Base_Bus::TA_GenericGui::ALIGN_FIT,
                                                                       defaultRect,
                                                                       defaultRect,
-                                                                      false);
+                                                                      false,
+                                                                      true);
 }

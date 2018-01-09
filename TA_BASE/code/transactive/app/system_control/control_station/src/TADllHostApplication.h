@@ -7,7 +7,6 @@ class TADllHostApplication : public Application
 public:
 
     TADllHostApplication(TA_Base_Core::IGui* gui);
-    virtual ~TADllHostApplication();
     static TADllHostApplication* create(TA_Base_Core::IGui* gui);
 
 protected:

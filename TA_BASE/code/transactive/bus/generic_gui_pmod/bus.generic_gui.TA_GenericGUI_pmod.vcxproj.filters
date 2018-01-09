@@ -57,5 +57,8 @@
     <ClInclude Include="src\AsyncWorkThreadPool.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\TA_Rect.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

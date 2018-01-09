@@ -14,8 +14,6 @@
   * duty request and notification dialogs
   */
 #include "StdAfx.h"
-#include "Signals.h"
-#include "SessionSignal.h"
 #include "ControlStationRootDialog.h"
 #include "SessionManager.h"
 #include "IProcessManager.h"
@@ -26,6 +24,9 @@
 #include "SessionDetails.h"
 #include "DatabaseStatusMonitor.h"
 #include "resourceQt.h"
+#include "DutySignal.h"
+#include "SessionSignal.h"
+#include "Signals.h"
 #include "bus/generic_gui_view/src/TransActiveMessage.h"
 #include "bus/security/authentication_agent/idl/src/SessionInfoCorbaDef.h"
 #include "core/data_access_interface/entity_access/src/IEntityData.h"
@@ -47,6 +48,10 @@
 #include "core/utilities/src/DebugUtil.h"
 #include "core/utilities/src/RunParams.h"
 #include "core/corba/src/CorbaUtil.h"
+//#include <boost/range/algorithm/remove_if.hpp>
+#include <boost/range/algorithm.hpp>
+#include <boost/range/algorithm_ext.hpp>
+#include <boost/algorithm/cxx11/one_of.hpp>
 
 using namespace TA_Base_App;
 using namespace TA_Base_Bus;
@@ -62,8 +67,8 @@ void DutyManager::setupConnection()
 {
     SessionSignal::logined.connect(boost::bind(&DutyManager::onSessionLogin, this));
     SessionSignal::logouted.connect(boost::bind(&DutyManager::onSessionLogout, this));
-    Signals::responseDutyAgent.connect(boost::bind(&DutyManager::respond, this, _1, _2));
-    Signals::loseExclusiveDuty.connect(boost::bind(&DutyManager::handleLoseExclusiveDuty, this, _1));
+    DutySignal::responseDutyAgent.connect(boost::bind(&DutyManager::respond, this, _1, _2));
+    DutySignal::loseExclusiveDuty.connect(boost::bind(&DutyManager::handleLoseExclusiveDuty, this, _1));
 }
 
 void DutyManager::asyncInitialize()
@@ -71,14 +76,13 @@ void DutyManager::asyncInitialize()
     DatabaseStatusMonitor::getInstance().waitForAnyAvaliable(10000);
 
     // Get the entity name based on the locationKey
-    TA_ASSERT(TA_Base_Core::RunParams::getInstance().promiseIsSet(RPARAM_LOCATIONKEY, 10000), "RPARAM_LOCATIONKEY unset");
+    TA_ASSERT(TA_Base_Core::RunParams::getInstance().promiseIsSet(RPARAM_LOCATIONKEY, 10000), "RPARAM_LOCATIONKEY not set");
     unsigned long locationKey = TA_Base_Core::getRunParamValue(RPARAM_LOCATIONKEY, 0);
-    std::string agentType = TA_Base_Core::DutyAgentEntityData::getStaticType();
 
     try
     {
         // this will only return a single entry
-        TA_Base_Core::CorbaNameList dutyAgentName = TA_Base_Core::EntityAccessFactory::getInstance().getCorbaNamesOfTypeAtLocation(agentType, locationKey, true);
+        CorbaNameList dutyAgentName = EntityAccessFactory::getInstance().getCorbaNamesOfTypeAtLocation(DutyAgentEntityData::getStaticType(), locationKey, true);
         TA_ASSERT(dutyAgentName.size(), "Cannot find duty agent");
 
         // If more than one name was returned for the duty agent, then that's a bad thing (it's a theoretically
@@ -105,7 +109,7 @@ void DutyManager::asyncInitialize()
 
 void DutyManager::onSessionLogin()
 {
-    DutyManager::getInstance();
+    waitAsyncInitialize();
     TA_Base_Core::MessageSubscriptionManager::getInstance().subscribeToBroadcastCommsMessage(TA_Base_Core::DutyAgentBroadcastComms::DutyRequest, this, NULL);
     TA_Base_Core::MessageSubscriptionManager::getInstance().subscribeToBroadcastCommsMessage(TA_Base_Core::DutyAgentBroadcastComms::DutyChangedNotification, this, NULL);
 }
@@ -117,36 +121,25 @@ void DutyManager::onSessionLogout()
 
 void DutyManager::receiveSpecialisedMessage(const TA_Base_Core::CommsMessageCorbaDef& message)
 {
-    FUNCTION_ENTRY("receiveSpecialisedMessage");
+    //
+    // message from the duty agent
+    //
+    LOG_INFO("Got a Comms message.");
 
-    try
+    std::string mesgTypeKey = message.messageTypeKey;
+
+    if (mesgTypeKey == DutyAgentBroadcastComms::DutyChangedNotification.getTypeKey())
     {
-        //
-        // message from the duty agent
-        //
-        LOG_INFO("Got a Comms message.");
-
-        std::string mesgTypeKey = message.messageTypeKey;
-
-        if (mesgTypeKey == TA_Base_Core::DutyAgentBroadcastComms::DutyChangedNotification.getTypeKey())
-        {
-            LOG_INFO("Processing duty change message.");
-            // need to display notification dialog
-            processDutyChange(message);
-        }
-        else if (mesgTypeKey == TA_Base_Core::DutyAgentBroadcastComms::DutyRequest.getTypeKey())
-        {
-            LOG_INFO("Processing duty update message.");
-            // need to display request duty dialog
-            processDutyRequest(message);
-        }
+        LOG_INFO("Processing duty change message.");
+        // need to display notification dialog
+        processDutyChange(message);
     }
-    catch (...)
+    else if (mesgTypeKey == DutyAgentBroadcastComms::DutyRequest.getTypeKey())
     {
-        LOG_EXCEPTION("Unknown", "Caught some error when processing specialised message");
+        LOG_INFO("Processing duty update message.");
+        // need to display request duty dialog
+        processDutyRequest(message);
     }
-
-    FUNCTION_EXIT;
 }
 
 void DutyManager::respond(const std::string& uniqueId, const TA_Base_App::TA_ControlStation::EDutyResponse response)
@@ -156,7 +149,7 @@ void DutyManager::respond(const std::string& uniqueId, const TA_Base_App::TA_Con
     // see if it is already in the map, if it is, then we've already done the request so just ignore
     if (m_callback.find(uniqueId) == m_callback.end())
     {
-        LOG_INFO("Unique Id not in map.  Ignore.");
+        LOG_DEBUG("Unique Id %d not in map.  Ignore.", uniqueId);
         return;
     }
 
@@ -177,107 +170,75 @@ void DutyManager::respond(const std::string& uniqueId, const TA_Base_App::TA_Con
 // TD19075
 void DutyManager::processDutyChange(const TA_Base_Core::CommsMessageCorbaDef& message)
 {
-    FUNCTION_ENTRY("processDutyChange");
+    TA_Base_Bus::DutyAgentTypeCorbaDef::DutyPopup* pDutyPopup = NULL;
+    TA_Base_Bus::DutyAgentTypeCorbaDef::DutyPopupSequence* pDutySeq = NULL;
+    DutyNotificationDetailPtr detail(new DutyNotificationDetail);
     std::string currentId = SessionDetails::getInstance().getSessionId();
-    LOG_INFO("[processDutyChange]1 Get in ProcessDutyChange, SessionID:%s", currentId.c_str());
 
-    TA_Base_Bus::DutyAgentTypeCorbaDef::DutyPopup* pDutyPopup;
-    TA_Base_Bus::DutyAgentTypeCorbaDef::DutyPopupSequence* pDutySeq;
-    // process and repackage the data so that the GUI could use it straightaway
-    DutyNotificationDetail* det = new struct DutyNotificationDetail;
-    bool isDutyUpdated;
-
-    if ((message.messageState >>= pDutyPopup) != 0)   // for DutyPopup
+    if (message.messageState >>= pDutyPopup)
     {
-        // MessageBox(NULL, "Get DutyPopup Message!", "processDutyChange", MB_OK);
-        // check session ID
-        if (currentId.compare(pDutyPopup->targetSession) != 0)
+        if (currentId != pDutyPopup->targetSession.in())
         {
-            LOG_INFO("Received a DutyChangedNotification for DutyPopup, but doesn't affect current session.  Ignore[%s]", pDutyPopup->targetSession.in());
-            FUNCTION_EXIT;
+            LOG_INFO("Received a DutyChangedNotification for DutyPopup, but doesn't affect current session.  Ignore [%s]", pDutyPopup->targetSession.in());
             return;
         }
 
-        // repackage data
-        repackageDutyData(pDutyPopup->gained, det->gained);
-        repackageDutyData(pDutyPopup->denied, det->denied);
-        repackageDutyData(pDutyPopup->lost, det->lost);
-        det->changed.clear();
+        repackageDutyData(pDutyPopup->gained, detail->gained);
+        repackageDutyData(pDutyPopup->denied, detail->denied);
+        repackageDutyData(pDutyPopup->lost, detail->lost);
 
-        isDutyUpdated = ((det->gained.size() > 0) || (det->denied.size() > 0) || (det->lost.size() > 0) || (det->changed.size() > 0));
-
-        if (isDutyUpdated)
+        if (detail->dutyChanged())
         {
-            ControlStationRootDialog::getInstance().postMessage(WM_DUTY_CHANGE, reinterpret_cast<WPARAM>(det), 0);
+            DutySignal::dutyChanged2(detail, 0);
         }
     }
-    else if ((message.messageState >>= pDutySeq) != 0)   // for DutySeq
+    else if (message.messageState >>= pDutySeq)
     {
-        // MessageBox(NULL, "Get DutySequence Message!", "processDutyChange", MB_OK);
         TA_Base_Bus::DutyAgentTypeCorbaDef::DutyPopupSequence& dutySeq = *pDutySeq;
+        std::vector<std::string> targetSessions;
 
-        int nDutyDetails = 0;
-        unsigned int iIndex = 0;
-
-        for (iIndex = 0; iIndex < dutySeq.length(); ++iIndex)
+        for (size_t i = 0; i < dutySeq.length(); ++i)
         {
-            if (currentId.compare(dutySeq[iIndex].targetSession) == 0)
+            if (currentId == dutySeq[i].targetSession.in())
             {
-                ++nDutyDetails;
+                repackageDutyData(dutySeq[i].gained, detail->gained);
+                repackageDutyData(dutySeq[i].denied, detail->denied);
+                repackageDutyData(dutySeq[i].lost, detail->lost);
+            }
+            else
+            {
+                targetSessions.emplace_back(dutySeq[i].targetSession.in());
             }
         }
 
-        if (0 == nDutyDetails)
+        if (dutySeq.length() && detail->empty())
         {
-            LOG_INFO("Received a DutyChangedNotification for DutySequence, but doesn't affect current session.  Ignore[%s]", dutySeq[iIndex].targetSession.in());
-            FUNCTION_EXIT;
+            LOG_INFO("Received a DutyChangedNotification for DutySequence, but doesn't affect current session.  Ignore [%s]", boost::join(targetSessions, ", ").c_str());
             return;
-        }
-        else
-        {
-            LOG_INFO("[processDutyChange]3 get DutyDetail:%d", nDutyDetails);
-        }
-
-        // check session ID and repackage data
-        for (unsigned int i = 0; i < dutySeq.length(); ++i)
-        {
-            if (currentId.compare(dutySeq[i].targetSession) != 0)
-            {
-                LOG_INFO("One of DutyDetail is on concern with current session, index:%d, sessionID:%s", i, dutySeq[i].targetSession.in());
-                continue;
-            }
-
-            repackageDutyData(dutySeq[i].gained, det->gained);
-            repackageDutyData(dutySeq[i].denied, det->denied);
-            repackageDutyData(dutySeq[i].lost, det->lost);
         }
 
         // get duty changed data
-        LOG_INFO("[processDutyChange] before getDutyChanged, Gained:%d   Lost:%d   Deined:%d   Changed:%d",
-                 det->gained.size(), det->lost.size(), det->denied.size(), det->changed.size());
+        LOG_INFO("[processDutyChange] before getDutyChanged, %s", detail->str().c_str());
 
-        getDutyChanged(det);
+        getDutyChanged(*detail);
 
-        LOG_INFO("[processDutyChange] after getDutyChanged, Gained:%d Lost:%d Deined:%d Changed:%d", det->gained.size(), det->lost.size(), det->denied.size(), det->changed.size());
+        LOG_INFO("[processDutyChange] after getDutyChanged, %s", detail->str().c_str());
 
-        isDutyUpdated = ((det->gained.size() > 0) || (det->denied.size() > 0) || (det->lost.size() > 0) || (det->changed.size() > 0));
-
-        if (isDutyUpdated)
+        if (detail->dutyChanged())
         {
-            ControlStationRootDialog::getInstance().postMessage(WM_DUTY_CHANGE, reinterpret_cast<WPARAM>(det), 1);
+            DutySignal::dutyChanged2(detail, 1);
         }
     }
     else
     {
         LOG_INFO("Received a DutyChangedNotification but couldn't extract DutyPopup or DutySequence. Ignore");
-        FUNCTION_EXIT;
         return;
     }
 
     // doesn't affects the current session, ignore
     LOG_INFO("Received a DutyChangedNotification message");
 
-    if (isDutyUpdated)
+    if (detail->dutyChanged())
     {
         // Force the applications to update since we've gained or lost duty
         Signals::sessionIdChanged(currentId);
@@ -291,8 +252,6 @@ void DutyManager::processDutyChange(const TA_Base_Core::CommsMessageCorbaDef& me
     {
         LOG_INFO("Received Duty Change DutyChangedNotification, but no data exist!");
     }
-
-    FUNCTION_EXIT;
 }
 // ++TD19075
 
@@ -347,10 +306,10 @@ void DutyManager::repackageDutyData(TA_Base_Bus::DutyAgentTypeCorbaDef::DutyTree
                 for (unsigned int k = 0; k < source[i].subsystems[j].subsystems.length(); k++)
                 {
                     TA_Base_Core::ISubsystemPtr subsystemData(SubsystemAccessFactory::getInstance().getSubsystemByKey(source[i].subsystems[j].subsystems[k]));
-                    subsystem.subsystemName.push_back(subsystemData->getName());
+                    subsystem.subsystemNames.insert(subsystemData->getName());
                 }
 
-                duty.subsystem.push_back(subsystem);
+                duty.subsystemDetails.push_back(subsystem);
             }
             catch (...)
             {
@@ -364,8 +323,6 @@ void DutyManager::repackageDutyData(TA_Base_Bus::DutyAgentTypeCorbaDef::DutyTree
 
 void DutyManager::processDutyRequest(const TA_Base_Core::CommsMessageCorbaDef& message)
 {
-    FUNCTION_ENTRY("processDutyRequest");
-
     std::string currentId = SessionDetails::getInstance().getSessionId();
     TA_Base_Bus::DutyAgentTypeCorbaDef::DutyRequest* data;
 
@@ -373,7 +330,6 @@ void DutyManager::processDutyRequest(const TA_Base_Core::CommsMessageCorbaDef& m
     if ((message.messageState >>= data) == 0)
     {
         LOG_DEBUG("Received a DutyRequest but couldn't extract DutyRequest.  Ignore");
-        FUNCTION_EXIT;
         return;
     }
 
@@ -381,33 +337,28 @@ void DutyManager::processDutyRequest(const TA_Base_Core::CommsMessageCorbaDef& m
     if (currentId.compare(data->targetSession) != 0)
     {
         LOG_DEBUG("Received a DutyRequest but doesn't affect current session.  Ignore");
-        FUNCTION_EXIT;
         return;
     }
 
     if (data->duty.subsystems.length() == 0)
     {
         LOG_INFO("Received a DutyRequest message but doesn't have subsystem details.  Ignore.");
-        FUNCTION_EXIT;
         return;
     }
 
     // set up the map for the callback
-    std::string uniqueId = data->uniqueId;
     {
         ThreadGuard guard(m_callbackLock);
 
         // see if it is already in the map, if it is, then we've already done the request so just ignore
-        if (m_callback.find(uniqueId) != m_callback.end())
+        if (m_callback.find(data->uniqueId.in()) != m_callback.end())
         {
-            LOG_INFO("Received a DutyRequest message but we've already received a message with the same unique id.  Ignore.");
+            LOG_INFO("Received a DutyRequest message but we've already received a message with the same unique id %D.  Ignore.", data->uniqueId.in());
             return;
         }
 
         LOG_INFO("Received a DutyRequest message");
-
-        // add it to the map
-        m_callback.insert(CallbackMap::value_type(uniqueId, data->dutyAgent));
+        m_callback.emplace(data->uniqueId.in(), data->dutyAgent);
     }
 
     try
@@ -423,11 +374,11 @@ void DutyManager::processDutyRequest(const TA_Base_Core::CommsMessageCorbaDef& m
         TA_Base_Core::IEntityDataPtr consoleEntity(EntityAccessFactory::getInstance().getEntity(sessionInfo.WorkstationId));
         TA_Base_Core::ILocationPtr location(LocationAccessFactory::getInstance().getLocationByKey(consoleEntity->getLocation()));
         TA_Base_Core::IOperatorPtr oper(OperatorAccessFactory::getInstance().getOperator(sessionInfo.OperatorId[0], false));
-        DutyRequestDetail* det = new struct DutyRequestDetail;
-        det->uniqueId = uniqueId;
-        det->duty.operatorName = oper->getName();
-        det->duty.profileName = profile->getName();
-        det->duty.locationName = location->getDisplayName();
+        DutyRequestDetail* detail = new DutyRequestDetail;
+        detail->uniqueId = data->uniqueId.in();
+        detail->duty.operatorName = oper->getName();
+        detail->duty.profileName = profile->getName();
+        detail->duty.locationName = location->getDisplayName();
 
         for (unsigned int j = 0; j < data->duty.subsystems.length(); j++)
         {
@@ -438,23 +389,21 @@ void DutyManager::processDutyRequest(const TA_Base_Core::CommsMessageCorbaDef& m
             for (unsigned int k = 0; k < data->duty.subsystems[j].subsystems.length(); k++)
             {
                 boost::shared_ptr<TA_Base_Core::ISubsystem> subsystemData(SubsystemAccessFactory::getInstance().getSubsystemByKey(data->duty.subsystems[j].subsystems[k]));
-                subsystem.subsystemName.push_back(subsystemData->getName());
+                subsystem.subsystemNames.insert(subsystemData->getName());
             }
 
-            det->duty.subsystem.push_back(subsystem);
+            detail->duty.subsystemDetails.emplace_back(std::move(subsystem));
         }
 
-        ControlStationRootDialog::getInstance().postMessage(WM_DUTY_REQUEST, reinterpret_cast<WPARAM>(det));
+        ControlStationRootDialog::getInstance().postMessage(WM_DUTY_REQUEST, reinterpret_cast<WPARAM>(detail));
     }
     catch (...)
     {
         LOG_EXCEPTION("Unknown", "Error accessing database");
     }
-
-    FUNCTION_EXIT;
 }
 
-void DutyManager::handleLoseExclusiveDuty(boost::shared_ptr<Promise<bool> > promise)
+void DutyManager::handleLoseExclusiveDuty(BoolPromisePtr promise)
 {
     promise->set_value(loseExclusiveDuty());
 }
@@ -506,7 +455,7 @@ bool DutyManager::loseExclusiveDuty()
                 for (unsigned int k = 0; k < exclusiveSubsystems[j].subsystems.length(); k++)
                 {
                     TA_Base_Core::ISubsystemPtr subsystem(SubsystemAccessFactory::getInstance().getSubsystemByKey(exclusiveSubsystems[j].subsystems[k]));
-                    subsystemDetails.subsystemName.push_back(subsystem->getName());
+                    subsystemDetails.subsystemNames.insert(subsystem->getName());
                 }
 
                 subsystems.push_back(subsystemDetails);
@@ -527,150 +476,88 @@ bool DutyManager::loseExclusiveDuty()
             subsystemsAtLocations += subsystems[i].regionName.c_str();
             subsystemsAtLocations += _T("\n") + subsystemStr + _T("\t");
 
-            for (unsigned int j = 0; j < subsystems[i].subsystemName.size(); j++)
+            for (const std::string& name : subsystems[i].subsystemNames)
             {
-                subsystemsAtLocations += subsystems[i].subsystemName[j].c_str();
+                subsystemsAtLocations += name.c_str();
                 subsystemsAtLocations += _T("\n\t\t");
             }
 
             subsystemsAtLocations += _T("\n");
         }
 
-        // TD19409 yg++
         if (SessionDetails::getInstance().isOperatorOverridden())
         {
             LOG_INFO("yg0606 isOverride has no exclusive duties.");
             OverRideExclusiveDuty exclusiveDutyDialog((const char*)subsystemsAtLocations);
-
-            if (exclusiveDutyDialog.doModal() == QDialog::Rejected)
-            {
-                return false;
-            }
-
+            return exclusiveDutyDialog.doModal() != QDialog::Rejected;
+        }
+        else
+        {
             return true;
         }
-        else // ++yg
-        {
-            //TD15531++ [2012-06-06]
-            //ExclusiveDutyDialog exclusiveDutyDialog((LPCTSTR)subsystemsAtLocations);
-
-            //if (exclusiveDutyDialog.doModal() == QDialog::Rejected)
-            //{
-            //    return false;
-            //}
-
-            return true;
-        }
-
-        /*TA_Base_Bus::TransActiveMessage userMsg;
-        userMsg << subsystemsAtLocations;
-        UINT selectedButton = userMsg.showMsgBox(IDS_UW_020008);
-
-        if ( selectedButton == IDNO )
-        {
-            return false;
-        }
-        return true;*/
-        //++TD15531
     }
 
     return false;
 }
 
-// TD19075++
-inline bool IsSubsystemEmpty(DutyManager::SubsystemDetail sd)
+void DutyManager::getDutyChanged(DutyNotificationDetail& detail)
 {
-    return sd.subsystemName.empty();
-}
+    DutyDetailList& gained = detail.gained;
+    DutyDetailList& lost = detail.lost;
+    DutyDetailList& changed = detail.changed;
 
-inline bool IsDutyDetailEmpty(DutyManager::DutyDetail dd)
-{
-    return dd.subsystem.empty();
-}
-
-void DutyManager::getDutyChanged(DutyNotificationDetail* det)
-{
-    DutyDetailList& gained = det->gained;
-    DutyDetailList& lost = det->lost;
-    DutyDetailList& changed = det->changed;
-
-    for (DutyDetailIter iterGain = gained.begin(); iterGain != gained.end(); ++iterGain)
+    for (DutyDetail& iterGain : detail.gained)
     {
-        for (DutyDetailIter iterLost = lost.begin(); iterLost != lost.end(); ++iterLost)
+        for (DutyDetail& iterLost : detail.lost)
         {
-            DutyDetail details;
-            details.locationName = iterGain->locationName;
-            details.operatorName = iterGain->operatorName;
-            details.profileName = iterGain->profileName;
-            //if (iterGain->operatorName == iterLost->operatorName)
+            DutyDetail details = iterGain;
+
+            for (SubsystemDetail& iterGainSub : iterGain.subsystemDetails)
             {
-                for (SubsystemDetailIter iterGainSub = iterGain->subsystem.begin(); iterGainSub != iterGain->subsystem.end(); ++iterGainSub)
+                for (SubsystemDetail& iterLostSub : iterLost.subsystemDetails)
                 {
-                    for (SubsystemDetailIter iterLostSub = iterLost->subsystem.begin(); iterLostSub != iterLost->subsystem.end(); ++iterLostSub)
+                    // Handle SubsystemDetail(region, subsystems<set>)
+                    SubsystemDetail sDetail;
+                    sDetail.regionName = iterLostSub.regionName;
+
+                    if (iterGainSub.regionName == iterLostSub.regionName)
                     {
-                        // Handle SubsystemDetail(region, subsystems<set>)
-                        SubsystemDetail sDetail;
-                        sDetail.regionName = iterLostSub->regionName;
-
-                        if (iterGainSub->regionName == iterLostSub->regionName)
+                        for (const std::string& iterGainSubsys : iterGainSub.subsystemNames)
                         {
-                            std::vector<std::string>::iterator iterLostSubsysEnd = iterLostSub->subsystemName.end();
-                            std::vector<std::string>::iterator iterLostSubsysEndOld = iterLostSub->subsystemName.end();
-
-                            for (std::vector<std::string>::iterator iterGainSubsys = iterGainSub->subsystemName.begin(); iterGainSubsys != iterGainSub->subsystemName.end(); ++iterGainSubsys)
+                            if (iterLostSub.subsystemNames.erase(iterGainSubsys))
                             {
-                                iterLostSubsysEnd = std::remove(iterLostSub->subsystemName.begin(), iterLostSubsysEnd, *iterGainSubsys);
-
-                                if (iterLostSubsysEnd != iterLostSubsysEndOld)
-                                {
-                                    LOG_INFO("Duty Change at:%s-->%s",
-                                             sDetail.regionName.c_str(),
-                                             iterGainSubsys->c_str());
-                                    sDetail.subsystemName.push_back(*iterGainSubsys);
-                                }
-                            }
-
-                            // do delete from Lost and Gain
-                            LOG_INFO("Delete all Lost SubSytem");
-                            iterLostSub->subsystemName.erase(iterLostSubsysEnd, iterLostSub->subsystemName.end());
-                            // do delete from Gain
-                            LOG_INFO("Delete all Gain SubSytem");
-
-                            for (std::vector<std::string>::iterator iterChangeds = sDetail.subsystemName.begin();
-                                    iterChangeds != sDetail.subsystemName.end(); ++iterChangeds)
-                            {
-                                // LOG(DEBUG_INFO,// "Delete gaind SubSytem %s", iterChangeds->c_str());
-                                iterGainSub->subsystemName.erase(
-                                    std::remove(iterGainSub->subsystemName.begin(),
-                                                iterGainSub->subsystemName.end(), *iterChangeds),
-                                    iterGainSub->subsystemName.end());
+                                LOG_INFO("Duty Change at: %s --> %s", sDetail.regionName.c_str(), iterGainSubsys.c_str()); sDetail.subsystemNames.insert(iterGainSubsys);
                             }
                         }
 
-                        if (sDetail.subsystemName.size() > 0)
+                        // do delete from Gain
+                        LOG_INFO("Delete all Gain SubSytem");
+
+                        for (const std::string& subsystem : sDetail.subsystemNames)
                         {
-                            LOG_INFO("Add change details subsystem for region:%s   systemcount:%d",
-                                     sDetail.regionName.c_str(), sDetail.subsystemName.size());
-                            details.subsystem.push_back(sDetail);
+                            iterGainSub.subsystemNames.erase(subsystem);
                         }
                     }
+
+                    if (sDetail.subsystemNames.size())
+                    {
+                        LOG_INFO("Add change details subsystem for region:%s   systemcount:%d", sDetail.regionName.c_str(), sDetail.subsystemNames.size());
+                        details.subsystemDetails.push_back(sDetail);
+                    }
                 }
-            }// end if
+            }
+
+            auto subsystemNamesEmpty = [](const SubsystemDetail & detail) { return detail.subsystemNames.empty(); };
+
             // delete all empty subsystem
             LOG_INFO("Del all empty gained subsystem");
-            SubsystemDetailIter gainSubDetailEnd = std::remove_if(
-                                                       iterGain->subsystem.begin(), iterGain->subsystem.end(),
-                                                       IsSubsystemEmpty);
-            iterGain->subsystem.erase(gainSubDetailEnd, iterGain->subsystem.end());
+            boost::remove_erase_if(iterGain.subsystemDetails, subsystemNamesEmpty);
 
             LOG_INFO("Del all empty lost subsystem");
-            SubsystemDetailIter lostSubDetailEnd = std::remove_if(
-                                                       iterLost->subsystem.begin(), iterLost->subsystem.end(),
-                                                       IsSubsystemEmpty);
-            iterLost->subsystem.erase(lostSubDetailEnd, iterLost->subsystem.end());
+            boost::remove_erase_if(iterLost.subsystemDetails, subsystemNamesEmpty);
 
             // add change detail
-            if (details.subsystem.size() > 0)
+            if (details.subsystemDetails.size())
             {
                 LOG_INFO("Add changed for:Loc:%s\tUser:%s\tProFile:%s", details.locationName.c_str(), details.operatorName.c_str(), details.profileName.c_str());
                 changed.push_back(details);
@@ -678,12 +565,11 @@ void DutyManager::getDutyChanged(DutyNotificationDetail* det)
         }
     }
 
+    auto subsystemDetailsEmpty = [](const DutyManager::DutyDetail & detail) { return detail.subsystemDetails.empty(); };
+
     LOG_INFO("Del all empty gained dutydetail");
-    DutyDetailIter GainDutyDetail = std::remove_if(gained.begin(), gained.end(), IsDutyDetailEmpty);
-    gained.erase(GainDutyDetail, gained.end());
+    boost::remove_erase_if(gained, subsystemDetailsEmpty);
 
     LOG_INFO("Del all empty lost dutydetail");
-    DutyDetailIter LostDutyDetail = std::remove_if(lost.begin(), lost.end(), IsDutyDetailEmpty);
-    lost.erase(LostDutyDetail, lost.end());
+    boost::remove_erase_if(lost, subsystemDetailsEmpty);
 }
-// ++TD19075

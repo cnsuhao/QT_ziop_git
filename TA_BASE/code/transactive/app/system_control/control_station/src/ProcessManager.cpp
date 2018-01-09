@@ -98,8 +98,7 @@ void ProcessManager::poll()
 TA_Base_Core::RunParamSeq* ProcessManager::getParams(TA_Base_Core::ProcessId processId, const char* /* hostname */)
 {
     RunParamSeqWrap params;
-    RunParams::ParamVector paramVector;
-    RunParams::getInstance().getAll(paramVector);
+    RunParams::ParamVector paramVector = RunParams::getInstance().getAll();
     std::stringstream log;
     log << boost::format("Parameters passed to application with pid %lu: \n") % processId;
 
@@ -109,12 +108,12 @@ TA_Base_Core::RunParamSeq* ProcessManager::getParams(TA_Base_Core::ProcessId pro
         RPARAM_ENTITYNAME, RPARAM_DEBUGFILE, RPARAM_MGRPORT, RPARAM_PROGNAME, RPARAM_HELPFILE
     };
 
-    for (unsigned int i = 0; i < paramVector.size(); ++i)
+    for (const RunParams::ParamNameValue& param : paramVector)
     {
-        if (!boost::algorithm::one_of_equal(ignores, paramVector[i].name))
+        if (!boost::algorithm::one_of_equal(ignores, param.name))
         {
-            log << boost::format("%s=%s") % paramVector[i].name % paramVector[i].value;
-            params.push_name_value(paramVector[i]);
+            params.push_name_value(param);
+            log << params.last_str();
         }
     }
 
@@ -142,12 +141,12 @@ TA_Base_Core::RunParamSeq* ProcessManager::getParams(TA_Base_Core::ProcessId pro
             if (!runningApplication->areInstancesLimited())
             {
                 params.push_back(RPARAM_DEBUGPIDFILENAMES, USE_DEBUG_PID_FILE_NAMES);
-                LOGMORE(SourceInfo, "%s=%s", RPARAM_DEBUGPIDFILENAMES, USE_DEBUG_PID_FILE_NAMES.c_str());
+                log << params.last_str();
             }
 
             debugPath /= TA_ControlStation::LOG_PRE_STRING + entityName + TA_ControlStation::LOG_POST_STRING;
             params.push_back(RPARAM_DEBUGFILE, debugPath.string());
-            log << boost::format("%s=%s") % RPARAM_DEBUGFILE % debugPath.string();
+            log << params.last_str();
         }
 
         std::string appName = runningApplication->getApplicationFullName();
@@ -164,7 +163,7 @@ TA_Base_Core::RunParamSeq* ProcessManager::getParams(TA_Base_Core::ProcessId pro
         if (helpFile.size())
         {
             params.push_back(RPARAM_HELPFILE, helpFile);
-            log << boost::format("%s=%s") % RPARAM_HELPFILE % helpFile;
+            log << params.last_str();
         }
     }
 

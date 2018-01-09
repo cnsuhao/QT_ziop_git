@@ -9,9 +9,10 @@ RunningApplication* RunningApplicationManager::createRunningApplication(Applicat
                                                                         unsigned long alignFlag,
                                                                         const RECT& objectDim,
                                                                         const RECT& boundaryDim,
-                                                                        bool isVisible)
+                                                                        bool isVisible,
+                                                                        bool autoRelaunch)
 {
-    return new RunningApplication(application, additionalCommands, posFlag, alignFlag, objectDim, boundaryDim, isVisible);
+    return new RunningApplication(application, additionalCommands, posFlag, alignFlag, objectDim, boundaryDim, isVisible, autoRelaunch);
 }
 
 ExternalRunningApplication* RunningApplicationManager::createRunningApplication(Application* application,

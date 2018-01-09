@@ -13,11 +13,9 @@ ExternalRunningApplication::ExternalRunningApplication(Application* application,
 {
     m_processId = processId;
     m_managedProcess = managedProcess;
-
     m_processHandle = ::OpenProcess(PROCESS_ALL_ACCESS, false, processId);
+    RunningApplication::setupSignalConnections();
     boost::async(boost::bind(&RunningApplication::waitThread, this));
-
-    setupSignalConnections();
 }
 
 void ExternalRunningApplication::wait()
