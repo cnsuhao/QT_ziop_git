@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>app.data_management.archive_manager</ProjectName>
+    <ProjectGuid>{841158E8-3A18-4891-8715-4633134EE909}</ProjectGuid>
+    <RootNamespace>app.data_management.archive_manager</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+	<Import Project="..\..\..\..\tools\build\VCPropSheet\Common2.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+	<Import Project="..\..\..\..\tools\build\VCPropSheet\Common2.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(BIN_PATH)/app.data_management.archive_manager.ArchiveManager.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\..\cots\Nero\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>$(OMNI_LIB);ws2_32.lib;oci.lib;$(MYSQL_LIB);$(HTMLHELP_LIB);Rpcrt4.lib;NeroAPIGlue.lib;$(ACE_LIB);$(MCL_LIB);TA_Base_Core.lib;TA_Base_Bus.lib;$(WINSTACKTRACE_LIB);%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Windows</SubSystem>
+      <DataExecutionPrevention />
+    </Link>
+    <Bscmake>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(BIN_PATH)/app.data_management.archive_manager.ArchiveManager.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>$(OMNI_LIB);ws2_32.lib;oci.lib;$(MYSQL_LIB);$(HTMLHELP_LIB);Rpcrt4.lib;$(ACE_LIB);$(MCL_LIB);TA_Base_Core_d.lib;TA_Base_Bus_d.lib;$(WINSTACKTRACE_LIB);TA_ArchiveManager_pmodel.lib;NeroAPIGlue.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Windows</SubSystem>
+      <DataExecutionPrevention />
+    </Link>
+    <Bscmake>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ArchiveGuiObserver.cpp" />
+    <ClCompile Include="src\ArchiveManager.cpp" />
+    <ClCompile Include="src\ArchiveManagerDlg.cpp" />
+    <ClCompile Include="src\BurnMediaDlg.cpp" />
+    <ClCompile Include="src\DateRangeDlg.cpp" />
+    <ClCompile Include="src\DeleteArchiveDlg.cpp" />
+    <ClCompile Include="src\RestoreArchiveDlg.cpp" />
+    <ClCompile Include="src\RestoreCompleteDlg.cpp" />
+    <ClCompile Include="src\RestoredArchiveListComponent.cpp" />
+    <ClCompile Include="src\RetrieveCompleteDlg.cpp" />
+    <ClCompile Include="src\RetrievingDataDlg.cpp" />
+    <ClCompile Include="src\SelectDeletionDateDlg.cpp" />
+    <ClCompile Include="src\StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="src\VersionGen.cpp" />
+    <ClCompile Include="src\WriteArchiveDlg.cpp" />
+    <ClCompile Include="src\WriteArchiveListComponent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\ArchiveManager.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ArchiveGuiObserver.h" />
+    <ClInclude Include="src\ArchiveManager.h" />
+    <ClInclude Include="src\ArchiveManagerDlg.h" />
+    <ClInclude Include="src\BurnMediaDlg.h" />
+    <ClInclude Include="src\DateRangeDlg.h" />
+    <ClInclude Include="src\DeleteArchiveDlg.h" />
+    <ClInclude Include="src\RestoreArchiveDlg.h" />
+    <ClInclude Include="src\RestoreCompleteDlg.h" />
+    <ClInclude Include="src\RestoredArchiveListComponent.h" />
+    <ClInclude Include="src\RetrieveCompleteDlg.h" />
+    <ClInclude Include="src\RetrievingDataDlg.h" />
+    <ClInclude Include="src\SelectDeletionDateDlg.h" />
+    <ClInclude Include="src\StdAfx.h" />
+    <ClInclude Include="src\WriteArchiveDlg.h" />
+    <ClInclude Include="src\WriteArchiveListComponent.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\bus\resources\icons\ArchiveManager.ico" />
+    <Image Include="res\ArchiveManager.ico" />
+    <Image Include="res\sort_ascending.bmp" />
+    <Image Include="res\sort_descending.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\ArchiveManager.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="en_US.txt" />
+    <Text Include="src\ReadMe.txt" />
+    <Text Include="zh_CN.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

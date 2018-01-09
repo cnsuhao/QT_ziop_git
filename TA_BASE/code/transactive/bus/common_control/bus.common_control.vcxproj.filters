@@ -1,0 +1,631 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{25c20400-152a-4781-bca1-f16f979e3cae}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="src\button">
+      <UniqueIdentifier>{f773c8b7-61e6-40ff-9b8f-f66a400c4b28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\common">
+      <UniqueIdentifier>{9bd91546-6fda-431d-b8a2-ec85bc53f6b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\label">
+      <UniqueIdentifier>{8c499064-ad02-4769-85a6-417d015d004e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\textedit">
+      <UniqueIdentifier>{5128ee4a-9853-4a3c-be45-308d96925fd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\contrain">
+      <UniqueIdentifier>{900d11c0-2f79-41e6-93f9-24cdf19f65f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\itemview">
+      <UniqueIdentifier>{504a1fea-a0ac-47fb-9dcf-8927f8e829f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\input">
+      <UniqueIdentifier>{2ca26471-de36-4668-be5d-062341cd4b10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{bbe5d0be-5ce8-45d2-a1ba-1f0a065b3851}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{52546bae-bfb3-4613-8b00-90be7666fd2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\filedialog">
+      <UniqueIdentifier>{e83eda74-d670-42ed-b72a-fd89ac9159d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\printdialog">
+      <UniqueIdentifier>{0a4afc99-29f2-46aa-b9cb-acfe86b0d6df}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\button\CtlButton.cpp">
+      <Filter>src\button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\button\CtlButtonPlugin.cpp">
+      <Filter>src\button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\button\CtlCheckBox.cpp">
+      <Filter>src\button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\button\CtlCheckBoxPlugin.cpp">
+      <Filter>src\button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\button\CtlRadioButton.cpp">
+      <Filter>src\button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\button\CtlRadioButtonPlugin.cpp">
+      <Filter>src\button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\CommonControl.cpp">
+      <Filter>src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\CtlCommonEnhance.cpp">
+      <Filter>src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\label\CtlLabel.cpp">
+      <Filter>src\label</Filter>
+    </ClCompile>
+    <ClCompile Include="src\label\CtlLabelPlugin.cpp">
+      <Filter>src\label</Filter>
+    </ClCompile>
+    <ClCompile Include="src\textedit\CtlLineEdit.cpp">
+      <Filter>src\textedit</Filter>
+    </ClCompile>
+    <ClCompile Include="src\textedit\CtlLineEditPlugin.cpp">
+      <Filter>src\textedit</Filter>
+    </ClCompile>
+    <ClCompile Include="src\textedit\CtlPlainTextEdit.cpp">
+      <Filter>src\textedit</Filter>
+    </ClCompile>
+    <ClCompile Include="src\textedit\CtlPlainTextEditPlugin.cpp">
+      <Filter>src\textedit</Filter>
+    </ClCompile>
+    <ClCompile Include="src\textedit\CtlTextEdit.cpp">
+      <Filter>src\textedit</Filter>
+    </ClCompile>
+    <ClCompile Include="src\textedit\CtlTextEditPlugin.cpp">
+      <Filter>src\textedit</Filter>
+    </ClCompile>
+    <ClCompile Include="src\container\CtlGroupBox.cpp">
+      <Filter>src\contrain</Filter>
+    </ClCompile>
+    <ClCompile Include="src\container\CtlGroupBoxPlugin.cpp">
+      <Filter>src\contrain</Filter>
+    </ClCompile>
+    <ClCompile Include="src\itemview\CtlAbstractTableModel.cpp">
+      <Filter>src\itemview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\itemview\CtlTableView.cpp">
+      <Filter>src\itemview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\itemview\CtlTableViewPlugin.cpp">
+      <Filter>src\itemview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input\CtlComboBox.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input\CtlComboBoxPlugin.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CommonControl.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlAbstractTableModel.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlButton.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlButtonPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlCheckBox.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlCheckBoxPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlComboBox.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlComboBoxPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlGroupBox.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlGroupBoxPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlLabel.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlLabelPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlLineEdit.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlLineEditPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlPlainTextEdit.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlPlainTextEditPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlRadioButton.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlRadioButtonPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlTableView.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlTableViewPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlTextEdit.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CommonControl.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlAbstractTableModel.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlButton.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlButtonPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlCheckBox.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlCheckBoxPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlComboBox.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlComboBoxPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlGroupBox.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlGroupBoxPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlLabel.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlLabelPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlLineEdit.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlLineEditPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlPlainTextEdit.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlPlainTextEditPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlRadioButton.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlRadioButtonPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlTableView.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlTableViewPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlTextEdit.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlTextEditPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input\CtlSpinBox.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input\CtlSpinBoxPlugin.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input\CtlDoubleSpinBox.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input\CtlDoubleSpinBoxPlugin.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input\CtlTimeEdit.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input\CtlTimeEditPlugin.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input\CtlDateEdit.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input\CtlDateEditPlugin.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input\CtlDateTimeEdit.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input\CtlDateTimeEditPlugin.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlDateEdit.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlDateEditPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlDateTimeEdit.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlDateTimeEditPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlDoubleSpinBox.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlDoubleSpinBoxPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlTimeEdit.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlDateEdit.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlDateEditPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlDateTimeEdit.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlDateTimeEditPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlDoubleSpinBox.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlDoubleSpinBoxPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlTimeEdit.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlTimeEditPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input\CtlScrollBar.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input\CtlHorizontalScrollBarPlugin.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlHorizontalScrollBarPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlScrollBar.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlHorizontalScrollBarPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlScrollBar.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input\CtlScrollBarPlugin.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlScrollBarPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlScrollBarPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\input\CtlVerticalScrollBarPlugin.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlVerticalScrollBarPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlVerticalScrollBarPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\itemview\CtlListWidget.cpp">
+      <Filter>src\itemview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\itemview\CtlListWidgetPlugin.cpp">
+      <Filter>src\itemview</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlTimeEditPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlListWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlListWidgetPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlListWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlListWidgetPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\itemview\CtlListView.cpp">
+      <Filter>src\itemview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\itemview\CtlListViewPlugin.cpp">
+      <Filter>src\itemview</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlListView.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlListViewPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlListView.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlListViewPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\UICommonType.cpp">
+      <Filter>src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlTextEditPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\itemview\CtlTableWidget.cpp">
+      <Filter>src\itemview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\itemview\CtlTableWidgetPlugin.cpp">
+      <Filter>src\itemview</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlSpinBox.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlSpinBoxPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlSpinBox.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlSpinBoxPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlTableWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CtlTableWidgetPlugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlTableWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CtlTableWidgetPlugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\DateTimeUtility.cpp">
+      <Filter>src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\itemview\CtlTreeWidget.cpp">
+      <Filter>src\itemview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\itemview\CtlTreeWidgetPlugin.cpp">
+      <Filter>src\itemview</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\$(Configuration)\moc_CtlTreeWidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\$(Configuration)\moc_CtlTreeWidgetPlugin.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\container\CtlTabWidget.cpp">
+      <Filter>src\contrain</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\$(Configuration)\moc_CtlTabWidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\container\CtlTabWidgetPlugin.cpp">
+      <Filter>src\contrain</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\$(Configuration)\moc_CtlTabWidgetPlugin.cpp">
+      <Filter>Generated Files</Filter>
+	</ClCompile>
+    <ClCompile Include="src\filedialog\CtlFileDilaog.cpp">
+      <Filter>src\filedialog</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\$(Configuration)\moc_CtlFileDilaog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\printdialog\CtlPrintDialog.cpp">
+      <Filter>src\printdialog</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\$(Configuration)\moc_CtlPrintDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\button\CtlButton.h">
+      <Filter>src\button</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\button\CtlButtonPlugin.h">
+      <Filter>src\button</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\button\CtlCheckBox.h">
+      <Filter>src\button</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\button\CtlCheckBoxPlugin.h">
+      <Filter>src\button</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\button\CtlRadioButton.h">
+      <Filter>src\button</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\button\CtlRadioButtonPlugin.h">
+      <Filter>src\button</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\CommonControl.h">
+      <Filter>src\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\CtlCommonEnhance.h">
+      <Filter>src\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\label\CtlLabel.h">
+      <Filter>src\label</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\label\CtlLabelPlugin.h">
+      <Filter>src\label</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\textedit\CtlLineEdit.h">
+      <Filter>src\textedit</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\textedit\CtlLineEditPlugin.h">
+      <Filter>src\textedit</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\textedit\CtlPlainTextEdit.h">
+      <Filter>src\textedit</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\textedit\CtlPlainTextEditPlugin.h">
+      <Filter>src\textedit</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\textedit\CtlTextEdit.h">
+      <Filter>src\textedit</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\textedit\CtlTextEditPlugin.h">
+      <Filter>src\textedit</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\container\CtlGroupBox.h">
+      <Filter>src\contrain</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\container\CtlGroupBoxPlugin.h">
+      <Filter>src\contrain</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\itemview\CtlAbstractTableModel.h">
+      <Filter>src\itemview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\itemview\CtlTableView.h">
+      <Filter>src\itemview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\itemview\CtlTableViewPlugin.h">
+      <Filter>src\itemview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\input\CtlComboBoxPlugin.h">
+      <Filter>src\input</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\input\CtlComboBox.h">
+      <Filter>src\input</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\input\CtlSpinBox.h">
+      <Filter>src\input</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\input\CtlSpinBoxPlugin.h">
+      <Filter>src\input</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\input\CtlDateEdit.h">
+      <Filter>src\input</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\input\CtlDateEditPlugin.h">
+      <Filter>src\input</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\input\CtlDateTimeEdit.h">
+      <Filter>src\input</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\input\CtlDateTimeEditPlugin.h">
+      <Filter>src\input</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\input\CtlDoubleSpinBox.h">
+      <Filter>src\input</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\input\CtlDoubleSpinBoxPlugin.h">
+      <Filter>src\input</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\input\CtlHorizontalScrollBarPlugin.h">
+      <Filter>src\input</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\input\CtlScrollBar.h">
+      <Filter>src\input</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\input\CtlTimeEdit.h">
+      <Filter>src\input</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\input\CtlTimeEditPlugin.h">
+      <Filter>src\input</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\input\CtlScrollbarPlugin.h">
+      <Filter>src\input</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\input\CtlVerticalScrollBarPlugin.h">
+      <Filter>src\input</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\itemview\CtlListWidget.h">
+      <Filter>src\itemview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\itemview\CtlListWidgetPlugin.h">
+      <Filter>src\itemview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\itemview\CtlListView.h">
+      <Filter>src\itemview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\itemview\CtlListViewPlugin.h">
+      <Filter>src\itemview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\StringUtility.h">
+      <Filter>src\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\itemview\CtlTableWidget.h">
+      <Filter>src\itemview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\itemview\CtlTableWidgetPlugin.h">
+      <Filter>src\itemview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\itemview\CtlTreeWidget.h">
+      <Filter>src\itemview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\itemview\CtlTreeWidgetPlugin.h">
+      <Filter>src\itemview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\container\CtlTabWidget.h">
+      <Filter>src\contrain</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\container\CtlTabWidgetPlugin.h">
+      <Filter>src\contrain</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\filedialog\CtlFileDilaog.h">
+      <Filter>src\filedialog</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\printdialog\CtlPrintDialog.h">
+      <Filter>src\printdialog</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\common\UICommonType.h">
+      <Filter>src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\DateTimeUtility.h">
+      <Filter>src\common</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

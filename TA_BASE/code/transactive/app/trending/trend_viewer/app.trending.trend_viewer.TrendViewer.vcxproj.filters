@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{8f10d4c6-3c3f-4be1-b427-3c86a730bfc0}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{ba2e92a8-ca5f-447c-84b5-dd9488b3bca3}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AbstractGraph.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AbstractUpdateSubscriber.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ArchiveDataStore.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BarGraph.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ComparisonGraph.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CompositeStore.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataPointSelectDlg.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataPointStore.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataPointUpdateSubscriber.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dlgbars.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GenericItem.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GraphedItem.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GraphRefreshThread.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GraphTypeFactory.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HistoricalDataLoader.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HistoryViewer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HistoryViewerDlg.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HistoryViewerGUI.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ItemLoaderThread.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ItemSelectDialog.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LineGraph.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PrintTitleDlg.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StdAfx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TimeFunction.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TrendConfigDatabaseAccess.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TrendDataFactory.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TrendPropertiesDatabaseAccess.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TrendPropertiesDialog.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TrendPropertiesStore.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TrendsDialog.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TrendTreeCtrl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TrendTreeItem.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\core\exceptions\src\TrendViewerException.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utilities.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VersionGen.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XYGraph.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\AbstractGraph.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AbstractUpdateSubscriber.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ArchiveDataStore.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BarGraph.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ComparisonGraph.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CompositeStore.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataPointSelectDlg.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataPointStore.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DataPointUpdateSubscriber.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dlgbars.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GenericItem.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\globals.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GraphedItem.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GraphRefreshThread.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GraphTypeFactory.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HistoricalDataLoader.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HistoryViewer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HistoryViewerDlg.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HistoryViewerGUI.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IArchiveDataStore.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IDataLoader.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IDataUpdateObserver.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IGenericItem.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IGraph.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IGraphObserver.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IItemLoader.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IItemStore.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ILoaderObserver.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ItemLoaderThread.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ItemSelectDialog.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IUpdateSubscriber.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LineGraph.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PrintTitleDlg.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Resource.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StdAfx.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TimeFunction.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TrendConfigDatabaseAccess.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TrendDataFactory.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TrendPropertiesDatabaseAccess.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TrendPropertiesDialog.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TrendPropertiesStore.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TrendsDialog.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TrendTreeCtrl.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TrendTreeItem.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\core\exceptions\src\TrendViewerException.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utilities.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\XYGraph.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\HistoryViewer.rc">
+      <Filter>src</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\HistoryViewer.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ledoff.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ledon.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\lpicon.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\lpiconcolour.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\MainToolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TrendViewer.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\HistoryViewer.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\..\..\..\cots\TeeChart\TeeChart.dsp" />
+  </ItemGroup>
+</Project>

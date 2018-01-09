@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{55db6759-3e94-4246-9ad8-83edb02e97e0}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\maintenance_management\mmscorbadef\IDL\src\IMmsAlarmSubmitterCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\maintenance_management\mmscorbadef\IDL\src\IMmsAlarmSubmitterCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\maintenance_management\mmscorbadef\IDL\src\IMmsConnectionCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\maintenance_management\mmscorbadef\IDL\src\IMmsConnectionCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\maintenance_management\mmscorbadef\IDL\src\IMmsGlobalInhibitCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\maintenance_management\mmscorbadef\IDL\src\IMmsGlobalInhibitCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\maintenance_management\mmscorbadef\IDL\src\IMmsJobRequestSubmitterCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\maintenance_management\mmscorbadef\IDL\src\IMmsJobRequestSubmitterCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(TA_BuildPath)\win32_n\transactive\bus\maintenance_management\mmscorbadef\IDL\src\IMmsAlarmSubmitterCorbaDef.h" />
+    <ClInclude Include="$(TA_BuildPath)\win32_n\transactive\bus\maintenance_management\mmscorbadef\IDL\src\IMmsConnectionCorbaDef.h" />
+    <ClInclude Include="$(TA_BuildPath)\win32_n\transactive\bus\maintenance_management\mmscorbadef\IDL\src\IMmsGlobalInhibitCorbaDef.h" />
+    <ClInclude Include="$(TA_BuildPath)\win32_n\transactive\bus\maintenance_management\mmscorbadef\IDL\src\IMmsJobRequestSubmitterCorbaDef.h" />
+  </ItemGroup>
+</Project>

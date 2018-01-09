@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>tools.build.core_library</ProjectName>
+    <ProjectGuid>{F6D91EDE-3DC1-4073-9271-CA6A8D0BEF02}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\../../../../sdk/win32_nr\</OutDir>
+    <IntDir>.\../../../../build/win32_nr/tools/build/core_library\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\../../../../sdk/win32_nd\</OutDir>
+    <IntDir>.\../../../../build/win32_nd/tools/build/core_library\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\../../../../build/win32_nr/tools/build/core_library/tools.build.core_library.TA_Base_Core.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../../build/win32_nr/tools/build/core_library/</AssemblerListingLocation>
+      <ObjectFileName>.\../../../../build/win32_nr/tools/build/core_library/</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../../build/win32_nr/tools/build/core_library/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c09</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>../../../../sdk/win32_nr/TA_Base_Core.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\../../../../sdk/win32_nr/tools.build.core_library.TA_Base_Core.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\../../../../build/win32_nd/tools/build/core_library/tools.build.core_library.TA_Base_Core.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../../build/win32_nd/tools/build/core_library/</AssemblerListingLocation>
+      <ObjectFileName>.\../../../../build/win32_nd/tools/build/core_library/</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../../build/win32_nd/tools/build/core_library/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MinimalRebuild>true</MinimalRebuild>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c09</Culture>
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <Lib>
+      <OutputFile>../../../../sdk/win32_nd/TA_Base_Core_d.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\../../../../sdk/win32_nd/tools.build.core_library.TA_Base_Core.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BuildBaseCore.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\transactive\core\alarm\core.alarm.TA_Alarm.vcxproj">
+      <Project>{a26610dc-4d83-4a07-9092-69e27ece0941}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\alarm\IDL\core.alarm.idl.TA_AlarmAgentCorbaDef.vcxproj">
+      <Project>{7c6902d2-cfa0-4e8b-b4a9-c68815297f8c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\alarm\IDL\core.alarm.idl.TA_AlarmAgentIDL.vcxproj">
+      <Project>{5526d445-e7d0-4bc7-9265-80ff03f0284e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\configuration_updates\core.configuration_updates.TA_ConfigurationUpdates.vcxproj">
+      <Project>{71c8102e-dc3e-42f3-967e-5b6369a65356}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\corba\core.corba.TA_CorbaUtil.vcxproj">
+      <Project>{33f76e24-3c1d-4c1f-a99c-a1cc910de3e2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\corba\IDL\core.corba.idl.TA_CorbaDef.vcxproj">
+      <Project>{c299713c-ea75-47eb-b6ba-ef2cebe7744e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\corba\IDL\core.corba.idl.TA_IDL.vcxproj">
+      <Project>{bd262114-29cb-425d-aa7f-c18a63aafa68}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\database\core.database.TA_DataAccess.vcxproj">
+      <Project>{4d1a6af1-a4de-4dde-84cd-3745e68e6ccb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\datalog\IDL\core.datalog.idl.TA_DatalogAgentCorbaDef.vcxproj">
+      <Project>{2adc3f26-b842-4e7b-9419-302524a56c5d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\datalog\IDL\core.datalog.idl.TA_DatalogAgentIDL.vcxproj" />
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\alarm_rule\core.dai.alarm_rule.TA_AlarmRuleDAI.vcxproj">
+      <Project>{2a8e51d7-1a08-4ab2-b46f-16cee6450e2c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\archive_manager_dai\core.dai.archive_manager.TA_ArchiveManagerDAI.vcxproj">
+      <Project>{afa7612c-8d55-4559-8164-c6839046590c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\configuration\core.dai.configuration.TA_ConfigurationDAI.vcxproj">
+      <Project>{fd31488b-5a63-4637-9770-f2bc0cd6e3c3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\core.dai.TA_DAI.SQL.vcxproj">
+      <Project>{6b618973-0792-41dd-b60d-3d27ae77491b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\core.dai.TA_DAI.vcxproj">
+      <Project>{c3e85347-a8ec-4fa5-be93-1c687bfea597}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\datalog\core.dai.datalog.TA_DataLogDAI.vcxproj">
+      <Project>{ec61bad0-99c7-49b7-a0f8-1855619f7652}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\data_recording_dai\core.dai.data_recording_dai.TA_DataRecordingDAI.vcxproj">
+      <Project>{73fd36f4-f48d-45c1-8eb5-6b5e7d14fbf7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\derived_datapoints\core.dai.derived_datapoints.TA_DerivedDataPointDAI.vcxproj">
+      <Project>{c0d43a6d-e971-4b70-a10f-5b2d174b79b1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\entity_access\core.dai.entity_access.TA_EntityAccess.vcxproj">
+      <Project>{751df256-19dd-488f-be98-a874359dc9ca}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\entity_access\IDL\core.dai.entity_access.idl.TA_EntityStatusUpdateCorbaDef.vcxproj">
+      <Project>{a1959ac8-ed89-4baf-9067-63f6bb5c438d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\entity_access\IDL\core.dai.entity_access.idl.TA_EntityStatusUpdateIDL.vcxproj">
+      <Project>{6b618973-0792-41dd-b60d-3d27ae77491a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\interlocking\core.dai.interlocking.TA_InterlockingDAI.vcxproj">
+      <Project>{ae26fec4-6a87-4e5a-bf89-2c03b810f12b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\interlocking_entity\core.dai.interlocking_entity.TA_InterlockingEntity.vcxproj">
+      <Project>{7501e551-b2f1-46e2-832c-df91f07cbd9b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\interlocking_variable\core.dai.interlocking_variable.TA_InterlockingVariable.vcxproj">
+      <Project>{e7839a16-e0c2-411d-9093-c65d722364f3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\opctag_alias\core.dai.opctag_alias.TA_OpcTagAliasDai.vcxproj">
+      <Project>{a95d8719-0512-46f0-a1b9-d830f918192f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\pa_4669\core.dai.pa_4669.TA_PADAI_4669.vcxproj">
+      <Project>{12d62f64-d99d-4466-a07b-69d86a7815ea}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\PlanAgent\IDL\core.dai.PlanAgent.idl.TA_PlanAgentCorbaDef.vcxproj">
+      <Project>{b4ef3c07-9b9b-42de-aeb2-41817d383eba}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\PlanAgent\IDL\core.dai.PlanAgent.idl.TA_PlanAgentIDL.vcxproj">
+      <Project>{2ed6530a-2b15-4c6a-84de-313d060a5e9f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\plans\core.dai.plans.TA_PlanDAI.vcxproj">
+      <Project>{e1a95e92-2997-4287-a386-a747d7354e3f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\radio\core.dai.radio.TA_RadioDAI.vcxproj">
+      <Project>{e396dbb3-0e11-4bcf-aaa3-9f3c94b11f7c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\scheduling_agent\core.dai.scheduling_agent.TA_SchedulingAgentDAI.vcxproj">
+      <Project>{5b6a8962-be69-4858-b6bf-15526ed85155}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\sound_manager\core.dai.sound_manager.TA_SoundManagerDAI.vcxproj">
+      <Project>{9fed6a1b-14ec-4346-83ff-308b99c98601}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\system_controller\core.dai.system_controller.TA_SystemControllerDAI.vcxproj">
+      <Project>{01292a78-a47c-431a-9510-189399b498e2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\tis_agent_4669\core.dai.tis_agent.TA_TISAgentDAI_4669.vcxproj">
+      <Project>{ac18df37-d984-43a0-bbb5-6717b59c1907}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\tis_agent_4669\IDL\core.dai.tis_agent.IDL.TA_TISAgentCorbaDef_4669.vcxproj">
+      <Project>{d3bf783b-859c-4a50-bea2-b9c032d16b0d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\tis_agent_4669\IDL\core.dai.tis_agent.IDL.TA_TISAgentIDL_4669.vcxproj">
+      <Project>{8534f447-9d53-4c3c-9c11-0eab6803c95f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\trends\core.dai.trends.TA_TrendDAI.vcxproj">
+      <Project>{e5c7baa7-1254-4f72-9300-2e9bdecae3b3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\data_access_interface\user_settings\core.dai.user_settings.TA_UserSettingsDAI.vcxproj">
+      <Project>{1a9deb69-145f-46bd-a4f8-51b97320f107}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\event_processing\core.event_processing.TA_EventProcessing.vcxproj">
+      <Project>{330a8358-50bc-448a-9cf6-d733a7e6aea9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\exceptions\core.exceptions.TA_Exceptions.vcxproj">
+      <Project>{bd905322-b027-4f3b-bc83-b6abb98ee9c9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\exceptions\IDL\core.exceptions.idl.TA_CommonExceptionsCorbaDef.vcxproj">
+      <Project>{9deb9100-ba43-45d5-a03b-98a496f1c8e7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\exceptions\IDL\core.exceptions.idl.TA_CommonExceptionsIDL.vcxproj">
+      <Project>{8d12961c-485a-4007-9f7b-eac7c4031509}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\ftp\core.ftp.TA_FTP.vcxproj">
+      <Project>{aaac96b0-eef8-41f3-aaf6-d746485be8b2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\message\core.message.TA_Message.vcxproj">
+      <Project>{2a3dc5ff-7e79-4364-94e1-7ff194419655}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\message\IDL\core.message.idl.TA_MessageCorbaDef.vcxproj">
+      <Project>{e5c45faa-d288-4ede-bc62-a0a638dbd939}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\message\IDL\core.message.idl.TA_MessageIDL.vcxproj">
+      <Project>{90f02999-b013-441e-8e32-a7fefd58786b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\naming\core.naming.TA_Naming.vcxproj">
+      <Project>{93383a15-a36d-4125-b52d-3ccbd0c9b8d6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\naming\IDL\core.naming.idl.TA_NamingCorbaDef.vcxproj">
+      <Project>{e6a813dd-cb2f-48f4-9fd3-87f2fca66b69}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\naming\IDL\core.naming.idl.TA_NamingIDL.vcxproj">
+      <Project>{f1780617-e451-4a45-8c52-a64897bd836e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\ocl\core.ocl.TA_ocl.vcxproj">
+      <Project>{ebf17666-e6d5-41c0-8c73-3d3ab01bacff}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\process_management\core.process_management.TA_ManagedProcess.vcxproj">
+      <Project>{86161db2-6a47-40f6-a703-c7246b405482}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\process_management\IDL\core.process_management.idl.TA_ProcessManagementCorbaDef.vcxproj">
+      <Project>{c2d11493-cf81-408c-b24c-98717f033003}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\process_management\IDL\core.process_management.idl.TA_ProcessManagementIDL.vcxproj">
+      <Project>{d9486d0c-ddd1-4929-9322-1af66deb2ffb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\sftp\core.sftp.TA_SFTP.vcxproj">
+      <Project>{42b047a7-d1a8-4b82-b38a-6661807d9c11}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\sockets\core.sockets.TA_Sockets.vcxproj">
+      <Project>{3ca25a01-108b-4e3f-bcef-2fe49db65963}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\synchronisation\core.synchronisation.TA_Synchronisation.vcxproj">
+      <Project>{984916ff-7b81-4d25-8724-3f5bfc34025f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\threads\core.threads.TA_Thread.vcxproj">
+      <Project>{17364d64-1f53-4c4b-b4b0-163abbee8dd7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\timers\core.timers.TA_Timers.vcxproj">
+      <Project>{cb9164ad-8543-4900-80d9-92c5ea8860f4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\utilities\core.utilities.TA_Util.vcxproj">
+      <Project>{9e805ae6-0ea9-452e-9952-e0b3ce8b1146}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\uuid\core.uuid.TA_Uuid.vcxproj">
+      <Project>{2c86bf05-1a05-461e-a516-fdddd5f1ecc0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\core\versioning\core.versioning.TA_Version.vcxproj">
+      <Project>{e0dec0f1-3876-4818-b2e8-0ba6c0f425af}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4a77e863-f26d-4ee2-9e07-a6dcd598da78}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{4cdda0f6-ef06-45ef-84fc-d43c1261f975}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8723c918-d1d4-4867-ac60-4e1936aa1f9d}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="AlarmCommand">
+      <UniqueIdentifier>{56bc4e6f-eb5b-41e9-af9a-c84b42d309a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ATSAlarmInfo">
+      <UniqueIdentifier>{6c5c29ff-7373-40e6-81a7-f7d1362f9318}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ATSProfile">
+      <UniqueIdentifier>{9abb4a27-a901-40f7-a63e-8992c70db861}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ATSNewShareMemoryCommon">
+      <UniqueIdentifier>{cc3ae8e8-4ecc-4cff-b17e-e52e948a7b2e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ATSAlarm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ATSMmsQueueItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ISCSAlarm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ISCSAlarmQueueItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShareMemoryDLL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AlarmACKCommandManager.cpp">
+      <Filter>AlarmCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="AlarmMMSJobCommandManager.cpp">
+      <Filter>AlarmCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStoreReceiverAlarmACKCommand.cpp">
+      <Filter>AlarmCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStoreReceiverAlarmMMSJobCommand.cpp">
+      <Filter>AlarmCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStoreUpdaterACKCommand.cpp">
+      <Filter>AlarmCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStoreUpdaterMMSJobCommand.cpp">
+      <Filter>AlarmCommand</Filter>
+    </ClCompile>
+    <ClCompile Include="ATSAckQueueItem.cpp">
+      <Filter>ATSAlarmInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="ATSAlarmInfoManager.cpp">
+      <Filter>ATSAlarmInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStoreReceiverATSAlarmInfo.cpp">
+      <Filter>ATSAlarmInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStoreUpdaterATSAlarmInfo.cpp">
+      <Filter>ATSAlarmInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="ATSProfileManager.cpp">
+      <Filter>ATSProfile</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStoreReceiverATSProfile.cpp">
+      <Filter>ATSProfile</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStoreReceiverISCSProfile.cpp">
+      <Filter>ATSProfile</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStoreUpdaterATSProfile.cpp">
+      <Filter>ATSProfile</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStoreUpdaterISCSProfile.cpp">
+      <Filter>ATSProfile</Filter>
+    </ClCompile>
+    <ClCompile Include="ISCSProfileManager.cpp">
+      <Filter>ATSProfile</Filter>
+    </ClCompile>
+    <ClCompile Include="CacheDataHead.cpp">
+      <Filter>ATSNewShareMemoryCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="NonReEntrantProcessLockable.cpp">
+      <Filter>ATSNewShareMemoryCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessGuard.cpp">
+      <Filter>ATSNewShareMemoryCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="ShareMemoryHelper.cpp">
+      <Filter>ATSNewShareMemoryCommon</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ResInfo.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AlarmAPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ATSAckQueueItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ATSAlarm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ATSMmsQueueItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ISCSAlarm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ISCSAlarmQueueItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShareMemoryDLL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AlarmACKCommandManager.h">
+      <Filter>AlarmCommand</Filter>
+    </ClInclude>
+    <ClInclude Include="AlarmMMSJobCommandManager.h">
+      <Filter>AlarmCommand</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStoreReceiverAlarmACKCommand.h">
+      <Filter>AlarmCommand</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStoreReceiverAlarmMMSJobCommand.h">
+      <Filter>AlarmCommand</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStoreUpdaterACKCommand.h">
+      <Filter>AlarmCommand</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStoreUpdaterMMSJobCommand.h">
+      <Filter>AlarmCommand</Filter>
+    </ClInclude>
+    <ClInclude Include="ATSAlarmInfoManager.h">
+      <Filter>ATSAlarmInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStoreReceiverATSAlarmInfo.h">
+      <Filter>ATSAlarmInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStoreUpdaterATSAlarmInfo.h">
+      <Filter>ATSAlarmInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="ATSProfileManager.h">
+      <Filter>ATSProfile</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStoreReceiverATSProfile.h">
+      <Filter>ATSProfile</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStoreReceiverISCSProfile.h">
+      <Filter>ATSProfile</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStoreUpdaterATSProfile.h">
+      <Filter>ATSProfile</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStoreUpdaterISCSProfile.h">
+      <Filter>ATSProfile</Filter>
+    </ClInclude>
+    <ClInclude Include="ISCSProfileManager.h">
+      <Filter>ATSProfile</Filter>
+    </ClInclude>
+    <ClInclude Include="CacheDataHead.h">
+      <Filter>ATSNewShareMemoryCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="CacheDataManager.h">
+      <Filter>ATSNewShareMemoryCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="CacheDataManagerChild.h">
+      <Filter>ATSNewShareMemoryCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="CacheDataWraper.h">
+      <Filter>ATSNewShareMemoryCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStoreReceiver.h">
+      <Filter>ATSNewShareMemoryCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStoreUpdater.h">
+      <Filter>ATSNewShareMemoryCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="ICacheDataUpdateObserver.h">
+      <Filter>ATSNewShareMemoryCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="IProcessLockable.h">
+      <Filter>ATSNewShareMemoryCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="NonReEntrantProcessLockable.h">
+      <Filter>ATSNewShareMemoryCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessGuard.h">
+      <Filter>ATSNewShareMemoryCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="ShareMemoryHelper.h">
+      <Filter>ATSNewShareMemoryCommon</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="log4C.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

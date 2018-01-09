@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>app.response_plans.plan_manager_pmodel</ProjectName>
+    <ProjectGuid>{5A38CC31-0AD6-4107-81B5-92801F11A4F8}</ProjectGuid>
+    <RootNamespace>app.response_plans.plan_manager</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src;;;$(TA_BuildPath)\win32_n\transactive\core\alarm\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\scada\common_library\IDL\src;..\..\..\..\..\cots\boost\boost_1_39_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;TA_ASSERT_LOG=1;WIN32;_LIB;__WIN32__;__x86__;__NT__;_WIN32_WINNT=0x500;_CRT_SECURE_NO_DEPRECATE;__OSVERSION__=4;WINVER=0x0500;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Lib>
+    </Lib>
+    <Bscmake>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src;;;$(TA_BuildPath)\win32_n\transactive\core\alarm\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\scada\common_library\IDL\src;..\..\..\..\..\cots\boost\boost_1_57_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WINVER=0x0500;TA_ASSERT_LOG=0;WIN32;_LIB;__WIN32__;__x86__;__NT__;_WIN32_WINNT=0x500;_CRT_SECURE_NO_DEPRECATE;__OSVERSION__=4;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ResourceOutputFileName />
+    </ResourceCompile>
+    <Lib>
+    </Lib>
+    <Bscmake>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\plan_agent\src\PlanNotFoundException.cpp" />
+    <ClCompile Include="src\ActivePlanModel.cpp" />
+    <ClCompile Include="src\CategoryNode.cpp" />
+    <ClCompile Include="src\LabelMaker.cpp" />
+    <ClCompile Include="src\OperatorRights.cpp" />
+    <ClCompile Include="src\PlanAgentAccess.cpp" />
+    <ClCompile Include="src\PlanAgentAccessException.cpp" />
+    <ClCompile Include="src\PlanAgentUpdateProcessor.cpp" />
+    <ClCompile Include="src\PlanBrowserService.cpp" />
+    <ClCompile Include="src\PlanManagerAppController.cpp" />
+    <ClCompile Include="src\PlanManagerCorbaDefImpl.cpp" />
+    <ClCompile Include="src\PlanManagerException.cpp" />
+    <ClCompile Include="src\PlanManagerFrameModel.cpp" />
+    <ClCompile Include="src\PlanNode.cpp" />
+    <ClCompile Include="src\PlanService.cpp" />
+    <ClCompile Include="src\PlanTreeModel.cpp" />
+    <ClCompile Include="src\ProfileConfigAccess.cpp" />
+    <ClCompile Include="src\RootNode.cpp" />
+    <ClCompile Include="src\TreeNode.cpp" />
+    <ClCompile Include="src\TreeNodeFactory.cpp" />
+    <ClCompile Include="src\Utilities.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ActivePlanModel.h" />
+    <ClInclude Include="src\CategoryNode.h" />
+    <ClInclude Include="src\IActivePlanObserver.h" />
+    <ClInclude Include="src\IPlanConfigObserver.h" />
+    <ClInclude Include="src\IPlanCustomisationObserver.h" />
+    <ClInclude Include="src\ITimerSubscriber.h" />
+    <ClInclude Include="src\LabelMaker.h" />
+    <ClInclude Include="src\OperatorRights.h" />
+    <ClInclude Include="src\PlanAgentAccess.h" />
+    <ClInclude Include="src\PlanAgentUpdateProcessor.h" />
+    <ClInclude Include="src\PlanBrowserService.h" />
+    <ClInclude Include="src\PlanManagerAppController.h" />
+    <ClInclude Include="src\PlanManagerConsts.h" />
+    <ClInclude Include="src\PlanManagerCorbaDefImpl.h" />
+    <ClInclude Include="src\PlanManagerException.h" />
+    <ClInclude Include="src\PlanManagerFrameModel.h" />
+    <ClInclude Include="src\PlanNode.h" />
+    <ClInclude Include="src\PlanService.h" />
+    <ClInclude Include="src\PlanServiceConsts.h" />
+    <ClInclude Include="src\PlanTreeModel.h" />
+    <ClInclude Include="src\ProfileConfigAccess.h" />
+    <ClInclude Include="src\RootNode.h" />
+    <ClInclude Include="src\StringDefn.h" />
+    <ClInclude Include="src\SynchronisedMap.h" />
+    <ClInclude Include="src\TreeNode.h" />
+    <ClInclude Include="src\TreeNodeFactory.h" />
+    <ClInclude Include="src\Utilities.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

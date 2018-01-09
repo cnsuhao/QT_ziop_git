@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="App">
+      <UniqueIdentifier>{5084eba9-80bb-4806-8ba4-38cd31732995}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View">
+      <UniqueIdentifier>{654dcae4-aa78-4e91-a758-5e48a25274a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Command">
+      <UniqueIdentifier>{9f2c815f-d32a-4c76-9b9e-96a0f8464a72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{52d8d1c6-4db5-42fc-8351-289e8569a0bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Notification">
+      <UniqueIdentifier>{2c740e84-5f8b-411b-a56f-cadbdbe9b3ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pmodel">
+      <UniqueIdentifier>{99e9a9e2-c4ff-43bc-a93d-20606bf777dc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AppLauncher.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TransActiveViewManager.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AbstractGUIAppController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AbstractPModel.cpp">
+      <Filter>Pmodel</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\AppLauncher.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CommonDataType.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IRuntimeEnvionmentNotification.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ITransActiveApp.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ITransActiveWinApp.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AbstractTransActiveFormView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AbstractTransActiveView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GenericGuiConstants.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ITransActiveView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ITransActiveViewManager.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IViewFactory.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TransActiveViewManager.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CommandGateway.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AbstractGUIAppController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IGUIApplicationController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AbstractStateChangeSubject.h">
+      <Filter>Notification</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IStateChangeObserver.h">
+      <Filter>Notification</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IStateChangeSubject.h">
+      <Filter>Notification</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AbstractPModel.h">
+      <Filter>Pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ItemRepository.h">
+      <Filter>Pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ITransActivePModel.h">
+      <Filter>Pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PModelDataType.h">
+      <Filter>Pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UserInteraction.h">
+      <Filter>Pmodel</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

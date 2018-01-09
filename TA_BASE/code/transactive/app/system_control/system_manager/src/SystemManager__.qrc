@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="SystemManager">
+    <file>Resources/login.bmp</file>
+    <file>Resources/logout.bmp</file>
+    <file>Resources/refresh.bmp</file>
+    <file>Resources/start.bmp</file>
+    <file>Resources/stop.bmp</file>
+    <file>Resources/SystemManager.ico</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>menubarPlanController</class>
+ <widget class="QMenuBar" name="menubarPlanController">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>394</width>
+    <height>20</height>
+   </rect>
+  </property>
+  <widget class="QMenu" name="menuFile">
+   <property name="title">
+    <string>&amp;File</string>
+   </property>
+   <addaction name="actionAppExit"/>
+  </widget>
+  <widget class="QMenu" name="menuView">
+   <property name="title">
+    <string>&amp;View</string>
+   </property>
+   <addaction name="actionViewToolbar"/>
+   <addaction name="actionViewStatusBar"/>
+  </widget>
+  <widget class="QMenu" name="menuPlan">
+   <property name="title">
+    <string>&amp;Plan</string>
+   </property>
+   <widget class="QMenu" name="menuS_tart">
+    <property name="title">
+     <string>S&amp;tart</string>
+    </property>
+    <addaction name="actionPlanExecute"/>
+    <addaction name="actionPlanCustomise"/>
+   </widget>
+   <addaction name="menuS_tart"/>
+   <addaction name="actionPlanStop"/>
+   <addaction name="actionPlanPause"/>
+   <addaction name="actionPlanResume"/>
+   <addaction name="actionPlanResumeSelectedStep"/>
+   <addaction name="actionPlanTakeControl"/>
+   <addaction name="separator"/>
+   <addaction name="actionPlanSchedule"/>
+  </widget>
+  <widget class="QMenu" name="menuStep">
+   <property name="title">
+    <string>&amp;Step</string>
+   </property>
+   <addaction name="action_Customise"/>
+  </widget>
+  <action name="actionAppExit">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="actionViewToolbar">
+   <property name="text">
+    <string>&amp;Toolbar</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle ToolBar</string>
+   </property>
+  </action>
+  <action name="actionViewStatusBar">
+   <property name="text">
+    <string>&amp;Status Bar</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle StatusBar</string>
+   </property>
+  </action>
+  <action name="actionPlanStop">
+   <property name="text">
+    <string>&amp;Stop Instance</string>
+   </property>
+   <property name="toolTip">
+    <string>Stop Selected Instance (Ctrl+S)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionPlanPause">
+   <property name="text">
+    <string>&amp;Pause Instance</string>
+   </property>
+   <property name="toolTip">
+    <string>Pause Selected Instance (Ctrl+P)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionPlanResume">
+   <property name="text">
+    <string>&amp;Resume Instance</string>
+   </property>
+   <property name="toolTip">
+    <string>Resume Selected Instance (Ctrl+R)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionPlanResumeSelectedStep">
+   <property name="text">
+    <string>Resume &amp;Instance at Selected Step</string>
+   </property>
+   <property name="toolTip">
+    <string>Resume Selected Instance at Selected Step (Ctrl+I)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionPlanTakeControl">
+   <property name="text">
+    <string>Ta&amp;ke Control of Instance</string>
+   </property>
+   <property name="toolTip">
+    <string>Take Control of Selected Instance</string>
+   </property>
+  </action>
+  <action name="actionPlanSchedule">
+   <property name="text">
+    <string>Sc&amp;hedule</string>
+   </property>
+   <property name="toolTip">
+    <string>Schedule Plan Execution</string>
+   </property>
+  </action>
+  <action name="action_Customise">
+   <property name="text">
+    <string>&amp;Customise</string>
+   </property>
+  </action>
+  <action name="actionPlanExecute">
+   <property name="text">
+    <string>Run New Instance)</string>
+   </property>
+   <property name="toolTip">
+    <string>Run New Instance (Ctrl+N)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionPlanCustomise">
+   <property name="text">
+    <string>&amp;Customise New Instance</string>
+   </property>
+  </action>
+  <addaction name="menuFile"/>
+  <addaction name="menuView"/>
+  <addaction name="menuPlan"/>
+  <addaction name="menuStep"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

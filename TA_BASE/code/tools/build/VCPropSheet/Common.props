@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <!--need to override macro definition per project-->
+    <TRANSACTIVE_FOLDER>transactive</TRANSACTIVE_FOLDER>
+    <DEBUG_SUFFIX>nd</DEBUG_SUFFIX>
+    <RELEASE_SUFFIX>nr</RELEASE_SUFFIX>
+    <NEUTRAL_SUFFIX>n</NEUTRAL_SUFFIX>
+    <DEBUG_FOLDER>$(Platform)_$(DEBUG_SUFFIX)</DEBUG_FOLDER>
+    <RELEASE_FOLDER>$(Platform)_$(RELEASE_SUFFIX)</RELEASE_FOLDER>
+    <NEUTRAL_FOLDER>$(Platform)_$(NEUTRAL_SUFFIX)</NEUTRAL_FOLDER>
+    <!-- Cots version directory -->
+    <OMNI_VERSION>omniORB_4.1.6</OMNI_VERSION>
+    <BOOST_VERSION>boost_1_65_1</BOOST_VERSION>
+    <ACE_VERSION>6_0_4</ACE_VERSION>
+    <ORACLE_VERSION>10.2.0</ORACLE_VERSION>
+    <CURL_VERSION>curl-7.21.7-win32</CURL_VERSION>
+    <MYSQL_VERSION>5.5.15</MYSQL_VERSION>
+    <MCL_VERSION>1.1.1</MCL_VERSION>
+    <OPENSSL_VERSION>openssl-1.0.0d</OPENSSL_VERSION>
+	<ZIPARCHIVE_VERSION>4.6.4</ZIPARCHIVE_VERSION>
+    <!-- Cots include directories -->
+    <OMNI_ROOT_PATH>$(COTS_BASE_DIR)\omniORB\$(OMNI_VERSION)\</OMNI_ROOT_PATH>
+    <OMNI_INCLUDE_PATH>$(COTS_BASE_DIR)\omniORB\$(OMNI_VERSION)\include</OMNI_INCLUDE_PATH>
+    <BOOST_INCLUDE_PATH>$(COTS_BASE_DIR)\boost\$(BOOST_VERSION)</BOOST_INCLUDE_PATH>
+    <ACE_INCLUDE_PATH>$(COTS_BASE_DIR)\ACE\$(ACE_VERSION)\ACE_wrappers</ACE_INCLUDE_PATH>
+    <ORACLE_INCLUDE_PATH>$(COTS_BASE_DIR)\oracle\$(ORACLE_VERSION)\winnt\inc</ORACLE_INCLUDE_PATH>
+    <CURL_INCLUDE_PATH>$(COTS_BASE_DIR)\curl\$(CURL_VERSION)\include</CURL_INCLUDE_PATH>
+    <MYSQL_INCLUDE_PATH>$(COTS_BASE_DIR)\mysql\$(MYSQL_VERSION)\winnt\inc</MYSQL_INCLUDE_PATH>
+    <MCL_INCLUDE_PATH>$(COTS_BASE_DIR)\mcl\$(MCL_VERSION)</MCL_INCLUDE_PATH>
+    <WINSTACKTRACE_INCLUDE_PATH>$(COTS_BASE_DIR)\WinStackTrace\INCLUDE</WINSTACKTRACE_INCLUDE_PATH>
+    <OPENSSL_INCLUDE_PATH>$(COTS_BASE_DIR)\openssl\$(OPENSSL_VERSION)\build\include</OPENSSL_INCLUDE_PATH>
+    <ZIPARCHIVE_INCLUDE_PATH>$(COTS_BASE_DIR)\ZipArchive\$(ZIPARCHIVE_VERSION)\ZipArchive</ZIPARCHIVE_INCLUDE_PATH>
+    <!--IsDebug: search for 'Debug' in Configuration-->
+    <IsDebug>$([System.Convert]::ToString( $([System.Text.RegularExpressions.Regex]::IsMatch($(Configuration), '[Dd]ebug'))))</IsDebug>
+  </PropertyGroup>
+  <Choose>
+    <When Condition="$([System.Convert]::ToBoolean($(IsDebug)))">
+      <!-- debug macroses -->
+      <PropertyGroup Label="UserMacros">
+        <DebugSuffix>$(DEBUG_SUFFIX)</DebugSuffix>
+        <!-- Cots library directories -->
+        <OMNI_LIB_PATH>$(COTS_BASE_DIR)\omniORB\$(OMNI_VERSION)\lib\x86_win32</OMNI_LIB_PATH>
+        <OMNI_BIN_PATH>$(COTS_BASE_DIR)\omniORB\$(OMNI_VERSION)\bin\x86_win32</OMNI_BIN_PATH>
+        <BOOST_LIB_PATH>$(COTS_BASE_DIR)\boost\$(BOOST_VERSION)\stage\lib</BOOST_LIB_PATH>
+        <ACE_LIB_PATH>$(COTS_BASE_DIR)\ACE\$(ACE_VERSION)\ACE_wrappers\lib</ACE_LIB_PATH>
+        <ORACLE_LIB_PATH>$(COTS_BASE_DIR)\oracle\$(ORACLE_VERSION)\winnt\lib</ORACLE_LIB_PATH>
+        <HTMLHELP_LIB_PATH>$(COTS_BASE_DIR)\HTMLHelp\lib</HTMLHELP_LIB_PATH>
+        <WINSTACKTRACE_LIB_PATH>$(COTS_BASE_DIR)\WinStackTrace\build\Debug</WINSTACKTRACE_LIB_PATH>
+        <CURL_LIB_PATH>$(COTS_BASE_DIR)\curl\$(CURL_VERSION)\lib\Debug</CURL_LIB_PATH>
+        <MYSQL_LIB_PATH>$(COTS_BASE_DIR)\mysql\$(MYSQL_VERSION)\winnt\lib</MYSQL_LIB_PATH>
+        <MCL_LIB_PATH>$(COTS_BASE_DIR)\mcl\$(MCL_VERSION)\lib\winnt</MCL_LIB_PATH>
+        <WINTECH_LIB_PATH>$(COTS_BASE_DIR)\Wintech\OPCServerToolKit</WINTECH_LIB_PATH>
+        <OPENSSL_LIB_PATH>$(COTS_BASE_DIR)\openssl\$(OPENSSL_VERSION)\build\lib\windows</OPENSSL_LIB_PATH>
+        <ZIPARCHIVE_LIB_PATH>$(COTS_BASE_DIR)\ZipArchive\$(ZIPARCHIVE_VERSION)\ZipArchive\Debug STL MD</ZIPARCHIVE_LIB_PATH>
+        <!-- Cots library files -->
+        <OMNI_LIB>omniORB416_rtd.lib;omniDynamic416_rtd.lib;omnithread34_rtd.lib;COS416_rtd.lib;COSNotify416_rtd.lib;AttNotification416_rtd.lib</OMNI_LIB>
+        <ACE_LIB>ACEd.lib</ACE_LIB>
+        <ORACLE_LIB>oci.lib;orasql10.lib</ORACLE_LIB>
+        <HTMLHELP_LIB>htmlhelp.lib</HTMLHELP_LIB>
+        <WINSTACKTRACE_LIB>stracelib.lib</WINSTACKTRACE_LIB>
+        <MCL_LIB>TA_mcl_d.lib</MCL_LIB>
+        <MYSQL_LIB>libmysql.lib</MYSQL_LIB>
+        <ZIPARCHIVE_LIB>ZipArchive.lib</ZIPARCHIVE_LIB>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <!-- other/release macroses -->
+      <PropertyGroup Label="UserMacros">
+        <DebugSuffix>$(RELEASE_SUFFIX)</DebugSuffix>
+        <!-- Cots library directories -->
+        <OMNI_LIB_PATH>$(COTS_BASE_DIR)\omniORB\$(OMNI_VERSION)\lib\x86_win32</OMNI_LIB_PATH>
+        <OMNI_BIN_PATH>$(COTS_BASE_DIR)\omniORB\$(OMNI_VERSION)\bin\x86_win32</OMNI_BIN_PATH>
+        <BOOST_LIB_PATH>$(COTS_BASE_DIR)\boost\$(BOOST_VERSION)\stage\lib</BOOST_LIB_PATH>
+        <ACE_LIB_PATH>$(COTS_BASE_DIR)\ACE\$(ACE_VERSION)\ACE_wrappers\lib</ACE_LIB_PATH>
+        <ORACLE_LIB_PATH>$(COTS_BASE_DIR)\oracle\$(ORACLE_VERSION)\winnt\lib</ORACLE_LIB_PATH>
+        <HTMLHELP_LIB_PATH>$(COTS_BASE_DIR)\HTMLHelp\lib</HTMLHELP_LIB_PATH>
+        <WINSTACKTRACE_LIB_PATH>$(COTS_BASE_DIR)\WinStackTrace\build\release</WINSTACKTRACE_LIB_PATH>
+        <CURL_LIB_PATH>$(COTS_BASE_DIR)\curl\$(CURL_VERSION)\lib\release</CURL_LIB_PATH>
+        <MYSQL_LIB_PATH>$(COTS_BASE_DIR)\mysql\$(MYSQL_VERSION)\winnt\lib</MYSQL_LIB_PATH>
+        <MCL_LIB_PATH>$(COTS_BASE_DIR)\mcl\$(MCL_VERSION)\lib\winnt</MCL_LIB_PATH>
+        <WINTECH_LIB_PATH>$(COTS_BASE_DIR)\Wintech\OPCServerToolKit</WINTECH_LIB_PATH>
+        <OPENSSL_LIB_PATH>$(COTS_BASE_DIR)\openssl\$(OPENSSL_VERSION)\build\lib\windows</OPENSSL_LIB_PATH>
+        <ZIPARCHIVE_LIB_PATH>$(COTS_BASE_DIR)\ZipArchive\Release STL MD</ZIPARCHIVE_LIB_PATH>
+        <!-- Cots library files -->
+        <OMNI_LIB>omniORB416_rt.lib;omniDynamic416_rt.lib;omnithread34_rt.lib;COS416_rt.lib;COSNotify416_rt.lib;AttNotification416_rt.lib</OMNI_LIB>
+        <ACE_LIB>acemfc.lib</ACE_LIB>
+        <ORACLE_LIB>oci.lib;orasql10.lib</ORACLE_LIB>
+        <HTMLHELP_LIB>htmlhelp.lib</HTMLHELP_LIB>
+        <WINSTACKTRACE_LIB>stracelib.lib</WINSTACKTRACE_LIB>
+        <MCL_LIB>TA_mcl.lib</MCL_LIB>
+        <MYSQL_LIB>libmysql.lib</MYSQL_LIB>
+        <ZIPARCHIVE_LIB>ZipArchive.lib</ZIPARCHIVE_LIB>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+  <Choose>
+    <When Condition="Exists($(BASE_DIR))">
+      <PropertyGroup Label="UserMacros">
+        <BIN_PATH>$(BASE_DIR)\bin\$(Platform)_$(DebugSuffix)</BIN_PATH>
+        <BUILD_PATH>$(BASE_DIR)\build\$(Platform)_$(DebugSuffix)</BUILD_PATH>
+        <IDL_BUILD_PATH>$(BASE_DIR)\build\$(NEUTRAL_FOLDER)</IDL_BUILD_PATH>
+        <TA_SDK_PATH>$(BASE_DIR)\sdk\$(Platform)_$(DebugSuffix)</TA_SDK_PATH>
+        <TA_SDK_LIB_PATH>$(BASE_DIR)\sdk\lib</TA_SDK_LIB_PATH>
+        <TA_SDK_INCLUDE_PATH>$(BASE_DIR)\sdk\include</TA_SDK_INCLUDE_PATH>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup Label="UserMacros">
+        <BIN_PATH>$(SolutionDir)\bin\$(Platform)_$(DebugSuffix)</BIN_PATH>
+        <BUILD_PATH>$(SolutionDir)\build\$(Platform)_$(DebugSuffix)</BUILD_PATH>
+        <IDL_BUILD_PATH>$(SolutionDir)\build\$(NEUTRAL_FOLDER)</IDL_BUILD_PATH>
+        <TA_SDK_PATH>$(SolutionDir)\sdk\$(Platform)_$(DebugSuffix)</TA_SDK_PATH>
+        <TA_SDK_LIB_PATH>$(SolutionDir)\sdk\lib</TA_SDK_LIB_PATH>
+        <TA_SDK_INCLUDE_PATH>$(SolutionDir)\sdk\include</TA_SDK_INCLUDE_PATH>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+  <Choose>
+    <When Condition="$(TargetExt)=='.lib'">
+      <PropertyGroup Label="UserMacros">
+        <TARGET_OUTPUT>$(BUILD_PATH)</TARGET_OUTPUT>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup Label="UserMacros">
+        <TARGET_OUTPUT>$(BIN_PATH)</TARGET_OUTPUT>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+  <PropertyGroup>
+    <OutDir>$(TARGET_OUTPUT)\</OutDir>
+    <IntDir>$(BUILD_PATH)\$(TRANSACTIVE_FOLDER)\$(PROJECT_LAYER)\$(PROJECT_FOLDER)\</IntDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <SourcePath>$(SourcePath)</SourcePath>
+    <LibraryWPath>$(LibraryWPath)</LibraryWPath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <Choose>
+    <When Condition="Exists($(BASE_DIR))">
+    </When>
+  </Choose>
+  <!-- Pre processor definition -->
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;__WIN32__;__x86__;__NT__;_WIN32_WINNT=0x600;_CRT_SECURE_NO_DEPRECATE;__OSVERSION__=4;_USE_32BIT_TIME_T</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+</Project>

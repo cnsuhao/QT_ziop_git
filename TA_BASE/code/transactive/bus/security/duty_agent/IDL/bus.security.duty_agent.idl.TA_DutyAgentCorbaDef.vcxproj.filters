@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{34b3e109-ddc4-4942-8428-5950a40a22a6}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\DutyAgentTypeCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\DutyAgentTypeCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentAuthCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentAuthCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentAutoDegradeCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentAutoDegradeCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentMgrCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentMgrCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentPeerCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentPeerCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentQueryCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentQueryCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentRespCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentRespCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\DutyAgentTypeCorbaDef.h" />
+    <ClInclude Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentAuthCorbaDef.h" />
+    <ClInclude Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentAutoDegradeCorbaDef.h" />
+    <ClInclude Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentCorbaDef.h" />
+    <ClInclude Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentMgrCorbaDef.h" />
+    <ClInclude Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentPeerCorbaDef.h" />
+    <ClInclude Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentQueryCorbaDef.h" />
+    <ClInclude Include="$(IDL_BUILD_PATH)\transactive\bus\security\duty_agent\IDL\src\IDutyAgentRespCorbaDef.h" />
+  </ItemGroup>
+</Project>

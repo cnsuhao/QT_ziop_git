@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>toolbarPlanControllerGeneral</class>
+ <widget class="QToolBar" name="toolbarPlanControllerGeneral">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>237</width>
+    <height>34</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>toolBar</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>24</width>
+    <height>24</height>
+   </size>
+  </property>
+  <action name="actionPlanExecute">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/icons/PlanControllerStepsExecute.png</normaloff>:/icons/icons/PlanControllerStepsExecute.png</iconset>
+   </property>
+   <property name="text">
+    <string>Run Instance</string>
+   </property>
+   <property name="toolTip">
+    <string>Run New Instance (Ctrl+N)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionPlanSchedule">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/icons/PlanControllerStepsSchedule.png</normaloff>:/icons/icons/PlanControllerStepsSchedule.png</iconset>
+   </property>
+   <property name="text">
+    <string>Schedule Plan</string>
+   </property>
+   <property name="toolTip">
+    <string>Schedule Plan Execution</string>
+   </property>
+  </action>
+  <action name="actionPlanTakeControl">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/icons/PlanControllerStepsTakeControl.png</normaloff>:/icons/icons/PlanControllerStepsTakeControl.png</iconset>
+   </property>
+   <property name="text">
+    <string>Take Control of Instance</string>
+   </property>
+   <property name="toolTip">
+    <string>Take Control of Selected Instance</string>
+   </property>
+  </action>
+  <action name="actionPlanResumeSelectedStep">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/icons/PlanControllerStepsResumeSelected.png</normaloff>:/icons/icons/PlanControllerStepsResumeSelected.png</iconset>
+   </property>
+   <property name="text">
+    <string>Resume Instance at Selected Step</string>
+   </property>
+   <property name="toolTip">
+    <string>Resume Selected Instance at Selected Step (Ctrl+I)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionPlanResume">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/icons/PlanControllerStepsResume.png</normaloff>:/icons/icons/PlanControllerStepsResume.png</iconset>
+   </property>
+   <property name="text">
+    <string>Resume Instance</string>
+   </property>
+   <property name="toolTip">
+    <string>Resume Selected Instance (Ctrl+R)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionPlanPause">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/icons/PlanControllerStepsPause.png</normaloff>:/icons/icons/PlanControllerStepsPause.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pause Instance</string>
+   </property>
+   <property name="toolTip">
+    <string>Pause Selected Instance (Ctrl+P)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionPlanStop">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/icons/PlanControllerStepsStop.png</normaloff>:/icons/icons/PlanControllerStepsStop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop Instance</string>
+   </property>
+   <property name="toolTip">
+    <string>Stop Selected Instance (Ctrl+S)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <addaction name="actionPlanExecute"/>
+  <addaction name="actionPlanStop"/>
+  <addaction name="actionPlanPause"/>
+  <addaction name="actionPlanResume"/>
+  <addaction name="actionPlanResumeSelectedStep"/>
+  <addaction name="actionPlanTakeControl"/>
+  <addaction name="separator"/>
+  <addaction name="actionPlanSchedule"/>
+ </widget>
+ <resources>
+  <include location="PlanManager.qrc"/>
+ </resources>
+ <connections/>
+</ui>

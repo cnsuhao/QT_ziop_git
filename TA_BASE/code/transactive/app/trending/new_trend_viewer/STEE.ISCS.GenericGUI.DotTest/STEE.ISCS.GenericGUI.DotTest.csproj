@@ -1,0 +1,78 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ProjectGuid>{D4D37743-7A6B-48DC-B699-25BD9C23F8E3}</ProjectGuid>
+    <RootNamespace>STEE.ISCS.GenericGUI.DotTest</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseFormTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OPCSampleGrpConfig.DotTest\OPCSampleGrpConfig.DotTest.csproj">
+      <Project>{E875455D-1559-41AD-9015-50754C13AFA2}</Project>
+      <Name>OPCSampleGrpConfig.DotTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OPCSampleGrpConfig\OPCSampleGrpConfig\OPCSampleGrpConfig.csproj">
+      <Project>{68FBD6AE-2DB2-4D8C-9729-9A11577582C6}</Project>
+      <Name>OPCSampleGrpConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\STEE.ISCS.GenericGUI\STEE.ISCS.GenericGUI.csproj">
+      <Project>{6AEE1C9A-97BB-4D8B-B195-50AEF2F4D1EF}</Project>
+      <Name>STEE.ISCS.GenericGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\STEE.ISCS.MVC\STEE.ISCS.MVC.csproj">
+      <Project>{CE78950A-F16F-44D3-A52C-EB62ACECB33F}</Project>
+      <Name>STEE.ISCS.MVC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="dottest.framework, Version=9.1.0.2, Culture=neutral, PublicKeyToken=47d60c2a3c343a91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Parasoft\dotTEST\9.5\plugins\com.parasoft.xtest.libs.vstudio.dotnet\engine\dottest.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Parasoft\dotTEST\9.5\plugins\com.parasoft.xtest.libs.vstudio.dotnet\engine\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+</Project>

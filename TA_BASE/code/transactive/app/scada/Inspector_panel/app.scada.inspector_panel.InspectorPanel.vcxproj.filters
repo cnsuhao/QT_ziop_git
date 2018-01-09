@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{9a6e51fa-42e7-4b54-90dd-19b6639d841f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{aae58576-da05-4e4c-8d08-6757c1303140}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="mview">
+      <UniqueIdentifier>{ed462e9a-95c8-4f46-9907-fc81e1111e80}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="res\en_US.txt">
+      <Filter>src</Filter>
+    </Text>
+    <Text Include="res\zh_CN.txt">
+      <Filter>src</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\InspectorPanel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StdAfx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VersionGen.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConfirmAdjustDialog.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConfirmCommandDialog.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConfirmOverrideDialog.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ConfirmTagDialog.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ControlDialog.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ControlListCtrl.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DataPointListCtrl.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DirectControlDialog.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InformationDialog.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InformationListCtrl.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InhibitDialog.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InhibitListCtrl.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InspectorPanelDlg.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LimitDetailsListCtrl.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LimitDialog.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LimitListCtrl.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MainTabControl.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MeterDialog.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MeterListCtrl.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NotesDialog.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OverrideDialog.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OverrideListCtrl.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StatusDialog.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TagDialog.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\InspectorPanel.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Resource.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StdAfx.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AppLogicExceptionConverter.h">
+      <Filter>mview</Filter>
+    </ClInclude>
+    <ClInclude Include="src\InspectorPanelDlg.h">
+      <Filter>mview</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ITabDialog.h">
+      <Filter>mview</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MainTabControl.h">
+      <Filter>mview</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StringResource.h">
+      <Filter>mview</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\InspectorPanel.rc">
+      <Filter>src</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\blank.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\blank.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\check.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\green1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\green2.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\green3.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\InspectorPanel.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\nocheck.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\InspectorPanel.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\ConfirmAdjustDialog.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\ConfirmCommandDialog.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\ConfirmOverrideDialog.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\ConfirmTagDialog.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\ControlDialog.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\ControlListCtrl.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\DataPointListCtrl.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\DirectControlDialog.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\InformationDialog.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\InformationListCtrl.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\InhibitDialog.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\InhibitListCtrl.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\LimitDetailsListCtrl.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\LimitDialog.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\LimitListCtrl.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\MeterDialog.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\MeterListCtrl.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\NotesDialog.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\OverrideDialog.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\OverrideListCtrl.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\StatusDialog.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\TagDialog.h">
+      <Filter>mview</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

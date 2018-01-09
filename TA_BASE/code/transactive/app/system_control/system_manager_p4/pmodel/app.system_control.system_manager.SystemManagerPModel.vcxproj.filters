@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="pmodel">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="BusinessLogic">
+      <UniqueIdentifier>{4fc20116-5fd5-4324-ab4a-9e0671d62a09}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ChangeOperationModeDlgModel.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OptionsDlgModel.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ProcessListCtrlModel.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ProcessParamsDlgModel.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ShutdownSystemControllerDlgModel.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StartProcessDlgModel.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StopProcessDlgModel.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SystemControllerDlgModel.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SystemManagerAppController.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SystemManagerDlgModel.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TransActiveLoginDlgModel.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AppServiceCenter.cpp">
+      <Filter>BusinessLogic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AppServiceConsts.cpp">
+      <Filter>BusinessLogic</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ChangeOperationModeDlgModel.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OptionsDlgModel.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ProcessListCtrlModel.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ProcessParamsDlgModel.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ShutdownSystemControllerDlgModel.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StartProcessDlgModel.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StopProcessDlgModel.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SystemControllerDlgModel.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SystemManagerAppController.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SystemManagerConsts.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SystemManagerDlgModel.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TransActiveLoginDlgModel.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AppServiceCenter.h">
+      <Filter>BusinessLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AppServiceConsts.h">
+      <Filter>BusinessLogic</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

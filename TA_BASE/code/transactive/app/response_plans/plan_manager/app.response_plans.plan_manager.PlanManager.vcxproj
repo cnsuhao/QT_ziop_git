@@ -1,0 +1,574 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>app.response_plans.plan_manager</ProjectName>
+    <ProjectGuid>{555C36AF-A038-4308-A2C0-D87A7EF8974E}</ProjectGuid>
+    <RootNamespace>app.response_plans.plan_manager</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>..\..\..\..\..\bin\win32_nd\app.response_plans.plan_manager.PlanManager.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src;;;$(TA_BuildPath)\win32_n\transactive\core\alarm\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\scada\common_library\IDL\src;..\..\..\..\cots\boost\boost_1_57_0;$(QTDIR)\include;.\GeneratedFiles\$(Configuration);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui\5.3.2;$(QTDIR)\include\QtGui\5.3.2\QtGui;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NOMINMAX;_DEBUG;_WINDOWS;WIN32;__WIN32__;__WIN32__;__x86__;__NT__;_MBCS_MBCS;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ShowIncludes>true</ShowIncludes>
+      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\bus\response_plans\plan_tree\res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>omniORB416_rtd.lib;omniDynamic416_rtd.lib;COS416_rtd.lib;omnithread34_rtd.lib;oci.lib;libmysql.lib;htmlhelp.lib;rpcrt4.lib;acemfcd.lib;TA_mcl_d.lib;TA_Base_Core_d.lib;stracelib.lib;TA_PlanManager_pmodel_d.lib;TA_GenericGUI_entity_d.lib;TA_GenericGUI_view_d.lib;TA_GenericGUI_pmod_d.lib;TA_AboutBox_du.lib;TA_PlanTree_d.lib;TA_ActivePlansDisplay_d.lib;TA_MFCExtensions_d.lib;TA_UserSettings_d.lib;TA_EventTriggeredPlans_d.lib;TA_PlanManagerCorbaDef_d.lib;TA_PlanDataAccess_d.lib;TA_UnicodeCommonLib_du.lib;TA_SecurityUtilities_d.lib;TA_PlanAgentCorbaDef_d.lib;TA_PlanAgentLibrary_d.lib;TA_RightsLibrary_d.lib;TA_RightsAgentCorbaDef_d.lib;TA_AuthenticationLibrary_d.lib;TA_AuthenticationAgentCorbaDef_d.lib;TA_DutyMonitorFramework_d.lib;TA_DutyAgentCorbaDef_d.lib;TA_common_subsystem_facade_d.lib;TA_VideoSwitchAgentCorbaDef_d.lib;TA_VideoSwitchAgentAccess_d.lib;TA_PaAgentCorbaDef_4669_d.lib;TA_TISManagerCorbaDef_4669_d.lib;TA_TisAgentAccess_4669_d.lib;TA_ScadaTree_d.lib;TA_PlanTree_pmodel_d.lib;qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;TA_Common_Controld.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <DataExecutionPrevention />
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+    <Bscmake>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>..\..\..\..\..\bin\win32_nr\app.response_plans.plan_manager.PlanManager.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src;;;$(TA_BuildPath)\win32_n\transactive\core\alarm\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\scada\common_library\IDL\src;..\..\..\..\cots\boost\boost_1_39_0;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;__WIN32__;__x86__;__NT__;_WIN32_WINNT=0x0501;_CRT_SECURE_NO_DEPRECATE;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\bus\response_plans\plan_tree\res;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>omniORB416_rt.lib;omniDynamic416_rt.lib;COS416_rt.lib;omnithread34_rt.lib;oci.lib;libmysql.lib;htmlhelp.lib;rpcrt4.lib;acemfc.lib;TA_mcl.lib;TA_Base_Core.lib;TA_Base_Bus.lib;stracelib.lib;TA_PlanManager_pmodel.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBC;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Windows</SubSystem>
+      <DataExecutionPrevention />
+    </Link>
+    <Bscmake>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\Debug\moc_AbstractToolBarManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ActivePlanListFrame.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ActivePlanListView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CategoryNodeView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MainToolBarManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PlanBrowserFrame.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PlanManagerFrame.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PlanTreeFrame.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PlanTreeView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_PlanManager.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_AbstractToolBarManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ActivePlanListFrame.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ActivePlanListView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CategoryNodeView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MainToolBarManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PlanBrowserFrame.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PlanManagerFrame.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PlanTreeFrame.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PlanTreeView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanListFrame.cpp" />
+    <ClCompile Include="src\ActivePlanListView.cpp" />
+    <ClCompile Include="src\CategoryNodeView.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MessageBox.cpp" />
+    <ClCompile Include="src\PlanBrowserFrame.cpp" />
+    <ClCompile Include="src\PlanManagerApp.cpp" />
+    <ClCompile Include="src\PlanTreeFrame.cpp" />
+    <ClCompile Include="src\PlanTreeView.cpp" />
+    <ClCompile Include="src\PlanViewFactory.cpp" />
+    <ClCompile Include="src\AbstractToolBarManager.cpp" />
+    <ClCompile Include="src\MainToolBarManager.cpp" />
+    <ClCompile Include="src\PlanManagerFrame.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\AbstractToolBarManager.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_USE_32BIT_TIME_T -D_DEBUG -DWIN32 -D_WINDOWS -D__WIN32__ -D__x86__ -D__NT__ -D_CRT_SECURE_NO_DEPRECATE -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\..\..\..\..\cots\boost\boost_1_57_0" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(Configuration)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui\5.3.2" "-I$(QTDIR)\include\QtGui\5.3.2\QtGui" "-I.\GeneratedFiles"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing AbstractToolBarManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_USE_32BIT_TIME_T -DNDEBUG -DWIN32 -D_WINDOWS -D__WIN32__ -D__x86__ -D__NT__ -D_WIN32_WINNT=0x0501 -D_CRT_SECURE_NO_DEPRECATE -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\..\..\..\..\cots\boost\boost_1_39_0" "-I.\GeneratedFiles"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing AbstractToolBarManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\MainToolBarManager.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_USE_32BIT_TIME_T -D_DEBUG -DWIN32 -D_WINDOWS -D__WIN32__ -D__x86__ -D__NT__ -D_CRT_SECURE_NO_DEPRECATE -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\..\..\..\..\cots\boost\boost_1_57_0" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(Configuration)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui\5.3.2" "-I$(QTDIR)\include\QtGui\5.3.2\QtGui" "-I.\GeneratedFiles"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing MainToolBarManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_USE_32BIT_TIME_T -DNDEBUG -DWIN32 -D_WINDOWS -D__WIN32__ -D__x86__ -D__NT__ -D_WIN32_WINNT=0x0501 -D_CRT_SECURE_NO_DEPRECATE -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\..\..\..\..\cots\boost\boost_1_39_0" "-I.\GeneratedFiles"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing MainToolBarManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\PlanManagerFrame.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_USE_32BIT_TIME_T -D_DEBUG -DWIN32 -D_WINDOWS -D__WIN32__ -D__x86__ -D__NT__ -D_CRT_SECURE_NO_DEPRECATE -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(Configuration)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui\5.3.2" "-I$(QTDIR)\include\QtGui\5.3.2\QtGui"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing PlanManagerFrame.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_USE_32BIT_TIME_T -DNDEBUG -DWIN32 -D_WINDOWS -D__WIN32__ -D__x86__ -D__NT__ -D_WIN32_WINNT=0x0501 -D_CRT_SECURE_NO_DEPRECATE -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\..\..\..\..\cots\boost\boost_1_39_0" "-I.\GeneratedFiles"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing PlanManagerFrame.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_activePlanView.h" />
+    <ClInclude Include="GeneratedFiles\ui_menubarPlanController.h" />
+    <ClInclude Include="GeneratedFiles\ui_menubarPlanEditor.h" />
+    <ClInclude Include="GeneratedFiles\ui_menubarPlanStepEditor.h" />
+    <ClInclude Include="GeneratedFiles\ui_planManagerFrame.h" />
+    <ClInclude Include="GeneratedFiles\ui_toolbarPlanControllerFlowChart.h" />
+    <ClInclude Include="GeneratedFiles\ui_toolbarPlanControllerGeneral.h" />
+    <ClInclude Include="GeneratedFiles\ui_toolbarPlanControllerSteps.h" />
+    <ClInclude Include="GeneratedFiles\ui_toolbarPlanEditorFlowChart.h" />
+    <ClInclude Include="GeneratedFiles\ui_toolbarPlanEditorGeneral.h" />
+    <ClInclude Include="GeneratedFiles\ui_toolbarPlanEditorSteps.h" />
+    <CustomBuild Include="src\ActivePlanListFrame.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ActivePlanListFrame.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNOMINMAX -D_DEBUG -D_WINDOWS -DWIN32 -D__WIN32__ -D__x86__ -D__NT__ -D_MBCS_MBCS -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_VC80_UPGRADE=0x0600 -D_MBCS "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\..\..\..\..\cots\boost\boost_1_57_0" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(Configuration)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui\5.3.2" "-I$(QTDIR)\include\QtGui\5.3.2\QtGui" "-I.\GeneratedFiles"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ActivePlanListFrame.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DWIN32 -D_WINDOWS -D__WIN32__ -D__x86__ -D__NT__ -D_WIN32_WINNT=0x0501 -D_CRT_SECURE_NO_DEPRECATE -D_USE_32BIT_TIME_T -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\..\..\..\..\cots\boost\boost_1_39_0" "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\ActivePlanListView.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ActivePlanListView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNOMINMAX -D_DEBUG -D_WINDOWS -DWIN32 -D__WIN32__ -D__x86__ -D__NT__ -D_MBCS_MBCS -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_VC80_UPGRADE=0x0600 -D_MBCS "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\..\..\..\..\cots\boost\boost_1_57_0" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(Configuration)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui\5.3.2" "-I$(QTDIR)\include\QtGui\5.3.2\QtGui" "-I.\GeneratedFiles"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ActivePlanListView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DWIN32 -D_WINDOWS -D__WIN32__ -D__x86__ -D__NT__ -D_WIN32_WINNT=0x0501 -D_CRT_SECURE_NO_DEPRECATE -D_USE_32BIT_TIME_T -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\..\..\..\..\cots\boost\boost_1_39_0" "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <ClInclude Include="resource.h" />
+    <CustomBuild Include="src\CategoryNodeView.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing CategoryNodeView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -DWIN32 -D_WINDOWS -D__WIN32__ -D__x86__ -D__NT__ -D_CRT_SECURE_NO_DEPRECATE -D_USE_32BIT_TIME_T -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_VC80_UPGRADE=0x0600 -D_MBCS "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\..\..\..\..\cots\boost\boost_1_57_0" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(Configuration)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui\5.3.2" "-I$(QTDIR)\include\QtGui\5.3.2\QtGui" "-I.\GeneratedFiles"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing CategoryNodeView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DWIN32 -D_WINDOWS -D__WIN32__ -D__x86__ -D__NT__ -D_WIN32_WINNT=0x0501 -D_CRT_SECURE_NO_DEPRECATE -D_USE_32BIT_TIME_T -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\..\..\..\..\cots\boost\boost_1_39_0" "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\PlanBrowserFrame.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing PlanBrowserFrame.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -DWIN32 -D_WINDOWS -D__WIN32__ -D__x86__ -D__NT__ -D_CRT_SECURE_NO_DEPRECATE -D_USE_32BIT_TIME_T -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\..\..\..\..\cots\boost\boost_1_57_0" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(Configuration)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui\5.3.2" "-I$(QTDIR)\include\QtGui\5.3.2\QtGui" "-I.\GeneratedFiles"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing PlanBrowserFrame.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DWIN32 -D_WINDOWS -D__WIN32__ -D__x86__ -D__NT__ -D_WIN32_WINNT=0x0501 -D_CRT_SECURE_NO_DEPRECATE -D_USE_32BIT_TIME_T -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\..\..\..\..\cots\boost\boost_1_39_0" "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\PlanTreeFrame.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing PlanTreeFrame.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -DWIN32 -D_WINDOWS -D__WIN32__ -D__x86__ -D__NT__ -D_CRT_SECURE_NO_DEPRECATE -D_USE_32BIT_TIME_T -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\..\..\..\..\cots\boost\boost_1_57_0" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(Configuration)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui\5.3.2" "-I$(QTDIR)\include\QtGui\5.3.2\QtGui" "-I.\GeneratedFiles"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing PlanTreeFrame.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DWIN32 -D_WINDOWS -D__WIN32__ -D__x86__ -D__NT__ -D_WIN32_WINNT=0x0501 -D_CRT_SECURE_NO_DEPRECATE -D_USE_32BIT_TIME_T -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\..\..\..\..\cots\boost\boost_1_39_0" "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\PlanTreeView.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing PlanTreeView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -DWIN32 -D_WINDOWS -D__WIN32__ -D__x86__ -D__NT__ -D_CRT_SECURE_NO_DEPRECATE -D_USE_32BIT_TIME_T -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\..\..\..\..\cots\boost\boost_1_57_0" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(Configuration)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui\5.3.2" "-I$(QTDIR)\include\QtGui\5.3.2\QtGui" "-I.\GeneratedFiles"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing PlanTreeView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DWIN32 -D_WINDOWS -D__WIN32__ -D__x86__ -D__NT__ -D_WIN32_WINNT=0x0501 -D_CRT_SECURE_NO_DEPRECATE -D_USE_32BIT_TIME_T -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I.\src" "-I.\..\..\.." "-I.\..\..\..\..\..\build\win32_n\transactive" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\process_management\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\message\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\core\exceptions\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src" "-I.\" "-I.\" "-I.\..\..\..\..\..\build\win32_n\transactive\core\alarm\IDL\src" "-I.\..\..\..\..\..\build\win32_n\transactive\bus\scada\common_library\IDL\src" "-I.\..\..\..\..\cots\boost\boost_1_39_0" "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="src\MessageBox.h" />
+    <ClInclude Include="src\PlanViewFactory.h" />
+    <ClInclude Include="src\PlanManagerApp.h" />
+    <ClInclude Include="src\TableDelegate.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\toolbarPlanControllerFlowChart.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\toolbarPlanControllerGeneral.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\toolbarPlanControllerSteps.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\toolbarPlanEditorFlowChart.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\toolbarPlanEditorSteps.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\toolbarPlanEditorGeneral.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\menubarPlanEditor.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\menubarPlanController.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\menubarPlanStepEditor.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\bus\resources\icons\PlanManager.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\CategoryNodeDelete.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\CategoryNodeEdit.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\CategoryNodeNew.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\CategoryNodePaste.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanControllerStepsCustomise.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanControllerStepsExecute.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanControllerStepsPause.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanControllerStepsResume.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanControllerStepsResumeSelected.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanControllerStepsSchedule.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanControllerStepsStop.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanControllerStepsTakeControl.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanEditorStepsCopy.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanEditorStepsCut.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanEditorStepsDelete.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanEditorStepsEdit.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanEditorStepsNew.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanEditorStepsPaste.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanEditorStepsSave.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanNodeApprove.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanNodeControl.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanNodeCopy.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanNodeCut.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanNodeDelete.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanNodeInvisible.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanNodeNew.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanNodePaste.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanNodeSchedule.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanNodeUnapprove.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="src\icons\PlanNodeVisible.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\PlanManager.qrc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);.\src\icons\PlanControllerStepsCustomise.png;.\src\icons\PlanControllerStepsSchedule.png;.\src\icons\PlanControllerStepsTakeControl.png;.\src\icons\PlanControllerStepsResumeSelected.png;.\src\icons\PlanControllerStepsResume.png;.\src\icons\PlanControllerStepsPause.png;.\src\icons\PlanControllerStepsStop.png;.\src\icons\PlanControllerStepsExecute.png;.\src\icons\PlanEditorStepsEdit.png;.\src\icons\PlanEditorStepsPaste.png;.\src\icons\PlanEditorStepsCopy.png;.\src\icons\PlanEditorStepsCut.png;.\src\icons\PlanEditorStepsDelete.png;.\src\icons\PlanEditorStepsNew.png;.\src\icons\PlanEditorStepsSave.png;.\src\icons\PlanNodeInvisible.png;.\src\icons\PlanNodeVisible.png;.\src\icons\PlanNodeControl.png;.\src\icons\PlanNodeSchedule.png;.\src\icons\PlanNodeUnapprove.png;.\src\icons\PlanNodeApprove.png;.\src\icons\CategoryNodeEdit.png;.\src\icons\CategoryNodePaste.png;.\src\icons\PlanNodeCopy.png;.\src\icons\PlanNodeCut.png;.\src\icons\PlanNodeDelete.png;.\src\icons\PlanNodePaste.png;.\src\icons\PlanNodeNew.png;.\src\icons\CategoryNodeDelete.png;.\src\icons\CategoryNodeNew.png;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);.\src\icons\PlanControllerStepsCustomise.png;.\src\icons\PlanControllerStepsSchedule.png;.\src\icons\PlanControllerStepsTakeControl.png;.\src\icons\PlanControllerStepsResumeSelected.png;.\src\icons\PlanControllerStepsResume.png;.\src\icons\PlanControllerStepsPause.png;.\src\icons\PlanControllerStepsStop.png;.\src\icons\PlanControllerStepsExecute.png;.\src\icons\PlanEditorStepsEdit.png;.\src\icons\PlanEditorStepsPaste.png;.\src\icons\PlanEditorStepsCopy.png;.\src\icons\PlanEditorStepsCut.png;.\src\icons\PlanEditorStepsDelete.png;.\src\icons\PlanEditorStepsNew.png;.\src\icons\PlanEditorStepsSave.png;.\src\icons\PlanNodeInvisible.png;.\src\icons\PlanNodeVisible.png;.\src\icons\PlanNodeControl.png;.\src\icons\PlanNodeSchedule.png;.\src\icons\PlanNodeUnapprove.png;.\src\icons\PlanNodeApprove.png;.\src\icons\CategoryNodeEdit.png;.\src\icons\CategoryNodePaste.png;.\src\icons\PlanNodeCopy.png;.\src\icons\PlanNodeCut.png;.\src\icons\PlanNodeDelete.png;.\src\icons\PlanNodePaste.png;.\src\icons\PlanNodeNew.png;.\src\icons\CategoryNodeDelete.png;.\src\icons\CategoryNodeNew.png;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\planManagerFrame.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\dialog\activePlanView.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\PlanManager.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Qt5Version_x0020_Win32="$(DefaultQtVersion)" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

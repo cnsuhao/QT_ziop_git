@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>tools.build.bus_library</ProjectName>
+    <ProjectGuid>{203FD891-740B-4254-B23F-1E88F6632CD5}</ProjectGuid>
+    <RootNamespace>tools.build.bus_library</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\../../../../sdk/win32_nd\</OutDir>
+    <IntDir>.\../../../../build/win32_nd/tools/build/bus_library\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\../../../../sdk/win32_nr\</OutDir>
+    <IntDir>.\../../../../build/win32_nr/tools/build/bus_library\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\../../../../build/win32_nd/tools/build/bus_library/tools.build.bus_library.TA_Base_Bus.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../../build/win32_nd/tools/build/bus_library/</AssemblerListingLocation>
+      <ObjectFileName>.\../../../../build/win32_nd/tools/build/bus_library/</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../../build/win32_nd/tools/build/bus_library/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c09</Culture>
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <Lib>
+      <OutputFile>../../../../sdk/win32_nd/TA_Base_Bus_d.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\../../../../sdk/win32_nd/tools.build.bus_library.TA_Base_Bus.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\../../../../build/win32_nr/tools/build/bus_library/tools.build.bus_library.TA_Base_Bus.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../../build/win32_nr/tools/build/bus_library/</AssemblerListingLocation>
+      <ObjectFileName>.\../../../../build/win32_nr/tools/build/bus_library/</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../../build/win32_nr/tools/build/bus_library/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c09</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>../../../../sdk/win32_nr/TA_Base_Bus.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\../../../../sdk/win32_nr/tools.build.bus_library.TA_Base_Bus.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BuildCoreBus.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\transactive\bus\about_box\bus.about_box.TA_AboutBox.vcxproj">
+      <Project>{228b76d1-94ac-4cd4-98f3-8c24ae0730ed}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\alarm\alarm_list_control\bus.alarm.alarm_list_control.TA_AlarmListCtrl.vcxproj">
+      <Project>{045f2ce1-f02d-47eb-abc1-3f701cf1ce03}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\alarm\alarm_list_control\pmodel\bus.alarm_list_control_pmodel.vcxproj">
+      <Project>{2775d410-c754-4a57-8cb9-f676a599b213}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\alarm\alarm_store_library\bus.alarm.alarm_store_library.TA_AlarmStoreLibrary.vcxproj">
+      <Project>{dbbad18f-88df-494a-9dbf-f4361d74d9b5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\alarm\ATS_alarm_bridge_library\bus.ATS_alarm_bridge_library.vcxproj">
+      <Project>{eb9b5882-3762-4aa3-92a5-10bb6385e69e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\cctv\tvss_agent\TVSSManager\IDL\bus.cctv.tvss_agent.TVSSManagerCorbaDef.IDL\bus.cctv.tvss_agent.TVSSManagerCorbaDef.IDL.vcxproj">
+      <Project>{edbe611e-62d6-4a64-b6f2-a1d5e77340c8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\cctv\tvss_agent\TVSSManager\IDL\bus.cctv.tvss_agent.TVSSManagerCorbaDef.Src\bus.cctv.video_switch_agent.TVSS_Agent.Src.vcxproj">
+      <Project>{f3ce1561-edd4-4f15-9a59-9f82590c6a8b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\cctv\video_switch_agent\agent_access\bus.cctv.video_switch_agent.agent_access.TA_VideoSwitchAgentAccess.vcxproj">
+      <Project>{5682a17a-1124-4614-a745-40cfb233f3b7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\cctv\video_switch_agent\IDL\bus.cctv.video_switch_agent.IDL.TA_VideoSwitchAgentCorbaDef.vcxproj">
+      <Project>{61febe31-bdb1-4eb1-bd49-db8e9f79c36e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\cctv\video_switch_agent\IDL\bus.cctv.video_switch_agent.IDL.TA_VideoSwitchAgentIDL.vcxproj">
+      <Project>{6e104394-c446-4c52-bb1e-390a143a9910}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\common_control\bus.common_control.vcxproj">
+      <Project>{7ddc2408-ddaa-4244-86b7-98bc479cd8ab}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\common_subsystem_facade\TACommonSubsystemFacade.vcxproj">
+      <Project>{bc30cc87-3da4-4de6-a9af-8e713eb4f8c6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\database_status_monitor\bus.database_status_monitor.TA_DatabaseStatusMonitor.vcxproj">
+      <Project>{15288fa8-d459-4274-89fb-bdcf25a7697a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\database_status_monitor\dsmCorbaDef\idl\bus.database_status_monitor.dsmcorbadef.idl.TA_DsmCorbaDef.vcxproj">
+      <Project>{d8eb62c2-2e0e-4864-9651-12ee81198f9a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\database_status_monitor\dsmCorbaDef\idl\bus.database_status_monitor.dsmcorbadef.idl.TA_DsmIDL.vcxproj">
+      <Project>{3300a7d0-6099-4f3b-b27f-20036d49bcc1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\datalog\datalog_library\bus.datalog.datalog_library.TA_DataLogLibrary.vcxproj">
+      <Project>{9b120eed-3b13-4be8-9694-4db5048d30a5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\generic_agent\bus.generic_agent.TA_GenericAgent.vcxproj">
+      <Project>{cc8ba961-90f4-4194-bedb-8a50a6c6f5c2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\generic_gui_entity\bus.generic_gui.TA_GenericGUI_entity.vcxproj">
+      <Project>{2ebef116-8044-4ecf-bcc8-917e6a20e214}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\generic_gui_pmod\bus.generic_gui.TA_GenericGUI_pmod.vcxproj">
+      <Project>{9f3e6406-c8e4-432d-ac12-9f767f4f2a12}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\generic_gui_view\bus.generic_gui.TA_GenericGUI_view.vcxproj">
+      <Project>{3a821cee-4dd5-40cb-99cf-a11f6f49053e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\generic_service\bus.generic_service.TA_GenericService.vcxproj">
+      <Project>{9944ebaa-0a5b-4a84-9c4e-7482b592703f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\history\data_recording\bus.history.data_recording.TA_DataRecording.vcxproj">
+      <Project>{e028909c-ce80-41ab-9685-dd5c9296ed08}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\maintenance_management\mmsCorbaDef\idl\bus.maintenance_management.mmscorbadef.idl.TA_MmsCorbaDef.vcxproj">
+      <Project>{e489aadd-b91a-4657-8ac7-d4ba6e555331}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\maintenance_management\mmsCorbaDef\idl\bus.maintenance_management.mmscorbadef.idl.TA_MmsIDL.vcxproj">
+      <Project>{6f2f2a2e-07d8-44ce-9383-16aefc3c3650}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\maintenance_management\mmsHelper\bus.maintenance_management.mmsHelper.TA_mmsHelper.vcxproj">
+      <Project>{177b31bc-730e-487f-bfa3-d7c64fd0c985}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\mathematical_evaluation\bus.mathematical_evaluation.TA_MathEvaluation.vcxproj">
+      <Project>{4684415d-5904-44e6-b7cc-677a23292c0f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\modbus_comms\bus.modbus_comms.TA_ModbusComms.vcxproj">
+      <Project>{e41810a3-bca2-469b-a2de-d18703e565b7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\pa_4669\pa_agent\IDL\bus.pa_4669.pa_agent.IDL.TA_PaAgentCorbaDef_4669.vcxproj">
+      <Project>{05d21fb7-132f-441f-9966-8c889944f38c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\pa_4669\pa_agent\IDL\bus.pa_4669.pa_agent.IDL.TA_PaAgentIDL_4669.vcxproj">
+      <Project>{4101499f-7c08-40a7-b128-05b6906c211a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\pa_4677\pa_agent\IDL\bus.pa_4677.pa_agent.IDL.TA_PaAgentCorbaDef_4677.vcxproj">
+      <Project>{d530f880-0fd5-4f6e-867b-00e8aa092116}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\pa_4677\pa_agent\IDL\bus.pa_4677.pa_agent.IDL.TA_PaAgentIDL_4677.vcxproj">
+      <Project>{3a13d8cc-fc27-4eb7-a313-30c082f21002}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\radio\RadioAgentCorbaDef_4669\idl\bus.radio.radioagentcorbadef_4669.idl.TA_RadioAgentCorbaDef_4669.vcxproj">
+      <Project>{27ff8e1d-3a2b-4c4d-8c22-346939e1dde8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\radio\RadioAgentCorbaDef_4669\idl\bus.radio.radioagentcorbadef_4669.idl.TA_RadioAgentIDL.vcxproj">
+      <Project>{c1424fe5-e39c-40bc-ae55-c921125fdbce}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\radio\RadioAgentCorbaDef_4712\idl\bus.radio.radioagentcorbadef_4712.idl.TA_RadioAgentCorbaDef_4712.vcxproj">
+      <Project>{1a8307db-6602-4e4e-a26c-a54b410df8b1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\radio\RadioAgentCorbaDef_4712\idl\bus.radio.radioagentcorbadef_4712.idl.TA_RadioAgentIDL.vcxproj">
+      <Project>{87f464b2-739b-4d7f-9f18-5fa9b185623c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\response_plans\event_triggered\bus.response_plans.event_triggered.vcxproj">
+      <Project>{bd9a7312-da77-44be-ae0f-65ec7eedd4fd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\response_plans\PlanDataAccess\bus.response_plans.plandataaccess.TA_PlanDataAccess.vcxproj">
+      <Project>{90429d3f-c298-4d1a-9305-86c2ac154a9e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\response_plans\plan_agent\bus.response_plans.plan_agent.TA_PlanAgentLibrary.vcxproj">
+      <Project>{f74af392-ac4a-4c5e-b9bd-3219e5e7982e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\response_plans\plan_agent\IDL\bus.response_plans.plan_agent.IDL.TA_PlanAgentCorbaDef.vcxproj">
+      <Project>{dc5dd57e-66f6-45aa-9890-447648b7b516}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\response_plans\plan_agent\IDL\bus.response_plans.plan_agent.IDL.TA_PlanAgentIDL.vcxproj">
+      <Project>{36d238d0-3ba9-4a95-9292-cd193eeed491}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\response_plans\plan_manager\IDL\bus.response_plans.plan_manager.idl.TA_PlanManagerCorbaDef.vcxproj">
+      <Project>{62701741-c511-4d84-8451-a430a88f1cab}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\response_plans\plan_manager\IDL\bus.response_plans.plan_manager.idl.TA_PlanManagerIDL.vcxproj">
+      <Project>{01238d7d-c292-4b4d-9b28-b36559da48a5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\scada\common_library\bus.scada.common_library.TA_ScadaCommonLib.vcxproj">
+      <Project>{2f7460f8-e237-440c-96b3-2c97f36c3f19}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\scada\common_library\IDL\bus.scada.common_library.idl.TA_ScadaCommonCorbaDef.vcxproj">
+      <Project>{39cb6842-3c71-4cdb-8702-7ded539d766f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\scada\common_library\IDL\bus.scada.common_library.idl.TA_ScadaCommonIDL.vcxproj">
+      <Project>{dd057566-e95d-429a-bd60-ba5ef83a97b6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\scada\DataNodeAgentCorbaDef_Impl\bus.scada.datanodeagentcorbadef_impl.TA_DataNodeAgentCorbaDef_Impl.vcxproj">
+      <Project>{f2894efe-2a1c-4d08-9590-dee4f2f1f8a6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\scada\datanode_library\bus.scada.datanode_library.TA_DataNodeLibrary.vcxproj">
+      <Project>{ef1d6a09-8756-4e51-a5b1-2fb7d079c376}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\scada\DataPointAgentCorbaDef_Impl\bus.scada.datapointagentcorbadef_impl.TA_DataPointAgentCorbaDef_Impl.vcxproj">
+      <Project>{e1156f96-7076-4089-a32b-47b257aef5ae}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\scada\datapoint_library\bus.scada.datapoint_library.TA_DataPointLibrary.vcxproj">
+      <Project>{176f0152-ca9c-4050-a91a-b5e8fa65a975}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\scada\ItaScada\bus.scada.ItaScada.TA_ItaScada.vcxproj">
+      <Project>{0f81cc36-fd51-46fd-b457-c49d0eb12533}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\scada\proxy_library\bus.scada.proxy_library.TA_ScadaProxyLibrary.vcxproj">
+      <Project>{c7a754e2-6afe-4d39-b7e7-118076f31000}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\scheduling\SchedulingAgentCorbaDef\IDL\bus.scheduling.schedulingagentcorbadef.idl.TA_SchedulingAgentCorbaDef.vcxproj">
+      <Project>{37048045-bc57-4708-8a20-f791364e1d33}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\scheduling\SchedulingAgentCorbaDef\IDL\bus.scheduling.schedulingagentcorbadef.idl.TA_SchedulingAgentIDL.vcxproj">
+      <Project>{68e7a998-a857-4bf9-1000-000000000000}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\security\authentication_agent\IDL\bus.security.authentication_agent.idl.TA_AuthenticationAgentCorbaDef.vcxproj">
+      <Project>{9dd21bad-2fb7-4279-ae91-45e639483642}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\security\authentication_agent\IDL\bus.security.authentication_agent.idl.TA_AuthenticationAgentIDL.vcxproj">
+      <Project>{514cacea-48e0-43b0-813c-bfa604b1fb3e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\security\authentication_library\bus.security.authentication_library.TA_AuthenticationLibrary.vcxproj">
+      <Project>{5bb21b30-80d2-4633-860c-d9f374228a55}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\security\duty_agent\duty_agent_state\bus.security.duty_agent.duty_agent_state.TA_DutyAgentState.vcxproj">
+      <Project>{a10bfa7f-2a60-47e7-90f2-8e0bab2c656e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\security\duty_agent\IDL\bus.security.duty_agent.idl.TA_DutyAgentCorbaDef.vcxproj">
+      <Project>{0746c6a6-105c-4afb-84ee-4bde64a6375b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\security\duty_agent\IDL\bus.security.duty_agent.idl.TA_DutyAgentIDL.vcxproj">
+      <Project>{b89bfb9e-8768-4cef-bb20-9b7a77e2b3e9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\security\duty_monitor_framework\bus.security.duty_monitor_framework.TA_DutyMonitorFramework.vcxproj">
+      <Project>{9545b769-3f73-4144-9ffe-6012610f241d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\security\rights_agent\IDL\bus.security.rights_agent.idl.TA_RightsAgentCorbaDef.vcxproj">
+      <Project>{402ee6e5-c63d-491c-8deb-de10983ebf0a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\security\rights_agent\IDL\bus.security.rights_agent.idl.TA_RightsAgentIDL.vcxproj">
+      <Project>{c3396769-06dd-4473-9464-e9f5b71294a8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\security\rights_agent\policy_decision_point\bus.security.rights_agent.policy_decision_point.TA_PolicyDecisionPoint.vcxproj">
+      <Project>{9c068593-ebba-4599-ade2-86caef695588}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\security\rights_agent\xacml_factory\bus.security.rights_agent.xacml_factory.TA_XacmlFactory.vcxproj">
+      <Project>{61822ace-e53c-4c71-b40f-76b3ceeab56c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\security\rights_library\bus.security.rights_library.TA_RightsLibrary.vcxproj">
+      <Project>{5e69c412-4b19-4f10-b5a7-aeb89026b9ea}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\security\security_utilities\bus.security.security_utilities.TA_SecurityUtilities.vcxproj">
+      <Project>{dd63de20-53e2-442f-83e3-44265d607501}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\signs_4669\TisManagerCorbaDef\bus.signs.TisManagerCorbaDef.TA_TISManagerCorbaDef.vcxproj">
+      <Project>{b0465060-33af-489c-b2cb-ce140b7220d3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\signs_4669\TisManagerCorbaDef\bus.signs.TisManagerCorbaDef.TA_TISManagerIDL.vcxproj">
+      <Project>{012bc29f-a86c-4cfd-81b6-8db5f7e47278}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\signs_4669\tis_agent_access\bus.signs.tis_agent_access.TA_TisAgentAccess.vcxproj">
+      <Project>{467e3d1b-7941-4c08-ac11-0c545638444f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\sound\sound_client\bus.sound.sound_client.TA_SoundClient.vcxproj">
+      <Project>{238e1afa-11de-4b09-8c14-1b354d9ca186}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\sound\sound_player\bus.sound.sound_player.TA_SoundPlayer.vcxproj">
+      <Project>{f62a446b-86c5-4c0a-b037-c6945f7e732d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\TA_MessageResource\bus.TA_MessageResource.TA_CreateMsgResourceFile.vcxproj">
+      <Project>{7481ac06-f73b-43ac-94d1-41f4eb2db4c2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\TA_MessageResource\bus.TA_MessageResource.TA_MessageResource.vcxproj">
+      <Project>{662fc71d-65df-4414-88af-60e04e7645b5}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\trains\TrainAgentCorba\bus.trains.TrainAgentCorba.TA_TrainAgentObjectNames.vcxproj">
+      <Project>{acf05438-dba4-476b-9f5b-a75dce0e3592}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\trains\TrainAgentCorba\idl\bus.trains.TrainAgentCorba.idl.TA_TrainAgentCorba.vcxproj">
+      <Project>{709ece0f-2545-4455-b2f0-5ce7a71958a7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\trains\TrainAgentCorba\idl\bus.trains.TrainAgentCorba.idl.TA_TrainAgentIdl.vcxproj">
+      <Project>{a53db69e-7754-4155-ab18-d08bc8435f7f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\unicode_common_lib\unicode_common_lib_unicode.vcxproj">
+      <Project>{048c0a25-15aa-41bc-a736-26a7fa2c4cb9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\bus\user_settings\bus.user_settings.TA_UserSettings.vcxproj">
+      <Project>{ef47aa2c-a9b1-496b-8167-770c76774837}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

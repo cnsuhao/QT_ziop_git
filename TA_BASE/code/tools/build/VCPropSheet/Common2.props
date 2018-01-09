@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="TransActiveEditManually">
+    <TA_OutBranch Condition="'$(ConfigurationType)' != 'StaticLibrary'">bin</TA_OutBranch>
+    <TA_OutBranch Condition="'$(ConfigurationType)' == 'StaticLibrary'">build</TA_OutBranch>
+    <TA_LibSuffix Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_d</TA_LibSuffix>
+    <TA_LibSuffixShort Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">d</TA_LibSuffixShort>
+    <TA_ConfigurationSuffix Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">d</TA_ConfigurationSuffix>
+    <TA_ConfigurationSuffix Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">d</TA_ConfigurationSuffix>
+    <TA_ConfigurationSuffix Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">r</TA_ConfigurationSuffix>
+    <TA_TargetSuffix Condition="('$(Configuration)|$(Platform)'=='Debug|Win32') And ('$(ConfigurationType)' != 'Application')">_d</TA_TargetSuffix>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros">
+    <TA_VisualStudio_ver>VS2013</TA_VisualStudio_ver>
+    <TA_Platform>win32_n</TA_Platform>
+    <TA_IsIDLProject>$(ProjectDir.ToUpper().EndsWith("\IDL\"))</TA_IsIDLProject>
+    <TA_TargetName>$([System.Text.RegularExpressions.Regex]::Match($(MSBuildProjectName), "\.?([^\.]+)$").Groups[1].Value)$(TA_TargetSuffix)</TA_TargetName>
+    <TA_TransActivePath>$([System.Text.RegularExpressions.Regex]::Match($(ProjectDir), "(^.+\\transactive)\\(core|bus|app)\\").Groups[1].Value)</TA_TransActivePath>
+    <TA_RelativeProjectPath>$([System.Text.RegularExpressions.Regex]::Match($(ProjectDir), "^.+\\(transactive\\(core|bus|app)\\.+)\\$").Groups[1].Value)</TA_RelativeProjectPath>
+    <TA_CodePath>$([System.IO.Path]::GetFullPath($(TA_TransActivePath)\..))</TA_CodePath>
+    <TA_ToolsPath>$(TA_CodePath)\tools</TA_ToolsPath>
+    <TA_CotsPath>$(TA_CodePath)\cots</TA_CotsPath>
+    <TA_BasePath>$([System.IO.Path]::GetFullPath($(TA_TransActivePath)\..\..))</TA_BasePath>
+    <TA_BinPath>$(TA_BasePath)\bin</TA_BinPath>
+    <TA_BuildPath>$(TA_BasePath)\build</TA_BuildPath>
+    <TA_SdkPath>$(TA_BasePath)\sdk</TA_SdkPath>
+    <TA_Sdk_IncludePath>$(TA_SdkPath)\include</TA_Sdk_IncludePath>
+    <TA_Sdk_LibPath>$(TA_SdkPath)\lib</TA_Sdk_LibPath>
+    <TA_OutDir>$(TA_BasePath)\$(TA_OutBranch)\$(TA_Platform)$(TA_ConfigurationSuffix)\</TA_OutDir>
+    <TA_IntDir>$(TA_BuildPath)\$(TA_Platform)$(TA_ConfigurationSuffix)\$(TA_RelativeProjectPath)\</TA_IntDir>
+    <TA_omniORB_ver>omniORB-4.2.2</TA_omniORB_ver>
+    <TA_omniORB_Path>$(TA_CotsPath)\omniORB\$(TA_omniORB_ver)</TA_omniORB_Path>
+    <TA_omniORB_IncludePath>$(TA_omniORB_Path)\include</TA_omniORB_IncludePath>
+    <TA_omniORB_LibPath>$(TA_omniORB_Path)\lib\x86_win32</TA_omniORB_LibPath>
+    <TA_omniORB_Lib>omniORB422_rt$(TA_LibSuffixShort).lib;omniDynamic422_rt$(TA_LibSuffixShort).lib;omnithread40_rt$(TA_LibSuffixShort).lib;omniZIOP422_rt$(TA_LibSuffixShort).lib;COS422_rt$(TA_LibSuffixShort).lib;COSNotify422_rt$(TA_LibSuffixShort).lib;AttNotification422_rt$(TA_LibSuffixShort).lib</TA_omniORB_Lib>
+    <TA_CustomBuild_IDL_CommandLine>$(TA_omniORB_Path)\bin\x86_win32\omniidl -nf -bcxx -Wba -Wbh=.h -Wbs=.cpp -Wbd=_skel.cpp -I. -I$(TA_TransActivePath) -C$(TA_BuildPath)\$(TA_Platform)\$(TA_RelativeProjectPath)\src src\%(Filename).idl</TA_CustomBuild_IDL_CommandLine>
+    <TA_CustomBuild_IDL_Outputs>$(TA_BuildPath)\$(TA_Platform)\$(TA_RelativeProjectPath)\src\%(Filename).h;$(TA_BuildPath)\$(TA_Platform)\$(TA_RelativeProjectPath)\src\%(Filename).cpp;$(TA_BuildPath)\$(TA_Platform)\$(TA_RelativeProjectPath)\src\%(Filename)_skel.cpp</TA_CustomBuild_IDL_Outputs>
+    <TA_boost_ver>boost_1_65_1</TA_boost_ver>
+    <TA_boost_Path>$(TA_CotsPath)\boost\$(TA_boost_ver)</TA_boost_Path>
+    <TA_boost_IncludePath>$(TA_boost_Path)</TA_boost_IncludePath>
+    <TA_boost_LibPath>$(TA_boost_Path)\stage\lib</TA_boost_LibPath>
+    <TA_ACE_ver>6_4_0</TA_ACE_ver>
+    <TA_ACE_Path>$(TA_CotsPath)\ACE\$(TA_ACE_ver)</TA_ACE_Path>
+    <TA_ACE_IncludePath>$(TA_ACE_Path)\ACE_wrappers</TA_ACE_IncludePath>
+    <TA_ACE_LibPath>$(TA_ACE_Path)\ACE_wrappers\lib_vc12</TA_ACE_LibPath>
+    <TA_ACE_Lib>ACE$(TA_LibSuffixShort).lib;ACEmfc$(TA_LibSuffixShort).lib</TA_ACE_Lib>
+    <TA_Oracle_ver>10.2.0</TA_Oracle_ver>
+    <TA_Oracle_Path>$(TA_CotsPath)\oracle\$(TA_Oracle_ver)</TA_Oracle_Path>
+    <TA_Oracle_IncludePath>$(TA_Oracle_Path)\winnt\inc</TA_Oracle_IncludePath>
+    <TA_Oracle_LibPath>$(TA_Oracle_Path)\winnt\lib</TA_Oracle_LibPath>
+    <TA_Oracle_Lib>oci.lib;orasql10.lib</TA_Oracle_Lib>
+    <TA_Curl_ver>curl-7.21.7-win32</TA_Curl_ver>
+    <TA_Curl_Path>$(TA_CotsPath)\curl\$(TA_Curl_ver)</TA_Curl_Path>
+    <TA_Curl_IncludePath>$(TA_Curl_Path)\include</TA_Curl_IncludePath>
+    <TA_Curl_LibPath>$(TA_Curl_Path)\lib\$(Configuration)</TA_Curl_LibPath>
+    <TA_MySQL_ver>5.5.15</TA_MySQL_ver>
+    <TA_MySQL_Path>$(TA_CotsPath)\mysql\$(TA_MySQL_ver)</TA_MySQL_Path>
+    <TA_MySQL_IncludePath>$(TA_MySQL_Path)\winnt</TA_MySQL_IncludePath>
+    <TA_MySQL_LibPath>$(TA_MySQL_Path)\winnt\lib</TA_MySQL_LibPath>
+    <TA_MySQL_Lib>libmysql.lib</TA_MySQL_Lib>
+    <TA_MCL_ver>1.1.1</TA_MCL_ver>
+    <TA_MCL_Path>$(TA_CotsPath)\mcl\$(TA_MCL_ver)</TA_MCL_Path>
+    <TA_MCL_IncludePath>$(TA_MCL_Path)</TA_MCL_IncludePath>
+    <TA_MCL_LibPath>$(TA_MCL_Path)\$(Configuration)_$(TA_VisualStudio_ver)</TA_MCL_LibPath>
+    <TA_MCL_Lib>TA_mcl$(TA_LibSuffix).lib</TA_MCL_Lib>
+    <TA_OpenSSL_ver>openssl-1.0.0d</TA_OpenSSL_ver>
+    <TA_OpenSSL_Path>$(TA_CotsPath)\openssl\$(TA_OpenSSL_ver)</TA_OpenSSL_Path>
+    <TA_OpenSSL_IncludePath>$(TA_OpenSSL_Path)\build\include</TA_OpenSSL_IncludePath>
+    <TA_OpenSSL_LibPath>$(TA_OpenSSL_Path)\build\lib\windows</TA_OpenSSL_LibPath>
+    <TA_OpenSSL_Lib>libeay32.lib</TA_OpenSSL_Lib>
+    <TA_ZipArchive_ver>4.6.5</TA_ZipArchive_ver>
+    <TA_ZipArchive_Path>$(TA_CotsPath)\ZipArchive\$(TA_ZipArchive_ver)\ZipArchive</TA_ZipArchive_Path>
+    <TA_ZipArchive_IncludePath>$(TA_ZipArchive_Path)</TA_ZipArchive_IncludePath>
+    <TA_ZipArchive_LibPath>$(TA_ZipArchive_Path)\$(Configuration) STL MD $(TA_VisualStudio_ver)</TA_ZipArchive_LibPath>
+    <TA_ZipArchive_Lib>ZipArchive.lib</TA_ZipArchive_Lib>
+    <TA_WinStackTrace_Path>$(TA_CotsPath)\WinStackTrace</TA_WinStackTrace_Path>
+    <TA_WinStackTrace_IncludePath>$(TA_WinStackTrace_Path)\INCLUDE</TA_WinStackTrace_IncludePath>
+    <TA_WinStackTrace_LibPath>$(TA_WinStackTrace_Path)\build\$(Configuration)_$(TA_VisualStudio_ver)</TA_WinStackTrace_LibPath>
+    <TA_WinStackTrace_Lib>stracelib.lib</TA_WinStackTrace_Lib>
+    <TA_HTMLHelp_Path>$(TA_CotsPath)\HTMLHelp</TA_HTMLHelp_Path>
+    <TA_HTMLHelp_LibPath>$(TA_HTMLHelp_Path)\lib</TA_HTMLHelp_LibPath>
+    <TA_HTMLHelp_Lib>htmlhelp.lib</TA_HTMLHelp_Lib>
+    <TA_WinTech_Path>$(TA_CotsPath)\WinTech</TA_WinTech_Path>
+    <TA_WinTech_LibPath>$(TA_WinTech_Path)\OPCServerToolKit</TA_WinTech_LibPath>
+    <TA_WinTech_Lib>WTOPCsvr.lib</TA_WinTech_Lib>
+    <TA_AllCotsIncludePath>$(TA_omniORB_Path);$(TA_omniORB_IncludePath);$(TA_omniORB_IncludePath)\COS;$(TA_boost_IncludePath);$(TA_ACE_IncludePath);$(TA_Oracle_IncludePath);$(TA_Curl_IncludePath);$(TA_MySQL_IncludePath);$(TA_MCL_IncludePath);$(TA_WinStackTrace_IncludePath);$(TA_OpenSSL_IncludePath);$(TA_ZipArchive_IncludePath)</TA_AllCotsIncludePath>
+    <TA_AllCotsLibPath>$(TA_omniORB_LibPath);$(TA_ACE_LibPath);$(TA_boost_LibPath);$(TA_Oracle_LibPath);$(TA_MCL_LibPath);$(TA_MySQL_LibPath);$(TA_OpenSSL_LibPath);$(TA_Curl_LibPath);$(TA_WinTech_LibPath);$(TA_WinStackTrace_LibPath);$(TA_HTMLHelp_LibPath);$(TA_ZipArchive_LibPath);$(TA_ZipArchive_zlib_LibPath)</TA_AllCotsLibPath>
+    <TA_AllCotsLib>$(TA_omniORB_Lib);$(TA_ACE_Lib);$(TA_Oracle_Lib);$(TA_MySQL_Lib);$(TA_MCL_Lib);$(TA_ZipArchive_Lib);$(TA_ZipArchive_zlib_Lib);$(TA_WinStackTrace_Lib);$(TA_HTMLHelp_Lib);$(TA_WinTech_Lib);$(TA_OpenSSL_Lib)</TA_AllCotsLib>
+    <TA_AllQtIncludePath>$(QtDir)\include;$(QtDir)\include\QtCore;$(QtDir)\include\QtGui;$(QtDir)\include\QtWidgets;$(QtDir)\include\ActiveQt</TA_AllQtIncludePath>
+    <TA_Preprocessor>_VC80_UPGRADE=0x0600;WIN32;__WIN32__;__x86__;__NT__;__OSVERSION__=4;_USE_32BIT_TIME_T;_AFXDLL;WINVER=_WIN32_WINNT_WINXP;NTDDI_VERSION=NTDDI_WINXP;_WIN32_WINNT=_WIN32_WINNT_WINXP;NO_WARN_MBCS_MFC_DEPRECATION;_CRT_NONSTDC_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_AFX_SECURE_NO_WARNINGS;_ATL_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS</TA_Preprocessor>
+    <TA_AdditionalIncludeDirectories>src;$(TA_TransActivePath);$(TA_CodePath);$(TA_BuildPath)\$(TA_Platform)\transactive;$(TA_BuildPath)\$(TA_Platform)\$(TA_RelativeProjectPath)\src;$(TA_SdkPath)\$(TA_Platform)$(TA_ConfigurationSuffix);$(TA_AllCotsIncludePath);$(TA_AllQtIncludePath);GeneratedFiles;GeneratedFiles\$(Configuration)</TA_AdditionalIncludeDirectories>
+    <TA_AdditionalLibraryDirectories>$(TA_SdkPath)\$(TA_Platform);$(TA_SdkPath)\$(TA_Platform)$(TA_ConfigurationSuffix);$(TA_BuildPath)\$(TA_Platform)$(TA_ConfigurationSuffix);$(TA_BinPath)\$(TA_Platform)$(TA_ConfigurationSuffix);$(TA_AllCotsLibPath);$(QtDir)\lib</TA_AdditionalLibraryDirectories>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(TA_OutDir)</OutDir>
+    <IntDir>$(TA_IntDir)</IntDir>
+    <TargetName>$(TA_TargetName)</TargetName>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(TA_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(TA_AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalDependencies>$(TA_AllCotsLib);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(TA_AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+    <CustomBuild Condition="('$(ConfigurationType)' == 'Utility') And ($(TA_IsIDLProject) == 'True')">
+      <Command>$(TA_CustomBuild_IDL_CommandLine)</Command>
+      <Outputs>$(TA_CustomBuild_IDL_Outputs)</Outputs>
+    </CustomBuild>
+    <ResourceCompile>
+      <Culture>0x0c09</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;$(TA_Preprocessor);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;$(TA_Preprocessor);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;$(TA_Preprocessor);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="TA_VisualStudio_ver">
+      <Value>$(TA_VisualStudio_ver)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_Platform">
+      <Value>$(TA_Platform)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_IsIDLProject">
+      <Value>$(TA_IsIDLProject)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_TargetName">
+      <Value>$(TA_TargetName)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_TransActivePath">
+      <Value>$(TA_TransActivePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_RelativeProjectPath">
+      <Value>$(TA_RelativeProjectPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_CodePath">
+      <Value>$(TA_CodePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_ToolsPath">
+      <Value>$(TA_ToolsPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_CotsPath">
+      <Value>$(TA_CotsPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_BasePath">
+      <Value>$(TA_BasePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_BinPath">
+      <Value>$(TA_BinPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_BuildPath">
+      <Value>$(TA_BuildPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_SdkPath">
+      <Value>$(TA_SdkPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_Sdk_IncludePath">
+      <Value>$(TA_Sdk_IncludePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_Sdk_LibPath">
+      <Value>$(TA_Sdk_LibPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_OutDir">
+      <Value>$(TA_OutDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_IntDir">
+      <Value>$(TA_IntDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_omniORB_ver">
+      <Value>$(TA_omniORB_ver)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_omniORB_Path">
+      <Value>$(TA_omniORB_Path)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_omniORB_IncludePath">
+      <Value>$(TA_omniORB_IncludePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_omniORB_LibPath">
+      <Value>$(TA_omniORB_LibPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_omniORB_Lib">
+      <Value>$(TA_omniORB_Lib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_CustomBuild_IDL_CommandLine">
+      <Value>$(TA_CustomBuild_IDL_CommandLine)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_CustomBuild_IDL_Outputs">
+      <Value>$(TA_CustomBuild_IDL_Outputs)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_boost_ver">
+      <Value>$(TA_boost_ver)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_boost_Path">
+      <Value>$(TA_boost_Path)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_boost_IncludePath">
+      <Value>$(TA_boost_IncludePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_boost_LibPath">
+      <Value>$(TA_boost_LibPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_ACE_ver">
+      <Value>$(TA_ACE_ver)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_ACE_Path">
+      <Value>$(TA_ACE_Path)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_ACE_IncludePath">
+      <Value>$(TA_ACE_IncludePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_ACE_LibPath">
+      <Value>$(TA_ACE_LibPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_ACE_Lib">
+      <Value>$(TA_ACE_Lib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_Oracle_ver">
+      <Value>$(TA_Oracle_ver)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_Oracle_Path">
+      <Value>$(TA_Oracle_Path)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_Oracle_IncludePath">
+      <Value>$(TA_Oracle_IncludePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_Oracle_LibPath">
+      <Value>$(TA_Oracle_LibPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_Oracle_Lib">
+      <Value>$(TA_Oracle_Lib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_Curl_ver">
+      <Value>$(TA_Curl_ver)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_Curl_Path">
+      <Value>$(TA_Curl_Path)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_Curl_IncludePath">
+      <Value>$(TA_Curl_IncludePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_Curl_LibPath">
+      <Value>$(TA_Curl_LibPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_MySQL_ver">
+      <Value>$(TA_MySQL_ver)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_MySQL_Path">
+      <Value>$(TA_MySQL_Path)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_MySQL_IncludePath">
+      <Value>$(TA_MySQL_IncludePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_MySQL_LibPath">
+      <Value>$(TA_MySQL_LibPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_MySQL_Lib">
+      <Value>$(TA_MySQL_Lib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_MCL_ver">
+      <Value>$(TA_MCL_ver)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_MCL_Path">
+      <Value>$(TA_MCL_Path)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_MCL_IncludePath">
+      <Value>$(TA_MCL_IncludePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_MCL_LibPath">
+      <Value>$(TA_MCL_LibPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_MCL_Lib">
+      <Value>$(TA_MCL_Lib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_OpenSSL_ver">
+      <Value>$(TA_OpenSSL_ver)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_OpenSSL_Path">
+      <Value>$(TA_OpenSSL_Path)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_OpenSSL_IncludePath">
+      <Value>$(TA_OpenSSL_IncludePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_OpenSSL_LibPath">
+      <Value>$(TA_OpenSSL_LibPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_OpenSSL_Lib">
+      <Value>$(TA_OpenSSL_Lib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_ZipArchive_ver">
+      <Value>$(TA_ZipArchive_ver)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_ZipArchive_Path">
+      <Value>$(TA_ZipArchive_Path)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_ZipArchive_IncludePath">
+      <Value>$(TA_ZipArchive_IncludePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_ZipArchive_LibPath">
+      <Value>$(TA_ZipArchive_LibPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_ZipArchive_Lib">
+      <Value>$(TA_ZipArchive_Lib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_WinStackTrace_Path">
+      <Value>$(TA_WinStackTrace_Path)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_WinStackTrace_IncludePath">
+      <Value>$(TA_WinStackTrace_IncludePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_WinStackTrace_LibPath">
+      <Value>$(TA_WinStackTrace_LibPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_WinStackTrace_Lib">
+      <Value>$(TA_WinStackTrace_Lib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_HTMLHelp_Path">
+      <Value>$(TA_HTMLHelp_Path)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_HTMLHelp_LibPath">
+      <Value>$(TA_HTMLHelp_LibPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_HTMLHelp_Lib">
+      <Value>$(TA_HTMLHelp_Lib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_WinTech_Path">
+      <Value>$(TA_WinTech_Path)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_WinTech_LibPath">
+      <Value>$(TA_WinTech_LibPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_WinTech_Lib">
+      <Value>$(TA_WinTech_Lib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_AllCotsIncludePath">
+      <Value>$(TA_AllCotsIncludePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_AllCotsLibPath">
+      <Value>$(TA_AllCotsLibPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_AllCotsLib">
+      <Value>$(TA_AllCotsLib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_AllQtIncludePath">
+      <Value>$(TA_AllQtIncludePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_Preprocessor">
+      <Value>$(TA_Preprocessor)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_AdditionalIncludeDirectories">
+      <Value>$(TA_AdditionalIncludeDirectories)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TA_AdditionalLibraryDirectories">
+      <Value>$(TA_AdditionalLibraryDirectories)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

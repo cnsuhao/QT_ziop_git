@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{1b6713b6-e13f-4eee-bac3-9b8a353b5bbd}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{b6b5ef0d-5c6d-4ecc-9690-a70c4fb529be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="override">
+      <UniqueIdentifier>{d3b0c5dd-5d7b-46a7-855d-f63d6ffd7c9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{40c3b5c2-b432-43d7-a194-7e9de46b3947}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\DummyAgent.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StdAfx.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VersionGen.cpp">
+      <Filter>include</Filter>
+    </ClCompile>
+    <ClCompile Include="src\override\GenericAgent.cpp">
+      <Filter>override</Filter>
+    </ClCompile>
+    <ClCompile Include="src\override\UtilityInitialiser.cpp">
+      <Filter>override</Filter>
+    </ClCompile>
+    <ClCompile Include="src\test\TestNaming.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\DummyAgent.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StdAfx.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\test\TestNaming.h">
+      <Filter>test</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

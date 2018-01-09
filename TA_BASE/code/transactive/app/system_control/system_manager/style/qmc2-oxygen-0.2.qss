@@ -1,0 +1,18 @@
+/*
+    qmc2-oxygen: v0.2, 06-OCT-2015, rene.reucher@batcom-it.net
+
+    Qt style sheet compatible with QMC2 0.57+
+
+    Note that this is no _complete_ style sheet, just an addon to the Oxygen
+    KDE 4 style for better readability of the ROM status / statistics.
+
+    http://qmc2.batcom-it.net/index.php/style-sheets/
+
+    Changes:
+    
+    v0.1 - initial version
+*/
+
+QLabel#labelMachineListStatus {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 64), stop:1 rgba(255, 255, 255, 0));
+}

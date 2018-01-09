@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{1890bf1f-f0b2-4c91-8a17-558b5eeb3f8f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{edc3479c-412b-4814-b3e6-81470ad64d09}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{89a5578c-fe24-44c2-90ac-d77b3f53fa91}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\BannerFrameworkDialog.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BannerPage.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FlashIconButton.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PrintButton.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PrintScreen.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SilenceButton.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SingletonHelper.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StackDialog.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StackedPage.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StackedPageHelper.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tabs.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_FlashIconButton.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_FlashIconButton.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Tabs.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Tabs.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_StackedPage.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_StackedPage.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\BannerFrameworkDialog.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\BannerPage.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\constants.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\FlashIconButton.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\IBannerPage.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\IPrintableObject.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\PrintButton.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\PrintScreen.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\SilenceButton.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\SingletonHelper.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\StackDialog.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\StackedPage.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\StackedPageHelper.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\Tabs.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="bus.banner_framework.rc">
+      <Filter>src</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

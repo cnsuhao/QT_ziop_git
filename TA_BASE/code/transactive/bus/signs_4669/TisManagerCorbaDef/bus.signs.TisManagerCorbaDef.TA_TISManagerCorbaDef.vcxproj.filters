@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{7f8f2686-aa32-4842-a1b0-4de9d55eff6c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\signs_4669\TISManagerCorbaDef\src\ISTISManagerCorbaDef.cpp" />
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\signs_4669\TISManagerCorbaDef\src\ISTISManagerCorbaDef_skel.cpp" />
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\signs_4669\TISManagerCorbaDef\src\ITTISManagerCorbaDef.cpp" />
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\signs_4669\TISManagerCorbaDef\src\ITTISManagerCorbaDef_skel.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(TA_BuildPath)\win32_n\transactive\bus\signs_4669\TISManagerCorbaDef\src\ISTISManagerCorbaDef.h" />
+    <ClInclude Include="$(TA_BuildPath)\win32_n\transactive\bus\signs_4669\TISManagerCorbaDef\src\ITTISManagerCorbaDef.h" />
+  </ItemGroup>
+</Project>

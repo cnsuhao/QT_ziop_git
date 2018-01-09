@@ -1,0 +1,645 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PlanManagerFrame</class>
+ <widget class="QMainWindow" name="PlanManagerFrame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1680</width>
+    <height>839</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Plan Manager</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normalon>:/AppIcon</normalon>
+    <activeoff>:/AppIcon</activeoff>
+    <activeon>:/AppIcon</activeon>
+    <selectedon>:/AppIcon</selectedon>
+   </iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>5</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>5</number>
+    </property>
+    <property name="bottomMargin">
+     <number>5</number>
+    </property>
+    <property name="spacing">
+     <number>3</number>
+    </property>
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item>
+       <widget class="QToolBar" name="toolbarPlanNodeAdmin">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="windowTitle">
+         <string>toolBar</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+        <addaction name="separator"/>
+        <addaction name="actionPlanEdit"/>
+        <addaction name="separator"/>
+        <addaction name="actionPlanApprove"/>
+        <addaction name="actionPlanUnapprove"/>
+        <addaction name="separator"/>
+        <addaction name="actionPlanSchedule"/>
+        <addaction name="actionPlanControl"/>
+        <addaction name="separator"/>
+        <addaction name="actionPlanVisible"/>
+        <addaction name="actionPlanInvisible"/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolBar" name="toolbarPlanNode">
+        <property name="maximumSize">
+         <size>
+          <width>775</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="windowTitle">
+         <string>toolBar</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+        <addaction name="actionCategoryNew"/>
+        <addaction name="separator"/>
+        <addaction name="actionPlanNew"/>
+        <addaction name="actionPlanDelete"/>
+        <addaction name="actionPlanCut"/>
+        <addaction name="actionPlanCopy"/>
+        <addaction name="actionPlanPaste"/>
+        <addaction name="actionPlanEdit"/>
+        <addaction name="separator"/>
+        <addaction name="actionPlanApprove"/>
+        <addaction name="actionPlanUnapprove"/>
+        <addaction name="separator"/>
+        <addaction name="actionPlanSchedule"/>
+        <addaction name="actionPlanControl"/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolBar" name="toolBarCategoryNode">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>304</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="windowTitle">
+         <string>toolBar</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+        <addaction name="actionCategoryNew"/>
+        <addaction name="actionCategoryDelete"/>
+        <addaction name="separator"/>
+        <addaction name="actionPlanNew"/>
+        <addaction name="actionPlanPaste"/>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <widget class="QMdiArea" name="mdiArea"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubarPlanTreeView">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1680</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionFileAppExit"/>
+    <addaction name="actionFileImportPlan"/>
+    <addaction name="actionFileExportPlan"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <addaction name="actionViewToolbar"/>
+    <addaction name="actionViewStatusBar"/>
+    <addaction name="separator"/>
+    <addaction name="actionViewAllPlans"/>
+    <addaction name="actionViewApprovedPlans"/>
+    <addaction name="actionViewUnapprovedPlans"/>
+    <addaction name="actionViewActivePlans"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionHelpIndex"/>
+    <addaction name="actionHelpAppAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuCategory">
+    <property name="title">
+     <string>&amp;Category</string>
+    </property>
+    <addaction name="actionCategoryNew"/>
+    <addaction name="actionCategoryDelete"/>
+    <addaction name="actionCategoryRename"/>
+   </widget>
+   <widget class="QMenu" name="menu_Plan">
+    <property name="title">
+     <string>&amp;Plan</string>
+    </property>
+    <addaction name="actionPlanNew"/>
+    <addaction name="actionPlanDelete"/>
+    <addaction name="actionPlanCut"/>
+    <addaction name="actionPlanCopy"/>
+    <addaction name="actionPlanPaste"/>
+    <addaction name="actionPlanEdit"/>
+    <addaction name="separator"/>
+    <addaction name="actionPlanApprove"/>
+    <addaction name="actionPlanUnapprove"/>
+    <addaction name="separator"/>
+    <addaction name="actionPlanSchedule"/>
+    <addaction name="actionPlanControl"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView"/>
+   <addaction name="menuCategory"/>
+   <addaction name="menu_Plan"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionFileAppExit">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+   <property name="statusTip">
+    <string>Quit the application</string>
+   </property>
+  </action>
+  <action name="actionFileImportPlan">
+   <property name="text">
+    <string>Import Plan...</string>
+   </property>
+   <property name="toolTip">
+    <string>Import Plan</string>
+   </property>
+   <property name="statusTip">
+    <string>Import plan details from a plan (.pln) file</string>
+   </property>
+  </action>
+  <action name="actionFileExportPlan">
+   <property name="text">
+    <string>Export Plan...</string>
+   </property>
+   <property name="toolTip">
+    <string>Export Plan</string>
+   </property>
+   <property name="statusTip">
+    <string>Export plan details to a plan (.pln) file</string>
+   </property>
+  </action>
+  <action name="actionViewToolbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Toolbar</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle ToolBar</string>
+   </property>
+   <property name="statusTip">
+    <string>Show or hide the toolbar</string>
+   </property>
+  </action>
+  <action name="actionViewStatusBar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Status Bar</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle StatusBar</string>
+   </property>
+   <property name="statusTip">
+    <string>Show or hide the status bar</string>
+   </property>
+  </action>
+  <action name="actionHelpIndex">
+   <property name="text">
+    <string>Plan Manager Help</string>
+   </property>
+   <property name="statusTip">
+    <string>List Help topics</string>
+   </property>
+  </action>
+  <action name="actionHelpAppAbout">
+   <property name="text">
+    <string>&amp;About Plan Manager</string>
+   </property>
+   <property name="statusTip">
+    <string>Display program information, version number and copyright</string>
+   </property>
+  </action>
+  <action name="actionViewAllPlans">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;All Plans</string>
+   </property>
+   <property name="toolTip">
+    <string>Show All Plans</string>
+   </property>
+   <property name="statusTip">
+    <string>Show all available plans</string>
+   </property>
+  </action>
+  <action name="actionViewApprovedPlans">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>A&amp;pproved Plans</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Approved Plans</string>
+   </property>
+   <property name="statusTip">
+    <string>Show approved plans only</string>
+   </property>
+  </action>
+  <action name="actionViewUnapprovedPlans">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>U&amp;napproved Plans</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Unapproved Plans</string>
+   </property>
+   <property name="statusTip">
+    <string>Show unapproved plans only</string>
+   </property>
+  </action>
+  <action name="actionViewActivePlans">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>A&amp;ctive Plans</string>
+   </property>
+   <property name="toolTip">
+    <string>Show All Active Plans</string>
+   </property>
+   <property name="statusTip">
+    <string>Show all active plan instances</string>
+   </property>
+  </action>
+  <action name="actionCategoryNew">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/CategoryNodeNew.png</normaloff>:/icons/CategoryNodeNew.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New</string>
+   </property>
+   <property name="iconText">
+    <string>New Category</string>
+   </property>
+   <property name="toolTip">
+    <string>Create New Category (Ctrl+Shift+N)</string>
+   </property>
+   <property name="statusTip">
+    <string>Add a new category to the selected category or the selected plan's parent category</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+N</string>
+   </property>
+  </action>
+  <action name="actionCategoryDelete">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/CategoryNodeDelete.png</normaloff>:/icons/CategoryNodeDelete.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Delete</string>
+   </property>
+   <property name="iconText">
+    <string>Delete Category</string>
+   </property>
+   <property name="toolTip">
+    <string>Delete Current Category (Del)</string>
+   </property>
+   <property name="statusTip">
+    <string>Delete the selected category</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="actionCategoryRename">
+   <property name="text">
+    <string>&amp;Rename</string>
+   </property>
+   <property name="toolTip">
+    <string>Rename Current Category</string>
+   </property>
+   <property name="statusTip">
+    <string>Rename the selected category</string>
+   </property>
+  </action>
+  <action name="actionPlanNew">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/PlanNodeNew.png</normaloff>:/icons/PlanNodeNew.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New</string>
+   </property>
+   <property name="iconText">
+    <string>New Plan</string>
+   </property>
+   <property name="toolTip">
+    <string>Create New Plan (Ctrl+N)</string>
+   </property>
+   <property name="statusTip">
+    <string>Add a new plan to the selected category or the selected plan's parent category</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionPlanDelete">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/PlanNodeDelete.png</normaloff>:/icons/PlanNodeDelete.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Delete</string>
+   </property>
+   <property name="iconText">
+    <string>Delete Plan</string>
+   </property>
+   <property name="toolTip">
+    <string>Delete Current Plan (Del)</string>
+   </property>
+   <property name="statusTip">
+    <string>Delete the selected plan</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="actionPlanCut">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/PlanNodeCut.png</normaloff>:/icons/PlanNodeCut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cu&amp;t</string>
+   </property>
+   <property name="iconText">
+    <string>Cut Plan</string>
+   </property>
+   <property name="toolTip">
+    <string>Cut Current Plan (Ctrl+X)</string>
+   </property>
+   <property name="statusTip">
+    <string>Move the selected plan to the clipboard</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionPlanCopy">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/PlanNodeCopy.png</normaloff>:/icons/PlanNodeCopy.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Copy</string>
+   </property>
+   <property name="iconText">
+    <string>Copy Plan</string>
+   </property>
+   <property name="toolTip">
+    <string>Copy Current Plan (Ctrl+C)</string>
+   </property>
+   <property name="statusTip">
+    <string>Copy the selected plan to the clipboard</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPlanPaste">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/PlanNodePaste.png</normaloff>:/icons/PlanNodePaste.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Paste</string>
+   </property>
+   <property name="iconText">
+    <string>Paste Plan</string>
+   </property>
+   <property name="toolTip">
+    <string>Paste Cut/Copied Plan (Ctrl+V)</string>
+   </property>
+   <property name="statusTip">
+    <string>Paste the plan from the clipboard to the selected category or the selected plan's parent directory</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionPlanEdit">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/CategoryNodeEdit.png</normaloff>:/icons/CategoryNodeEdit.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Edit</string>
+   </property>
+   <property name="iconText">
+    <string>Edit Plan</string>
+   </property>
+   <property name="toolTip">
+    <string>Edit Current Plan</string>
+   </property>
+   <property name="statusTip">
+    <string>Edit the selected plan</string>
+   </property>
+  </action>
+  <action name="actionPlanApprove">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/PlanNodeApprove.png</normaloff>:/icons/PlanNodeApprove.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Approve</string>
+   </property>
+   <property name="iconText">
+    <string>Approve Plan</string>
+   </property>
+   <property name="toolTip">
+    <string>Grant Execution Approval</string>
+   </property>
+   <property name="statusTip">
+    <string>Approve the plan for execution</string>
+   </property>
+  </action>
+  <action name="actionPlanUnapprove">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/PlanNodeUnapprove.png</normaloff>:/icons/PlanNodeUnapprove.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Unapprove</string>
+   </property>
+   <property name="iconText">
+    <string>Unapprove Plan</string>
+   </property>
+   <property name="toolTip">
+    <string>Revoke Execution Approval</string>
+   </property>
+   <property name="statusTip">
+    <string>Withdraw the plan's execution approval</string>
+   </property>
+  </action>
+  <action name="actionPlanSchedule">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/PlanNodeSchedule.png</normaloff>:/icons/PlanNodeSchedule.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sc&amp;hedule</string>
+   </property>
+   <property name="iconText">
+    <string>Schedule Plan</string>
+   </property>
+   <property name="toolTip">
+    <string>Schedule Plan Execution</string>
+   </property>
+   <property name="statusTip">
+    <string>Schedule the execution of the selected plan</string>
+   </property>
+  </action>
+  <action name="actionPlanControl">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/PlanNodeControl.png</normaloff>:/icons/PlanNodeControl.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cont&amp;rol</string>
+   </property>
+   <property name="iconText">
+    <string>Control Plan</string>
+   </property>
+   <property name="toolTip">
+    <string>Control Plan Execution</string>
+   </property>
+   <property name="statusTip">
+    <string>Control the execution of the selected plan</string>
+   </property>
+  </action>
+  <action name="actionPlanVisible">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/PlanNodeVisible.png</normaloff>:/icons/PlanNodeVisible.png</iconset>
+   </property>
+   <property name="text">
+    <string>New Plan</string>
+   </property>
+   <property name="toolTip">
+    <string>Create New Plan (Ctrl+N)</string>
+   </property>
+   <property name="statusTip">
+    <string>Add a new plan to the selected category or the selected plan's parent category</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionPlanInvisible">
+   <property name="icon">
+    <iconset resource="PlanManager.qrc">
+     <normaloff>:/icons/PlanNodeInvisible.png</normaloff>:/icons/PlanNodeInvisible.png</iconset>
+   </property>
+   <property name="text">
+    <string>Plan Invisible</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="PlanManager.qrc"/>
+ </resources>
+ <connections/>
+</ui>

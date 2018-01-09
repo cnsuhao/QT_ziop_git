@@ -1,0 +1,152 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>icons/AlarmManager.ico</file>
+        <file>icons/ArchiveManager.ico</file>
+        <file>icons/BannerPrint.ico</file>
+        <file>icons/camera.ico</file>
+        <file>icons/ConfigurationEditor.ico</file>
+        <file>icons/ControlStation.ico</file>
+        <file>icons/display-blue.ico</file>
+        <file>icons/DisplayManager.ico</file>
+        <file>icons/DutyManager.ico</file>
+        <file>icons/equipcontroller-blue.ico</file>
+        <file>icons/EquipmentController.ico</file>
+        <file>icons/EventViewer.ico</file>
+        <file>icons/incident.ico</file>
+        <file>icons/MapViewer.ico</file>
+        <file>icons/PlanManager.ico</file>
+        <file>icons/pubaddress-blue.ico</file>
+        <file>icons/PublicAddress.ico</file>
+        <file>icons/radio-blue.ico</file>
+        <file>icons/RadioManager.ico</file>
+        <file>icons/RadioMonitor.ico</file>
+        <file>icons/region-manager.ico</file>
+        <file>icons/ReportManager.ico</file>
+        <file>icons/scheduler.ico</file>
+        <file>icons/SchedulingManager.ico</file>
+        <file>icons/signs-blue.ico</file>
+        <file>icons/SignViewer.ico</file>
+        <file>icons/silence.ico</file>
+        <file>icons/SMS-blue.ico</file>
+        <file>icons/SystemManager.ico</file>
+        <file>icons/telephone-blue.ico</file>
+        <file>icons/TelephoneManager.ico</file>
+        <file>icons/TransActiveHelp.ico</file>
+        <file>icons/TrendViewer.ico</file>
+        <file>icons/unsilence.ico</file>
+        <file>bitmaps/alarm_comment.bmp</file>
+        <file>bitmaps/ats.bmp</file>
+        <file>bitmaps/atsd.bmp</file>
+        <file>bitmaps/atsdg.bmp</file>
+        <file>bitmaps/atsg.bmp</file>
+        <file>bitmaps/call.bmp</file>
+        <file>bitmaps/calld.bmp</file>
+        <file>bitmaps/calldg.bmp</file>
+        <file>bitmaps/callg.bmp</file>
+        <file>bitmaps/iscs.bmp</file>
+        <file>bitmaps/iscsd.bmp</file>
+        <file>bitmaps/iscsdg.bmp</file>
+        <file>bitmaps/iscsdgkrtc.bmp</file>
+        <file>bitmaps/iscsdkrtc.bmp</file>
+        <file>bitmaps/iscsg.bmp</file>
+        <file>bitmaps/iscsgkrtc.bmp</file>
+        <file>bitmaps/iscskrtc.bmp</file>
+        <file>bitmaps/plan.bmp</file>
+        <file>bitmaps/pland.bmp</file>
+        <file>bitmaps/plandg.bmp</file>
+        <file>bitmaps/plang.bmp</file>
+        <file>bitmaps/sort_ascending.bmp</file>
+        <file>bitmaps/sort_descending.bmp</file>
+        <file>bitmaps/TransActive_Logo_RGB.bmp</file>
+        <file>icons/ConfigurationEditor/config agent.ico</file>
+        <file>icons/ConfigurationEditor/config alarm combo.ico</file>
+        <file>icons/ConfigurationEditor/config alarm plans.ico</file>
+        <file>icons/ConfigurationEditor/config alarm rules.ico</file>
+        <file>icons/ConfigurationEditor/config alarm severity.ico</file>
+        <file>icons/ConfigurationEditor/config alarm type.ico</file>
+        <file>icons/ConfigurationEditor/config application.ico</file>
+        <file>icons/ConfigurationEditor/config ats.ico</file>
+        <file>icons/ConfigurationEditor/config central profile.ico</file>
+        <file>icons/ConfigurationEditor/config datapoint.ico</file>
+        <file>icons/ConfigurationEditor/config duties.ico</file>
+        <file>icons/ConfigurationEditor/config ecs master modes.ico</file>
+        <file>icons/ConfigurationEditor/config ecs station modes.ico</file>
+        <file>icons/ConfigurationEditor/config ecs zones.ico</file>
+        <file>icons/ConfigurationEditor/config entity.ico</file>
+        <file>icons/ConfigurationEditor/config event plans.ico</file>
+        <file>icons/ConfigurationEditor/config interlocking.ico</file>
+        <file>icons/ConfigurationEditor/config local profile.ico</file>
+        <file>icons/ConfigurationEditor/config location.ico</file>
+        <file>icons/ConfigurationEditor/config message type.ico</file>
+        <file>icons/ConfigurationEditor/config mms scheduling.ico</file>
+        <file>icons/ConfigurationEditor/config online printer.ico</file>
+        <file>icons/ConfigurationEditor/config operator.ico</file>
+        <file>icons/ConfigurationEditor/config pa ats triggered broadcasts.ico</file>
+        <file>icons/ConfigurationEditor/config pa station dva messages.ico</file>
+        <file>icons/ConfigurationEditor/config pa stations.ico</file>
+        <file>icons/ConfigurationEditor/config pa train dva messages.ico</file>
+        <file>icons/ConfigurationEditor/config pa zone groups.ico</file>
+        <file>icons/ConfigurationEditor/config pa zones.ico</file>
+        <file>icons/ConfigurationEditor/config profile.ico</file>
+        <file>icons/ConfigurationEditor/config rights.ico</file>
+        <file>icons/ConfigurationEditor/config scada display.ico</file>
+        <file>icons/ConfigurationEditor/config server.ico</file>
+        <file>icons/ConfigurationEditor/config si element location.ico</file>
+        <file>icons/ConfigurationEditor/config si region talkgroup.ico</file>
+        <file>icons/ConfigurationEditor/config si train.ico</file>
+        <file>icons/ConfigurationEditor/config sound file.ico</file>
+        <file>icons/ConfigurationEditor/config subsystem.ico</file>
+        <file>icons/ConfigurationEditor/config system controller group.ico</file>
+        <file>icons/ConfigurationEditor/config system controller.ico</file>
+        <file>icons/ConfigurationEditor/config tis ratis destination.ico</file>
+        <file>icons/ConfigurationEditor/config tis ratis tag.ico</file>
+        <file>icons/ConfigurationEditor/config tis.ico</file>
+        <file>icons/ConfigurationEditor/config workstation.ico</file>
+        <file>icons/ConfigurationEditor/ECSStationColor.ico</file>
+        <file>icons/ControlStation/ass-camera1-20.ico</file>
+        <file>icons/ControlStation/ass-camera2-20.ico</file>
+        <file>icons/ControlStation/ass-controler-20.ico</file>
+        <file>icons/ControlStation/ass-incidents-20.ico</file>
+        <file>icons/ControlStation/ass-maps-20.ico</file>
+        <file>icons/ControlStation/ass-plans-20.ico</file>
+        <file>icons/ControlStation/ass-trends-20.ico</file>
+        <file>icons/ControlStation/centremonitor.ico</file>
+        <file>icons/ControlStation/DefaultHot.ico</file>
+        <file>icons/ControlStation/EditShortcut.ico</file>
+        <file>icons/ControlStation/help.ico</file>
+        <file>icons/ControlStation/help-20.ico</file>
+        <file>icons/ControlStation/leftmonitor.ico</file>
+        <file>icons/ControlStation/Logout.ico</file>
+        <file>icons/ControlStation/logout-20.ico</file>
+        <file>icons/ControlStation/NetworkConnnected.ico</file>
+        <file>icons/ControlStation/NetworkDisconnected.ico</file>
+        <file>icons/ControlStation/OperatorOverride.ico</file>
+        <file>icons/ControlStation/OperatorPassword.ico</file>
+        <file>icons/ControlStation/OperatorProfileChange.ico</file>
+        <file>icons/ControlStation/OperatorShiftChange.ico</file>
+        <file>icons/ControlStation/overide-20.ico</file>
+        <file>icons/ControlStation/password-20.ico</file>
+        <file>icons/ControlStation/print-map-20.ico</file>
+        <file>icons/ControlStation/profile-20.ico</file>
+        <file>icons/ControlStation/rightmonitor.ico</file>
+        <file>icons/ControlStation/show-all-running-20.ico</file>
+        <file>icons/ControlStation/silence-20.ico</file>
+        <file>icons/ControlStation/ViewCamera.ico</file>
+        <file>icons/ControlStation/ViewSchematic.ico</file>
+        <file>icons/ControlStation/ViewShortcut.ico</file>
+        <file>icons/Toolbar/add.ico</file>
+        <file>icons/Toolbar/alarm_comment.ico</file>
+        <file>icons/Toolbar/copy config.ico</file>
+        <file>icons/Toolbar/delete config.ico</file>
+        <file>icons/Toolbar/delete.ico</file>
+        <file>icons/Toolbar/disable.ico</file>
+        <file>icons/Toolbar/edit.ico</file>
+        <file>icons/Toolbar/enable.ico</file>
+        <file>icons/Toolbar/filter.ico</file>
+        <file>icons/Toolbar/new config.ico</file>
+        <file>icons/Toolbar/print.ico</file>
+        <file>icons/Toolbar/reload config.ico</file>
+        <file>icons/Toolbar/tdslog config.ico</file>
+        <file>icons/Toolbar/view.ico</file>
+    </qresource>
+</RCC>

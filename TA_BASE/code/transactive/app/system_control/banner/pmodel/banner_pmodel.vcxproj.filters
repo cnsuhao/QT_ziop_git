@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="pmodel">
+      <UniqueIdentifier>{5df16303-fb8f-49d8-856d-0a9d30b006ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="businesslogic">
+      <UniqueIdentifier>{4b9ad79e-28dd-4542-9fcb-1090b4ba8b59}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\BannerAppController.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BannerDlgPModel.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BannerDlgBusLogic.cpp">
+      <Filter>businesslogic</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\BannerAppController.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BannerDlgPModel.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BannerPModelConst.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BannerDlgBusLogic.h">
+      <Filter>businesslogic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StartTabEventAgrs.h">
+      <Filter>businesslogic</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

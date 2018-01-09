@@ -1,0 +1,39 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ass-camera1-20.ico</file>
+        <file>ass-camera2-20.ico</file>
+        <file>ass-controler-20.ico</file>
+        <file>ass-incidents-20.ico</file>
+        <file>ass-maps-20.ico</file>
+        <file>ass-plans-20.ico</file>
+        <file>ass-trends-20.ico</file>
+        <file>centremonitor.ico</file>
+        <file>DefaultHot.ico</file>
+        <file>EditShortcut.ico</file>
+        <file>help.ico</file>
+        <file>help-20.ico</file>
+        <file>leftmonitor.ico</file>
+        <file>Logout.ico</file>
+        <file>logout-20.ico</file>
+        <file>NetworkConnnected.ico</file>
+        <file>NetworkDisconnected.ico</file>
+        <file>OperatorOverride.ico</file>
+        <file>OperatorPassword.ico</file>
+        <file>OperatorProfileChange.ico</file>
+        <file>OperatorShiftChange.ico</file>
+        <file>overide-20.ico</file>
+        <file>password-20.ico</file>
+        <file>print-map-20.ico</file>
+        <file>profile-20.ico</file>
+        <file>rightmonitor.ico</file>
+        <file>show-all-running-20.ico</file>
+        <file>silence-20.ico</file>
+        <file>ViewCamera.ico</file>
+        <file>ViewSchematic.ico</file>
+        <file>ViewShortcut.ico</file>
+        <file>ControlStation.ico</file>
+        <file>logo.jpg</file>
+        <file>logo.gif</file>
+        <file>transactiveintro.gif</file>
+    </qresource>
+</RCC>

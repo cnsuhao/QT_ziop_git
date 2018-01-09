@@ -1,0 +1,40 @@
+﻿<RCC>
+    <qresource prefix="/">
+        <file>icons/PlanControllerStepsCustomise.png</file>
+        <file>icons/PlanControllerStepsSchedule.png</file>
+        <file>icons/PlanControllerStepsTakeControl.png</file>
+        <file>icons/PlanControllerStepsResumeSelected.png</file>
+        <file>icons/PlanControllerStepsResume.png</file>
+        <file>icons/PlanControllerStepsPause.png</file>
+        <file>icons/PlanControllerStepsStop.png</file>
+        <file>icons/PlanControllerStepsExecute.png</file>
+        <file>icons/PlanEditorStepsEdit.png</file>
+        <file>icons/PlanEditorStepsPaste.png</file>
+        <file>icons/PlanEditorStepsCopy.png</file>
+        <file>icons/PlanEditorStepsCut.png</file>
+        <file>icons/PlanEditorStepsDelete.png</file>
+        <file>icons/PlanEditorStepsNew.png</file>
+        <file>icons/PlanEditorStepsSave.png</file>
+        <file>icons/PlanNodeInvisible.png</file>
+        <file>icons/PlanNodeVisible.png</file>
+        <file>icons/PlanNodeControl.png</file>
+        <file>icons/PlanNodeSchedule.png</file>
+        <file>icons/PlanNodeUnapprove.png</file>
+        <file>icons/PlanNodeApprove.png</file>
+        <file>icons/CategoryNodeEdit.png</file>
+        <file>icons/CategoryNodePaste.png</file>
+        <file>icons/PlanNodeCopy.png</file>
+        <file>icons/PlanNodeCut.png</file>
+        <file>icons/PlanNodeDelete.png</file>
+        <file>icons/PlanNodePaste.png</file>
+        <file>icons/PlanNodeNew.png</file>
+        <file>icons/CategoryNodeDelete.png</file>
+        <file>icons/CategoryNodeNew.png</file>
+        <file alias="AppIcon">../../../../bus/resources/icons/PlanManager.ico</file>
+        <file>icons/treeNodeRoot.png</file>
+        <file>icons/treeNodeCross.png</file>
+        <file>icons/treeNodeTick.png</file>
+        <file>icons/treeNodeFolderOpen.png</file>
+        <file>icons/treeNodeFolderClose.png</file>
+    </qresource>
+</RCC>

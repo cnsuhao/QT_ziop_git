@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>activePlanView</class>
+ <widget class="QWidget" name="activePlanView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>748</width>
+    <height>198</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>MS Sans Serif</family>
+    <pointsize>8</pointsize>
+   </font>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="CtlGroupBox" name="groupBox">
+     <property name="title">
+      <string>Active instances</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="CtlCheckBox" name="allOwnersCheck">
+          <property name="text">
+           <string>Show all plan owners</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="CtlCheckBox" name="allLocationsCheck">
+          <property name="text">
+           <string>Show all plan locations</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="CtlTableWidget" name="activeInstancesList">
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
+          <property name="showGrid">
+           <bool>false</bool>
+          </property>
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CtlCheckBox</class>
+   <extends>QCheckBox</extends>
+   <header>bus/common_control/src/button/CtlCheckBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CtlGroupBox</class>
+   <extends>QGroupBox</extends>
+   <header>bus/common_control/src/container/CtlGroupBox.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CtlTableWidget</class>
+   <extends>QTableWidget</extends>
+   <header>bus/common_control/src/itemview/CtlTableWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

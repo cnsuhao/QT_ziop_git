@@ -1,0 +1,150 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ProjectGuid>{E875455D-1559-41AD-9015-50754C13AFA2}</ProjectGuid>
+    <RootNamespace>OPCSampleGrpConfig.DotTest</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ChineseStringTests.cs" />
+    <Compile Include="Common\EnglishStringTests.cs" />
+    <Compile Include="Common\FormCaptionHelperTests.cs" />
+    <Compile Include="Controller\OPCDataSelectorControllerTests.cs" />
+    <Compile Include="Controller\OPCSampleGrpConfigStartControllerTests.cs" />
+    <Compile Include="DAO\TrendingMSS\DatalogDPGroupTrendDAOMSS.cs" />
+    <Compile Include="DAO\TrendingMSS\DatalogDPTrendDAOMSS.cs" />
+    <Compile Include="DAO\TrendingMSS\EntityDAOMSS.cs" />
+    <Compile Include="DAO\Trending\CommonMSS\SimpleDatabaseMSS.cs" />
+    <Compile Include="DAO\Trending\HelperMSS\LocationKeyHelperMSS.cs" />
+    <Compile Include="Factories\Controller\OPCDataSelectorControllerFactory.cs" />
+    <Compile Include="Factories\Controller\OPCSampleGrpConfigStartControllerFactory.cs" />
+    <Compile Include="Factories\Model\OPCDataSelectorModelFactory.cs" />
+    <Compile Include="Factories\Model\OPCSampleGrpConfigStartModelFactory.cs" />
+    <Compile Include="Factories\View\OPCDataSelectorFactory.cs" />
+    <Compile Include="Factories\View\OPCSampleGrpConfigStartFactory.cs" />
+    <Compile Include="Factories\View\OPCSampleGrpConfigViewFactoryFactory.cs" />
+    <Compile Include="Model\OPCDataSelectorModelTests.cs" />
+    <Compile Include="Model\OPCSampleGrpConfigStartModelTests.cs" />
+    <Compile Include="OPCSampleGrpConfig\ControllerMSS\OPCDataSelectorControllerMSS.cs" />
+    <Compile Include="OPCSampleGrpConfig\ControllerMSS\OPCSampleGrpConfigStartControllerMSS.cs" />
+    <Compile Include="OPCSampleGrpConfig\ModelMSS\OPCDataSelectorModelMSS.cs" />
+    <Compile Include="OPCSampleGrpConfig\ModelMSS\OPCSampleGrpConfigStartModelMSS.cs" />
+    <Compile Include="OPCSampleGrpConfig\ViewMSS\OPCSampleGrpConfigStartMSS.cs" />
+    <Compile Include="ProgramTest.cs" />
+    <Compile Include="Properties_ResourcesTest.cs" />
+    <Compile Include="Properties_SettingsTest.cs" />
+    <Compile Include="STEE\ISCS\MulLanguageMSS\MessageBoxDialogMSS.cs" />
+    <Compile Include="System\DiagnosticsMSS\ProcessMSS.cs" />
+    <Compile Include="System\IOMSS\FileMSS.cs" />
+    <Compile Include="System\NetMSS\DnsMSS.cs" />
+    <Compile Include="System\Windows\FormsMSS\ApplicationMSS.cs" />
+    <Compile Include="System\Windows\FormsMSS\ControlMSS.cs" />
+    <Compile Include="System\Windows\FormsMSS\DataGridViewMSS.cs" />
+    <Compile Include="System\Windows\FormsMSS\ListBoxMSS.cs" />
+    <Compile Include="System\Windows\FormsMSS\NumericUpDownMSS.cs" />
+    <Compile Include="System\Windows\FormsMSS\TreeViewMSS.cs" />
+    <Compile Include="View\OPCDataSelectorTests.cs" />
+    <Compile Include="View\OPCSampleGrpConfigStartTests.cs" />
+    <Compile Include="View\OPCSampleGrpConfigViewFactoryTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAO.Trending\DAO.Trending.csproj">
+      <Project>{E3417E6D-7B59-41DC-AAEB-CB376FB5830F}</Project>
+      <Name>DAO.Trending</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity.Trending\Entity.Trending.csproj">
+      <Project>{4D60352D-4118-4DD8-8D9A-45EB585C3830}</Project>
+      <Name>Entity.Trending</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OPCSampleGrpConfig\OPCSampleGrpConfig\OPCSampleGrpConfig.csproj">
+      <Project>{68FBD6AE-2DB2-4D8C-9729-9A11577582C6}</Project>
+      <Name>OPCSampleGrpConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\STEE.ISCS.GenericGUI\STEE.ISCS.GenericGUI.csproj">
+      <Project>{6AEE1C9A-97BB-4D8B-B195-50AEF2F4D1EF}</Project>
+      <Name>STEE.ISCS.GenericGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\STEE.ISCS.MulLanguage.DotTest\STEE.ISCS.MulLanguage.DotTest.csproj">
+      <Project>{63926BDF-FFDE-4DD2-BE19-28673EB62E74}</Project>
+      <Name>STEE.ISCS.MulLanguage.DotTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\STEE.ISCS.MulLanguage\STEE.ISCS.MulLanguage.csproj">
+      <Project>{F5B95A85-BDE7-4F19-A6C5-C2AB8010B7BE}</Project>
+      <Name>STEE.ISCS.MulLanguage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\STEE.ISCS.MVC.DotTest\STEE.ISCS.MVC.DotTest.csproj">
+      <Project>{1B9E7524-A4CD-46DE-B9D1-4C86AC16D76B}</Project>
+      <Name>STEE.ISCS.MVC.DotTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\STEE.ISCS.MVC\STEE.ISCS.MVC.csproj">
+      <Project>{CE78950A-F16F-44D3-A52C-EB62ACECB33F}</Project>
+      <Name>STEE.ISCS.MVC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrendingHelper\TrendingHelper.csproj">
+      <Project>{86898DA5-B846-4BC4-9AF2-51E9868B4A40}</Project>
+      <Name>TrendingHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="dottest.framework, Version=9.1.0.2, Culture=neutral, PublicKeyToken=47d60c2a3c343a91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Parasoft\dotTEST\9.5\plugins\com.parasoft.xtest.libs.vstudio.dotnet\engine\dottest.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.3.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Parasoft\dotTEST\9.5\plugins\com.parasoft.xtest.libs.vstudio.dotnet\engine\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=10.2.0.100, Culture=neutral, PublicKeyToken=89b483f429c47342" />
+    <Reference Include="STEE.ISCS.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\STEE.ISCS.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+</Project>

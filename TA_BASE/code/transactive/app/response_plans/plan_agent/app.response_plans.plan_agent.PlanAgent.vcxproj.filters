@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Steps">
+      <UniqueIdentifier>{8c47988a-5520-4bbb-b2e1-eaa5f7b9d011}</UniqueIdentifier>
+      <Extensions>cpp;h</Extensions>
+    </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{c9ac7192-913c-423a-aa65-72bb414a5c1b}</UniqueIdentifier>
+      <Extensions>cpp;h</Extensions>
+    </Filter>
+    <Filter Include="Messages">
+      <UniqueIdentifier>{9158e0e6-2e2f-473f-bee2-8db1bb7e75e4}</UniqueIdentifier>
+      <Extensions>cpp;h</Extensions>
+    </Filter>
+    <Filter Include="ActivePlans">
+      <UniqueIdentifier>{21f92d55-0680-417d-8aa4-3a2d1ab13786}</UniqueIdentifier>
+      <Extensions>cpp;h</Extensions>
+    </Filter>
+    <Filter Include="DBGenericAgentCORBA">
+      <UniqueIdentifier>{91ba272f-aa70-45da-9d43-5b1a8bf3bf87}</UniqueIdentifier>
+      <Extensions>cpp;h</Extensions>
+    </Filter>
+    <Filter Include="Exceptions">
+      <UniqueIdentifier>{5d67220a-b2da-4344-97c4-c4212efcabe9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DSS">
+      <UniqueIdentifier>{77731027-ab08-4570-976b-7a9e1330251b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ActiveAbortStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveActivePlanCheckStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveAssignCameraToMonitorStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveAssignCameraToPresetStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveDataPointCheckStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveDataPointSetStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveDataPointTimeCheckStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveDecisionStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveEndStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveEvaluateExpressionStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveExecuteScriptStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveFailureSummaryStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveJumpStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveLaunchGuiAppStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveLaunchSchematicStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveLogStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveNullStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanCheckTimerStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanSetTimerStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePopupMFTMessageStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePromptStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveRunPlanStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveSendSmsMessageStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveShutdownSystemStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveStationPaStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveStationTisStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveTerminatePlanStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveTrainPaStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveTrainTisStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveVideoWallStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveVmsBlankoutStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveVmsRestoreScheduleStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveVmsSetSceneStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GRC3DataPointSetComplexStep.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GRCType3SubTask.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GRCType3SubTaskMO.cpp">
+      <Filter>Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanDelayedState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanExecutingState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanOperatorPausedState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanPausedState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanPendingState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanCompleteMessage.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanCustomiseStepMessage.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanDecisionStepMessage.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanDetailUpdateMessage.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanFailureSummaryStepMessage.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanLaunchGuiAppStepMessage.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanLaunchSchematicStepMessage.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanLogStepMessage.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanMessageBlock.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanMessageQueue.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanPauseForOperatorMessage.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanPauseMessage.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanPopupMftMessageStepMessage.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanPromptStepMessage.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanReassignMessage.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanResumeMessage.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanRunPlanStepMessage.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanStopMessage.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanUnassignMessage.cpp">
+      <Filter>Messages</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlan.cpp">
+      <Filter>ActivePlans</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanBulletinBoard.cpp">
+      <Filter>ActivePlans</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlanDetail.cpp">
+      <Filter>ActivePlans</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlanExecutionEngine.cpp">
+      <Filter>ActivePlans</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlanExecutor.cpp">
+      <Filter>ActivePlans</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlanHouseKeepingMethodObject.cpp">
+      <Filter>ActivePlans</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RunPlanMethodObject.cpp">
+      <Filter>ActivePlans</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SortablePlanId.cpp">
+      <Filter>ActivePlans</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AAMessageSender.cpp">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlanAccessFactory.cpp">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlanAgent.cpp">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlanAgentCorbaDefImpl.cpp">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlanAgentUser.cpp">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlanDataWriter.cpp">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VersionGen.cpp">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanMessageException.cpp">
+      <Filter>Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActiveStepParamException.cpp">
+      <Filter>Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlanNotFoundException.cpp">
+      <Filter>Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\core\exceptions\src\PlanStepDetailException.cpp">
+      <Filter>Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ThirdPartyLibException.cpp">
+      <Filter>Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DatapointTriggerObserver.cpp">
+      <Filter>DSS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DssAbstractRule.cpp">
+      <Filter>DSS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DssDatapointRule.cpp">
+      <Filter>DSS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DssEngine.cpp">
+      <Filter>DSS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DssKnowledgeBase.cpp">
+      <Filter>DSS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DssManager.cpp">
+      <Filter>DSS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DssRuleProcessor.cpp">
+      <Filter>DSS</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ActiveAbortStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveActivePlanCheckStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveAssignCameraToMonitorStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveAssignCameraToPresetStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveDataPointCheckStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveDataPointSetStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveDataPointTimeCheckStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveDecisionStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveEndStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveEvaluateExpressionStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveExecuteScriptStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveFailureSummaryStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveJumpStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveLaunchGuiAppStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveLaunchSchematicStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveLogStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveNullStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanCheckTimerStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanSetTimerStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePopupMFTMessageStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePromptStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveRunPlanStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveSendSmsMessageStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveShutdownSystemStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveStationPaStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveStationTisStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveTerminatePlanStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveTrainPaStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveTrainTisStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveVideoWallStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveVmsBlankoutStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveVmsRestoreScheduleStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveVmsSetSceneStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BooleanContextImpl.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GRC3DataPointSetComplexStep.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GRCType3SubTask.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GRCType3SubTaskMO.h">
+      <Filter>Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanDelayedState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanExecutingState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanOperatorPausedState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanPausedState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanPendingState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanCompleteMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanCustomiseStepMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanDecisionStepMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanDetailUpdateMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanFailureSummaryStepMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanLaunchGuiAppStepMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanLaunchSchematicStepMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanLogStepMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanMessageBlock.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanMessageQueue.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanPauseForOperatorMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanPauseMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanPopupMftMessageStepMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanPromptStepMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanReassignMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanResumeMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanRunPlanStepMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanStopMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanUnassignMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IActivePlanMessage.h">
+      <Filter>Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlan.h">
+      <Filter>ActivePlans</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanBulletinBoard.h">
+      <Filter>ActivePlans</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IActivePlanFlow.h">
+      <Filter>ActivePlans</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlanDetail.h">
+      <Filter>ActivePlans</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlanExecutionEngine.h">
+      <Filter>ActivePlans</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlanExecutor.h">
+      <Filter>ActivePlans</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlanHouseKeepingMethodObject.h">
+      <Filter>ActivePlans</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RunPlanMethodObject.h">
+      <Filter>ActivePlans</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SortablePlanId.h">
+      <Filter>ActivePlans</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AAMessageSender.h">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveStepsHeader.h">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DatabaseConstants.h">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GlobalConstant.h">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlanAccessFactory.h">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlanAgent.h">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlanAgentCorbaDefImpl.h">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlanAgentUser.h">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlanDataWriter.h">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\src\ProjectDefinition.h">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\src\StringConstants.h">
+      <Filter>DBGenericAgentCORBA</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanMessageException.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActiveStepParamException.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlanNotFoundException.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\core\exceptions\src\PlanStepDetailException.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ThirdPartyLibException.h">
+      <Filter>Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DatapointTriggerObserver.h">
+      <Filter>DSS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DssAbstractRule.h">
+      <Filter>DSS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DssDatapointRule.h">
+      <Filter>DSS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DssEngine.h">
+      <Filter>DSS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DssKnowledgeBase.h">
+      <Filter>DSS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DssManager.h">
+      <Filter>DSS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DssRuleProcessor.h">
+      <Filter>DSS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IDssEngine.h">
+      <Filter>DSS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IDssRule.h">
+      <Filter>DSS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ITriggerObserver.h">
+      <Filter>DSS</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

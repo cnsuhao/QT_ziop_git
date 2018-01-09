@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>menubarPlanStepEditor</class>
+ <widget class="QMenuBar" name="menubarPlanStepEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>394</width>
+    <height>20</height>
+   </rect>
+  </property>
+  <widget class="QMenu" name="menuFile">
+   <property name="title">
+    <string>&amp;File</string>
+   </property>
+   <addaction name="actionAppExit"/>
+  </widget>
+  <widget class="QMenu" name="menuStep">
+   <property name="title">
+    <string>&amp;Step</string>
+   </property>
+   <addaction name="actionStepSave"/>
+   <addaction name="actionPlanStepEditParameter"/>
+  </widget>
+  <action name="actionAppExit">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="actionStepSave">
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionPlanStepEditParameter">
+   <property name="text">
+    <string>Edit Parameter</string>
+   </property>
+  </action>
+  <addaction name="menuFile"/>
+  <addaction name="menuStep"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,86 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ProjectGuid>{63926BDF-FFDE-4DD2-BE19-28673EB62E74}</ProjectGuid>
+    <RootNamespace>STEE.ISCS.MulLanguage.DotTest</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChineseStringTests.cs" />
+    <Compile Include="DateTimeFormatterTests.cs" />
+    <Compile Include="Factories\DateTimeFormatterFactory.cs" />
+    <Compile Include="Factories\LanguageTypeHelperFactory.cs" />
+    <Compile Include="Factories\MessageBoxDialogFactory.cs" />
+    <Compile Include="Factories\StringHelperFactory.cs" />
+    <Compile Include="LanguageTypeHelperTests.cs" />
+    <Compile Include="MessageBoxButtonStringTests.cs" />
+    <Compile Include="MessageBoxDialogTests.cs" />
+    <Compile Include="MessageBoxFormTests.cs" />
+    <Compile Include="Properties_ResourcesTest.cs" />
+    <Compile Include="STEE\ISCS\MulLanguageMSS\MessageBoxFormMSS.cs" />
+    <Compile Include="StringHelperTests.cs" />
+    <Compile Include="StringItemTests.cs" />
+    <Compile Include="System\Windows\FormsMSS\ControlMSS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\STEE.ISCS.MulLanguage\STEE.ISCS.MulLanguage.csproj">
+      <Project>{F5B95A85-BDE7-4F19-A6C5-C2AB8010B7BE}</Project>
+      <Name>STEE.ISCS.MulLanguage</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="dottest.framework, Version=9.1.0.2, Culture=neutral, PublicKeyToken=47d60c2a3c343a91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Parasoft\dotTEST\9.5\plugins\com.parasoft.xtest.libs.vstudio.dotnet\engine\dottest.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Parasoft\dotTEST\9.5\plugins\com.parasoft.xtest.libs.vstudio.dotnet\engine\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="STEE.ISCS.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\STEE.ISCS.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+</Project>

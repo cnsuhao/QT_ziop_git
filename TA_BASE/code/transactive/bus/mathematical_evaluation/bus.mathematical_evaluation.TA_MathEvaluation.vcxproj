@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>bus.mathematical_evaluation</ProjectName>
+    <ProjectGuid>{4684415D-5904-44E6-B7CC-677A23292C0F}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+    <Import Project="..\..\..\tools\build\VCPropSheet\Common2.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+    <Import Project="..\..\..\tools\build\VCPropSheet\Common2.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>TA_MathEvaluation_d</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AndExpression.cpp" />
+    <ClCompile Include="src\BooleanConstant.cpp" />
+    <ClCompile Include="src\BooleanVariable.cpp" />
+    <ClCompile Include="src\ContextContainer.cpp" />
+    <ClCompile Include="src\EqualityComparison.cpp" />
+    <ClCompile Include="src\ExpressionEvaluator.cpp" />
+    <ClCompile Include="src\InequalityComparison.cpp" />
+    <ClCompile Include="src\NotExpression.cpp" />
+    <ClCompile Include="src\OrExpression.cpp" />
+    <ClCompile Include="src\RealNumberAbsoluteExpression.cpp" />
+    <ClCompile Include="src\RealNumberAddExpression.cpp" />
+    <ClCompile Include="src\RealNumberConstant.cpp" />
+    <ClCompile Include="src\RealNumberDivideExpression.cpp" />
+    <ClCompile Include="src\RealNumberGreaterThanComparison.cpp" />
+    <ClCompile Include="src\RealNumberGreaterThanOrEqualComparison.cpp" />
+    <ClCompile Include="src\RealNumberLessThanComparison.cpp" />
+    <ClCompile Include="src\RealNumberLessThanOrEqualComparison.cpp" />
+    <ClCompile Include="src\RealNumberMultiplyExpression.cpp" />
+    <ClCompile Include="src\RealNumberPowerOfExpression.cpp" />
+    <ClCompile Include="src\RealNumberSquareRootExpression.cpp" />
+    <ClCompile Include="src\RealNumberSubtractExpression.cpp" />
+    <ClCompile Include="src\RealNumberVariable.cpp" />
+    <ClCompile Include="src\StringLiteral.cpp" />
+    <ClCompile Include="src\StringVariable.cpp" />
+    <ClCompile Include="src\Token.cpp" />
+    <ClCompile Include="src\Tokeniser.cpp" />
+    <ClCompile Include="src\XorExpression.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\AndExpression.h" />
+    <ClInclude Include="src\BooleanConstant.h" />
+    <ClInclude Include="src\BooleanVariable.h" />
+    <ClInclude Include="src\ContextContainer.h" />
+    <ClInclude Include="src\EqualityComparison.h" />
+    <ClInclude Include="src\ExpressionEvaluator.h" />
+    <ClInclude Include="src\IBooleanContext.h" />
+    <ClInclude Include="src\IBooleanExpression.h" />
+    <ClInclude Include="src\InequalityComparison.h" />
+    <ClInclude Include="src\IRealNumberContext.h" />
+    <ClInclude Include="src\IRealNumberExpression.h" />
+    <ClInclude Include="src\IStringContext.h" />
+    <ClInclude Include="src\IStringExpression.h" />
+    <ClInclude Include="src\NotExpression.h" />
+    <ClInclude Include="src\OrExpression.h" />
+    <ClInclude Include="src\RealNumberAbsoluteExpression.h" />
+    <ClInclude Include="src\RealNumberAddExpression.h" />
+    <ClInclude Include="src\RealNumberConstant.h" />
+    <ClInclude Include="src\RealNumberDivideExpression.h" />
+    <ClInclude Include="src\RealNumberGreaterThanComparison.h" />
+    <ClInclude Include="src\RealNumberGreaterThanOrEqualComparison.h" />
+    <ClInclude Include="src\RealNumberLessThanComparison.h" />
+    <ClInclude Include="src\RealNumberLessThanOrEqualComparison.h" />
+    <ClInclude Include="src\RealNumberMultiplyExpression.h" />
+    <ClInclude Include="src\RealNumberPowerOfExpression.h" />
+    <ClInclude Include="src\RealNumberSquareRootExpression.h" />
+    <ClInclude Include="src\RealNumberSubtractExpression.h" />
+    <ClInclude Include="src\RealNumberVariable.h" />
+    <ClInclude Include="src\StringLiteral.h" />
+    <ClInclude Include="src\StringVariable.h" />
+    <ClInclude Include="src\Token.h" />
+    <ClInclude Include="src\Tokeniser.h" />
+    <ClInclude Include="src\XorExpression.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

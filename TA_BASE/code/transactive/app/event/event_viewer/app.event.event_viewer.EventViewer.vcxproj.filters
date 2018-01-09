@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{04cd9fcc-da80-4850-8f50-1fc3169ff405}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{719b952b-6294-4834-96ae-ca6eb3bb524a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ATSEvents">
+      <UniqueIdentifier>{b024d14c-6d90-47e0-b39a-5787b892ce70}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\AlarmManager.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\AlarmManagerHot.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\down.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\east_arr.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\EventViewer.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\filter.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\filterhot.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ico00001.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ico00002.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ico00003.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ico00004.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ico00005.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ico00006.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\pagedown.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\pageup.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Plan.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Planhot.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\print.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\printhot.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\refresh.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\refreshot.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\save.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\savehot.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\WarningDot.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\EventViewer.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\CombinedEventFilterDlg.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EventViewer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EventViewerDlg.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MultipleLoadDlg.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StatusProgressBar.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StdAfx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WaitNotificationBox.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ATSComWrapper.cpp">
+      <Filter>src\ATSEvents</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MySink.cpp">
+      <Filter>src\ATSEvents</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\CombinedEventFilterDlg.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EventViewer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EventViewerDlg.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EventViewerGUIConstants.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FilterDlg.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MultipleLoadDlg.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Resource.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StatusProgressBar.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StdAfx.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WaitNotificationBox.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ATSComWrapper.h">
+      <Filter>src\ATSEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MySink.h">
+      <Filter>src\ATSEvents</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\EventViewer.rc">
+      <Filter>src</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="en_US.txt" />
+    <Text Include="zh_CN.txt" />
+  </ItemGroup>
+</Project>

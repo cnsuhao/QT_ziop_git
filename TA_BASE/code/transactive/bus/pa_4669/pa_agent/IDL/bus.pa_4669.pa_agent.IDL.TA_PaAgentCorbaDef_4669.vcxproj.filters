@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{954994cd-4e81-42f8-87c8-38e551016cee}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\pa_4669\pa_agent\IDL\src\IPAAgentCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\pa_4669\pa_agent\IDL\src\IPAAgentCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\pa_4669\pa_agent\IDL\src\IStationPaMethod.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\pa_4669\pa_agent\IDL\src\IStationPaMethod_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\pa_4669\pa_agent\IDL\src\ITrainPaMethod.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\pa_4669\pa_agent\IDL\src\ITrainPaMethod_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(TA_BuildPath)\win32_n\transactive\bus\pa_4669\pa_agent\IDL\src\IPAAgentCorbaDef.h" />
+    <ClInclude Include="$(TA_BuildPath)\win32_n\transactive\bus\pa_4669\pa_agent\IDL\src\IStationPaMethod.h" />
+    <ClInclude Include="$(TA_BuildPath)\win32_n\transactive\bus\pa_4669\pa_agent\IDL\src\ITrainPaMethod.h" />
+  </ItemGroup>
+</Project>

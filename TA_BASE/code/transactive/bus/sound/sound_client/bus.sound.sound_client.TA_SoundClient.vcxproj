@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>bus.sound.sound_client</ProjectName>
+    <ProjectGuid>{238E1AFA-11DE-4B09-8C14-1B354D9CA186}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+    <Import Project="..\..\..\..\tools\build\VCPropSheet\Common2.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+    <Import Project="..\..\..\..\tools\build\VCPropSheet\Common2.props" />
+  </ImportGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>TA_SoundClient_d</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(QTDIR)\include;$(QTDIR)\include\QtCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;__WIN32__;__x86__;__NT__;_WIN32_WINNT=0x0501;_CRT_SECURE_NO_DEPRECATE;__OSVERSION__=4;_AFXDLL;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ISoundObserver.h" />
+    <ClInclude Include="src\SoundInterfaceSink.h" />
+    <ClInclude Include="..\..\..\..\..\build\win32_n\transactive\bus\sound\sound_client\src\SoundManager.h" />
+    <ClInclude Include="src\SoundManagerCP.h" />
+    <ClInclude Include="src\SoundManagerProxy.h" />
+    <ClInclude Include="..\..\..\core\exceptions\src\SoundPlayerException.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\SoundManager.idl">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">midl src/%(Filename).idl /tlb "$(TA_SdkPath)\$(TA_Platform)$(TA_ConfigurationSuffix)\TA_%(Filename).tlb" /h "$(TA_BuildPath)\$(TA_Platform)\$(TA_RelativeProjectPath)\src\%(Filename).h" /iid "$(TA_BuildPath)\$(TA_Platform)\$(TA_RelativeProjectPath)\src\%(Filename)_i.c"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TA_SdkPath)\$(TA_Platform)$(TA_ConfigurationSuffix)\TA_%(Filename).tlb;$(TA_BuildPath)\$(TA_Platform)\$(TA_RelativeProjectPath)\src\%(Filename).h;$(TA_BuildPath)\$(TA_Platform)\$(TA_RelativeProjectPath)\src\%(Filename)_i.c</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">midl src/%(Filename).idl /tlb "$(TA_SdkPath)\$(TA_Platform)$(TA_ConfigurationSuffix)\TA_%(Filename).tlb" /h "$(TA_BuildPath)\$(TA_Platform)\$(TA_RelativeProjectPath)\src\%(Filename).h" /iid "$(TA_BuildPath)\$(TA_Platform)\$(TA_RelativeProjectPath)\src\%(Filename)_i.c"</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(TA_SdkPath)\$(TA_Platform)$(TA_ConfigurationSuffix)\TA_%(Filename).tlb;$(TA_BuildPath)\$(TA_Platform)\$(TA_RelativeProjectPath)\src\%(Filename).h;$(TA_BuildPath)\$(TA_Platform)\$(TA_RelativeProjectPath)\src\%(Filename)_i.c</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\SoundManagerProxy.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

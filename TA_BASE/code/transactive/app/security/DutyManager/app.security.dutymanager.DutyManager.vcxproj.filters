@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{cd8c276f-cab7-48f5-aaf2-d325966d783e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="src\page">
+      <UniqueIdentifier>{4f4871ec-a5b0-47d6-a5e6-7d9aae04a731}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\dlg">
+      <UniqueIdentifier>{475fa3e4-f340-462b-a443-03da2ecd5002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8007d1a9-b9a8-4660-a16d-d2fded24bbd6}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\DutyManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DutyManagerApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DutyManagerConstants.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DutyManagerDlg.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DutyManagerPropertySheet.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GridAssistant.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MessageBox.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resource.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StdAfx.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StringResource.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OtherSesSubDutyPropertyPage.h">
+      <Filter>src\page</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RegionDutyPropertyPage.h">
+      <Filter>src\page</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SubsystemDutyPropertyPage.h">
+      <Filter>src\page</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RegionDutyTransferDlg.h">
+      <Filter>src\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RegionSelectionDlg.h">
+      <Filter>src\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SelectSesSubDutyDlg.h">
+      <Filter>src\dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SubsystemDutyTransferDlg.h">
+      <Filter>src\dlg</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\DutyManager.rc">
+      <Filter>src</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\DutyManagerApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DutyManagerDlg.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DutyManagerPropertySheet.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GridAssistant.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MessageBox.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StdAfx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VersionGen.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OtherSesSubDutyPropertyPage.cpp">
+      <Filter>src\page</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RegionDutyPropertyPage.cpp">
+      <Filter>src\page</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SubsystemDutyPropertyPage.cpp">
+      <Filter>src\page</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RegionDutyTransferDlg.cpp">
+      <Filter>src\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RegionSelectionDlg.cpp">
+      <Filter>src\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SelectSesSubDutyDlg.cpp">
+      <Filter>src\dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SubsystemDutyTransferDlg.cpp">
+      <Filter>src\dlg</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\dutymana.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\DutyManager.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\DutyManager.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\grid_images.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ico00001.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ico00002.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ico00003.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ico00004.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\icon1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\occ1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\DutyManager.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

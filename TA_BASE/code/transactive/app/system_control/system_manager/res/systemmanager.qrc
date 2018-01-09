@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>SystemManager.ico</file>
+        <file>down.bmp</file>
+        <file>icon1.ico</file>
+        <file>icon2.ico</file>
+        <file>login.bmp</file>
+        <file>logout.bmp</file>
+        <file>refresh.bmp</file>
+        <file>start.bmp</file>
+        <file>stop.bmp</file>
+        <file>up.bmp</file>
+    </qresource>
+</RCC>

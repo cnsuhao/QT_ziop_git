@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{73cc3fb1-ea38-4bbb-ac18-0d94874bc0df}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{a83924df-3a0f-42fb-a0c5-fcd3b6ca78de}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="mview">
+      <UniqueIdentifier>{de4cdea6-8070-473f-91c8-fa42471be81c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\EquipmentStatusViewer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StdAfx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VersionGen.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dlgbars.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EquipmentStatusListCtrl.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EquipmentStatusViewerDlg.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FileUtility.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ReportCommentDialog.cpp">
+      <Filter>mview</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\EquipmentStatusViewer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Resource.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\StdAfx.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UserDefinedString.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dlgbars.h">
+      <Filter>mview</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EquipmentStatusListCtrl.h">
+      <Filter>mview</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EquipmentStatusViewerDlg.h">
+      <Filter>mview</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FileUtility.h">
+      <Filter>mview</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ReportCommentDialog.h">
+      <Filter>mview</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\EquipmentStatusViewer.rc">
+      <Filter>src</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\blue.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\EquipmentStatusViewer.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\green.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\orange.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\red.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\sort_ascending.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\sort_descending.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\stop.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\toolbar1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\toolbar2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\EquipmentStatusViewer.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

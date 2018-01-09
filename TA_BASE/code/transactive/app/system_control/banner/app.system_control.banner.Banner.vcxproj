@@ -1,0 +1,883 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>app.system_control.banner</ProjectName>
+    <ProjectGuid>{73F57663-6403-48B7-9152-BD2FB7EE244E}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+    <Import Project="..\..\..\..\tools\build\VCPropSheet\Common2.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+    <Import Project="..\..\..\..\tools\build\VCPropSheet\Common2.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(BIN_PATH)/app.system_control.banner.Banner.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\alarm\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src;.\src;.\GeneratedFiles;C:\Qt\Qt5.3.2\5.3\include;C:\Qt\Qt5.3.2\5.3\include\QtWidgets;C:\Qt\Qt5.3.2\5.3\include\QtGui;C:\Qt\Qt5.3.2\5.3\include\QtPrintSupport;C:\Qt\Qt5.3.2\5.3\include\QtCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_AFXDLL;QT_WIDGETS_LIB;QT_GUI_LIB;QT_PRINTSUPPORT_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\bus\resources;..\..\..\bus\banner_framework\src;$(BUILD_PATH)\transactive\app\system_control\banner\pages\iscs_page\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>$(HTMLHELP_LIB);Rpcrt4.lib;Ws2_32.lib;$(OMNI_LIB);oci.lib;$(MYSQL_LIB);$(ACE_LIB);$(MCL_LIB);TA_Base_Core_d.lib;TA_Base_Bus_d.lib;$(WINSTACKTRACE_LIB);TA_Banner_PModel.lib;qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5PrintSupportd.lib;TA_Common_Controld.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>nafxcwd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Windows</SubSystem>
+      <BaseAddress />
+      <DataExecutionPrevention />
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+    <Bscmake>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(BIN_PATH)/app.system_control.banner.Banner.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\alarm\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src;.\;.\src;.\GeneratedFiles;$(QTDIR)\include;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtDesigner;$(QTDIR)\include\QtPrintSupport;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_AFXDLL;_MBCS_MBCS;QT_WIDGETS_LIB;QT_GUI_LIB;QT_PRINTSUPPORT_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\bus\resources;..\..\..\bus\banner_framework\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>$(HTMLHELP_LIB);Rpcrt4.lib;Ws2_32.lib;$(OMNI_LIB);oci.lib;$(MYSQL_LIB);$(ACE_LIB);$(MCL_LIB);TA_SharedAlarm.lib;TA_Base_Core.lib;TA_Base_Bus.lib;$(WINSTACKTRACE_LIB);Qt5Widgets.lib;Qt5Gui.lib;Qt5PrintSupport.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>nafxcw.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Windows</SubSystem>
+      <DataExecutionPrevention />
+    </Link>
+    <Bscmake>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\Debug\moc_bannerdlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_TransActiveResources.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_bannerdlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\ATSCOMHandler.cpp" />
+    <ClCompile Include="src\BannerViewFactory.cpp" />
+    <ClCompile Include="src\IscsBanner.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\banner.cpp" />
+    <ClCompile Include="src\bannerdlg.cpp" />
+    <ClCompile Include="src\ComponentLibraryAccessor.cpp" />
+    <ClCompile Include="src\VersionGen.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\banner.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\bannerdlg.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_PRINTSUPPORT_LIB -DWIN32 -D__WIN32__ -D__x86__ -D__NT__ -D_WIN32_WINNT=0x501 -D_CRT_SECURE_NO_DEPRECATE -D__OSVERSION__=4 -D_USE_32BIT_TIME_T "-D$(NOINHERIT)\." -D_VC80_UPGRADE=0x0600 -D_UNICODE -DUNICODE -D_AFXDLL "-I.\..\..\.." "-I$(TA_BuildPath)\win32_n\transactive" "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\alarm\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I$(TA_omniORB_IncludePath)\." "-I$(BOOST_INCLUDE_PATH)\." "-I$(TA_ACE_IncludePath)\." "-I.\src" "-I.\GeneratedFiles" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtPrintSupport"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing bannerdlg.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -D_WINDOWS -D_MBCS_MBCS -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_PRINTSUPPORT_LIB -DWIN32 -D__WIN32__ -D__x86__ -D__NT__ -D_WIN32_WINNT=0x501 -D_CRT_SECURE_NO_DEPRECATE -D__OSVERSION__=4 -D_USE_32BIT_TIME_T "-D$(NOINHERIT)\." -D_VC80_UPGRADE=0x0600 -D_MBCS "-I.\..\..\.." "-I$(TA_BuildPath)\win32_n\transactive" "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\alarm\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I$(TA_omniORB_IncludePath)\." "-I$(BOOST_INCLUDE_PATH)\." "-I$(TA_ACE_IncludePath)\." "-I." "-I.\src" "-I.\GeneratedFiles" "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtPrintSupport"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing bannerdlg.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\Component.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\ComponentLibraryAccessor.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\resource.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="src\banner.idl">
+      <MkTypLibCompatible Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</MkTypLibCompatible>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Win32</TargetEnvironment>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateStublessProxies>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TA_SDK_PATH)/TA_Banner.tlb</TypeLibraryName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TA_BuildPath)\win32_n/transactive/app/system_control/banner/src/BannerInterface.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TA_BuildPath)\win32_n/transactive/app/system_control/banner/src/BannerInterface_i.c</InterfaceIdentifierFileName>
+      <MkTypLibCompatible Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</MkTypLibCompatible>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Win32</TargetEnvironment>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateStublessProxies>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(TA_SDK_PATH)/TA_Banner.tlb</TypeLibraryName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(TA_BuildPath)\win32_n/transactive/app/system_control/banner/src/BannerInterface.h</HeaderFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(TA_BuildPath)\win32_n/transactive/app/system_control/banner/src/BannerInterface_i.c</InterfaceIdentifierFileName>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\banner.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">src;$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">src;$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\banner.ico">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="pages\iscs_page\app.system_control.banner.pages.iscs_page.TA_IscsBannerPage.vcxproj">
+      <Project>{eae2f8ec-a407-407e-bb13-99d73543eb4d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\bannerdlg.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_bannerdlg.h" />
+    <ClInclude Include="src\ATSCOMHandler.h" />
+    <ClInclude Include="src\BannerViewFactory.h" />
+    <ClInclude Include="src\CommonDef.h" />
+    <ClInclude Include="src\IscsBanner.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\bus\resources\TransActiveResources.qrc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);..\..\..\bus\resources\icons\AlarmManager.ico;..\..\..\bus\resources\icons\ArchiveManager.ico;..\..\..\bus\resources\icons\BannerPrint.ico;..\..\..\bus\resources\icons\camera.ico;..\..\..\bus\resources\icons\ConfigurationEditor.ico;..\..\..\bus\resources\icons\ControlStation.ico;..\..\..\bus\resources\icons\display-blue.ico;..\..\..\bus\resources\icons\DisplayManager.ico;..\..\..\bus\resources\icons\DutyManager.ico;..\..\..\bus\resources\icons\equipcontroller-blue.ico;..\..\..\bus\resources\icons\EquipmentController.ico;..\..\..\bus\resources\icons\EventViewer.ico;..\..\..\bus\resources\icons\incident.ico;..\..\..\bus\resources\icons\MapViewer.ico;..\..\..\bus\resources\icons\PlanManager.ico;..\..\..\bus\resources\icons\pubaddress-blue.ico;..\..\..\bus\resources\icons\PublicAddress.ico;..\..\..\bus\resources\icons\radio-blue.ico;..\..\..\bus\resources\icons\RadioManager.ico;..\..\..\bus\resources\icons\RadioMonitor.ico;..\..\..\bus\resources\icons\region-manager.ico;..\..\..\bus\resources\icons\ReportManager.ico;..\..\..\bus\resources\icons\scheduler.ico;..\..\..\bus\resources\icons\SchedulingManager.ico;..\..\..\bus\resources\icons\signs-blue.ico;..\..\..\bus\resources\icons\SignViewer.ico;..\..\..\bus\resources\icons\silence.ico;..\..\..\bus\resources\icons\SMS-blue.ico;..\..\..\bus\resources\icons\SystemManager.ico;..\..\..\bus\resources\icons\telephone-blue.ico;..\..\..\bus\resources\icons\TelephoneManager.ico;..\..\..\bus\resources\icons\TransActiveHelp.ico;..\..\..\bus\resources\icons\TrendViewer.ico;..\..\..\bus\resources\icons\unsilence.ico;..\..\..\bus\resources\bitmaps\alarm_comment.bmp;..\..\..\bus\resources\bitmaps\ats.bmp;..\..\..\bus\resources\bitmaps\atsd.bmp;..\..\..\bus\resources\bitmaps\atsdg.bmp;..\..\..\bus\resources\bitmaps\atsg.bmp;..\..\..\bus\resources\bitmaps\call.bmp;..\..\..\bus\resources\bitmaps\calld.bmp;..\..\..\bus\resources\bitmaps\calldg.bmp;..\..\..\bus\resources\bitmaps\callg.bmp;..\..\..\bus\resources\bitmaps\iscs.bmp;..\..\..\bus\resources\bitmaps\iscsd.bmp;..\..\..\bus\resources\bitmaps\iscsdg.bmp;..\..\..\bus\resources\bitmaps\iscsdgkrtc.bmp;..\..\..\bus\resources\bitmaps\iscsdkrtc.bmp;..\..\..\bus\resources\bitmaps\iscsg.bmp;..\..\..\bus\resources\bitmaps\iscsgkrtc.bmp;..\..\..\bus\resources\bitmaps\iscskrtc.bmp;..\..\..\bus\resources\bitmaps\plan.bmp;..\..\..\bus\resources\bitmaps\pland.bmp;..\..\..\bus\resources\bitmaps\plandg.bmp;..\..\..\bus\resources\bitmaps\plang.bmp;..\..\..\bus\resources\bitmaps\sort_ascending.bmp;..\..\..\bus\resources\bitmaps\sort_descending.bmp;..\..\..\bus\resources\bitmaps\TransActive_Logo_RGB.bmp;..\..\..\bus\resources\icons\ConfigurationEditor\config agent.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config alarm combo.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config alarm plans.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config alarm rules.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config alarm severity.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config alarm type.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config application.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config ats.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config central profile.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config datapoint.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config duties.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config ecs master modes.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config ecs station modes.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config ecs zones.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config entity.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config event plans.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config interlocking.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config local profile.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config location.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config message type.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config mms scheduling.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config online printer.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config operator.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config pa ats triggered broadcasts.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config pa station dva messages.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config pa stations.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config pa train dva messages.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config pa zone groups.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config pa zones.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config profile.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config rights.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config scada display.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config server.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config si element location.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config si region talkgroup.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config si train.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config sound file.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config subsystem.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config system controller group.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config system controller.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config tis ratis destination.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config tis ratis tag.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config tis.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config workstation.ico;..\..\..\bus\resources\icons\ConfigurationEditor\ECSStationColor.ico;..\..\..\bus\resources\icons\ControlStation\ass-camera1-20.ico;..\..\..\bus\resources\icons\ControlStation\ass-camera2-20.ico;..\..\..\bus\resources\icons\ControlStation\ass-controler-20.ico;..\..\..\bus\resources\icons\ControlStation\ass-incidents-20.ico;..\..\..\bus\resources\icons\ControlStation\ass-maps-20.ico;..\..\..\bus\resources\icons\ControlStation\ass-plans-20.ico;..\..\..\bus\resources\icons\ControlStation\ass-trends-20.ico;..\..\..\bus\resources\icons\ControlStation\centremonitor.ico;..\..\..\bus\resources\icons\ControlStation\DefaultHot.ico;..\..\..\bus\resources\icons\ControlStation\EditShortcut.ico;..\..\..\bus\resources\icons\ControlStation\help.ico;..\..\..\bus\resources\icons\ControlStation\help-20.ico;..\..\..\bus\resources\icons\ControlStation\leftmonitor.ico;..\..\..\bus\resources\icons\ControlStation\Logout.ico;..\..\..\bus\resources\icons\ControlStation\logout-20.ico;..\..\..\bus\resources\icons\ControlStation\NetworkConnnected.ico;..\..\..\bus\resources\icons\ControlStation\NetworkDisconnected.ico;..\..\..\bus\resources\icons\ControlStation\OperatorOverride.ico;..\..\..\bus\resources\icons\ControlStation\OperatorPassword.ico;..\..\..\bus\resources\icons\ControlStation\OperatorProfileChange.ico;..\..\..\bus\resources\icons\ControlStation\OperatorShiftChange.ico;..\..\..\bus\resources\icons\ControlStation\overide-20.ico;..\..\..\bus\resources\icons\ControlStation\password-20.ico;..\..\..\bus\resources\icons\ControlStation\print-map-20.ico;..\..\..\bus\resources\icons\ControlStation\profile-20.ico;..\..\..\bus\resources\icons\ControlStation\rightmonitor.ico;..\..\..\bus\resources\icons\ControlStation\show-all-running-20.ico;..\..\..\bus\resources\icons\ControlStation\silence-20.ico;..\..\..\bus\resources\icons\ControlStation\ViewCamera.ico;..\..\..\bus\resources\icons\ControlStation\ViewSchematic.ico;..\..\..\bus\resources\icons\ControlStation\ViewShortcut.ico;..\..\..\bus\resources\icons\Toolbar\add.ico;..\..\..\bus\resources\icons\Toolbar\alarm_comment.ico;..\..\..\bus\resources\icons\Toolbar\copy config.ico;..\..\..\bus\resources\icons\Toolbar\delete config.ico;..\..\..\bus\resources\icons\Toolbar\delete.ico;..\..\..\bus\resources\icons\Toolbar\disable.ico;..\..\..\bus\resources\icons\Toolbar\edit.ico;..\..\..\bus\resources\icons\Toolbar\enable.ico;..\..\..\bus\resources\icons\Toolbar\filter.ico;..\..\..\bus\resources\icons\Toolbar\new config.ico;..\..\..\bus\resources\icons\Toolbar\print.ico;..\..\..\bus\resources\icons\Toolbar\reload config.ico;..\..\..\bus\resources\icons\Toolbar\tdslog config.ico;..\..\..\bus\resources\icons\Toolbar\view.ico;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);..\..\..\bus\resources\icons\AlarmManager.ico;..\..\..\bus\resources\icons\ArchiveManager.ico;..\..\..\bus\resources\icons\BannerPrint.ico;..\..\..\bus\resources\icons\camera.ico;..\..\..\bus\resources\icons\ConfigurationEditor.ico;..\..\..\bus\resources\icons\ControlStation.ico;..\..\..\bus\resources\icons\display-blue.ico;..\..\..\bus\resources\icons\DisplayManager.ico;..\..\..\bus\resources\icons\DutyManager.ico;..\..\..\bus\resources\icons\equipcontroller-blue.ico;..\..\..\bus\resources\icons\EquipmentController.ico;..\..\..\bus\resources\icons\EventViewer.ico;..\..\..\bus\resources\icons\incident.ico;..\..\..\bus\resources\icons\MapViewer.ico;..\..\..\bus\resources\icons\PlanManager.ico;..\..\..\bus\resources\icons\pubaddress-blue.ico;..\..\..\bus\resources\icons\PublicAddress.ico;..\..\..\bus\resources\icons\radio-blue.ico;..\..\..\bus\resources\icons\RadioManager.ico;..\..\..\bus\resources\icons\RadioMonitor.ico;..\..\..\bus\resources\icons\region-manager.ico;..\..\..\bus\resources\icons\ReportManager.ico;..\..\..\bus\resources\icons\scheduler.ico;..\..\..\bus\resources\icons\SchedulingManager.ico;..\..\..\bus\resources\icons\signs-blue.ico;..\..\..\bus\resources\icons\SignViewer.ico;..\..\..\bus\resources\icons\silence.ico;..\..\..\bus\resources\icons\SMS-blue.ico;..\..\..\bus\resources\icons\SystemManager.ico;..\..\..\bus\resources\icons\telephone-blue.ico;..\..\..\bus\resources\icons\TelephoneManager.ico;..\..\..\bus\resources\icons\TransActiveHelp.ico;..\..\..\bus\resources\icons\TrendViewer.ico;..\..\..\bus\resources\icons\unsilence.ico;..\..\..\bus\resources\bitmaps\alarm_comment.bmp;..\..\..\bus\resources\bitmaps\ats.bmp;..\..\..\bus\resources\bitmaps\atsd.bmp;..\..\..\bus\resources\bitmaps\atsdg.bmp;..\..\..\bus\resources\bitmaps\atsg.bmp;..\..\..\bus\resources\bitmaps\call.bmp;..\..\..\bus\resources\bitmaps\calld.bmp;..\..\..\bus\resources\bitmaps\calldg.bmp;..\..\..\bus\resources\bitmaps\callg.bmp;..\..\..\bus\resources\bitmaps\iscs.bmp;..\..\..\bus\resources\bitmaps\iscsd.bmp;..\..\..\bus\resources\bitmaps\iscsdg.bmp;..\..\..\bus\resources\bitmaps\iscsdgkrtc.bmp;..\..\..\bus\resources\bitmaps\iscsdkrtc.bmp;..\..\..\bus\resources\bitmaps\iscsg.bmp;..\..\..\bus\resources\bitmaps\iscsgkrtc.bmp;..\..\..\bus\resources\bitmaps\iscskrtc.bmp;..\..\..\bus\resources\bitmaps\plan.bmp;..\..\..\bus\resources\bitmaps\pland.bmp;..\..\..\bus\resources\bitmaps\plandg.bmp;..\..\..\bus\resources\bitmaps\plang.bmp;..\..\..\bus\resources\bitmaps\sort_ascending.bmp;..\..\..\bus\resources\bitmaps\sort_descending.bmp;..\..\..\bus\resources\bitmaps\TransActive_Logo_RGB.bmp;..\..\..\bus\resources\icons\ConfigurationEditor\config agent.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config alarm combo.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config alarm plans.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config alarm rules.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config alarm severity.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config alarm type.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config application.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config ats.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config central profile.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config datapoint.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config duties.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config ecs master modes.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config ecs station modes.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config ecs zones.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config entity.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config event plans.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config interlocking.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config local profile.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config location.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config message type.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config mms scheduling.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config online printer.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config operator.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config pa ats triggered broadcasts.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config pa station dva messages.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config pa stations.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config pa train dva messages.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config pa zone groups.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config pa zones.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config profile.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config rights.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config scada display.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config server.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config si element location.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config si region talkgroup.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config si train.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config sound file.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config subsystem.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config system controller group.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config system controller.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config tis ratis destination.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config tis ratis tag.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config tis.ico;..\..\..\bus\resources\icons\ConfigurationEditor\config workstation.ico;..\..\..\bus\resources\icons\ConfigurationEditor\ECSStationColor.ico;..\..\..\bus\resources\icons\ControlStation\ass-camera1-20.ico;..\..\..\bus\resources\icons\ControlStation\ass-camera2-20.ico;..\..\..\bus\resources\icons\ControlStation\ass-controler-20.ico;..\..\..\bus\resources\icons\ControlStation\ass-incidents-20.ico;..\..\..\bus\resources\icons\ControlStation\ass-maps-20.ico;..\..\..\bus\resources\icons\ControlStation\ass-plans-20.ico;..\..\..\bus\resources\icons\ControlStation\ass-trends-20.ico;..\..\..\bus\resources\icons\ControlStation\centremonitor.ico;..\..\..\bus\resources\icons\ControlStation\DefaultHot.ico;..\..\..\bus\resources\icons\ControlStation\EditShortcut.ico;..\..\..\bus\resources\icons\ControlStation\help.ico;..\..\..\bus\resources\icons\ControlStation\help-20.ico;..\..\..\bus\resources\icons\ControlStation\leftmonitor.ico;..\..\..\bus\resources\icons\ControlStation\Logout.ico;..\..\..\bus\resources\icons\ControlStation\logout-20.ico;..\..\..\bus\resources\icons\ControlStation\NetworkConnnected.ico;..\..\..\bus\resources\icons\ControlStation\NetworkDisconnected.ico;..\..\..\bus\resources\icons\ControlStation\OperatorOverride.ico;..\..\..\bus\resources\icons\ControlStation\OperatorPassword.ico;..\..\..\bus\resources\icons\ControlStation\OperatorProfileChange.ico;..\..\..\bus\resources\icons\ControlStation\OperatorShiftChange.ico;..\..\..\bus\resources\icons\ControlStation\overide-20.ico;..\..\..\bus\resources\icons\ControlStation\password-20.ico;..\..\..\bus\resources\icons\ControlStation\print-map-20.ico;..\..\..\bus\resources\icons\ControlStation\profile-20.ico;..\..\..\bus\resources\icons\ControlStation\rightmonitor.ico;..\..\..\bus\resources\icons\ControlStation\show-all-running-20.ico;..\..\..\bus\resources\icons\ControlStation\silence-20.ico;..\..\..\bus\resources\icons\ControlStation\ViewCamera.ico;..\..\..\bus\resources\icons\ControlStation\ViewSchematic.ico;..\..\..\bus\resources\icons\ControlStation\ViewShortcut.ico;..\..\..\bus\resources\icons\Toolbar\add.ico;..\..\..\bus\resources\icons\Toolbar\alarm_comment.ico;..\..\..\bus\resources\icons\Toolbar\copy config.ico;..\..\..\bus\resources\icons\Toolbar\delete config.ico;..\..\..\bus\resources\icons\Toolbar\delete.ico;..\..\..\bus\resources\icons\Toolbar\disable.ico;..\..\..\bus\resources\icons\Toolbar\edit.ico;..\..\..\bus\resources\icons\Toolbar\enable.ico;..\..\..\bus\resources\icons\Toolbar\filter.ico;..\..\..\bus\resources\icons\Toolbar\new config.ico;..\..\..\bus\resources\icons\Toolbar\print.ico;..\..\..\bus\resources\icons\Toolbar\reload config.ico;..\..\..\bus\resources\icons\Toolbar\tdslog config.ico;..\..\..\bus\resources\icons\Toolbar\view.ico;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\bus\resources\bitmaps\alarm_comment.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\ats.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\atsd.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\atsdg.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\atsg.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\call.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\calld.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\calldg.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\callg.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\iscs.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\iscsd.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\iscsdg.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\iscsdgkrtc.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\iscsdkrtc.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\iscsg.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\iscsgkrtc.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\iscskrtc.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\plan.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\pland.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\plandg.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\plang.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\sort_ascending.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\sort_descending.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\bitmaps\TransActive_Logo_RGB.bmp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\AlarmManager.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ArchiveManager.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\BannerPrint.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\camera.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config agent.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config alarm combo.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config alarm plans.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config alarm rules.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config alarm severity.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config alarm type.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config application.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config ats.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config central profile.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config datapoint.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config duties.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config ecs master modes.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config ecs station modes.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config ecs zones.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config entity.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config event plans.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config interlocking.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config local profile.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config location.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config message type.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config mms scheduling.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config online printer.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config operator.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config pa ats triggered broadcasts.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config pa station dva messages.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config pa stations.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config pa train dva messages.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config pa zone groups.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config pa zones.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config profile.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config rights.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config scada display.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config server.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config si element location.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config si region talkgroup.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config si train.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config sound file.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config subsystem.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config system controller group.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config system controller.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config tis ratis destination.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config tis ratis tag.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config tis.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\config workstation.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ConfigurationEditor\ECSStationColor.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\ass-camera1-20.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\ass-camera2-20.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\ass-controler-20.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\ass-incidents-20.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\ass-maps-20.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\ass-plans-20.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\ass-trends-20.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\centremonitor.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\DefaultHot.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\EditShortcut.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\help-20.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\help.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\leftmonitor.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\logout-20.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\Logout.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\NetworkConnnected.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\NetworkDisconnected.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\OperatorOverride.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\OperatorPassword.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\OperatorProfileChange.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\OperatorShiftChange.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\overide-20.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\password-20.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\print-map-20.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\profile-20.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\rightmonitor.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\show-all-running-20.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\silence-20.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\ViewCamera.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\ViewSchematic.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ControlStation\ViewShortcut.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\display-blue.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\DisplayManager.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\DutyManager.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\equipcontroller-blue.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\EquipmentController.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\EventViewer.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\incident.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\MapViewer.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\PlanManager.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\pubaddress-blue.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\PublicAddress.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\radio-blue.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\RadioManager.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\RadioMonitor.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\region-manager.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\ReportManager.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\scheduler.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\SchedulingManager.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\signs-blue.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\SignViewer.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\silence.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\SMS-blue.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\SystemManager.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\telephone-blue.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\TelephoneManager.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\Toolbar\add.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\Toolbar\alarm_comment.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\Toolbar\copy config.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\Toolbar\delete config.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\Toolbar\delete.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\Toolbar\disable.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\Toolbar\edit.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\Toolbar\enable.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\Toolbar\filter.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\Toolbar\new config.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\Toolbar\print.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\Toolbar\reload config.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\Toolbar\tdslog config.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\Toolbar\view.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\TransActiveHelp.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\TrendViewer.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="..\..\..\bus\resources\icons\unsilence.ico">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Qt5Version_x0020_Win32="Qt5.3.2" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

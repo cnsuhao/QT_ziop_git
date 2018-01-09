@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{c598cf50-b6ec-4a84-9cc4-90b73f8600a6}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Message Files">
+      <UniqueIdentifier>{1cf158e9-3c20-47ed-8308-9640f6eee2a8}</UniqueIdentifier>
+      <Extensions>*.mc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\core\exceptions\src\GenericAgentException.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\generic_agent\src\IEntity.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IServiceAgentUser.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ServiceAgent.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ServiceMain.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ServiceAgent.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="message_file\src\messages.mc">
+      <Filter>Message Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="common">
+      <UniqueIdentifier>{cade80ea-2661-4129-b047-3f4baba22b1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{f0d2e8a5-b709-4eef-9173-b8334918b45d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Active Steps">
+      <UniqueIdentifier>{62578d39-15fe-4680-b600-16fd223f91fc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ActivePlanAgency.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlanAgentUpdateProcessor.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlanMFTProcessor.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlanProcessor.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RightsManager.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ActivePlanStep.cpp">
+      <Filter>Active Steps</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MftMessageActiveStep.cpp">
+      <Filter>Active Steps</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ActivePlanAgency.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlanAgentUpdateProcessor.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlanMFTProcessor.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlanProcessor.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RightsManager.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stdafx.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ActivePlanStep.h">
+      <Filter>Active Steps</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MftMessageActiveStep.h">
+      <Filter>Active Steps</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\Plan_Mft_Processor.rc">
+      <Filter>res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

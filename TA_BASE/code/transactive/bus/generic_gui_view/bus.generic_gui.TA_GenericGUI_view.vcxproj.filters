@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{a159b65f-c2b3-4741-bf05-a9bb393c8460}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{4975f4be-4c57-4693-b9be-7fbdb792679b}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{53ca9369-c562-47f1-b619-7ecb8418f1b2}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\HelpLauncher.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\core\exceptions\src\MessageResourceException.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ResizeViewHelper.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TACFormView.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TransActiveDialog.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TransActiveLibraryApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TransActiveMessage.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TransActiveViewManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TransActiveWinApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_TransActiveViewManager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_TransActiveViewManager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_TransActiveMessage.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_TransActiveDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TransActiveMessageConfigParser.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\$(Configuration)\moc_TransActiveWinApp.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TA_GenericGUI_view.rc">
+      <Filter>src</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\AbstractTransActiveView.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\HelpLauncher.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\core\exceptions\src\MessageResourceException.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\ResizeViewHelper.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\StdAfx.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\TACFormView.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\TransActiveConsts.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\TransActiveDialog.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\TransActiveLibraryApp.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\TransActiveMessage.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\TransActiveViewManager.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\TransActiveWinApp.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\TransActiveMessageConfigParser.h">
+      <Filter>src</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

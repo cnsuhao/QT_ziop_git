@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{8491a4a0-892d-48c8-8af1-0c388b2f7b18}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\database_status_monitor\DsmCorbaDef\IDL\src\DatabaseStatusCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildPath)\win32_n\transactive\bus\database_status_monitor\DsmCorbaDef\IDL\src\DatabaseStatusCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(TA_BuildPath)\win32_n\transactive\bus\database_status_monitor\DsmCorbaDef\IDL\src\DatabaseStatusCorbaDef.h" />
+  </ItemGroup>
+</Project>

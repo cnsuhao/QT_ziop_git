@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>alarmFilterGUIDlg</class>
+ <widget class="QWidget" name="alarmFilterGUIDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>933</width>
+    <height>425</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+    <pointsize>10</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Alarm Filter</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_5">
+   <item row="0" column="3" rowspan="2" colspan="3">
+    <widget class="CtlGroupBox" name="grpDateTime">
+     <property name="minimumSize">
+      <size>
+       <width>373</width>
+       <height>131</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="title">
+      <string>Date/Time</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="CtlCheckBox" name="chkFrom">
+        <property name="text">
+         <string>From</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="CtlDateEdit" name="dateFrom">
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::UpDownArrows</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="CtlTimeEdit" name="timeFrom">
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::UpDownArrows</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="CtlCheckBox" name="chkTo">
+        <property name="text">
+         <string>To</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="CtlDateEdit" name="dateTo">
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::UpDownArrows</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="CtlTimeEdit" name="timeTo">
+        <property name="buttonSymbols">
+         <enum>QAbstractSpinBox::UpDownArrows</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="2">
+    <widget class="CtlGroupBox" name="grpSubsystem">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="title">
+      <string>Subsystem</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="CtlLineEdit" name="txtSubsystem"/>
+      </item>
+      <item>
+       <widget class="CtlButton" name="btnSubsystem">
+        <property name="maximumSize">
+         <size>
+          <width>35</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="CtlGroupBox" name="grpSystem">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="title">
+      <string>System</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="CtlLineEdit" name="txtSystem"/>
+      </item>
+      <item>
+       <widget class="CtlButton" name="btnSystem">
+        <property name="maximumSize">
+         <size>
+          <width>35</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="CtlGroupBox" name="grpOperator">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="title">
+      <string>Operator</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="CtlLineEdit" name="txtOperator"/>
+      </item>
+      <item>
+       <widget class="CtlButton" name="btnOperator">
+        <property name="maximumSize">
+         <size>
+          <width>35</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="1" colspan="2">
+    <widget class="CtlGroupBox" name="grpLocation">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="title">
+      <string>Location</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="CtlLineEdit" name="txtLocation"/>
+      </item>
+      <item>
+       <widget class="CtlButton" name="btnLocation">
+        <property name="maximumSize">
+         <size>
+          <width>35</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="2" rowspan="2">
+    <widget class="CtlGroupBox" name="grpSeverity">
+     <property name="maximumSize">
+      <size>
+       <width>111</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Severity</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_6">
+      <item row="0" column="0">
+       <widget class="QListWidget" name="listSeverity">
+        <property name="minimumSize">
+         <size>
+          <width>91</width>
+          <height>101</height>
+         </size>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::MultiSelection</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="3" rowspan="2">
+    <widget class="CtlGroupBox" name="grpOM">
+     <property name="title">
+      <string>Operation/Maintenance</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="CtlRadioButton" name="rdoOperation">
+        <property name="text">
+         <string>Operation</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="CtlRadioButton" name="rdoMaintenance">
+        <property name="text">
+         <string>Maintenance</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="CtlRadioButton" name="rdoBoth">
+        <property name="text">
+         <string>Both</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="CtlRadioButton" name="rdoOMAll">
+        <property name="text">
+         <string>All</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="4" rowspan="2">
+    <widget class="CtlGroupBox" name="grpAck">
+     <property name="title">
+      <string>Acknowledge</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="2" column="0">
+       <widget class="CtlRadioButton" name="rdoAckAll">
+        <property name="text">
+         <string>All</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="CtlRadioButton" name="rdoUnacked">
+        <property name="text">
+         <string>Unacked</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="CtlRadioButton" name="rdoAcked">
+        <property name="text">
+         <string>Acked</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="5" rowspan="2">
+    <widget class="CtlGroupBox" name="grpState">
+     <property name="title">
+      <string>State</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="2" column="0">
+       <widget class="CtlRadioButton" name="rdoStateAll">
+        <property name="text">
+         <string>All</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="CtlRadioButton" name="rdoClosed">
+        <property name="text">
+         <string>Closed</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="CtlRadioButton" name="rdoOpen">
+        <property name="text">
+         <string>Open</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="CtlGroupBox" name="grpDescription">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="title">
+      <string>Description</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="CtlLineEdit" name="txtDescription"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="3">
+    <widget class="CtlGroupBox" name="grpNameFilter">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="title">
+      <string>Named Filter</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="CtlComboBox" name="cboNamedFilter">
+        <property name="editable">
+         <bool>true</bool>
+        </property>
+        <property name="currentText">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="CtlButton" name="btnSave">
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Save</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="CtlButton" name="btnDelete">
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="4" column="3" colspan="2">
+    <widget class="CtlGroupBox" name="grpAlarmType">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="title">
+      <string>Alarm Type</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <item>
+       <widget class="CtlLineEdit" name="txtAlarmType"/>
+      </item>
+      <item>
+       <widget class="CtlButton" name="btnAlarmType">
+        <property name="maximumSize">
+         <size>
+          <width>35</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="6">
+    <layout class="QHBoxLayout" name="horizontalLayout_9">
+     <item>
+      <widget class="CtlButton" name="btnDefault">
+       <property name="minimumSize">
+        <size>
+         <width>120</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Default/Clear</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="CtlButton" name="btnOk">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Ok</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="CtlButton" name="btnCancel">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="CtlButton" name="btnApply">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Apply</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="CtlGroupBox" name="grpEquipmentID">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="title">
+      <string>Equipment ID</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="CtlLineEdit" name="txtEquipmentID"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CtlButton</class>
+   <extends></extends>
+   <header>bus/common_control/src/button/CtlButton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CtlRadioButton</class>
+   <extends></extends>
+   <header>bus/common_control/src/button/CtlRadioButton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CtlCheckBox</class>
+   <extends></extends>
+   <header>bus/common_control/src/button/CtlCheckBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CtlLineEdit</class>
+   <extends></extends>
+   <header>bus/common_control/src/textedit/CtlLineEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CtlGroupBox</class>
+   <extends></extends>
+   <header>bus/common_control/src/container/CtlGroupBox.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CtlTimeEdit</class>
+   <extends></extends>
+   <header>bus/common_control/src/input/CtlTimeEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CtlDateEdit</class>
+   <extends></extends>
+   <header>bus/common_control/src/input/CtlDateEdit.h</header>
+  </customwidget>
+   <customwidget>
+     <class>CtlComboBox</class>
+     <extends></extends>
+     <header>bus/common_control/src/input/CtlComboBox.h</header>
+   </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

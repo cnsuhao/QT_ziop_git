@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>app.response_plans.plan_agent</ProjectName>
+    <ProjectGuid>{DA62DC27-B9B4-461F-BD72-B705223E7BF6}</ProjectGuid>
+    <RootNamespace>app.response_plans.plan_agent</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+	<Import Project="..\..\..\..\tools\build\VCPropSheet\Common2.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+	<Import Project="..\..\..\..\tools\build\VCPropSheet\Common2.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <TypeLibraryName>$(BIN_PATH)/app.response_plans.plan_agent.PlanAgent.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\planagent\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\scada\common_library\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\alarm\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>$(OMNI_LIB);oci.lib;$(MYSQL_LIB);Rpcrt4.lib;aced.lib;$(MCL_LIB);TA_Base_Core_d.lib;TA_Base_Bus_d.lib;winmm.lib;$(WINSTACKTRACE_LIB);%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+      <DataExecutionPrevention />
+    </Link>
+    <Bscmake>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <TypeLibraryName>$(BIN_PATH)/app.response_plans.plan_agent.PlanAgent.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\planagent\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\scada\common_library\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\cctv\video_switch_agent\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\alarm\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\tis_agent_4669\IDL\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/IGNORE:4089 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>Rpcrt4.lib;$(OMNI_LIB);oci.lib;libmysql.ib;ace.lib;$(MCL_LIB);TA_Base_Core.lib;winmm.lib;TA_Base_Bus.lib;$(WINSTACKTRACE_LIB);%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+      <DataExecutionPrevention />
+    </Link>
+    <Bscmake>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\core\exceptions\src\PlanStepDetailException.cpp" />
+    <ClCompile Include="src\AAMessageSender.cpp" />
+    <ClCompile Include="src\ActiveAbortStep.cpp" />
+    <ClCompile Include="src\ActiveActivePlanCheckStep.cpp" />
+    <ClCompile Include="src\ActiveAssignCameraToMonitorStep.cpp" />
+    <ClCompile Include="src\ActiveAssignCameraToPresetStep.cpp" />
+    <ClCompile Include="src\ActiveDataPointCheckStep.cpp" />
+    <ClCompile Include="src\ActiveDataPointSetStep.cpp" />
+    <ClCompile Include="src\ActiveDataPointTimeCheckStep.cpp" />
+    <ClCompile Include="src\ActiveDecisionStep.cpp" />
+    <ClCompile Include="src\ActiveEndStep.cpp" />
+    <ClCompile Include="src\ActiveEvaluateExpressionStep.cpp" />
+    <ClCompile Include="src\ActiveExecuteScriptStep.cpp" />
+    <ClCompile Include="src\ActiveFailureSummaryStep.cpp" />
+    <ClCompile Include="src\ActiveJumpStep.cpp" />
+    <ClCompile Include="src\ActiveLaunchGuiAppStep.cpp" />
+    <ClCompile Include="src\ActiveLaunchSchematicStep.cpp" />
+    <ClCompile Include="src\ActiveLogStep.cpp" />
+    <ClCompile Include="src\ActiveNullStep.cpp" />
+    <ClCompile Include="src\ActivePlan.cpp" />
+    <ClCompile Include="src\ActivePlanBulletinBoard.cpp" />
+    <ClCompile Include="src\ActivePlanCheckTimerStep.cpp" />
+    <ClCompile Include="src\ActivePlanCompleteMessage.cpp" />
+    <ClCompile Include="src\ActivePlanCustomiseStepMessage.cpp" />
+    <ClCompile Include="src\ActivePlanDecisionStepMessage.cpp" />
+    <ClCompile Include="src\ActivePlanDelayedState.cpp" />
+    <ClCompile Include="src\ActivePlanDetailUpdateMessage.cpp" />
+    <ClCompile Include="src\ActivePlanExecutingState.cpp" />
+    <ClCompile Include="src\ActivePlanFailureSummaryStepMessage.cpp" />
+    <ClCompile Include="src\ActivePlanLaunchGuiAppStepMessage.cpp" />
+    <ClCompile Include="src\ActivePlanLaunchSchematicStepMessage.cpp" />
+    <ClCompile Include="src\ActivePlanLogStepMessage.cpp" />
+    <ClCompile Include="src\ActivePlanMessageBlock.cpp" />
+    <ClCompile Include="src\ActivePlanMessageException.cpp" />
+    <ClCompile Include="src\ActivePlanMessageQueue.cpp" />
+    <ClCompile Include="src\ActivePlanOperatorPausedState.cpp" />
+    <ClCompile Include="src\ActivePlanPausedState.cpp" />
+    <ClCompile Include="src\ActivePlanPauseForOperatorMessage.cpp" />
+    <ClCompile Include="src\ActivePlanPauseMessage.cpp" />
+    <ClCompile Include="src\ActivePlanPendingState.cpp" />
+    <ClCompile Include="src\ActivePlanPopupMftMessageStepMessage.cpp" />
+    <ClCompile Include="src\ActivePlanPromptStepMessage.cpp" />
+    <ClCompile Include="src\ActivePlanReassignMessage.cpp" />
+    <ClCompile Include="src\ActivePlanResumeMessage.cpp" />
+    <ClCompile Include="src\ActivePlanRunPlanStepMessage.cpp" />
+    <ClCompile Include="src\ActivePlanSetTimerStep.cpp" />
+    <ClCompile Include="src\ActivePlanState.cpp" />
+    <ClCompile Include="src\ActivePlanStopMessage.cpp" />
+    <ClCompile Include="src\ActivePlanUnassignMessage.cpp" />
+    <ClCompile Include="src\ActivePopupMFTMessageStep.cpp" />
+    <ClCompile Include="src\ActivePromptStep.cpp" />
+    <ClCompile Include="src\ActiveRunPlanStep.cpp" />
+    <ClCompile Include="src\ActiveSendSmsMessageStep.cpp" />
+    <ClCompile Include="src\ActiveShutdownSystemStep.cpp" />
+    <ClCompile Include="src\ActiveStationPaStep.cpp" />
+    <ClCompile Include="src\ActiveStationTisStep.cpp" />
+    <ClCompile Include="src\ActiveStep.cpp" />
+    <ClCompile Include="src\ActiveStepParamException.cpp" />
+    <ClCompile Include="src\ActiveTerminatePlanStep.cpp" />
+    <ClCompile Include="src\ActiveTrainPaStep.cpp" />
+    <ClCompile Include="src\ActiveTrainTisStep.cpp" />
+    <ClCompile Include="src\ActiveVideoWallStep.cpp" />
+    <ClCompile Include="src\ActiveVmsBlankoutStep.cpp" />
+    <ClCompile Include="src\ActiveVmsRestoreScheduleStep.cpp" />
+    <ClCompile Include="src\ActiveVmsSetSceneStep.cpp" />
+    <ClCompile Include="src\DatapointTriggerObserver.cpp" />
+    <ClCompile Include="src\DssAbstractRule.cpp" />
+    <ClCompile Include="src\DssDatapointRule.cpp" />
+    <ClCompile Include="src\DssEngine.cpp" />
+    <ClCompile Include="src\DssKnowledgeBase.cpp" />
+    <ClCompile Include="src\DssManager.cpp" />
+    <ClCompile Include="src\DssRuleProcessor.cpp" />
+    <ClCompile Include="src\GRC3DataPointSetComplexStep.cpp" />
+    <ClCompile Include="src\GRCType3SubTask.cpp" />
+    <ClCompile Include="src\GRCType3SubTaskMO.cpp" />
+    <ClCompile Include="src\PlanAccessFactory.cpp" />
+    <ClCompile Include="src\PlanAgent.cpp" />
+    <ClCompile Include="src\PlanAgentCorbaDefImpl.cpp" />
+    <ClCompile Include="src\PlanAgentUser.cpp" />
+    <ClCompile Include="src\PlanDataWriter.cpp" />
+    <ClCompile Include="src\PlanDetail.cpp" />
+    <ClCompile Include="src\PlanExecutionEngine.cpp" />
+    <ClCompile Include="src\PlanExecutor.cpp" />
+    <ClCompile Include="src\PlanHouseKeepingMethodObject.cpp" />
+    <ClCompile Include="src\PlanNotFoundException.cpp" />
+    <ClCompile Include="src\RunPlanMethodObject.cpp" />
+    <ClCompile Include="src\SortablePlanId.cpp" />
+    <ClCompile Include="src\ThirdPartyLibException.cpp" />
+    <ClCompile Include="src\VersionGen.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\core\exceptions\src\PlanStepDetailException.h" />
+    <ClInclude Include="..\common\src\ProjectDefinition.h" />
+    <ClInclude Include="..\common\src\StringConstants.h" />
+    <ClInclude Include="src\AAMessageSender.h" />
+    <ClInclude Include="src\ActiveAbortStep.h" />
+    <ClInclude Include="src\ActiveActivePlanCheckStep.h" />
+    <ClInclude Include="src\ActiveAssignCameraToMonitorStep.h" />
+    <ClInclude Include="src\ActiveAssignCameraToPresetStep.h" />
+    <ClInclude Include="src\ActiveDataPointCheckStep.h" />
+    <ClInclude Include="src\ActiveDataPointSetStep.h" />
+    <ClInclude Include="src\ActiveDataPointTimeCheckStep.h" />
+    <ClInclude Include="src\ActiveDecisionStep.h" />
+    <ClInclude Include="src\ActiveEndStep.h" />
+    <ClInclude Include="src\ActiveEvaluateExpressionStep.h" />
+    <ClInclude Include="src\ActiveExecuteScriptStep.h" />
+    <ClInclude Include="src\ActiveFailureSummaryStep.h" />
+    <ClInclude Include="src\ActiveJumpStep.h" />
+    <ClInclude Include="src\ActiveLaunchGuiAppStep.h" />
+    <ClInclude Include="src\ActiveLaunchSchematicStep.h" />
+    <ClInclude Include="src\ActiveLogStep.h" />
+    <ClInclude Include="src\ActiveNullStep.h" />
+    <ClInclude Include="src\ActivePlan.h" />
+    <ClInclude Include="src\ActivePlanBulletinBoard.h" />
+    <ClInclude Include="src\ActivePlanCheckTimerStep.h" />
+    <ClInclude Include="src\ActivePlanCompleteMessage.h" />
+    <ClInclude Include="src\ActivePlanCustomiseStepMessage.h" />
+    <ClInclude Include="src\ActivePlanDecisionStepMessage.h" />
+    <ClInclude Include="src\ActivePlanDelayedState.h" />
+    <ClInclude Include="src\ActivePlanDetailUpdateMessage.h" />
+    <ClInclude Include="src\ActivePlanExecutingState.h" />
+    <ClInclude Include="src\ActivePlanFailureSummaryStepMessage.h" />
+    <ClInclude Include="src\ActivePlanLaunchGuiAppStepMessage.h" />
+    <ClInclude Include="src\ActivePlanLaunchSchematicStepMessage.h" />
+    <ClInclude Include="src\ActivePlanLogStepMessage.h" />
+    <ClInclude Include="src\ActivePlanMessageBlock.h" />
+    <ClInclude Include="src\ActivePlanMessageException.h" />
+    <ClInclude Include="src\ActivePlanMessageQueue.h" />
+    <ClInclude Include="src\ActivePlanOperatorPausedState.h" />
+    <ClInclude Include="src\ActivePlanPausedState.h" />
+    <ClInclude Include="src\ActivePlanPauseForOperatorMessage.h" />
+    <ClInclude Include="src\ActivePlanPauseMessage.h" />
+    <ClInclude Include="src\ActivePlanPendingState.h" />
+    <ClInclude Include="src\ActivePlanPopupMftMessageStepMessage.h" />
+    <ClInclude Include="src\ActivePlanPromptStepMessage.h" />
+    <ClInclude Include="src\ActivePlanReassignMessage.h" />
+    <ClInclude Include="src\ActivePlanResumeMessage.h" />
+    <ClInclude Include="src\ActivePlanRunPlanStepMessage.h" />
+    <ClInclude Include="src\ActivePlanSetTimerStep.h" />
+    <ClInclude Include="src\ActivePlanState.h" />
+    <ClInclude Include="src\ActivePlanStopMessage.h" />
+    <ClInclude Include="src\ActivePlanUnassignMessage.h" />
+    <ClInclude Include="src\ActivePopupMFTMessageStep.h" />
+    <ClInclude Include="src\ActivePromptStep.h" />
+    <ClInclude Include="src\ActiveRunPlanStep.h" />
+    <ClInclude Include="src\ActiveSendSmsMessageStep.h" />
+    <ClInclude Include="src\ActiveShutdownSystemStep.h" />
+    <ClInclude Include="src\ActiveStationPaStep.h" />
+    <ClInclude Include="src\ActiveStationTisStep.h" />
+    <ClInclude Include="src\ActiveStep.h" />
+    <ClInclude Include="src\ActiveStepParamException.h" />
+    <ClInclude Include="src\ActiveStepsHeader.h" />
+    <ClInclude Include="src\ActiveTerminatePlanStep.h" />
+    <ClInclude Include="src\ActiveTrainPaStep.h" />
+    <ClInclude Include="src\ActiveTrainTisStep.h" />
+    <ClInclude Include="src\ActiveVideoWallStep.h" />
+    <ClInclude Include="src\ActiveVmsBlankoutStep.h" />
+    <ClInclude Include="src\ActiveVmsRestoreScheduleStep.h" />
+    <ClInclude Include="src\ActiveVmsSetSceneStep.h" />
+    <ClInclude Include="src\BooleanContextImpl.h" />
+    <ClInclude Include="src\DatabaseConstants.h" />
+    <ClInclude Include="src\DatapointTriggerObserver.h" />
+    <ClInclude Include="src\DssAbstractRule.h" />
+    <ClInclude Include="src\DssDatapointRule.h" />
+    <ClInclude Include="src\DssEngine.h" />
+    <ClInclude Include="src\DssKnowledgeBase.h" />
+    <ClInclude Include="src\DssManager.h" />
+    <ClInclude Include="src\DssRuleProcessor.h" />
+    <ClInclude Include="src\GlobalConstant.h" />
+    <ClInclude Include="src\GRC3DataPointSetComplexStep.h" />
+    <ClInclude Include="src\GRCType3SubTask.h" />
+    <ClInclude Include="src\GRCType3SubTaskMO.h" />
+    <ClInclude Include="src\IActivePlanFlow.h" />
+    <ClInclude Include="src\IActivePlanMessage.h" />
+    <ClInclude Include="src\IDssEngine.h" />
+    <ClInclude Include="src\IDssRule.h" />
+    <ClInclude Include="src\ITriggerObserver.h" />
+    <ClInclude Include="src\PlanAccessFactory.h" />
+    <ClInclude Include="src\PlanAgent.h" />
+    <ClInclude Include="src\PlanAgentCorbaDefImpl.h" />
+    <ClInclude Include="src\PlanAgentUser.h" />
+    <ClInclude Include="src\PlanDataWriter.h" />
+    <ClInclude Include="src\PlanDetail.h" />
+    <ClInclude Include="src\PlanExecutionEngine.h" />
+    <ClInclude Include="src\PlanExecutor.h" />
+    <ClInclude Include="src\PlanHouseKeepingMethodObject.h" />
+    <ClInclude Include="src\PlanNotFoundException.h" />
+    <ClInclude Include="src\RunPlanMethodObject.h" />
+    <ClInclude Include="src\SortablePlanId.h" />
+    <ClInclude Include="src\ThirdPartyLibException.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

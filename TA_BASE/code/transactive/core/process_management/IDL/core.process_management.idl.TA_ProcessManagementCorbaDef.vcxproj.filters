@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{70a71019-0463-4805-876e-2c7278e99403}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IControlStationCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IControlStationCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IDllHostCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IDllHostCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IHeartbeatReceiverCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IHeartbeatReceiverCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IManagedAgentCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IManagedAgentCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IManagedApplicationCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IManagedApplicationCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IManagedGUICorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IManagedGUICorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IManagedProcessCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IManagedProcessCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IProcessManagerCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IProcessManagerCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IProcessObserverCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IProcessObserverCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IProcessSubjectCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IProcessSubjectCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IShutdownCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IShutdownCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\ISystemControllerAdminCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\ISystemControllerAdminCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\ProcessManagementDataDefinitionsCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\ProcessManagementDataDefinitionsCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IControlStationCorbaDef.h" />
+    <ClInclude Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IDllHostCorbaDef.h" />
+    <ClInclude Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IHeartbeatReceiverCorbaDef.h" />
+    <ClInclude Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IManagedAgentCorbaDef.h" />
+    <ClInclude Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IManagedApplicationCorbaDef.h" />
+    <ClInclude Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IManagedGUICorbaDef.h" />
+    <ClInclude Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IManagedProcessCorbaDef.h" />
+    <ClInclude Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IProcessManagerCorbaDef.h" />
+    <ClInclude Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IProcessObserverCorbaDef.h" />
+    <ClInclude Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IProcessSubjectCorbaDef.h" />
+    <ClInclude Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\IShutdownCorbaDef.h" />
+    <ClInclude Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\ISystemControllerAdminCorbaDef.h" />
+    <ClInclude Include="$(TA_BuildDir)win32_n\transactive\core\process_management\idl\src\ProcessManagementDataDefinitionsCorbaDef.h" />
+  </ItemGroup>
+</Project>

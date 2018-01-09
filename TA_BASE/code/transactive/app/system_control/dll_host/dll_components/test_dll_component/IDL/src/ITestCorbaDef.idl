@@ -1,0 +1,4 @@
+interface ITestCorbaDef
+{
+    void echo(in string str);
+};

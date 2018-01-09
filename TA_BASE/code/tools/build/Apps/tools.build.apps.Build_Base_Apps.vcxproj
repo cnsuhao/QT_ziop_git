@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>tools.build.apps</ProjectName>
+    <ProjectGuid>{95526D88-DD33-4BAF-A2F3-EDD7B445B609}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <NMakeBuildCommandLine />
+    <NMakeReBuildCommandLine>
+    </NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine />
+    <NMakeOutput>tools.build.apps.Build_Base_Apps.exe</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <NMakeBuildCommandLine />
+    <NMakeReBuildCommandLine>
+    </NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine />
+    <NMakeOutput>tools.build.apps.Build_Base_Apps.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\transactive\app\alarm\alarm_agent\app.alarm.alarm_agent.AlarmAgent.vcxproj">
+      <Project>{7596bcfc-b623-408d-8c9f-c77c9f9d42eb}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\alarm\alarm_raiser\app.alarm.alarm_raiser.AlarmRaiser.vcxproj">
+      <Project>{4b0267b5-212e-46d8-bcbf-4f9a41144536}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\alarm\alarm_store_service\app.alarm.alarm_store_service.TA_AlarmStoreService.vcxproj">
+      <Project>{5cf23a2a-bb7b-4a69-ae1c-5985346ee240}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\configuration_editor\app.configuration.configuration_editor.ConfigurationEditor.vcxproj">
+      <Project>{4b8f43c0-383b-4dc7-8f38-add66bddad43}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\action_groups\app.configuration.config_plugins.action_groups.TA_ActionGroupConfigPlugin.vcxproj">
+      <Project>{9423caf5-22e1-4d7c-8736-88d44ff6b30d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\agent\app.configuration.config_plugins.agent.TA_AgentConfigPlugin.vcxproj">
+      <Project>{e9c34cad-673d-40d6-b166-0132f26ca7e2}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\agent_entity\app.configuration.config_plugins.agent_entity.TA_AgentEntityConfigPlugin.vcxproj">
+      <Project>{0f91f47b-4a65-4b8c-9a1d-85b8d796c370}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\alarm_plan_association\app.configuration.config_plugins.alarm_plan_association.TA_AlarmPlanAssocConfigPlugin.vcxproj">
+      <Project>{df28e90b-393b-4450-9ef0-1542dad42b4a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\alarm_rules\app.configuration.config_plugins.alarm_rules.TA_AlarmRulesConfigPlugin.vcxproj">
+      <Project>{18c7298c-9157-459c-8256-25e7d146352d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\alarm_severity\app.configuration.config_plugins.alarm_severity.TA_AlarmSeverityConfigPlugin.vcxproj">
+      <Project>{4189c6c3-68ac-4477-9b54-25255bb4ac4f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\alarm_type\app.configuration.config_plugins.alarm_type.TA_AlarmTypeConfigPlugin.vcxproj">
+      <Project>{ee27aa9c-6ed1-4330-8f60-a016629c167f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\application\app.configuration.config_plugins.application.TA_ApplicationConfigPlugin.vcxproj">
+      <Project>{1fd79cbc-1bb7-4317-b8e9-5ea20a312d8e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\config_plugin_helper\app.configuration.config_plugins.config_plugin_helper.TA_ConfigPluginHelper.vcxproj">
+      <Project>{9f21a3ea-dc08-4545-90b2-f655dcb4a0c4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\event_colour\app.configuration.config_plugins.event_colour.TA_EventColourConfigPlugin.vcxproj">
+      <Project>{13a6722e-01e2-4831-85df-42eb12a1d35a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\event_plan_association\app.configuration.config_plugins.event_plan_association.TA_EventPlanAssocConfigPlugin.vcxproj">
+      <Project>{5546f74b-3a36-49b7-a60b-66a6067d6de4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\generic_entity\app.configuration.config_plugins.generic_entity.TA_GenericEntityConfigPlugin.vcxproj">
+      <Project>{21c5bc00-ea37-4955-895b-d5fbbfe4d4e1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\location\app.configuration.config_plugins.location.TA_LocationConfigPlugin.vcxproj">
+      <Project>{46119569-a706-4d97-a74c-50770ad4dd70}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\message_type\app.configuration.config_plugins.message_type.TA_MessageTypeConfigPlugin.vcxproj">
+      <Project>{e9cb4f41-ff2f-42da-8836-38f5cd7df1dc}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\online_printer\app.configuration.config_plugins.online_printer.TA_OnlinePrinterConfigPlugin.vcxproj">
+      <Project>{6049c85e-f446-4cc7-9e07-ded4c544b03f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\operator\app.configuration.config_plugins.operator.TA_OperatorConfigPlugin.vcxproj">
+      <Project>{9d4a99fb-9faa-4fb0-ba44-5d3b2ace8f50}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\profile\app.configuration.config_plugins.profile.TA_ProfileConfigPlugin.vcxproj">
+      <Project>{dc6aa8b0-5dbe-4297-b5f9-ba73235d5f7e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\profile_groups\app.configuration.config_plugins.profile.TA_ProfileGroupsConfigPlugin.vcxproj">
+      <Project>{a8d9f1c6-b8b0-4106-b4f5-603e75876a59}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\rights\app.configuration.config_plugins.rights.TA_RightsConfigPlugin.vcxproj">
+      <Project>{697b7e73-0ed8-4d34-ae01-afe66fbd45b4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\scada\app.configuration.config_plugins.scada.TA_ScadaConfigPlugin.vcxproj">
+      <Project>{4a8ecb0c-8547-4b45-af4c-5ce449fe56de}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\scada_alias\app.configuration.config_plugins.scada_alias.TA_ScadaAliasConfigPlugin.vcxproj">
+      <Project>{2cef1f85-d3d5-4d3c-9c22-50925bc3a3df}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\scada_displays\app.configuration.config_plugins.scada_displays.TA_ScadaDisplayConfigPlugin.vcxproj">
+      <Project>{2c22d1ab-3890-47d9-af23-33a0557cb782}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\sound_file\app.configuration.config_plugins.sound_file.TA_SoundFileConfigPlugin.vcxproj">
+      <Project>{71b897a9-5b2e-4d51-9d43-399db0eb1a4d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\subsystem\app.configuration.config_plugins.subsystem.TA_SubsystemConfigPlugin.vcxproj">
+      <Project>{1f50a0ba-fbc0-451a-bd3f-192ccd070b8c}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\system_controller\app.configuration.config_plugins.system_controller.TA_SystemControllerConfigPlugin.vcxproj">
+      <Project>{5a0640fa-7a79-4c38-ad2d-b9619cb961f9}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\configuration\config_plugins\system_controller_groups\app.configuration.config_plugins.system_controller_groups.TA_SystemControllerGroupConfigPlugin.vcxproj">
+      <Project>{c44c957c-cb8e-4f5c-91a7-7095722a1859}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\data_management\archive_manager\app.data_management.archive_manager.ArchiveManager.vcxproj">
+      <Project>{841158e8-3a18-4891-8715-4633134ee909}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\event\event_extractor\app.event.EventExtractor.vcxproj">
+      <Project>{820f134e-812c-492c-bad7-d3aee0812c18}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\event\event_viewer\app.event.event_viewer.EventViewer.vcxproj">
+      <Project>{4844da07-a6bd-4ef1-853a-7cc1caad42f2}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\event\event_viewer\EventListComponent\app.event.event_viewer.eventlistcomponent.TA_EventListComponent.vcxproj">
+      <Project>{361615c5-a1e7-4c38-9ff9-c39a5cb9f79b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\notification_service\app.notification_service.NotificationServiceAgent.vcxproj">
+      <Project>{ef057ff3-dc59-422d-892f-bf379e00d044}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\reporting\crystal_reports_viewer\app.reporting.crystal_reports_viewer.ReportViewer.vcxproj">
+      <Project>{74a707f5-1ee6-421e-8839-bab21a55820c}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\response_plans\plan_agent\app.response_plans.plan_agent.PlanAgent.vcxproj">
+      <Project>{da62dc27-b9b4-461f-bd72-b705223e7bf6}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\response_plans\plan_manager\app.response_plans.plan_manager.PlanManager.vcxproj">
+      <Project>{555c36af-a038-4308-a2c0-d87a7ef8974e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\scada\DataNodeAgent\app.scada.datanodeagent.DataNodeAgent.vcxproj">
+      <Project>{f2c93d3d-0c8b-4037-bf22-48423112757a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\scada\EquipmentStatusViewer\app.scada.equipmentstatusviewer.EquipmentStatusViewer.vcxproj">
+      <Project>{e1f48e73-6027-41a5-83d5-636d9db20019}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\scada\inspector_panel\app.scada.inspector_panel.InspectorPanel.vcxproj">
+      <Project>{e2c1a9e7-df19-472c-a5ea-4fca34d72baa}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\scada\OpcBridgeLib\app.scada.opcbridgelib.TA_OpcBridgeLib.vcxproj">
+      <Project>{b3c20160-eb70-4da8-9f34-cf5343170d4d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\scada\OpcBridgeService\app.scada.opcbridge.TA_OpcBridgeService.vcxproj">
+      <Project>{a2d93e6b-444a-447e-8daf-4f80be847a47}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\scada\PowerDemandEditor\app.scada.powerdemandeditor.PowerDemandEditor.vcxproj">
+      <Project>{5b5af7b5-29b0-4e3b-942b-e2cc922848c1}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\scheduling\scheduling_agent\app.scheduling.scheduling_agent.SchedulingAgent.vcxproj">
+      <Project>{c063ad56-cde3-4d48-8e2b-e7d25dd7671a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\scheduling\scheduling_agent\command_line_interface\app.scheduling.scheduling_agent.command_line_interface.SchedulingAgentCLI.vcxproj">
+      <Project>{5d6e351c-9daf-4c84-8880-1e98c997bdda}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\scheduling\scheduling_manager\app.scheduling.scheduling_manager.SchedulingManager.vcxproj">
+      <Project>{c0577a4c-ae89-40b7-95ac-9abd8b5e2648}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\scheduling\scheduling_manager\plugin\plan\app.scheduling.scheduling_manager.plugin.plan.TA_PlanJobDetailsPlugin.vcxproj">
+      <Project>{4785479a-5120-4945-9f66-c5bc74cfa62d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\scheduling\scheduling_manager\plugin\plugin_helper\app.scheduling.scheduling_manager.plugin.plugin_helper.TA_JobDetailsPluginHelper.vcxproj">
+      <Project>{8ebc380e-b435-4829-92bc-062d9eca2613}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\security\authentication_agent\app.security.authentication_agent.AuthenticationAgent.vcxproj">
+      <Project>{d7a0a676-f9bd-4835-9d61-6ddae1eff87a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\security\DutyManager\app.security.dutymanager.DutyManager.vcxproj">
+      <Project>{61e62813-55e3-47f7-b1ce-ec1a85ff5d92}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\security\duty_agent\app.security.duty_agent.DutyAgent.vcxproj">
+      <Project>{9777aae2-a62d-4ffc-94d6-335af936843d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\security\region_manager\app.security.region_manager.RegionManager.vcxproj">
+      <Project>{dcc5e15c-4a6e-408b-9a5c-293cf7f2c2e4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\security\rights_agent\app.security.rights_agent.RightsAgent.vcxproj">
+      <Project>{f120a278-9145-47b3-90dd-29775c3b0e90}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\security\rights_service\app.security.rights_service.TA_RightsService.vcxproj">
+      <Project>{96c65154-d5d6-420b-bbb5-329c32ed653c}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\sound\sound_manager\app.sound.sound_manager.TA_SoundManager.vcxproj">
+      <Project>{aeee9ba6-535f-451a-bfb5-c2381b89ef00}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\system_control\banner\app.system_control.banner.Banner.vcxproj">
+      <Project>{73f57663-6403-48b7-9152-bd2fb7ee244e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\system_control\banner\pages\iscs_page\app.system_control.banner.pages.iscs_page.TA_IscsBannerPage.vcxproj">
+      <Project>{eae2f8ec-a407-407e-bb13-99d73543eb4d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\system_control\banner\pages\plan_page\app.system_control.banner.pages.plan_page.TA_PlanBannerPage.vcxproj">
+      <Project>{1d64376c-4bf9-4294-a719-e8fade52e363}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\system_control\config_keys\app.system_control.config_keys.ConfigKeys.vcxproj">
+      <Project>{98cfb4ee-dbb0-40d6-a31f-1062c734188e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\system_control\control_station\app.system_control.control_station.ControlStation.vcxproj">
+      <Project>{4c149049-0f03-45e2-9375-2a0991b107a3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\system_control\dll_host\app.system_control.system_manager.dll_host.TADllHost.vcxproj">
+      <Project>{5b7c5aaa-05cd-48e4-8c7a-b7e2968ab4d8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\system_control\dll_host\dll_components\dll_component_helper\app.system_control.dll_host.dll_components.TA_DllComponentHelper.vcxproj">
+      <Project>{c511d4c5-58d3-48b4-8aaa-252f38df1006}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\system_control\system_controller\app.system_control.system_controller.SystemController.vcxproj">
+      <Project>{a46e353f-bc7c-4243-a694-019de26fc325}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\system_control\system_manager\app.system_control.system_manager.SystemManager.vcxproj">
+      <Project>{66771ad1-f72f-401c-b3ca-88e8b75e2147}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\system_control\system_status_agent\app.system_control.system_status_agent.SystemStatusAgent.vcxproj">
+      <Project>{8501049c-333f-4848-837f-56d13a42fd10}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\system_control\transact_screensaver\app.system_control.transact_screensaver.TransactScreensaver.vcxproj">
+      <Project>{01678a71-07dd-4162-8be6-e3d15da701a5}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\transactive\app\trending\trend_viewer\app.trending.trend_viewer.TrendViewer.vcxproj">
+      <Project>{2ef14ada-b9a0-4c94-8db4-ce6ba7eb0be7}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

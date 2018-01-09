@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="pmodel">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="BusinessLogic">
+      <UniqueIdentifier>{fc68a3ce-4746-4a64-b23f-3e79ecfcbc3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AlarmGUIDlgModel.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AlarmManagerAppController.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SubsytemDataCache.cpp">
+      <Filter>BusinessLogic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\multipleSelDlgPModel.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AlarmFilterService.cpp">
+      <Filter>BusinessLogic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AlarmFilterDlgPModel.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AlarmManagerService.cpp">
+      <Filter>BusinessLogic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SuppressionRulesDlgBus.cpp">
+      <Filter>BusinessLogic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SuppressionRulesDlgPModel.cpp">
+      <Filter>pmodel</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\AlarmGUIDlgModel.h">
+      <Filter>pmodel</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\AlarmManagerAppController.h">
+      <Filter>pmodel</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\AlarmManagerConsts.h">
+      <Filter>pmodel</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\FilterEventArgs.h">
+      <Filter>BusinessLogic</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\SeverityCreateEventArgs.h">
+      <Filter>BusinessLogic</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\StringEventArgs.h">
+      <Filter>BusinessLogic</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\SubsytemDataCache.h">
+      <Filter>BusinessLogic</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\AlarmFilterService.h">
+      <Filter>BusinessLogic</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\FilterChangeEventArgs.h">
+      <Filter>BusinessLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\multipleSelDlgPModel.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FilterDlgBtnStateUpdate.h">
+      <Filter>BusinessLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PopulateNamedFilterEventArgs.h">
+      <Filter>BusinessLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PopulateFilterSelEventArgs.h">
+      <Filter>BusinessLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AlarmFilterDlgPModel.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AlarmManagerService.h">
+      <Filter>BusinessLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SuppressionRulesDlgPModel.h">
+      <Filter>pmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SuppressionRulesDlgBus.h">
+      <Filter>BusinessLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ServerStatusEventArgs.h">
+      <Filter>BusinessLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PrefilterChangeEventArgs.h">
+      <Filter>BusinessLogic</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

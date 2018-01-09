@@ -1,0 +1,222 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ProjectGuid>{4E0197E9-0837-4469-AB73-A815191100DC}</ProjectGuid>
+    <RootNamespace>TrendViewer.DotTest</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\TrendCacheTests.cs" />
+    <Compile Include="Controller\ChangeTrendTitleControllerTests.cs" />
+    <Compile Include="Controller\DataNotificaitonConstTests.cs" />
+    <Compile Include="Controller\DataPointDataControllerTests.cs" />
+    <Compile Include="Controller\DataPointGroupControllerTests.cs" />
+    <Compile Include="Controller\DataPointListControllerTests.cs" />
+    <Compile Include="Controller\FormulaDataControllerTests.cs" />
+    <Compile Include="Controller\FormulaGroupControllerTests.cs" />
+    <Compile Include="Controller\FormulaListControllerTests.cs" />
+    <Compile Include="Controller\HistDataPointDataControllerTests.cs" />
+    <Compile Include="Controller\HistDataPointGroupControllerTests.cs" />
+    <Compile Include="Controller\HistDataPointListControllerTests.cs" />
+    <Compile Include="Controller\MarkerDataControllerTests.cs" />
+    <Compile Include="Controller\MarkerGroupControllerTests.cs" />
+    <Compile Include="Controller\MarkerListControllerTests.cs" />
+    <Compile Include="Controller\OPCDataSelectorControllerTests.cs" />
+    <Compile Include="Controller\TrendViewControllerTests.cs" />
+    <Compile Include="DAO\Trending\CommonMSS\SimpleDatabaseMSS.cs" />
+    <Compile Include="DAO\Trending\HelperMSS\LocationKeyHelperMSS.cs" />
+    <Compile Include="Factories\View\AboutFactory.cs" />
+    <Compile Include="Factories\View\DataPointGroupFactory.cs" />
+    <Compile Include="Factories\View\EditChartTitleFactory.cs" />
+    <Compile Include="Factories\View\FormulaGroupFactory.cs" />
+    <Compile Include="Factories\View\FormulaListFactory.cs" />
+    <Compile Include="Factories\View\HistDataPointDataFactory.cs" />
+    <Compile Include="Factories\View\HistDataPointGroupFactory.cs" />
+    <Compile Include="Factories\View\HistDataPointListFactory.cs" />
+    <Compile Include="Factories\View\MarkerDataFactory.cs" />
+    <Compile Include="Factories\View\MarkerGroupFactory.cs" />
+    <Compile Include="Factories\View\MarkerListFactory.cs" />
+    <Compile Include="Factories\View\OPCDataSelectorFactory.cs" />
+    <Compile Include="Factories\View\TrendViewFactory.cs" />
+    <Compile Include="Common\LanguageHelperTests.cs" />
+    <Compile Include="OPCTrendLibMSS\EvaluatorMSS.cs" />
+    <Compile Include="ProgramTests.cs" />
+    <Compile Include="STEE\ISCS\LogMSS\LogHelperMSS.cs" />
+    <Compile Include="STEE\ISCS\MulLanguageMSS\MessageBoxDialogMSS.cs" />
+    <Compile Include="STEE\ISCS\MulLanguageMSS\StringHelperMSS.cs" />
+    <Compile Include="STEE\ISCS\MVCMSS\NotifyManagerMSS.cs" />
+    <Compile Include="STEE\ISCS\OPCProxyMSS\OPCServerProxyMSS.cs" />
+    <Compile Include="SystemMSS\StringMSS.cs" />
+    <Compile Include="System\DiagnosticsMSS\ProcessMSS.cs" />
+    <Compile Include="System\Windows\FormsMSS\ApplicationMSS.cs" />
+    <Compile Include="System\Windows\FormsMSS\CommonDialogMSS.cs" />
+    <Compile Include="System\Windows\FormsMSS\DataGridViewColumnCollectionMSS.cs" />
+    <Compile Include="System\Windows\FormsMSS\TimerMSS.cs" />
+    <Compile Include="TestConst.cs" />
+    <Compile Include="TrendingChartControlMSS\TrendingChartCtlMSS.cs" />
+    <Compile Include="TrendingHelperMSS\ConfigureFileHelperMSS.cs" />
+    <Compile Include="TrendViewerMSS\LanguageHelperMSS.cs" />
+    <Compile Include="TrendViewer\CommonMSS\TrendCacheMSS.cs" />
+    <Compile Include="TrendViewer\ControllerMSS\DataPointDataControllerMSS.cs" />
+    <Compile Include="TrendViewer\ControllerMSS\DataPointGroupControllerMSS.cs" />
+    <Compile Include="TrendViewer\ControllerMSS\FormulaDataControllerMSS.cs" />
+    <Compile Include="TrendViewer\ControllerMSS\FormulaGroupControllerMSS.cs" />
+    <Compile Include="TrendViewer\ControllerMSS\FormulaListControllerMSS.cs" />
+    <Compile Include="TrendViewer\ControllerMSS\HistDataPointGroupControllerMSS.cs" />
+    <Compile Include="TrendViewer\ControllerMSS\MarkerDataControllerMSS.cs" />
+    <Compile Include="TrendViewer\ControllerMSS\MarkerGroupControllerMSS.cs" />
+    <Compile Include="TrendViewer\ControllerMSS\TrendViewControllerMSS.cs" />
+    <Compile Include="TrendViewer\ModelMSS\DataPointGroupModelMSS.cs" />
+    <Compile Include="TrendViewer\ModelMSS\OPCDataSelectorModelMSS.cs" />
+    <Compile Include="TrendViewer\ModelMSS\TrendViewModelMSS.cs" />
+    <Compile Include="TrendViewer\ViewMSS\DataPointGroupMSS.cs" />
+    <Compile Include="TrendViewer\ViewMSS\DataPointListMSS.cs" />
+    <Compile Include="TrendViewer\ViewMSS\FormulaDataMSS.cs" />
+    <Compile Include="TrendViewer\ViewMSS\FormulaGroupMSS.cs" />
+    <Compile Include="TrendViewer\ViewMSS\FormulaListMSS.cs" />
+    <Compile Include="TrendViewer\ViewMSS\HistDataPointGroupMSS.cs" />
+    <Compile Include="TrendViewer\ViewMSS\HistDataPointListMSS.cs" />
+    <Compile Include="TrendViewer\ViewMSS\MarkerGroupMSS.cs" />
+    <Compile Include="TrendViewer\ViewMSS\MarkerListMSS.cs" />
+    <Compile Include="TrendViewer\ViewMSS\OPCDataSelectorMSS.cs" />
+    <Compile Include="TrendViewer\ViewMSS\TrendViewMSS.cs" />
+    <Compile Include="View\AboutTests.cs" />
+    <Compile Include="View\DataPointDataTests.cs" />
+    <Compile Include="View\DataPointGroupTests.cs" />
+    <Compile Include="View\DataPointListTests.cs" />
+    <Compile Include="View\EditChartTitleTests.cs" />
+    <Compile Include="View\FormulaDataTests.cs" />
+    <Compile Include="View\FormulaGroupTests.cs" />
+    <Compile Include="View\FormulaListTests.cs" />
+    <Compile Include="View\HistDataPointDataTests.cs" />
+    <Compile Include="View\HistDataPointGroupTests.cs" />
+    <Compile Include="View\HistDataPointListTests.cs" />
+    <Compile Include="View\MarkerDataTests.cs" />
+    <Compile Include="View\MarkerGroupTests.cs" />
+    <Compile Include="View\MarkerListTests.cs" />
+    <Compile Include="View\OPCDataSelectorTests.cs" />
+    <Compile Include="Common\TrendingHelperTests.cs" />
+    <Compile Include="View\TrendingViewFactoryTests.cs" />
+    <Compile Include="View\TrendViewConstTests.cs" />
+    <Compile Include="View\TrendViewTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\STEE.ISCS.GenericGUI\STEE.ISCS.GenericGUI.csproj">
+      <Project>{6AEE1C9A-97BB-4D8B-B195-50AEF2F4D1EF}</Project>
+      <Name>STEE.ISCS.GenericGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\STEE.ISCS.MVC\STEE.ISCS.MVC.csproj">
+      <Project>{CE78950A-F16F-44D3-A52C-EB62ACECB33F}</Project>
+      <Name>STEE.ISCS.MVC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrendingChartCtl\TrendingChartCtl.csproj">
+      <Project>{818B22DF-8752-42CA-A2E1-0D1BB2CA6C17}</Project>
+      <Name>TrendingChartCtl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrendingHelper\TrendingHelper.csproj">
+      <Project>{86898DA5-B846-4BC4-9AF2-51E9868B4A40}</Project>
+      <Name>TrendingHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrendViewer\TrendViewer\TrendViewer.csproj">
+      <Project>{15FF420F-F042-437E-A8F0-847682627FE1}</Project>
+      <Name>TrendViewer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DAO.Trending, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\DAO.Trending.dll</HintPath>
+    </Reference>
+    <Reference Include="dottest.framework, Version=9.1.0.2, Culture=neutral, PublicKeyToken=47d60c2a3c343a91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Parasoft\dotTEST\9.5\plugins\com.parasoft.xtest.libs.vstudio.dotnet\engine\dottest.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Entity.Trending, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\Entity.Trending.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Transactive\bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.3.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Parasoft\dotTEST\9.5\plugins\com.parasoft.xtest.libs.vstudio.dotnet\engine\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="OPCTrendLib, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\OPCTrendLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=9.2.0.700, Culture=neutral, PublicKeyToken=89b483f429c47342">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Transactive\bin\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="STEE.ISCS.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\STEE.ISCS.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="STEE.ISCS.MulLanguage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\STEE.ISCS.MulLanguage.dll</HintPath>
+    </Reference>
+    <Reference Include="STEE.ISCS.OPCProxy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\STEE.ISCS.OPCProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Transactive\bin\System.Windows.Forms.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAO\TrendingMSS\" />
+    <Folder Include="log4net\AppenderMSS\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,843 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug Library|Win32">
+      <Configuration>Debug Library</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>app.system_control.control_station</ProjectName>
+    <ProjectGuid>{4C149049-0F03-45E2-9375-2A0991B107A3}</ProjectGuid>
+    <RootNamespace>app.system_control.control_station</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+    <Import Project="..\..\..\..\tools\build\VCPropSheet\Common2.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+    <Import Project="..\..\..\..\tools\build\VCPropSheet\Common2.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+    <Import Project="..\..\..\..\tools\build\VCPropSheet\Common2.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>ControlStation</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">
+    <TargetName>ControlStation</TargetName>
+    <IntDir>$(TA_IntDir)$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>-Zm512</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src;$(TA_CotsPath)\Loki\Loki-0.1.7\include;.\GeneratedFiles;.\GeneratedFiles\$(ConfigurationName);C:\Qt\Qt5.5.1\5.5\include\QtCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_WIN32_DCOM;_VC80_UPGRADE=0x0600;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <ProgramDataBaseFileName />
+      <DisableSpecificWarnings>4005</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\bus\resources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>TA_Utilities_d.lib;TA_DAI_d.lib;TA_Base_Core_d.lib;TA_Base_Bus_d.lib;ws2_32.lib;Rpcrt4.lib;qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5Networkd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <DataExecutionPrevention />
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <AdditionalOptions>/IGNORE:4099,4075,4098 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <Bscmake />
+    <PreLinkEvent>
+      <Command>TASKKILL /F /IM ControlStation.exe 1&gt;NUL 2&gt;NUL
+CD .
+</Command>
+    </PreLinkEvent>
+    <PostBuildEvent>
+      <Command>TASKKILL /F /IM Gwx32.exe 1&gt;NUL 2&gt;NUL
+TASKKILL /F /IM ControlStation.exe 1&gt;NUL 2&gt;NUL
+TASKKILL /F /IM SystemManager.exe 1&gt;NUL 2&gt;NUL
+CD .
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>NotSet</TargetEnvironment>
+      <TypeLibraryName>$(BIN_PATH)/app.system_control.control_station.ControlStation.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>-Zm512</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src;$(TA_CotsPath)\Loki\Loki-0.1.7\include;.\GeneratedFiles;.\GeneratedFiles\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_WIN32_DCOM;_VC80_UPGRADE=0x0600;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4005</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\bus\resources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>TA_Utilities_d.lib;TA_DAI_d.lib;TA_Base_Core_d.lib;TA_Base_Bus_d.lib;ws2_32.lib;Rpcrt4.lib;qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5Networkd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <AdditionalOptions>/IGNORE:4099,4075,4098 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <Bscmake />
+    <PreLinkEvent>
+      <Command>TASKKILL /F /IM ControlStation.exe 1&gt;NUL 2&gt;NUL
+CD .</Command>
+    </PreLinkEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(BIN_PATH)/app.system_control.control_station.ControlStation.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>-Zm512</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src;$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src;.\GeneratedFiles;.\GeneratedFiles\$(ConfigurationName);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;ARIAL_BOLD_PROFILE_DIALOG;_WINDOWS;_WIN32_DCOM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\bus\resources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>version.lib;$(OMNI_LIB);$(ACE_LIB);$(MCL_LIB);TA_Base_Core.lib;oci.lib;$(MYSQL_LIB);ws2_32.lib;$(HTMLHELP_LIB);Rpcrt4.lib;ZipArchive.lib;TA_ConfigKeys.lib;TA_Base_Bus.lib;$(WINSTACKTRACE_LIB);%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>nafxcw.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Windows</SubSystem>
+      <DataExecutionPrevention />
+      <AdditionalOptions>/IGNORE:4099,4075 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <Bscmake>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\Debug Library\moc_AbstructLoginDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug Library\moc_ControlStationApp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug Library\moc_ControlStationInstanceChecker.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug Library\moc_ControlStationRootDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug Library\moc_CsDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug Library\moc_DutyChangeNoteDlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug Library\moc_DutyNotificationDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug Library\moc_DutyRequestDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug Library\moc_ExclusiveDutyDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug Library\moc_LogoutDlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug Library\moc_OverRideExclusiveDuty.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug Library\moc_PasswordDlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug Library\moc_ProfileLoginDlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_AbstructLoginDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ControlStationApp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ControlStationInstanceChecker.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ControlStationRootDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CsDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DutyChangeNoteDlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DutyNotificationDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DutyRequestDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ExclusiveDutyDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_LogoutDlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_OverRideExclusiveDuty.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PasswordDlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ProfileLoginDlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_controlstation.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_AbstructLoginDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ControlStationApp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ControlStationInstanceChecker.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ControlStationRootDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CsDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DutyChangeNoteDlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DutyNotificationDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DutyRequestDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ExclusiveDutyDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_LogoutDlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_OverRideExclusiveDuty.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PasswordDlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ProfileLoginDlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="OperatorRightsChecker.cpp" />
+    <ClCompile Include="src\AbstructLoginDialog.cpp" />
+    <ClCompile Include="src\ApplicationManager.cpp" />
+    <ClCompile Include="src\ApplicationMover.cpp" />
+    <ClCompile Include="src\ApplicationSignal.cpp" />
+    <ClCompile Include="src\BannerApplication.cpp" />
+    <ClCompile Include="src\ChangeOperatorTask.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\ChangeProfileDialogSignal.cpp" />
+    <ClCompile Include="src\ChangeProfileTask.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\CommonSignal.cpp" />
+    <ClCompile Include="src\ComUtilities.cpp" />
+    <ClCompile Include="src\ControlStation2Impl.cpp" />
+    <ClCompile Include="src\ControlStationSignal.cpp" />
+    <ClCompile Include="src\GraphworxSignal.cpp" />
+    <ClCompile Include="src\LogoutDialogSignal.cpp" />
+    <ClCompile Include="src\LogoutTask.cpp" />
+    <ClCompile Include="src\SessionSignal.cpp" />
+    <ClCompile Include="src\ComSignal.cpp" />
+    <ClCompile Include="src\ControlStationAuditMessageSender.cpp" />
+    <ClCompile Include="src\ControlStationComModule.cpp" />
+    <ClCompile Include="src\ConsecutiveNetworkFailureAlarmPolicy.cpp" />
+    <ClCompile Include="src\ControlStation2.cpp" />
+    <ClCompile Include="src\ControlStationApp.cpp" />
+    <ClCompile Include="src\ControlStationAppController.cpp" />
+    <ClCompile Include="src\ControlStationCorbaImpl.cpp" />
+    <ClCompile Include="src\ArchiveLogs.cpp" />
+    <ClCompile Include="src\ControlStationOnlineUpdateHandler.cpp" />
+    <ClCompile Include="src\ControlStationRootDialog.cpp" />
+    <ClCompile Include="src\DatabaseStatusMonitor.cpp" />
+    <ClCompile Include="src\DataCache.cpp" />
+    <ClCompile Include="src\DutyChangeNoteDlg.cpp" />
+    <ClCompile Include="src\DutyManager.cpp" />
+    <ClCompile Include="src\DutyNotificationDialog.cpp" />
+    <ClCompile Include="src\DutyRequestDialog.cpp" />
+    <ClCompile Include="src\EnumProcess.cpp" />
+    <ClCompile Include="src\ExclusiveDutyDialog.cpp" />
+    <ClCompile Include="src\GraphWorxCommunicator.cpp" />
+    <ClCompile Include="src\GraphWorxManager.cpp" />
+    <ClCompile Include="src\GraphworxMessageHandler.cpp" />
+    <ClCompile Include="src\KeyHelper.cpp" />
+    <ClCompile Include="src\LoginDialogSignal.cpp" />
+    <ClCompile Include="src\LoginTask.cpp" />
+    <ClCompile Include="src\LoginLocationSwitcher.cpp" />
+    <ClCompile Include="src\LogoutDlg.cpp" />
+    <ClCompile Include="src\main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\ExternalRunningApplication.cpp" />
+    <ClCompile Include="src\MyFuture.cpp" />
+    <ClCompile Include="src\CsDialog.cpp" />
+    <ClCompile Include="src\ProfileLoginDlg.cpp" />
+    <ClCompile Include="src\RunningApplication.cpp" />
+    <ClCompile Include="src\NamedRunningApplicationTerminator.cpp" />
+    <ClCompile Include="src\OperatorInteractionHandler.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\OverRideExclusiveDuty.cpp" />
+    <ClCompile Include="src\PasswordChecker.cpp" />
+    <ClCompile Include="src\PasswordDlg.cpp" />
+    <ClCompile Include="src\PingableItem.cpp" />
+    <ClCompile Include="src\ProcessManager.cpp" />
+    <ClCompile Include="src\QtUtilities.cpp" />
+    <ClCompile Include="src\ResourceService.cpp" />
+    <ClCompile Include="src\RightsManager.cpp" />
+    <ClCompile Include="src\RunningApplicationManager.cpp" />
+    <ClCompile Include="src\SchematicDisplay.cpp" />
+    <ClCompile Include="src\ScreenPositioning.cpp" />
+    <ClCompile Include="src\SecurityChecker.cpp" />
+    <ClCompile Include="src\ServerMonitor.cpp" />
+    <ClCompile Include="src\SessionDetails.cpp" />
+    <ClCompile Include="src\SessionManager.cpp" />
+    <ClCompile Include="src\ScreenSaverInstall.cpp" />
+    <ClCompile Include="src\Signals.cpp" />
+    <ClCompile Include="src\ControlStationInstanceChecker.cpp" />
+    <ClCompile Include="src\SoundManager.cpp" />
+    <ClCompile Include="src\StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\SystemControllerMessageHandler.cpp" />
+    <ClCompile Include="src\SystemManagerApplication.cpp" />
+    <ClCompile Include="src\TADllHostApplication.cpp" />
+    <ClCompile Include="src\UserExceptionHandler.cpp" />
+    <ClCompile Include="src\Utilities.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\VersionGen.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_ControlStationRootDialog.h" />
+    <ClInclude Include="GeneratedFiles\ui_DutyChangeNoteDlg.h" />
+    <ClInclude Include="GeneratedFiles\ui_DutyNotificationDialog.h" />
+    <ClInclude Include="GeneratedFiles\ui_DutyRequestDialog.h" />
+    <ClInclude Include="GeneratedFiles\ui_ExclusiveDutyDialog.h" />
+    <ClInclude Include="GeneratedFiles\ui_LogoutDlg.h" />
+    <ClInclude Include="GeneratedFiles\ui_OverRideExclusiveDutyDlg.h" />
+    <ClInclude Include="GeneratedFiles\ui_PasswordDlg.h" />
+    <ClInclude Include="GeneratedFiles\ui_ProfileLoginDlg.h" />
+    <CustomBuild Include="src\AbstructLoginDialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing AbstructLoginDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../src/AbstructLoginDialog.h"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\." "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-IC:\Qt\Qt5.5.1\5.5\include\QtCore" "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing AbstructLoginDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DARIAL_BOLD_PROFILE_DIALOG -D_WINDOWS -D_WIN32_DCOM "-D$(TA_Preprocessor)\." -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Moc%27ing AbstructLoginDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../src/AbstructLoginDialog.h"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\." "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+    </CustomBuild>
+    <ClInclude Include="src\AsyncSignal.h" />
+    <ClInclude Include="src\ComUtilities.h" />
+    <CustomBuild Include="src\ControlStationRootDialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ControlStationRootDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../src/ControlStationRootDialog.h"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\." "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-IC:\Qt\Qt5.5.1\5.5\include\QtCore" "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ControlStationRootDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DARIAL_BOLD_PROFILE_DIALOG -D_WINDOWS -D_WIN32_DCOM "-D$(TA_Preprocessor)\." -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Moc%27ing ControlStationRootDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../src/ControlStationRootDialog.h"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\." "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\DutyRequestDialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing DutyRequestDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../src/DutyRequestDialog.h"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\." "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-IC:\Qt\Qt5.5.1\5.5\include\QtCore" "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing DutyRequestDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DARIAL_BOLD_PROFILE_DIALOG -D_WINDOWS -D_WIN32_DCOM "-D$(TA_Preprocessor)\." -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Moc%27ing DutyRequestDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../src/DutyRequestDialog.h"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\." "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\DutyNotificationDialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing DutyNotificationDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../src/DutyNotificationDialog.h"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\." "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-IC:\Qt\Qt5.5.1\5.5\include\QtCore" "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing DutyNotificationDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DARIAL_BOLD_PROFILE_DIALOG -D_WINDOWS -D_WIN32_DCOM "-D$(TA_Preprocessor)\." -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Moc%27ing DutyNotificationDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../src/DutyNotificationDialog.h"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\." "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\CsDialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing CsDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../src/CsDialog.h"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\." "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-IC:\Qt\Qt5.5.1\5.5\include\QtCore" "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing CsDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DARIAL_BOLD_PROFILE_DIALOG -D_WINDOWS -D_WIN32_DCOM "-D$(TA_Preprocessor)\." -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Moc%27ing CsDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../src/CsDialog.h"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\." "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\ControlStationApp.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ControlStationApp.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../src/ControlStationApp.h"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\." "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-IC:\Qt\Qt5.5.1\5.5\include\QtCore" "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ControlStationApp.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DARIAL_BOLD_PROFILE_DIALOG -D_WINDOWS -D_WIN32_DCOM "-D$(TA_Preprocessor)\." -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Moc%27ing ControlStationApp.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../src/ControlStationApp.h"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\." "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\ControlStationInstanceChecker.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ControlStationInstanceChecker.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../src/ControlStationInstanceChecker.h"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\." "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-IC:\Qt\Qt5.5.1\5.5\include\QtCore" "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ControlStationInstanceChecker.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DARIAL_BOLD_PROFILE_DIALOG -D_WINDOWS -D_WIN32_DCOM "-D$(TA_Preprocessor)\." -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Moc%27ing ControlStationInstanceChecker.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../src/ControlStationInstanceChecker.h"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\." "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\ProfileLoginDlg.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ProfileLoginDlg.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../src/ProfileLoginDlg.h"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\." "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-IC:\Qt\Qt5.5.1\5.5\include\QtCore" "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ProfileLoginDlg.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DARIAL_BOLD_PROFILE_DIALOG -D_WINDOWS -D_WIN32_DCOM "-D$(TA_Preprocessor)\." -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Moc%27ing ProfileLoginDlg.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../src/ProfileLoginDlg.h"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\." "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+    </CustomBuild>
+    <ClInclude Include="src\resource.h" />
+    <ClInclude Include="src\Singleton.h" />
+    <ClInclude Include="src\ChangeOperatorTask.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\ChangeProfileTask.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <CustomBuild Include="src\DutyChangeNoteDlg.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing DutyChangeNoteDlg.h...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Moc%27ing DutyChangeNoteDlg.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\."  "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-IC:\Qt\Qt5.5.1\5.5\include\QtCore" "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\." "-fstdafx.h" "-f../../src/DutyChangeNoteDlg.h"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\."  "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\." "-fstdafx.h" "-f../../src/DutyChangeNoteDlg.h"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing DutyChangeNoteDlg.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DARIAL_BOLD_PROFILE_DIALOG -D_WINDOWS -D_WIN32_DCOM "-D$(TA_Preprocessor)\." -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\ExclusiveDutyDialog.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ExclusiveDutyDialog.h...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Moc%27ing ExclusiveDutyDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\."  "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-IC:\Qt\Qt5.5.1\5.5\include\QtCore" "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\." "-fstdafx.h" "-f../../src/ExclusiveDutyDialog.h"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\."  "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\." "-fstdafx.h" "-f../../src/ExclusiveDutyDialog.h"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ExclusiveDutyDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DARIAL_BOLD_PROFILE_DIALOG -D_WINDOWS -D_WIN32_DCOM "-D$(TA_Preprocessor)\." -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\LogoutDlg.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing LogoutDlg.h...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Moc%27ing LogoutDlg.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\."  "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-IC:\Qt\Qt5.5.1\5.5\include\QtCore" "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\." "-fstdafx.h" "-f../../src/LogoutDlg.h"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\."  "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\." "-fstdafx.h" "-f../../src/LogoutDlg.h"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing LogoutDlg.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DARIAL_BOLD_PROFILE_DIALOG -D_WINDOWS -D_WIN32_DCOM "-D$(TA_Preprocessor)\." -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\OverRideExclusiveDuty.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing OverRideExclusiveDuty.h...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Moc%27ing OverRideExclusiveDuty.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\."  "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-IC:\Qt\Qt5.5.1\5.5\include\QtCore" "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\." "-fstdafx.h" "-f../../src/OverRideExclusiveDuty.h"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\."  "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\." "-fstdafx.h" "-f../../src/OverRideExclusiveDuty.h"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing OverRideExclusiveDuty.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DARIAL_BOLD_PROFILE_DIALOG -D_WINDOWS -D_WIN32_DCOM "-D$(TA_Preprocessor)\." -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\PasswordDlg.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing PasswordDlg.h...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Moc%27ing PasswordDlg.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\."  "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-IC:\Qt\Qt5.5.1\5.5\include\QtCore" "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\." "-fstdafx.h" "-f../../src/PasswordDlg.h"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\."  "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\." "-fstdafx.h" "-f../../src/PasswordDlg.h"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing PasswordDlg.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DNDEBUG -DARIAL_BOLD_PROFILE_DIALOG -D_WINDOWS -D_WIN32_DCOM "-D$(TA_Preprocessor)\." -D_VC80_UPGRADE=0x0600 -D_MBCS -D_AFXDLL "-I$(TA_BuildPath)\win32_n\transactive\core\data_access_interface\PlanAgent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\response_plans\plan_manager\IDL\src" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="src\OperatorInteractionHandler.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\Promise.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\ControlStationRootDialog.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\ProfileLoginDlg.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\LogoutDlg.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\PasswordDlg.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\DutyChangeNoteDlg.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\OverRideExclusiveDutyDlg.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\DutyNotificationDialog.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\DutyRequestDialog.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\ExclusiveDutyDialog.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+    <CustomBuild Include="res\controlstation.qrc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+    </CustomBuild>
+    <None Include="src\ControlStation2.rgs" />
+    <None Include="src\RippleControlStation.rgs" />
+    <None Include="src\SchematicDisplay.rgs" />
+    <None Include="start.ini">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="src\ControlStation.idl">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;_USE_32BIT_TIME_T</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">_DEBUG;%(PreprocessorDefinitions);_USE_32BIT_TIME_T</PreprocessorDefinitions>
+      <MkTypLibCompatible Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</MkTypLibCompatible>
+      <MkTypLibCompatible Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">false</MkTypLibCompatible>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateStublessProxies>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</GenerateStublessProxies>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TA_BuildPath)\$(TA_Platform)\$(TA_RelativeProjectPath)\src\ControlStation_i.h</HeaderFileName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">..\..\..\..\..\build\win32_n\transactive\app\system_control\control_station\src\ControlStation_i.h</HeaderFileName>
+      <DllDataFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">dlldata.c</DllDataFileName>
+      <DllDataFileName Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">dlldata.c</DllDataFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TA_BuildPath)\$(TA_Platform)\$(TA_RelativeProjectPath)\src\ControlStation_i.c</InterfaceIdentifierFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">..\..\..\..\..\build\win32_n\transactive\app\system_control\control_station\src\ControlStation_i.c</InterfaceIdentifierFileName>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TA_SdkPath)\$(TA_Platform)$(TA_ConfigurationSuffix)\ControlStation.tlb</TypeLibraryName>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">..\..\..\..\..\sdk\win32_nd\ControlStation.tlb</TypeLibraryName>
+    </Midl>
+    <Midl Include="src\RippleControlStation.idl">
+      <MkTypLibCompatible Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</MkTypLibCompatible>
+      <MkTypLibCompatible Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">false</MkTypLibCompatible>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;%(PreprocessorDefinitions);_USE_32BIT_TIME_T</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">_DEBUG;%(PreprocessorDefinitions);_USE_32BIT_TIME_T</PreprocessorDefinitions>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateStublessProxies>
+      <GenerateStublessProxies Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">true</GenerateStublessProxies>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\build\win32_n\transactive\app\system_control\control_station\src\RippleControlStation_i.h</HeaderFileName>
+      <HeaderFileName Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">..\..\..\..\..\build\win32_n\transactive\app\system_control\control_station\src\RippleControlStation_i.h</HeaderFileName>
+      <DllDataFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">dlldata.c</DllDataFileName>
+      <DllDataFileName Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">dlldata.c</DllDataFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\build\win32_n\transactive\app\system_control\control_station\src\RippleControlStation_i.c</InterfaceIdentifierFileName>
+      <InterfaceIdentifierFileName Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">..\..\..\..\..\build\win32_n\transactive\app\system_control\control_station\src\RippleControlStation_i.c</InterfaceIdentifierFileName>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\..\sdk\win32_nd\RippleControlStation.tlb</TypeLibraryName>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">..\..\..\..\..\sdk\win32_nd\RippleControlStation.tlb</TypeLibraryName>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\ControlStation.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\Qt5.5.1\5.5\include;C:\Qt\Qt5.5.1\5.5\include\QtCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="src\ControlStation.rc" Qt5Version_x0020_Win32="Qt5.5.1" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

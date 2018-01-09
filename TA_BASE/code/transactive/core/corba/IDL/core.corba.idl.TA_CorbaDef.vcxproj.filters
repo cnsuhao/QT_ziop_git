@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{80f8dc95-188b-4bc2-81e9-6224856c717c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\core\corba\IDL\src\IChannelLocatorCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\core\corba\IDL\src\IChannelLocatorCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\core\corba\IDL\src\IFederatableEventChannel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\core\corba\IDL\src\IFederatableEventChannel_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(IDL_BUILD_PATH)\transactive\core\corba\IDL\src\IChannelLocatorCorbaDef.h" />
+    <ClInclude Include="$(IDL_BUILD_PATH)\transactive\core\corba\IDL\src\IFederatableEventChannel.hh" />
+  </ItemGroup>
+</Project>

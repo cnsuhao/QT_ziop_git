@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>app.system_controller.system_manager_pmodel</ProjectName>
+    <ProjectGuid>{7BA89EB6-3D76-49CC-85EE-C86D3AF15F61}</ProjectGuid>
+    <RootNamespace>app.system_controller.system_manager_pmodel</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\..\..\tools\build\VCPropSheet\Common2.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\..\..\tools\build\VCPropSheet\Common2.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src;$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_LIB;_DEBUG;TA_ASSERT_LOG=1;TA_ASSERT_FAIL=EXCEPTION;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader />
+    </ClCompile>
+    <Lib>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AppServiceCenter.cpp" />
+    <ClCompile Include="src\AppServiceConsts.cpp" />
+    <ClCompile Include="src\ChangeOperationModeDlgModel.cpp" />
+    <ClCompile Include="src\OptionsDlgModel.cpp" />
+    <ClCompile Include="src\ProcessListCtrlModel.cpp" />
+    <ClCompile Include="src\ProcessParamsDlgModel.cpp" />
+    <ClCompile Include="src\ShutdownSystemControllerDlgModel.cpp" />
+    <ClCompile Include="src\StartProcessDlgModel.cpp" />
+    <ClCompile Include="src\StopProcessDlgModel.cpp" />
+    <ClCompile Include="src\SystemControllerDlgModel.cpp" />
+    <ClCompile Include="src\SystemManagerAppController.cpp" />
+    <ClCompile Include="src\SystemManagerDlgModel.cpp" />
+    <ClCompile Include="src\TransActiveLoginDlgModel.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\AppServiceCenter.h" />
+    <ClInclude Include="src\AppServiceConsts.h" />
+    <ClInclude Include="src\ChangeOperationModeDlgModel.h" />
+    <ClInclude Include="src\OptionsDlgModel.h" />
+    <ClInclude Include="src\ProcessListCtrlModel.h" />
+    <ClInclude Include="src\ProcessParamsDlgModel.h" />
+    <ClInclude Include="src\ShutdownSystemControllerDlgModel.h" />
+    <ClInclude Include="src\StartProcessDlgModel.h" />
+    <ClInclude Include="src\StopProcessDlgModel.h" />
+    <ClInclude Include="src\SystemControllerDlgModel.h" />
+    <ClInclude Include="src\SystemManagerAppController.h" />
+    <ClInclude Include="src\SystemManagerConsts.h" />
+    <ClInclude Include="src\SystemManagerDlgModel.h" />
+    <ClInclude Include="src\TransActiveLoginDlgModel.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

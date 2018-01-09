@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{61293651-5569-4850-9a75-a8afacd81d26}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\AuditMessageCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\AuditMessageCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\BindingRequestMessageCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\BindingRequestMessageCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\CommsMessageCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\CommsMessageCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\ConfigUpdateMessageCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\ConfigUpdateMessageCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\GenericMessageCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\GenericMessageCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\StateUpdateMessageCorbaDef.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\StateUpdateMessageCorbaDef_skel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\AuditMessageCorbaDef.h" />
+    <ClInclude Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\BindingRequestMessageCorbaDef.h" />
+    <ClInclude Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\CommsMessageCorbaDef.h" />
+    <ClInclude Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\ConfigUpdateMessageCorbaDef.h" />
+    <ClInclude Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\GenericMessageCorbaDef.h" />
+    <ClInclude Include="$(IDL_BUILD_PATH)\transactive\core\message\IDL\src\StateUpdateMessageCorbaDef.h" />
+  </ItemGroup>
+</Project>

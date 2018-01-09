@@ -1,0 +1,249 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ProjectGuid>{CCBD0126-558D-4B0E-BB8D-5CD191F59D03}</ProjectGuid>
+    <RootNamespace>DotTest</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Factories\OPCTrendLib\AdditiveOpFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ArithmeticDivideFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ArithmeticModulusFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ArithmeticMultiplyFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ArithmeticOpFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ArithmeticSubtractFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\BinaryOpExecutorFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\BinaryOpFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\BitwiseAndFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\BitwiseOpFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\BitwiseOrFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\BitwiseShiftFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\BitwiseXorFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\BooleanAndExecutorFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\BooleanAndFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\BooleanOpFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\BooleanOrExecutorFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\BooleanOrFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\CompareOpFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ConditionalOpExecutorFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ConditionalOpFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ConstantFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ContextFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\EvalExceptionFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\EvaluatorFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ExecutorContextFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ExecutorFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ExpressionFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\GeneralFunctionFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\IdentifierFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\IExecutorContextFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\IExecutorFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\IndexerOpFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\IVariableHolderFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\MemberIdFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\MemberOpFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCDataInterface\OPCITEMDEFinternFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCDataInterface\OPCITEMRESULTinternFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCDataInterface\SERVERSTATUSFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCData\CancelCompleteEventArgsFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCData\DataChangeEventArgsFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCData\OPCItemAttributesFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCData\OPCItemDefFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCData\OPCItemResultFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCData\OPCItemStateFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCData\OPCPropertyDataFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCData\OPCPropertyFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCData\OPCPropertyItemFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCData\OpcServerFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCData\OPCWriteResultFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCData\ReadCompleteEventArgsFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCData\ShutdownRequestEventArgsFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCData\WriteCompleteEventArgsFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCHeader\DUMMY_VARIANTFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCHeader\HRESULTSFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCHeader\IOPCShutdownFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCHeader\OPCServerListC.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCHeader\OPCServerListFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OPCHeader\OPCServersFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OperandExecutorFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OperandFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\OperatorFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ParameterCollectionFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ParameterFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ParameterVariableHolderFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ParserExceptionFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ParserFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ResultFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ScannerExceptionFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\ScannerFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\TokenFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\TreeFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\TypeNamePartFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\UnaryOpFactory.cs" />
+    <Compile Include="Factories\OPCTrendLib\VariableFactory.cs" />
+    <Compile Include="Jyc\Expr\SRTests.cs" />
+    <Compile Include="OPCTrendLibMSS\ScannerMSS.cs" />
+    <Compile Include="OPCTrendLib\AdditiveOpTests.cs" />
+    <Compile Include="OPCTrendLib\ArithmeticOpTests.cs" />
+    <Compile Include="OPCTrendLib\ArithmeticDivideTests.cs" />
+    <Compile Include="OPCTrendLib\ArithmeticModulusTests.cs" />
+    <Compile Include="OPCTrendLib\ArithmeticMultiplyTests.cs" />
+    <Compile Include="OPCTrendLib\ArithmeticSubtractTests.cs" />
+    <Compile Include="OPCTrendLib\Base64DecoderTest.cs" />
+    <Compile Include="OPCTrendLib\Base64EncoderTest.cs" />
+    <Compile Include="OPCTrendLib\BinaryHelperTests.cs" />
+    <Compile Include="OPCTrendLib\BinaryOpExecutorTests.cs" />
+    <Compile Include="OPCTrendLib\BinaryOpTests.cs" />
+    <Compile Include="OPCTrendLib\BitwiseAndTests.cs" />
+    <Compile Include="OPCTrendLib\BitwiseOrTests.cs" />
+    <Compile Include="OPCTrendLib\BitwiseShiftTests.cs" />
+    <Compile Include="OPCTrendLib\BitwiseXorTests.cs" />
+    <Compile Include="OPCTrendLib\BooleanAndExecutorTests.cs" />
+    <Compile Include="OPCTrendLib\BooleanAndTests.cs" />
+    <Compile Include="OPCTrendLib\BooleanOrExecutorTests.cs" />
+    <Compile Include="OPCTrendLib\BooleanOrTests.cs" />
+    <Compile Include="OPCTrendLib\CompareOpTests.cs" />
+    <Compile Include="OPCTrendLib\ConditionalOpExecutorTests.cs" />
+    <Compile Include="OPCTrendLib\ConditionalOpTests.cs" />
+    <Compile Include="OPCTrendLib\ConstantTests.cs" />
+    <Compile Include="OPCTrendLib\ContextTests.cs" />
+    <Compile Include="OPCTrendLib\ConvertHelperTests.cs" />
+    <Compile Include="OPCTrendLib\ErrorFormatorTests.cs" />
+    <Compile Include="OPCTrendLib\EvalExceptionTests.cs" />
+    <Compile Include="OPCTrendLib\EvaluatorTests.cs" />
+    <Compile Include="OPCTrendLib\ExecutorTests.cs" />
+    <Compile Include="OPCTrendLib\ExprNodeTests.cs" />
+    <Compile Include="OPCTrendLib\GeneralFunctionTests.cs" />
+    <Compile Include="OPCTrendLib\IndexerOpTests.cs" />
+    <Compile Include="OPCTrendLib\MemberIdTests.cs" />
+    <Compile Include="OPCTrendLib\MemberOpTests.cs" />
+    <Compile Include="OPCTrendLib\OPCDataInterface\OPCITEMDEFinternTests.cs" />
+    <Compile Include="OPCTrendLib\OPCDataInterface\OPCITEMRESULTinternTests.cs" />
+    <Compile Include="OPCTrendLib\OPCDataInterface\OPCServerComClass.cs" />
+    <Compile Include="OPCTrendLib\OPCDataInterface\SERVERSTATUSTests.cs" />
+    <Compile Include="OPCTrendLib\OPCData\CancelCompleteEventArgsTests.cs" />
+    <Compile Include="OPCTrendLib\OPCData\DataChangeEventArgsTests.cs" />
+    <Compile Include="OPCTrendLib\OPCDataInterface\EnumString.cs" />
+    <Compile Include="OPCTrendLib\OPCData\OpcEnumItemAttributesTests.cs" />
+    <Compile Include="OPCTrendLib\OPCData\OpcGroupTests.cs" />
+    <Compile Include="OPCTrendLib\OPCData\OPCItemAttributesTests.cs" />
+    <Compile Include="OPCTrendLib\OPCData\OPCItemDefTests.cs" />
+    <Compile Include="OPCTrendLib\OPCData\OPCItemResultTests.cs" />
+    <Compile Include="OPCTrendLib\OPCData\OPCItemStateTests.cs" />
+    <Compile Include="OPCTrendLib\OPCData\OPCPropertyDataTests.cs" />
+    <Compile Include="OPCTrendLib\OPCData\OPCPropertyItemTests.cs" />
+    <Compile Include="OPCTrendLib\OPCData\OPCPropertyTests.cs" />
+    <Compile Include="OPCTrendLib\OPCData\OpcServerTests.cs" />
+    <Compile Include="OPCTrendLib\OPCData\OPCWriteResultTests.cs" />
+    <Compile Include="OPCTrendLib\OPCData\ReadCompleteEventArgsTests.cs" />
+    <Compile Include="OPCTrendLib\OPCData\ShutdownRequestEventArgsTests.cs" />
+    <Compile Include="OPCTrendLib\OPCData\WriteCompleteEventArgsTests.cs" />
+    <Compile Include="OPCTrendLib\OPCHeaderMSS\DUMMY_VARIANTMSS.cs" />
+    <Compile Include="OPCTrendLib\OPCHeader\DUMMY_VARIANTTests.cs" />
+    <Compile Include="OPCTrendLib\OPCHeader\HRESULTSTests.cs" />
+    <Compile Include="OPCTrendLib\OPCHeader\OPCServerListTests.cs" />
+    <Compile Include="OPCTrendLib\OPCHeader\OPCServersTests.cs" />
+    <Compile Include="OPCTrendLib\OperandExecutorTests.cs" />
+    <Compile Include="OPCTrendLib\ParameterCollectionTests.cs" />
+    <Compile Include="OPCTrendLib\ParameterTests.cs" />
+    <Compile Include="OPCTrendLib\ParameterVariableHolderTests.cs" />
+    <Compile Include="OPCTrendLib\ParserExceptionTests.cs" />
+    <Compile Include="OPCTrendLib\ParserTests.cs" />
+    <Compile Include="OPCTrendLib\ResultTests.cs" />
+    <Compile Include="OPCTrendLib\ScannerExceptionTests.cs" />
+    <Compile Include="OPCTrendLib\ScannerTests.cs" />
+    <Compile Include="OPCTrendLib\TreeTests.cs" />
+    <Compile Include="OPCTrendLib\TypeNamePartTests.cs" />
+    <Compile Include="OPCTrendLib\UnaryOpTests.cs" />
+    <Compile Include="OPCTrendLib\VariableTests.cs" />
+    <Compile Include="Oracle\DataAccess\ClientMSS\OracleCommandMSS.cs" />
+    <Compile Include="Oracle\DataAccess\ClientMSS\OracleConnectionMSS.cs" />
+    <Compile Include="Oracle\DataAccess\ClientMSS\OracleDataAdapterMSS.cs" />
+    <Compile Include="Properties_ResourcesTest.cs" />
+    <Compile Include="STEE\ISCS\LogMSS\LogHelperMSS.cs" />
+    <Compile Include="SystemMSS\ActivatorMSS.cs" />
+    <Compile Include="SystemMSS\CharMSS.cs" />
+    <Compile Include="SystemMSS\ConsoleMSS.cs" />
+    <Compile Include="SystemMSS\ConvertMSS.cs" />
+    <Compile Include="SystemMSS\TypeMSS.cs" />
+    <Compile Include="System\ComponentModelMSS\TypeConverterMSS.cs" />
+    <Compile Include="System\ComponentModelMSS\TypeDescriptorMSS.cs" />
+    <Compile Include="System\Data\SqlClientMSS\SqlCommandMSS.cs" />
+    <Compile Include="System\Data\SqlClientMSS\SqlConnectionMSS.cs" />
+    <Compile Include="System\Net\SocketsMSS\SocketMSS.cs" />
+    <Compile Include="System\ReflectionMSS\PropertyInfoMSS.cs" />
+    <Compile Include="System\ResourcesMSS\ResourceManagerMSS.cs" />
+    <Compile Include="System\Runtime\InteropServicesMSS\MarshalMSS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OPCTrendLib\OPCTrendLib.csproj">
+      <Project>{6155A522-E174-4465-9201-6D162779A590}</Project>
+      <Name>OPCTrendLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\STEE.ISCS.Log.DotTest\STEE.ISCS.Log.DotTest.csproj">
+      <Project>{1E62500F-0228-4B63-8866-473B2D9F26DB}</Project>
+      <Name>STEE.ISCS.Log.DotTest</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="dottest.framework, Version=9.1.0.2, Culture=neutral, PublicKeyToken=47d60c2a3c343a91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Parasoft\dotTEST\9.5\plugins\com.parasoft.xtest.libs.vstudio.dotnet\engine\dottest.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL" />
+    <Reference Include="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Parasoft\dotTEST\9.5\plugins\com.parasoft.xtest.libs.vstudio.dotnet\engine\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=9.2.0.700, Culture=neutral, PublicKeyToken=89b483f429c47342">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="STEE.ISCS.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\STEE.ISCS.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+</Project>

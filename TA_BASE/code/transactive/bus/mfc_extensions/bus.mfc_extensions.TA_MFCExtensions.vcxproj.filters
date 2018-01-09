@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{0ac465b4-d20e-416d-89a1-fb0368c2284a}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="src\auto_sort_list_ctrl">
+      <UniqueIdentifier>{c4de3f34-8e7d-4824-8ce9-5e5fca8d3a9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bitmap_and_text_push_button">
+      <UniqueIdentifier>{8c6cd996-b3b3-4d7c-ba2b-4efbdcc7b850}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\coloured_controls">
+      <UniqueIdentifier>{15cbc3fe-3fcd-441d-95e7-0ed114be5606}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\editable_list_control">
+      <UniqueIdentifier>{9cd54cd7-5bd3-40b0-916b-4e7eff79e851}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\fixed_column_header_ctrl">
+      <UniqueIdentifier>{06814753-9700-4d90-9e19-e54d540384d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\flashing_button">
+      <UniqueIdentifier>{6c628a6f-c8d2-4432-be1f-81108e957b29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\focus_management">
+      <UniqueIdentifier>{3ae21be5-242f-451f-ab24-b07cbb4a8f89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\grid_control">
+      <UniqueIdentifier>{57b4ec38-fbae-4e75-a0dd-eefe3e8cc664}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\grid_control_border_selection">
+      <UniqueIdentifier>{9a38b57e-d85f-43f3-9bbb-cfc4afa041a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\list_ctrl_on_off_selection">
+      <UniqueIdentifier>{a25456c7-834b-445e-b24d-9dbda228c180}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\list_ctrl_selection_without_fo">
+      <UniqueIdentifier>{8872ab02-cadf-431b-a79b-985e7c18cbeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\list_ctrl_with_hidden_scrollba">
+      <UniqueIdentifier>{8b2e55f0-56c8-430d-90e9-b957a4c4ae0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\message_box">
+      <UniqueIdentifier>{0608e73e-c90d-4053-8a0c-094ed11291e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\multi_dialog">
+      <UniqueIdentifier>{0cbc804f-b695-4f57-aee6-61878d5b8b95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\multi_font_property_sheet">
+      <UniqueIdentifier>{a4184882-8d5a-4a25-8a65-6f3cba30ac12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\numeric_edit_control">
+      <UniqueIdentifier>{d5327b31-48eb-4426-9864-9ae88007b3e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\object_tree_control">
+      <UniqueIdentifier>{1a9a1e57-70f8-4649-8751-cb5b8c55d793}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\outlook_bar_control">
+      <UniqueIdentifier>{99500d2c-0a5c-4a37-a2f6-c2c92033eb5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\print_list_ctrl">
+      <UniqueIdentifier>{54f41ffe-6aac-4263-bcae-773fb1741630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\progress_window">
+      <UniqueIdentifier>{ea87866d-44fd-4241-9660-22fe8ca4b795}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\redraw_control_lock">
+      <UniqueIdentifier>{0b2d0979-6971-4d8c-8215-4fccc2b96dc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\selection_helpers">
+      <UniqueIdentifier>{48008ec9-8ef5-4dec-86e3-b69523114d11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\standard_dialogs_arial_bold">
+      <UniqueIdentifier>{5891aa01-3fb9-451a-a888-b5e6c261bfe4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tab_control_with_disable">
+      <UniqueIdentifier>{e1e77a2c-3936-4889-a8e4-07bcca8e1c48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tab_dialog_control">
+      <UniqueIdentifier>{ee58dd1a-83cb-40bd-9592-a25f6984fcec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\toggleButton">
+      <UniqueIdentifier>{57e35ee3-bc01-47a9-a8ad-8faa681aa997}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tree_ctrl_multi_sel">
+      <UniqueIdentifier>{0611ccf1-a59b-4142-9509-6bff9206ad91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tree_list_control">
+      <UniqueIdentifier>{f3ca0e46-aae8-46cb-ac60-e90b55ae816b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\text_colour_edit">
+      <UniqueIdentifier>{4c65871d-5e71-4e90-89d8-372b04002bfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\combo_temporary_item">
+      <UniqueIdentifier>{657e37fc-74fe-4899-aad9-ad9acd37983d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\filter_list_ctrl">
+      <UniqueIdentifier>{a85ad120-0495-40b2-86de-4491114ffe7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\file_dialog_no_folder_change">
+      <UniqueIdentifier>{b66d3ba6-5f2e-4e2a-a70c-019c43224717}</UniqueIdentifier>
+      <Extensions>*.cpp *.h</Extensions>
+    </Filter>
+    <Filter Include="src\decorator_button">
+      <UniqueIdentifier>{2e1a011f-f7c2-4f3a-80f4-2a2e63d4224e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\prnScreen">
+      <UniqueIdentifier>{c02a44b0-5951-4f4c-a6ca-ac2fb23cfd13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\transactivehelp">
+      <UniqueIdentifier>{d244913b-1902-4fea-865e-e58259c95963}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\readonly_enabled_listbox">
+      <UniqueIdentifier>{ff215006-21cb-4161-ae13-6145bd8024fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\message_dialog_helper">
+      <UniqueIdentifier>{b1b40505-7c4a-4578-ba68-7ad507d03108}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{5f05104e-cbe6-4e74-aa6a-7627ea2cc1b6}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\mfc_extensions.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\auto_sort_list_ctrl\AutoSortListCtrl.cpp">
+      <Filter>src\auto_sort_list_ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bitmap_and_text_push_button\FooButton.cpp">
+      <Filter>src\bitmap_and_text_push_button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bitmap_and_text_push_button\Sxbutton.cpp">
+      <Filter>src\bitmap_and_text_push_button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\coloured_controls\ColorButton.cpp">
+      <Filter>src\coloured_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\coloured_controls\ColorCheck.cpp">
+      <Filter>src\coloured_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\coloured_controls\ColorComboBox.cpp">
+      <Filter>src\coloured_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\coloured_controls\ColourCombo.cpp">
+      <Filter>src\coloured_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\coloured_controls\HighlightItemListCtrl.cpp">
+      <Filter>src\coloured_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\editable_list_control\EditableListCtrl.cpp">
+      <Filter>src\editable_list_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\editable_list_control\ListCellButton.cpp">
+      <Filter>src\editable_list_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\editable_list_control\ListCellCheckBox.cpp">
+      <Filter>src\editable_list_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\editable_list_control\ListCellComboBox.cpp">
+      <Filter>src\editable_list_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\editable_list_control\ListCellDateTime.cpp">
+      <Filter>src\editable_list_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\editable_list_control\ListCellEdit.cpp">
+      <Filter>src\editable_list_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\editable_list_control\ListCellMaskedEdit.cpp">
+      <Filter>src\editable_list_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\editable_list_control\XTipListBox.cpp">
+      <Filter>src\editable_list_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fixed_column_header_ctrl\FixedHeaderCtrl.cpp">
+      <Filter>src\fixed_column_header_ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\flashing_button\FlashButton.cpp">
+      <Filter>src\flashing_button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\focus_management\XorListSelectionController.cpp">
+      <Filter>src\focus_management</Filter>
+    </ClCompile>
+    <ClCompile Include="src\grid_control\GridCtrl.cpp">
+      <Filter>src\grid_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\grid_control\GridCtrlS.cpp">
+      <Filter>src\grid_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\grid_control\GridDropTarget.cpp">
+      <Filter>src\grid_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\grid_control\InPlaceDateTime.cpp">
+      <Filter>src\grid_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\grid_control\InPlaceEdit.cpp">
+      <Filter>src\grid_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\grid_control\InPlaceList.cpp">
+      <Filter>src\grid_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\grid_control\TitleTip.cpp">
+      <Filter>src\grid_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\grid_control_border_selection\GridCtrlBorderSelection.cpp">
+      <Filter>src\grid_control_border_selection</Filter>
+    </ClCompile>
+    <ClCompile Include="src\list_ctrl_on_off_selection\ListCtrlOnOffSel.cpp">
+      <Filter>src\list_ctrl_on_off_selection</Filter>
+    </ClCompile>
+    <ClCompile Include="src\list_ctrl_selection_without_focus\ListCtrlSelNoFocus.cpp">
+      <Filter>src\list_ctrl_selection_without_fo</Filter>
+    </ClCompile>
+    <ClCompile Include="src\list_ctrl_with_hidden_scrollbar\ListCtrlHiddenSB.cpp">
+      <Filter>src\list_ctrl_with_hidden_scrollba</Filter>
+    </ClCompile>
+    <ClCompile Include="src\message_box\XMessageBox.cpp">
+      <Filter>src\message_box</Filter>
+    </ClCompile>
+    <ClCompile Include="src\multi_dialog\MultiDialog.cpp">
+      <Filter>src\multi_dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="src\multi_font_property_sheet\MultiFontPropertySheet.cpp">
+      <Filter>src\multi_font_property_sheet</Filter>
+    </ClCompile>
+    <ClCompile Include="src\numeric_edit_control\numericedit.cpp">
+      <Filter>src\numeric_edit_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\object_tree_control\ObjectTreeCtrl.cpp">
+      <Filter>src\object_tree_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\object_tree_control\ObjectTreeItem.cpp">
+      <Filter>src\object_tree_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\outlook_bar_control\GfxGroupEdit.cpp">
+      <Filter>src\outlook_bar_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\outlook_bar_control\GfxOutBarCtrl.cpp">
+      <Filter>src\outlook_bar_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\outlook_bar_control\GfxPopupMenu.cpp">
+      <Filter>src\outlook_bar_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\print_list_ctrl\CellColourMap.cpp">
+      <Filter>src\print_list_ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\print_list_ctrl\ListCtrlPrint.cpp">
+      <Filter>src\print_list_ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\print_list_ctrl\PrinterJob.cpp">
+      <Filter>src\print_list_ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\progress_window\ProgressWnd.cpp">
+      <Filter>src\progress_window</Filter>
+    </ClCompile>
+    <ClCompile Include="src\redraw_control_lock\LockControlRedraw.cpp">
+      <Filter>src\redraw_control_lock</Filter>
+    </ClCompile>
+    <ClCompile Include="src\selection_helpers\SelectionHelper.cpp">
+      <Filter>src\selection_helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\standard_dialogs_arial_bold\FileDialogArial.cpp">
+      <Filter>src\standard_dialogs_arial_bold</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tab_control_with_disable\TabCtrlEx.cpp">
+      <Filter>src\tab_control_with_disable</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tab_control_with_disable\TabCtrlWithDisable.cpp">
+      <Filter>src\tab_control_with_disable</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tab_control_with_disable\TabCtrlWithDisableEx.cpp">
+      <Filter>src\tab_control_with_disable</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tab_dialog_control\TabDialogCtrl.cpp">
+      <Filter>src\tab_dialog_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\toggleButton\toggleButton.cpp">
+      <Filter>src\toggleButton</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tree_ctrl_multi_sel\MltiTree.cpp">
+      <Filter>src\tree_ctrl_multi_sel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tree_ctrl_multi_sel\TrCtrlVw.cpp">
+      <Filter>src\tree_ctrl_multi_sel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tree_list_control\TreeListCtrl.cpp">
+      <Filter>src\tree_list_control</Filter>
+    </ClCompile>
+    <ClCompile Include="src\text_colour_edit\TextColourEdit.cpp">
+      <Filter>src\text_colour_edit</Filter>
+    </ClCompile>
+    <ClCompile Include="src\combo_temporary_item\ComboTempItem.cpp">
+      <Filter>src\combo_temporary_item</Filter>
+    </ClCompile>
+    <ClCompile Include="src\filter_list_ctrl\FilterListCtrl.cpp">
+      <Filter>src\filter_list_ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\filter_list_ctrl\MultiFilterListCtrl.cpp">
+      <Filter>src\filter_list_ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\file_dialog_no_folder_change\FileDialogArialDisableFolders.cpp">
+      <Filter>src\file_dialog_no_folder_change</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decorator_button\AbstractDecoratorButton.cpp">
+      <Filter>src\decorator_button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decorator_button\BackgroundDecorator.cpp">
+      <Filter>src\decorator_button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decorator_button\BitmapDecorator.cpp">
+      <Filter>src\decorator_button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decorator_button\BorderDecorator.cpp">
+      <Filter>src\decorator_button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decorator_button\ButtonDecorator.cpp">
+      <Filter>src\decorator_button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decorator_button\CDecoratorButton.cpp">
+      <Filter>src\decorator_button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decorator_button\TextDecorator.cpp">
+      <Filter>src\decorator_button</Filter>
+    </ClCompile>
+    <ClCompile Include="src\prnScreen\prnScreen.cpp">
+      <Filter>src\prnScreen</Filter>
+    </ClCompile>
+    <ClCompile Include="src\transactiveHelp\transactiveHelp.cpp">
+      <Filter>src\transactivehelp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\readonly_enabled_listbox\ReadOnlyListBox.cpp">
+      <Filter>src\readonly_enabled_listbox</Filter>
+    </ClCompile>
+    <ClCompile Include="src\message_dialog_helper\MessageDialogHelper.cpp">
+      <Filter>src\message_dialog_helper</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\mfc_extensions.rc">
+      <Filter>src</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\auto_sort_list_ctrl\AutoSortListCtrl.h">
+      <Filter>src\auto_sort_list_ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\auto_sort_list_ctrl\ISortingCallback.h">
+      <Filter>src\auto_sort_list_ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bitmap_and_text_push_button\FooButton.h">
+      <Filter>src\bitmap_and_text_push_button</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bitmap_and_text_push_button\Sxbutton.h">
+      <Filter>src\bitmap_and_text_push_button</Filter>
+    </ClInclude>
+    <ClInclude Include="src\coloured_controls\ColorButton.h">
+      <Filter>src\coloured_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\coloured_controls\ColorCheck.h">
+      <Filter>src\coloured_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\coloured_controls\ColorComboBox.h">
+      <Filter>src\coloured_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\coloured_controls\ColourCombo.h">
+      <Filter>src\coloured_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\coloured_controls\HighlightItemListCtrl.h">
+      <Filter>src\coloured_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\editable_list_control\EditableListCtrl.h">
+      <Filter>src\editable_list_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\editable_list_control\ICellManager.h">
+      <Filter>src\editable_list_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\editable_list_control\IListCellButtonProcessor.h">
+      <Filter>src\editable_list_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\editable_list_control\ListCellButton.h">
+      <Filter>src\editable_list_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\editable_list_control\ListCellCheckBox.h">
+      <Filter>src\editable_list_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\editable_list_control\ListCellComboBox.h">
+      <Filter>src\editable_list_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\editable_list_control\ListCellDateTime.h">
+      <Filter>src\editable_list_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\editable_list_control\ListCellEdit.h">
+      <Filter>src\editable_list_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\editable_list_control\ListCellMaskedEdit.h">
+      <Filter>src\editable_list_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\editable_list_control\XTipListBox.h">
+      <Filter>src\editable_list_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fixed_column_header_ctrl\FixedHeaderCtrl.h">
+      <Filter>src\fixed_column_header_ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\flashing_button\FlashButton.h">
+      <Filter>src\flashing_button</Filter>
+    </ClInclude>
+    <ClInclude Include="src\focus_management\XorListSelectionController.h">
+      <Filter>src\focus_management</Filter>
+    </ClInclude>
+    <ClInclude Include="src\grid_control\CellRange.h">
+      <Filter>src\grid_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\grid_control\GridCtrl.h">
+      <Filter>src\grid_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\grid_control\GridCtrlS.h">
+      <Filter>src\grid_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\grid_control\GridDropTarget.h">
+      <Filter>src\grid_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\grid_control\InPlaceDateTime.h">
+      <Filter>src\grid_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\grid_control\InPlaceEdit.h">
+      <Filter>src\grid_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\grid_control\InPlaceList.h">
+      <Filter>src\grid_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\grid_control\MemDC.h">
+      <Filter>src\grid_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\grid_control\TitleTip.h">
+      <Filter>src\grid_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\grid_control_border_selection\GridCtrlBorderSelection.h">
+      <Filter>src\grid_control_border_selection</Filter>
+    </ClInclude>
+    <ClInclude Include="src\list_ctrl_on_off_selection\ListCtrlOnOffSel.h">
+      <Filter>src\list_ctrl_on_off_selection</Filter>
+    </ClInclude>
+    <ClInclude Include="src\list_ctrl_selection_without_focus\ListCtrlSelNoFocus.h">
+      <Filter>src\list_ctrl_selection_without_fo</Filter>
+    </ClInclude>
+    <ClInclude Include="src\list_ctrl_with_hidden_scrollbar\ListCtrlHiddenSB.h">
+      <Filter>src\list_ctrl_with_hidden_scrollba</Filter>
+    </ClInclude>
+    <ClInclude Include="src\message_box\XMessageBox.h">
+      <Filter>src\message_box</Filter>
+    </ClInclude>
+    <ClInclude Include="src\multi_dialog\MultiDialog.h">
+      <Filter>src\multi_dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="src\multi_font_property_sheet\MultiFontPropertySheet.h">
+      <Filter>src\multi_font_property_sheet</Filter>
+    </ClInclude>
+    <ClInclude Include="src\numeric_edit_control\numericedit.h">
+      <Filter>src\numeric_edit_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\object_tree_control\ObjectTreeCtrl.h">
+      <Filter>src\object_tree_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\object_tree_control\ObjectTreeItem.h">
+      <Filter>src\object_tree_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\outlook_bar_control\GfxGroupEdit.h">
+      <Filter>src\outlook_bar_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\outlook_bar_control\GfxOutBarCtrl.h">
+      <Filter>src\outlook_bar_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\outlook_bar_control\GfxPopupMenu.h">
+      <Filter>src\outlook_bar_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\print_list_ctrl\CellColourMap.h">
+      <Filter>src\print_list_ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\print_list_ctrl\ListCtrlPrint.h">
+      <Filter>src\print_list_ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\print_list_ctrl\PrinterJob.h">
+      <Filter>src\print_list_ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\progress_window\ProgressWnd.h">
+      <Filter>src\progress_window</Filter>
+    </ClInclude>
+    <ClInclude Include="src\redraw_control_lock\LockControlRedraw.h">
+      <Filter>src\redraw_control_lock</Filter>
+    </ClInclude>
+    <ClInclude Include="src\selection_helpers\SelectionHelper.h">
+      <Filter>src\selection_helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\standard_dialogs_arial_bold\FileDialogArial.h">
+      <Filter>src\standard_dialogs_arial_bold</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tab_control_with_disable\TabCtrlEx.h">
+      <Filter>src\tab_control_with_disable</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tab_control_with_disable\TabCtrlWithDisable.h">
+      <Filter>src\tab_control_with_disable</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tab_control_with_disable\TabCtrlWithDisableEx.h">
+      <Filter>src\tab_control_with_disable</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tab_dialog_control\tabdialogctrl.h">
+      <Filter>src\tab_dialog_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\toggleButton\toggleButton.h">
+      <Filter>src\toggleButton</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tree_ctrl_multi_sel\MltiTree.h">
+      <Filter>src\tree_ctrl_multi_sel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tree_ctrl_multi_sel\TrCtrlVw.h">
+      <Filter>src\tree_ctrl_multi_sel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tree_list_control\TreeListCtrl.h">
+      <Filter>src\tree_list_control</Filter>
+    </ClInclude>
+    <ClInclude Include="src\text_colour_edit\TextColourEdit.h">
+      <Filter>src\text_colour_edit</Filter>
+    </ClInclude>
+    <ClInclude Include="src\combo_temporary_item\ComboTempItem.h">
+      <Filter>src\combo_temporary_item</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filter_list_ctrl\FilterListCtrl.h">
+      <Filter>src\filter_list_ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filter_list_ctrl\MultiFilterListCtrl.h">
+      <Filter>src\filter_list_ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\file_dialog_no_folder_change\FileDialogArialDisableFolders.h">
+      <Filter>src\file_dialog_no_folder_change</Filter>
+    </ClInclude>
+    <ClInclude Include="src\decorator_button\AbstractDecoratorButton.h">
+      <Filter>src\decorator_button</Filter>
+    </ClInclude>
+    <ClInclude Include="src\decorator_button\BackgroundDecorator.h">
+      <Filter>src\decorator_button</Filter>
+    </ClInclude>
+    <ClInclude Include="src\decorator_button\BitmapDecorator.h">
+      <Filter>src\decorator_button</Filter>
+    </ClInclude>
+    <ClInclude Include="src\decorator_button\BorderDecorator.h">
+      <Filter>src\decorator_button</Filter>
+    </ClInclude>
+    <ClInclude Include="src\decorator_button\ButtonDecorator.h">
+      <Filter>src\decorator_button</Filter>
+    </ClInclude>
+    <ClInclude Include="src\decorator_button\CDecoratorButton.h">
+      <Filter>src\decorator_button</Filter>
+    </ClInclude>
+    <ClInclude Include="src\decorator_button\IDecoratorButtonBehaviourStrategy.h">
+      <Filter>src\decorator_button</Filter>
+    </ClInclude>
+    <ClInclude Include="src\decorator_button\TextDecorator.h">
+      <Filter>src\decorator_button</Filter>
+    </ClInclude>
+    <ClInclude Include="src\prnScreen\prnScreen.h">
+      <Filter>src\prnScreen</Filter>
+    </ClInclude>
+    <ClInclude Include="src\transactiveHelp\transactiveHelp.h">
+      <Filter>src\transactivehelp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\readonly_enabled_listbox\ReadOnlyListBox.h">
+      <Filter>src\readonly_enabled_listbox</Filter>
+    </ClInclude>
+    <ClInclude Include="src\message_dialog_helper\MessageDialogHelper.h">
+      <Filter>src\message_dialog_helper</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\check.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\disabledcheck.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\disablednocheck.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\nocheck.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\sort_ascending.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\sort_descending.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\state.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\tree_ctrl_multi_sel\res\TreeTest.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="src\tree_ctrl_multi_sel\res\TreeTestDoc.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\dragging.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\handcur.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mfc_extensions.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\nodraggi.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

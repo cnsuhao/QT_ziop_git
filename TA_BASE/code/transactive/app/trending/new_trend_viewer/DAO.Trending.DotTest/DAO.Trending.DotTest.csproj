@@ -1,0 +1,128 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ProjectGuid>{04EF39AF-086A-4514-8FDD-B3E9403FED1B}</ProjectGuid>
+    <RootNamespace>DAO.Trending.DotTest</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\DatabaseConnectionExceptionTests.cs" />
+    <Compile Include="Common\DatabaseSessionFactoryTests.cs" />
+    <Compile Include="Common\DatabaseSessionTests.cs" />
+    <Compile Include="Common\DBConnectionStringsTests.cs" />
+    <Compile Include="Common\DbStatusMonitorThreadTests.cs" />
+    <Compile Include="Common\SessionStoreTests.cs" />
+    <Compile Include="Common\SimpleDatabaseTests.cs" />
+    <Compile Include="DAOHelperTests.cs" />
+    <Compile Include="DAO\Trending\CommonMSS\DatabaseSessionMSS.cs" />
+    <Compile Include="DAO\Trending\CommonMSS\SessionStoreMSS.cs" />
+    <Compile Include="DAO\Trending\CommonMSS\SimpleDatabaseMSS.cs" />
+    <Compile Include="DAO\Trending\HelperMSS\DAOHelperMSS.cs" />
+    <Compile Include="DatalogConfigSettingsDAOTests.cs" />
+    <Compile Include="DatalogDPGroupTrendDAOTests.cs" />
+    <Compile Include="DataLogDPLogTrendDAOTests.cs" />
+    <Compile Include="DatalogDPTrendDAOTests.cs" />
+    <Compile Include="DataPointDAOTests.cs" />
+    <Compile Include="EntityDAOTests.cs" />
+    <Compile Include="Factories\DAOHelperFactory.cs" />
+    <Compile Include="Factories\DataPointDAOFactory.cs" />
+    <Compile Include="Factories\EntityDAOFactory.cs" />
+    <Compile Include="Factories\FormulaerDAOFactory.cs" />
+    <Compile Include="Factories\HistDataPointDAOFactory.cs" />
+    <Compile Include="Factories\MarkerDAOFactory.cs" />
+    <Compile Include="Factories\TrendLogDAOFactory.cs" />
+    <Compile Include="FormulaerDAOTests.cs" />
+    <Compile Include="Helper\LocationKeyHelperTests.cs" />
+    <Compile Include="HistDataPointDAOTests.cs" />
+    <Compile Include="MarkerDAOTests.cs" />
+    <Compile Include="SimpleDatabaseTests.cs" />
+    <Compile Include="System\CollectionsMSS\IListMSS_1.cs" />
+    <Compile Include="System\DataMSS\IDataReaderMSS.cs" />
+    <Compile Include="System\DataMSS\IDbConnectionMSS.cs" />
+    <Compile Include="System\NetMSS\DnsMSS_1.cs" />
+    <Compile Include="System\ThreadingMSS\ThreadMSS.cs" />
+    <Compile Include="TestDBInit.cs" />
+    <Compile Include="TrendLogDAOTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAO.Trending\DAO.Trending.csproj">
+      <Project>{E3417E6D-7B59-41DC-AAEB-CB376FB5830F}</Project>
+      <Name>DAO.Trending</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity.Trending\Entity.Trending.csproj">
+      <Project>{4D60352D-4118-4DD8-8D9A-45EB585C3830}</Project>
+      <Name>Entity.Trending</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="dottest.framework, Version=9.1.0.2, Culture=neutral, PublicKeyToken=47d60c2a3c343a91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Parasoft\dotTEST\9.5\plugins\com.parasoft.xtest.libs.vstudio.dotnet\engine\dottest.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Transactive\bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.3.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Parasoft\dotTEST\9.5\plugins\com.parasoft.xtest.libs.vstudio.dotnet\engine\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=9.2.0.700, Culture=neutral, PublicKeyToken=89b483f429c47342">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Transactive\bin\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="STEE.ISCS.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\STEE.ISCS.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAO\TrendingMSS\" />
+    <Folder Include="STEE\ISCS\LogMSS\" />
+  </ItemGroup>
+</Project>

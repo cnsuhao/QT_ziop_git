@@ -1,0 +1,140 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ProjectGuid>{D9AD6769-ACDC-4A2C-8259-C6E16392CCD1}</ProjectGuid>
+    <RootNamespace>OPCDataLogger.DotTest</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CheckConfigVarsTests.cs" />
+    <Compile Include="ConfigureFileHelperTests.cs" />
+    <Compile Include="DAO\TrendingMSS\DBConnectionMSS.cs" />
+    <Compile Include="DAO\TrendingMSS\OPCNodeNDataPointDAOMSS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\TrendingMSS\OPCSampleGroupDAOMSS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\TrendingMSS\TrendLogDAOMSS.cs" />
+    <Compile Include="Factories\CheckConfigVarsFactory.cs" />
+    <Compile Include="Factories\ConfigureFileHelperFactory.cs" />
+    <Compile Include="Factories\OPCDataLoggerFactory.cs" />
+    <Compile Include="Factories\OPCDataPointManagerFactory.cs" />
+    <Compile Include="Factories\OPCDPGrpDetailsFactory.cs" />
+    <Compile Include="Factories\OPCLoggerQueneFactory.cs" />
+    <Compile Include="Factories\OPCLoggerWriteQueneFactory.cs" />
+    <Compile Include="OPCDataLoggerMSS\CheckConfigVarsMSS.cs" />
+    <Compile Include="OPCDataLoggerMSS\ConfigureFileHelperMSS.cs" />
+    <Compile Include="OPCDataLoggerMSS\OPCDataPointManagerMSS.cs" />
+    <Compile Include="OPCDataLoggerMSS\OPCLoggerQueneMSS.cs" />
+    <Compile Include="OPCDataLoggerTests.cs" />
+    <Compile Include="OPCDataPointManagerTests.cs" />
+    <Compile Include="OPCDPGrpDetailsTests.cs" />
+    <Compile Include="OPCLoggerQueneTests.cs" />
+    <Compile Include="OPCLoggerWriteQueneTests.cs" />
+    <Compile Include="ProgramTests.cs" />
+    <Compile Include="Properties_ResourcesTest.cs" />
+    <Compile Include="Properties_SettingsTest.cs" />
+    <Compile Include="STEE\ISCS\OPCProxyMSS\OPCServerProxyMSS.cs" />
+    <Compile Include="SystemMSS\DateTimeMSS.cs" />
+    <Compile Include="SystemMSS\EnvironmentMSS.cs" />
+    <Compile Include="System\DiagnosticsMSS\ProcessMSS.cs" />
+    <Compile Include="System\ThreadingMSS\ThreadMSS.cs" />
+    <Compile Include="System\ThreadingMSS\WaitHandleMSS.cs" />
+    <Compile Include="System\Windows\FormsMSS\ApplicationMSS.cs" />
+    <Compile Include="System\Windows\FormsMSS\ControlMSS.cs" />
+    <Compile Include="System\Windows\FormsMSS\FormCollectionMSS.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OPCDataLogger\OPCDataLogger\OPCDataLogger.csproj">
+      <Project>{F0E34001-0CB0-4679-9078-DE80132AFEE9}</Project>
+      <Name>OPCDataLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\STEE.ISCS.OPCProxy\STEE.ISCS.OPCProxy.csproj">
+      <Project>{2B0E79B6-0BEE-4AD3-84D3-5364996FCCC0}</Project>
+      <Name>STEE.ISCS.OPCProxy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DAO.Trending, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\DAO.Trending.dll</HintPath>
+    </Reference>
+    <Reference Include="dottest.framework, Version=9.1.0.2, Culture=neutral, PublicKeyToken=47d60c2a3c343a91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Parasoft\dotTEST\9.5\plugins\com.parasoft.xtest.libs.vstudio.dotnet\engine\dottest.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Entity.Trending, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\Entity.Trending.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Transactive\bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\Parasoft\dotTEST\9.5\plugins\com.parasoft.xtest.libs.vstudio.dotnet\engine\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="OPCTrendLib, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\OPCTrendLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=9.2.0.700, Culture=neutral, PublicKeyToken=89b483f429c47342">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Transactive\bin\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="STEE.ISCS.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\win32_nd\STEE.ISCS.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
