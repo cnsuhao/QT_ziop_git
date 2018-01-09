@@ -19,11 +19,13 @@
 #include "app/system_control/control_station/src/ApplicationMover.h"
 #include "bus/generic_gui_pmod/src/GenericGuiConstants.h"
 #include "bus/generic_gui_pmod/src/AppLauncher.h"
+#include "bus/generic_gui_view/src/AnyRect.h"
 #include "core/synchronisation/src/ThreadGuard.h"
 #include "core/utilities/src/DebugUtil.h"
 
 using TA_Base_Core::ThreadGuard;
 using TA_Base_Core::DebugUtil;
+using TA_Base_Bus::AnyRect;
 
 ApplicationMover::ApplicationMover()
     : m_isTerminating(false)
@@ -31,9 +33,9 @@ ApplicationMover::ApplicationMover()
     m_moveInformation.processId = 0;
     m_moveInformation.posFlag = 0;
     m_moveInformation.alignFlag = 0;
-    m_moveInformation.objectDim = TA_Base_Bus::TA_GenericGui::DEFAULT_RECT.toRect<RECT>();
-    m_moveInformation.boundaryDim = TA_Base_Bus::TA_GenericGui::DEFAULT_RECT.toRect<RECT>();
-    m_moveInformation.appDim = TA_Base_Bus::TA_GenericGui::DEFAULT_RECT.toRect<RECT>();
+    m_moveInformation.objectDim = AnyRect::DEFAULT;
+    m_moveInformation.boundaryDim = AnyRect::DEFAULT;
+    m_moveInformation.appDim = AnyRect::DEFAULT;
 }
 
 void ApplicationMover::setProcessDetails(unsigned long processId,
@@ -47,7 +49,7 @@ void ApplicationMover::setProcessDetails(unsigned long processId,
     m_moveInformation.alignFlag = alignFlag;
     m_moveInformation.objectDim = objectDim;
     m_moveInformation.boundaryDim = boundaryDim;
-    m_moveInformation.appDim = TA_Base_Bus::TA_GenericGui::DEFAULT_RECT.toRect<RECT>();
+    m_moveInformation.appDim = AnyRect::DEFAULT;
     m_moveInformation.finishedRepositioning = false;
 }
 
@@ -119,16 +121,18 @@ BOOL CALLBACK ApplicationMover::WndPositionEnumHandler(HWND hWnd, LPARAM lParam)
             return TRUE;
         }
 
-        RECT windowRect;
-        tempWindow.GetWindowRect(&windowRect);
-        bool isRepositioned = TA_Base_Bus::AppLauncher::calculateNewCoordinates(TA_Base_Bus::TA_Rect::fromRect(windowRect), TA_Base_Bus::TA_Rect::fromRect(info->objectDim), TA_Base_Bus::TA_Rect::fromRect(info->boundaryDim), info->posFlag, info->alignFlag);
+        RECT  windowRectWin;
+        tempWindow.GetWindowRect(&windowRectWin);
+        AnyRect windowRect = windowRectWin;
+        bool isRepositioned = TA_Base_Bus::AppLauncher::calculateNewCoordinates(windowRect, AnyRect(info->objectDim), AnyRect(info->boundaryDim), info->posFlag, info->alignFlag);
+        windowRectWin = windowRect;
         // if its coordinates are changed, then move to the new coordinates, otherwise, centre the
         // application without changing the size of the application.
 
         if (isRepositioned)
         {
             info->appDim = windowRect;
-            tempWindow.MoveWindow(&windowRect);
+            tempWindow.MoveWindow(&windowRectWin);
             LOG_DEBUG("Moved to: (%li,%li,%li,%li)", windowRect.left, windowRect.top, windowRect.right, windowRect.bottom);
         }
         else

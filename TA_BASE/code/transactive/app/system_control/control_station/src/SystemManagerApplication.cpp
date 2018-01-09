@@ -43,5 +43,6 @@ void SystemManagerApplication::onLogin()
                                                                       TA_Base_Bus::TA_GenericGui::ALIGN_FIT,
                                                                       defaultRect,
                                                                       boundaryRect,
+                                                                      false,
                                                                       false);
 }

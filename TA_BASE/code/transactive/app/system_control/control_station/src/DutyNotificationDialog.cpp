@@ -222,18 +222,18 @@ CString DutyNotificationDialog::formatContent(const EMessageType& type, const st
 
         out += temp;
 
-        for (unsigned int j = 0; j < data[i].subsystem.size(); j++)
+        for (unsigned int j = 0; j < data[i].subsystemDetails.size(); j++)
         {
             out += "\nfor:";
 
-            for (unsigned int k = 0; k < data[i].subsystem[j].subsystemName.size(); k++)
+            for (unsigned int k = 0; k < data[i].subsystemDetails[j].subsystemNames.size(); k++)
             {
-                temp = str(boost::format(SUBSYSTEM_FORMAT) % data[i].subsystem[j].subsystemName[k]);
+                temp = str(boost::format(SUBSYSTEM_FORMAT) % data[i].subsystemDetails[j].subsystemNames[k]);
                 out += temp;
             }
 
             out += "at:";
-            temp = str(boost::format(LOCATION_FORMAT) % data[i].subsystem[j].regionName);
+            temp = str(boost::format(LOCATION_FORMAT) % data[i].subsystemDetails[j].regionName);
             out += temp;
         }
 

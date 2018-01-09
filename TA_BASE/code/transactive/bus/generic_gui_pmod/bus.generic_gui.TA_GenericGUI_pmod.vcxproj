@@ -87,6 +87,7 @@
     <ClInclude Include="src\ItemRepository.h" />
     <ClInclude Include="src\PModelDataType.h" />
     <ClInclude Include="src\PModelInterface.h" />
+    <ClInclude Include="src\TA_Rect.h" />
     <ClInclude Include="src\TransActiveViewModel.h" />
     <ClInclude Include="src\UserInteraction.h" />
   </ItemGroup>

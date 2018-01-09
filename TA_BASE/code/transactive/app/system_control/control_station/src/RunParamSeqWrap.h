@@ -40,7 +40,6 @@ public:
 
         for (const auto& pair : pairs)
         {
-            //assign<typename T::value_type::first_type, typename T::value_type::second_type>(pd_buf[index++], pair.first, pair.second);
             assign(pd_buf[index++], pair.first, pair.second);
         }
 
@@ -103,7 +102,7 @@ public:
             _CORBA_Boolean  pd_bounded;
             TA_Base_Core::RunParam* pd_buf;
         };
-
+        BOOST_STATIC_ASSERT(sizeof(Hack) == sizeof(TA_Base_Core::RunParamSeq));
         Hack* hack = new Hack { pd_max, pd_len, pd_rel, pd_bounded, pd_buf };
         pd_rel = 1;
         pd_max = pd_len = pd_bounded = pd_buf = 0;

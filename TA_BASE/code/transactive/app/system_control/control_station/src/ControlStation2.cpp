@@ -86,7 +86,7 @@ STDMETHODIMP CControlStation2::getOperator(BSTR* pRet)
     AFX_MANAGE_STATE(AfxGetStaticModuleState())
     FUNCTION_ENTRY("getOperator");
 
-    Promise<std::string> operatorName;
+    DECLEAR_SHARED(Promise<std::string>, operatorName);
     ComSignal::getOperator(operatorName);
     copyToBSTR(pRet, operatorName);
 
@@ -99,7 +99,7 @@ STDMETHODIMP CControlStation2::getSite(BSTR* pRet)
     AFX_MANAGE_STATE(AfxGetStaticModuleState())
     FUNCTION_ENTRY("getSite");
 
-    Promise<std::string> name;
+    DECLEAR_SHARED(Promise<std::string>, name);
     ComSignal::getSite(name);
     copyToBSTR(pRet, name);
 
@@ -112,7 +112,7 @@ STDMETHODIMP CControlStation2::getProfile(BSTR* pRet)
     AFX_MANAGE_STATE(AfxGetStaticModuleState())
     FUNCTION_ENTRY("getProfile");
 
-    Promise<std::string> profileName;
+    DECLEAR_SHARED(Promise<std::string>, profileName);
     ComSignal::getProfile(profileName);
     copyToBSTR(pRet, profileName);
 
@@ -138,9 +138,9 @@ STDMETHODIMP CControlStation2::getAllApplications(VARIANT* pRet)
 
     VariantInit(pRet);
 
-    Promise<std::vector<ApplicationProperties> > allAppPromise;
+    DECLEAR_SHARED(Promise<std::vector<ApplicationProperties> >, allAppPromise);
     ComSignal::getAllApplications(allAppPromise);
-    std::vector<ApplicationProperties> allApps = allAppPromise.get();
+    std::vector<ApplicationProperties> allApps = allAppPromise->get();
     createArray(allApps, *pRet);
 
     FUNCTION_EXIT;
@@ -154,9 +154,9 @@ STDMETHODIMP CControlStation2::getRunningApplications(VARIANT* pRet)
 
     VariantInit(pRet);
 
-    Promise<std::map<unsigned long, std::string> > allAppsPromise;
+    boost::shared_ptr<Promise<std::map<unsigned long, std::string>>> allAppsPromise(new Promise<std::map<unsigned long, std::string>>);
     ComSignal::getRunningApplications(allAppsPromise);
-    std::map<unsigned long, std::string> allApps = allAppsPromise.get();
+    std::map<unsigned long, std::string> allApps = allAppsPromise->get();
 
     createArray(allApps, *pRet);
 
@@ -169,7 +169,7 @@ STDMETHODIMP CControlStation2::getLocation(BSTR* pRet)
     AFX_MANAGE_STATE(AfxGetStaticModuleState())
     FUNCTION_ENTRY("getLocation");
 
-    Promise<std::string> str;
+    DECLEAR_SHARED(Promise<std::string>, str);
     ComSignal::getLocation(str);
     copyToBSTR(pRet, str);
 
@@ -193,7 +193,7 @@ STDMETHODIMP CControlStation2::getProfileDisplay(long leftPosition, BSTR* pRet)
     AFX_MANAGE_STATE(AfxGetStaticModuleState())
     FUNCTION_ENTRY("getProfileDisplay");
 
-    Promise<std::string> str;
+    DECLEAR_SHARED(Promise<std::string>, str);
     ComSignal::getProfileDisplay(leftPosition, str);
     copyToBSTR(pRet, str);
 
@@ -206,7 +206,7 @@ STDMETHODIMP CControlStation2::getProfileDisplayAtLocation(long leftPosition, BS
     AFX_MANAGE_STATE(AfxGetStaticModuleState())
     FUNCTION_ENTRY("getProfileDisplayAtLocation");
 
-    Promise<std::string> str;
+    DECLEAR_SHARED(Promise<std::string>, str);
     ComSignal::getProfileDisplayAtLocation(leftPosition, toString(locationName), str);
     copyToBSTR(pRet, str);
 
@@ -252,9 +252,9 @@ STDMETHODIMP CControlStation2::isServerContactable(BOOL* isContactable)
     AFX_MANAGE_STATE(AfxGetStaticModuleState())
     FUNCTION_ENTRY("isServerContactable");
 
-    Promise<bool> promise;
+    DECLEAR_SHARED(Promise<bool>, promise);
     ComSignal::isServerContactable(promise);
-    *isContactable = promise.get();
+    *isContactable = promise->get();
 
     FUNCTION_EXIT;
     return S_OK;
@@ -287,9 +287,9 @@ STDMETHODIMP CControlStation2::isOperatorOverridden(BOOL* isOverridden)
     AFX_MANAGE_STATE(AfxGetStaticModuleState())
     FUNCTION_ENTRY("isOperatorOverridden");
 
-    Promise<bool> promise;
+    DECLEAR_SHARED(Promise<bool>, promise);
     ComSignal::isOperatorOverridden(promise);
-    *isOverridden = promise.get();
+    *isOverridden = promise->get();
 
     FUNCTION_EXIT;
     return S_OK;
@@ -325,9 +325,9 @@ STDMETHODIMP CControlStation2::getRect(EScreen targetScreen, EArea targetArea, l
 
     FUNCTION_ENTRY("getRect");
 
-    Promise<RECT> dimPromise;
+    DECLEAR_SHARED(Promise<RECT>, dimPromise);
     ComSignal::getRect(targetScreen, targetArea, val, dimPromise);
-    *dim = dimPromise.get();
+    *dim = dimPromise->get();
 
     FUNCTION_EXIT;
     return S_OK;
@@ -338,7 +338,7 @@ STDMETHODIMP CControlStation2::getCurrentDisplayName(BSTR* display)
     AFX_MANAGE_STATE(AfxGetStaticModuleState())
     FUNCTION_ENTRY("getCurrentDisplayName");
 
-    Promise<std::string> str;
+    DECLEAR_SHARED(Promise<std::string>, str);
     ComSignal::getCurrentDisplayName(str);
     copyToBSTR(display, str);
 
@@ -378,7 +378,7 @@ STDMETHODIMP CControlStation2::getSessionId(BSTR* sessionId)
     AFX_MANAGE_STATE(AfxGetStaticModuleState())
     FUNCTION_ENTRY("getSessionId");
 
-    Promise<std::string> str;
+    DECLEAR_SHARED(Promise<std::string>, str);
     ComSignal::getSessionId(str);
     copyToBSTR(sessionId, str);
 
@@ -446,9 +446,9 @@ STDMETHODIMP CControlStation2::isActionPermittedOnEntity(BSTR entityName, long a
     AFX_MANAGE_STATE(AfxGetStaticModuleState())
     FUNCTION_ENTRY("isActionPermittedOnEntity");
 
-    Promise<ResponseEnum> promise;
+    DECLEAR_SHARED(Promise<ResponseEnum>, promise);
     ComSignal::isActionPermittedOnEntity(toString(entityName), actionKey, promise);
-    *response = promise.get();
+    *response = promise->get();
 
     FUNCTION_EXIT;
     return S_OK;
@@ -471,9 +471,9 @@ STDMETHODIMP CControlStation2::isLoginAllowed(BSTR bstrOperator, BSTR bstrPasswo
     AFX_MANAGE_STATE(AfxGetStaticModuleState())
     FUNCTION_ENTRY("isLoginAllowed");
 
-    Promise<bool> promise;
+    DECLEAR_SHARED(Promise<bool>, promise);
     ComSignal::isLoginAllowed(toString(bstrOperator), toString(bstrPassword), promise);
-    *bLogin = promise.get();
+    *bLogin = promise->get();
 
     return S_OK;
 }
@@ -483,7 +483,7 @@ STDMETHODIMP CControlStation2::getDisplayMode(BSTR* pRet)
     AFX_MANAGE_STATE(AfxGetStaticModuleState())
     FUNCTION_ENTRY("getDisplayMode");
 
-    Promise<std::string> str;
+    DECLEAR_SHARED(Promise<std::string>, str);
     ComSignal::getDisplayMode(str);
     copyToBSTR(pRet, str);
 
@@ -705,6 +705,11 @@ std::string CControlStation2::getAppName(const std::string& ex_str)
 void CControlStation2::copyToBSTR(BSTR*& bstr, const std::string& str)
 {
     *bstr = _bstr_t(str.c_str()).Detach();
+}
+
+void CControlStation2::copyToBSTR(BSTR*& bstr, boost::shared_ptr<Promise<std::string>> str)
+{
+    *bstr = _bstr_t(str->get().c_str()).Detach();
 }
 
 std::string CControlStation2::toString(const BSTR& bstr)

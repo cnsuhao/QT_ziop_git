@@ -355,6 +355,7 @@ CD .</Command>
     <ClCompile Include="src\ComUtilities.cpp" />
     <ClCompile Include="src\ControlStation2Impl.cpp" />
     <ClCompile Include="src\ControlStationSignal.cpp" />
+    <ClCompile Include="src\DutySignal.cpp" />
     <ClCompile Include="src\GraphworxSignal.cpp" />
     <ClCompile Include="src\LogoutDialogSignal.cpp" />
     <ClCompile Include="src\LogoutTask.cpp" />
@@ -558,6 +559,7 @@ CD .</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug Library|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../src/ProfileLoginDlg.h"  -D_DEBUG -D_WINDOWS -D_WIN32_DCOM -D_VC80_UPGRADE=0x0600 -D_AFXDLL "-D$(TA_Preprocessor)\." "-I$(TA_BuildPath)\win32_n\transactive\core\process_management\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\exceptions\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\core\message\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\duty_agent\IDL\src" "-I$(TA_BuildPath)\win32_n\transactive\bus\security\authentication_agent\IDL\src" "-I$(TA_CotsPath)\Loki\Loki-0.1.7\include" "-I.\GeneratedFiles" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(TA_AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
     </CustomBuild>
+    <ClInclude Include="src\DutySignal.h" />
     <ClInclude Include="src\resource.h" />
     <ClInclude Include="src\Singleton.h" />
     <ClInclude Include="src\ChangeOperatorTask.h">

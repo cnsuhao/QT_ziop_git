@@ -24,29 +24,20 @@ RunningApplication::RunningApplication(Application* application,
                                        unsigned long alignFlag,
                                        const RECT& objectDim,
                                        const RECT& boundaryDim,
-                                       bool isVisible)
+                                       bool isVisible,
+                                       bool autoRelaunch)
     : m_isVisibleToUserAsRunning(isVisible),
       m_terminateTimeout(DEFAULT_TERMINATE_TIMEOUT_IN_SECONDS),
       m_application(application),
       m_additionalCommands(additionalCommands),
-      m_shoulsAutoRelaunch(false)
+      m_shoulsAutoRelaunch(autoRelaunch)
 {
     ApplicationMover::WindowMoveInformation& info = m_applicationMover.getProcessDetails();
     info.posFlag = posFlag;
     info.alignFlag = alignFlag;
     info.objectDim = objectDim;
     info.boundaryDim = boundaryDim;
-
-    if (RunParams::getInstance().isSet("StylePath"))
-    {
-        m_additionalCommands += " --StylePath=" + RunParams::getInstance().get("StylePath");
-    }
-
-    if (RunParams::getInstance().isSet("LanguagePath"))
-    {
-        m_additionalCommands += " --LanguagePath=" + RunParams::getInstance().get("LanguagePath");
-    }
-
+    addCommonCommand(m_additionalCommands);
     boost::async(boost::bind(&RunningApplication::launch, this));
 }
 
@@ -103,6 +94,19 @@ void RunningApplication::prepareProcessOption()
 
     m_options.command_line((startInstruction + " " + m_additionalCommands).c_str());
     m_options.working_directory(currentDir.c_str());
+}
+
+void RunningApplication::addCommonCommand(std::string& command)
+{
+    if (RunParams::getInstance().isSet("StylePath"))
+    {
+        command += " --StylePath=" + RunParams::getInstance().get("StylePath");
+    }
+
+    if (RunParams::getInstance().isSet("LanguagePath"))
+    {
+        command += " --LanguagePath=" + RunParams::getInstance().get("LanguagePath");
+    }
 }
 
 void RunningApplication::launch()

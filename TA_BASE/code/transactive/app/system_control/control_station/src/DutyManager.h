@@ -25,14 +25,16 @@
 #include "core/message/IDL/src/CommsMessageCorbaDef.h"
 #include "core/naming/src/NamedObject.h"
 
-class DutyManager : public TA_Base_Core::SpecialisedMessageSubscriber<TA_Base_Core::CommsMessageCorbaDef>, public Singleton<DutyManager>
+class DutyManager
+    : public TA_Base_Core::SpecialisedMessageSubscriber<TA_Base_Core::CommsMessageCorbaDef>,
+      public Singleton<DutyManager>
 {
 public:
 
     struct SubsystemDetail
     {
         std::string regionName;
-        std::vector<std::string> subsystemName;
+        std::set<std::string> subsystemNames;
     };
 
     struct DutyDetail
@@ -40,7 +42,7 @@ public:
         std::string operatorName;
         std::string profileName;
         std::string locationName;
-        std::vector<SubsystemDetail> subsystem;
+        std::vector<SubsystemDetail> subsystemDetails;
     };
 
     struct DutyNotificationDetail
@@ -49,13 +51,23 @@ public:
         std::vector<DutyDetail> denied;
         std::vector<DutyDetail> lost;
         std::vector<DutyDetail> changed;
+        bool empty() const { return gained.empty() && denied.empty() && lost.empty() && changed.empty(); }
+        bool dutyChanged() { return !empty(); }
+        std::string str()
+        {
+            return boost::str(boost::format("{gained:%d, lost:%d, deined:%d, changed:%d}") % gained.size() % lost.size() % denied.size() % changed.size());
+        }
     };
+
+    typedef boost::shared_ptr<DutyNotificationDetail> DutyNotificationDetailPtr;
 
     struct DutyRequestDetail
     {
         DutyDetail duty;
         std::string uniqueId;
     };
+
+    typedef boost::shared_ptr<DutyRequestDetail> DutyRequestDetailPtr;
 
     typedef std::vector<DutyDetail> DutyDetailList;
     typedef std::vector<DutyDetail>::iterator DutyDetailIter;
@@ -79,7 +91,7 @@ public:
       * duties, and warns the user that those sub-systems will be dutiless once they have logged out.
       */
     bool loseExclusiveDuty();
-    void handleLoseExclusiveDuty(boost::shared_ptr<Promise<bool> > promise);
+    void handleLoseExclusiveDuty(BoolPromisePtr promise);
 
     void initialize();
     void onSessionLogin();
@@ -90,7 +102,7 @@ protected:
     DutyManager();
     virtual void asyncInitialize() override;
 
-    void getDutyChanged(DutyNotificationDetail* det);   // TD19075
+    void getDutyChanged(DutyNotificationDetail& det);   // TD19075
 
     /**
       * processDutyChange

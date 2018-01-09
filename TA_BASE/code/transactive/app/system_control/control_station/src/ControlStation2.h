@@ -18,10 +18,11 @@
 #pragma once
 #include <atlbase.h>
 #include <atlcom.h>
-#include "app/system_control/control_station/src/resource.h" // main symbols
-#include "app/system_control/control_station/src/ControlStationCP.h"
-#include "app/system_control/control_station/src/IProcessManager.h"
+#include "resource.h" // main symbols
 #include "ControlStationCP.h"
+#include "IProcessManager.h"
+#include "ControlStationCP.h"
+#include "Promise.h"
 
 /////////////////////////////////////////////////////////////////////////////
 // CControlStation3
@@ -102,6 +103,7 @@ public:
 public:
 
     static void copyToBSTR(BSTR*& bstr, const std::string& str);
+    static void copyToBSTR(BSTR*& bstr, boost::shared_ptr<Promise<std::string>> str);
     static std::string toString(const BSTR& bstr);
     static std::string toString(const BSTR* bstr);
 

@@ -13,17 +13,6 @@ class RunningApplicationManager  : public Singleton<RunningApplicationManager>
 {
 public:
 
-    //static RunningApplicationManager& getInstance()
-    //{
-    //    static RunningApplicationManager instance;
-    //    return instance;
-    //}
-
-    //static RunningApplicationManager& getInstanceNoInit()
-    //{
-    //    return getInstance();
-    //}
-
     RunningApplication* createNamedRunningApplication(const std::string& name);
 
     RunningApplication* createRunningApplication(Application* application,
@@ -32,7 +21,8 @@ public:
                                                  unsigned long alignFlag,
                                                  const RECT& objectDim,
                                                  const RECT& boundaryDim,
-                                                 bool isVisible);
+                                                 bool isVisible,
+                                                 bool autoRelaunch = false);
 
     ExternalRunningApplication* createRunningApplication(Application* application,
                                                          TA_Base_Core::IManagedProcessCorbaDef_var managedProcess,

@@ -25,7 +25,7 @@ public:
 
 protected:
 
-    virtual void processUpdate(const TA_Base_Core::ConfigUpdateDetails& updateEvent);
+    ApplicationManager();
 
     virtual void launchApplication(unsigned long appType,
                                    const std::string& additionalCommands,
@@ -40,8 +40,7 @@ protected:
                                         CORBA::ULong applicationType,
                                         const std::string& entity);
 
-protected:
-
+    virtual void processUpdate(const TA_Base_Core::ConfigUpdateDetails& updateEvent) override;
     virtual void asyncInitialize() override;
     void setupSignalConnections();
     void setupApplicationCreators();
@@ -53,7 +52,6 @@ protected:
 
 protected:
 
-    ApplicationManager();
     ApplicationMap m_applications;
     ApplicationCreatorMap m_creators;
     NamedRunningApplicationTerminatorPtrList m_terminators;
